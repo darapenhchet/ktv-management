@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{28672F34-F916-41D8-8FD8-11D1DE3DB74F}</ProjectGuid>
+    <ProjectGuid>{B9BE79A6-5CA3-468E-9334-6B047BFDAE13}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>KTVManagement.My.MyApplication</StartupObject>
     <RootNamespace>KTVManagement</RootNamespace>
