@@ -11,3 +11,6 @@ C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\De
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.xml
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.pdb
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\bin\Debug\Interop.AXVLC.dll
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\AxInterop.AXVLC.dll
