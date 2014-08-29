@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2014-08-29 09:03:23
+Date: 2014-08-30 02:55:11
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -56,15 +56,16 @@ CREATE TABLE `guests` (
 DROP TABLE IF EXISTS `languages`;
 CREATE TABLE `languages` (
   `languageId` int(11) NOT NULL AUTO_INCREMENT,
-  `language` varchar(20) DEFAULT NULL,
+  `language` varchar(20) NOT NULL,
+  `photo` varchar(100) NOT NULL,
   PRIMARY KEY (`languageId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of languages
 -- ----------------------------
-INSERT INTO `languages` VALUES ('1', 'KHMER');
-INSERT INTO `languages` VALUES ('2', 'ENGLISH');
+INSERT INTO `languages` VALUES ('1', 'KHMER', '');
+INSERT INTO `languages` VALUES ('2', 'ENGLISH', '');
 
 -- ----------------------------
 -- Table structure for productions
@@ -73,16 +74,17 @@ DROP TABLE IF EXISTS `productions`;
 CREATE TABLE `productions` (
   `productionId` int(11) NOT NULL AUTO_INCREMENT,
   `production` varchar(50) DEFAULT NULL,
+  `photo` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`productionId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of productions
 -- ----------------------------
-INSERT INTO `productions` VALUES ('2', 'RHM');
-INSERT INTO `productions` VALUES ('3', 'SUNDAY');
-INSERT INTO `productions` VALUES ('4', 'M');
-INSERT INTO `productions` VALUES ('5', 'TOWN');
+INSERT INTO `productions` VALUES ('2', 'RHM', null);
+INSERT INTO `productions` VALUES ('3', 'SUNDAY', null);
+INSERT INTO `productions` VALUES ('4', 'M', null);
+INSERT INTO `productions` VALUES ('5', 'TOWN', null);
 
 -- ----------------------------
 -- Table structure for rooms
@@ -106,16 +108,17 @@ CREATE TABLE `rooms` (
 DROP TABLE IF EXISTS `singers`;
 CREATE TABLE `singers` (
   `singerId` int(11) NOT NULL AUTO_INCREMENT,
-  `singerName` varchar(50) DEFAULT NULL,
-  `gender` varchar(1) DEFAULT NULL,
+  `singerName` varchar(50) NOT NULL,
+  `gender` varchar(1) NOT NULL,
+  `photo` varchar(100) NOT NULL,
   PRIMARY KEY (`singerId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of singers
 -- ----------------------------
-INSERT INTO `singers` VALUES ('1', 'Preap Sovath', 'M');
-INSERT INTO `singers` VALUES ('2', 'Nob Nico', 'M');
+INSERT INTO `singers` VALUES ('1', 'Preap Sovath', 'M', '');
+INSERT INTO `singers` VALUES ('2', 'Nob Nico', 'M', '');
 
 -- ----------------------------
 -- Table structure for songdetails
@@ -126,8 +129,8 @@ CREATE TABLE `songdetails` (
   `songId` int(11) NOT NULL,
   KEY `singerId` (`singerId`),
   KEY `songId` (`songId`),
-  CONSTRAINT `songdetails_ibfk_2` FOREIGN KEY (`songId`) REFERENCES `songs` (`songid`),
-  CONSTRAINT `songdetails_ibfk_1` FOREIGN KEY (`singerId`) REFERENCES `singers` (`singerId`)
+  CONSTRAINT `songdetails_ibfk_1` FOREIGN KEY (`singerId`) REFERENCES `singers` (`singerId`),
+  CONSTRAINT `songdetails_ibfk_2` FOREIGN KEY (`songId`) REFERENCES `songs` (`songid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -150,9 +153,9 @@ CREATE TABLE `songs` (
   KEY `categoryId` (`categoryId`),
   KEY `langaugeId` (`languageId`),
   KEY `productionId` (`productionId`),
-  CONSTRAINT `songs_ibfk_3` FOREIGN KEY (`productionId`) REFERENCES `productions` (`productionId`),
   CONSTRAINT `songs_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`categoryId`),
-  CONSTRAINT `songs_ibfk_2` FOREIGN KEY (`languageId`) REFERENCES `languages` (`languageId`)
+  CONSTRAINT `songs_ibfk_2` FOREIGN KEY (`languageId`) REFERENCES `languages` (`languageId`),
+  CONSTRAINT `songs_ibfk_3` FOREIGN KEY (`productionId`) REFERENCES `productions` (`productionId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -168,28 +171,26 @@ CREATE TABLE `users` (
   `userid` int(11) NOT NULL,
   `username` varchar(50) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
+  `photo` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', 'douen', '123');
+INSERT INTO `users` VALUES ('1', 'douen', '123', null);
 
 -- ----------------------------
 -- Procedure structure for spAddSinger
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `spAddSinger`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `spAddSinger`(
-		singerId INT,
-		singerName VARCHAR(100),
-		gender VARCHAR(1)
-	)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spAddSinger`(singerId INT,singerName VARCHAR(100),
+gender VARCHAR(1),photo VARCHAR(100))
 BEGIN
 	
-	INSERT INTO singers(singerId,singerName,gender)
-	VALUES(singerId,singerName,gender);
+	INSERT INTO singers(singerId,singerName,gender,photo)
+	VALUES(singerId,singerName,gender,photo);
 
 END
 ;;
