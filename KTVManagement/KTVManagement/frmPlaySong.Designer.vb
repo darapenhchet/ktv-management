@@ -24,15 +24,24 @@ Partial Class frmPlaySong
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPlaySong))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.vlc = New AxAXVLC.AxVLCPlugin2()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnPlay = New System.Windows.Forms.Button()
-        Me.btnLoad = New System.Windows.Forms.Button()
-        Me.openSong = New System.Windows.Forms.OpenFileDialog()
         Me.btnTurnOffSingerSound = New System.Windows.Forms.Button()
+        Me.btnLoad = New System.Windows.Forms.Button()
+        Me.btnPlay = New System.Windows.Forms.Button()
+        Me.vlc = New AxAXVLC.AxVLCPlugin2()
+        Me.openSong = New System.Windows.Forms.OpenFileDialog()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.btnPrevious = New System.Windows.Forms.Button()
+        Me.btnPause = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.vlc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.vlc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -42,46 +51,27 @@ Partial Class frmPlaySong
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(888, 522)
+        Me.Panel1.Size = New System.Drawing.Size(1162, 522)
         Me.Panel1.TabIndex = 0
-        '
-        'vlc
-        '
-        Me.vlc.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.vlc.Enabled = True
-        Me.vlc.Location = New System.Drawing.Point(0, 0)
-        Me.vlc.Name = "vlc"
-        Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.vlc.Size = New System.Drawing.Size(888, 522)
-        Me.vlc.TabIndex = 1
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Button6)
+        Me.Panel2.Controls.Add(Me.Button5)
+        Me.Panel2.Controls.Add(Me.Button4)
+        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.btnPause)
+        Me.Panel2.Controls.Add(Me.btnPrevious)
+        Me.Panel2.Controls.Add(Me.btnNext)
         Me.Panel2.Controls.Add(Me.btnTurnOffSingerSound)
         Me.Panel2.Controls.Add(Me.btnLoad)
         Me.Panel2.Controls.Add(Me.btnPlay)
         Me.Panel2.Location = New System.Drawing.Point(0, 416)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(888, 106)
+        Me.Panel2.Size = New System.Drawing.Size(1159, 106)
         Me.Panel2.TabIndex = 2
-        '
-        'btnPlay
-        '
-        Me.btnPlay.Location = New System.Drawing.Point(3, 80)
-        Me.btnPlay.Name = "btnPlay"
-        Me.btnPlay.Size = New System.Drawing.Size(75, 23)
-        Me.btnPlay.TabIndex = 0
-        Me.btnPlay.Text = "PLAY"
-        Me.btnPlay.UseVisualStyleBackColor = True
-        '
-        'btnLoad
-        '
-        Me.btnLoad.Location = New System.Drawing.Point(3, 3)
-        Me.btnLoad.Name = "btnLoad"
-        Me.btnLoad.Size = New System.Drawing.Size(75, 23)
-        Me.btnLoad.TabIndex = 1
-        Me.btnLoad.Text = "LOAD"
-        Me.btnLoad.UseVisualStyleBackColor = True
         '
         'btnTurnOffSingerSound
         '
@@ -92,20 +82,138 @@ Partial Class frmPlaySong
         Me.btnTurnOffSingerSound.Text = "TurnOff Singer Sound"
         Me.btnTurnOffSingerSound.UseVisualStyleBackColor = True
         '
+        'btnLoad
+        '
+        Me.btnLoad.Location = New System.Drawing.Point(3, 3)
+        Me.btnLoad.Name = "btnLoad"
+        Me.btnLoad.Size = New System.Drawing.Size(75, 23)
+        Me.btnLoad.TabIndex = 1
+        Me.btnLoad.Text = "LOAD"
+        Me.btnLoad.UseVisualStyleBackColor = True
+        '
+        'btnPlay
+        '
+        Me.btnPlay.Location = New System.Drawing.Point(3, 80)
+        Me.btnPlay.Name = "btnPlay"
+        Me.btnPlay.Size = New System.Drawing.Size(75, 23)
+        Me.btnPlay.TabIndex = 0
+        Me.btnPlay.Text = "PLAY"
+        Me.btnPlay.UseVisualStyleBackColor = True
+        '
+        'vlc
+        '
+        Me.vlc.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.vlc.Enabled = True
+        Me.vlc.Location = New System.Drawing.Point(0, 0)
+        Me.vlc.Name = "vlc"
+        Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.vlc.Size = New System.Drawing.Size(1162, 522)
+        Me.vlc.TabIndex = 1
+        '
+        'btnNext
+        '
+        Me.btnNext.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.btnNext.Location = New System.Drawing.Point(120, 28)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(180, 23)
+        Me.btnNext.TabIndex = 3
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'btnPrevious
+        '
+        Me.btnPrevious.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.btnPrevious.Location = New System.Drawing.Point(336, 28)
+        Me.btnPrevious.Name = "btnPrevious"
+        Me.btnPrevious.Size = New System.Drawing.Size(180, 23)
+        Me.btnPrevious.TabIndex = 4
+        Me.btnPrevious.Text = "Previous"
+        Me.btnPrevious.UseVisualStyleBackColor = True
+        '
+        'btnPause
+        '
+        Me.btnPause.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.btnPause.Location = New System.Drawing.Point(567, 28)
+        Me.btnPause.Name = "btnPause"
+        Me.btnPause.Size = New System.Drawing.Size(180, 23)
+        Me.btnPause.TabIndex = 5
+        Me.btnPause.Text = "Pause"
+        Me.btnPause.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button1.Location = New System.Drawing.Point(336, 80)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(180, 23)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Exit"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button2.Location = New System.Drawing.Point(810, 28)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(180, 23)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Stop"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button3.Location = New System.Drawing.Point(567, 83)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(180, 23)
+        Me.Button3.TabIndex = 8
+        Me.Button3.Text = ">>"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button4.Location = New System.Drawing.Point(810, 80)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(180, 23)
+        Me.Button4.TabIndex = 9
+        Me.Button4.Text = "--"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button5.Location = New System.Drawing.Point(1016, 28)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(146, 23)
+        Me.Button5.TabIndex = 10
+        Me.Button5.Text = "Mute"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button6.Location = New System.Drawing.Point(1016, 80)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(146, 23)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "++"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'frmPlaySong
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.WindowText
-        Me.ClientSize = New System.Drawing.Size(888, 522)
+        Me.ClientSize = New System.Drawing.Size(1162, 522)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmPlaySong"
         Me.Text = "frmPlaySong"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
-        CType(Me.vlc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        CType(Me.vlc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -116,4 +224,13 @@ Partial Class frmPlaySong
     Friend WithEvents vlc As AxAXVLC.AxVLCPlugin2
     Friend WithEvents openSong As System.Windows.Forms.OpenFileDialog
     Friend WithEvents btnTurnOffSingerSound As System.Windows.Forms.Button
+    Friend WithEvents btnPause As System.Windows.Forms.Button
+    Friend WithEvents btnPrevious As System.Windows.Forms.Button
+    Friend WithEvents btnNext As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
 End Class
