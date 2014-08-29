@@ -10,3 +10,15 @@ C:\Users\ChDoeun\Documents\Visual Studio 2012\Projects\KTVManagement_System1\KTV
 C:\Users\ChDoeun\Documents\Visual Studio 2012\Projects\KTVManagement_System1\KTVManagement_System1\obj\Debug\KTVManagement_System1.exe
 C:\Users\ChDoeun\Documents\Visual Studio 2012\Projects\KTVManagement_System1\KTVManagement_System1\obj\Debug\KTVManagement_System1.xml
 C:\Users\ChDoeun\Documents\Visual Studio 2012\Projects\KTVManagement_System1\KTVManagement_System1\obj\Debug\KTVManagement_System1.pdb
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\bin\Debug\KTVManagement_System1.exe.config
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\obj\Debug\KTVManagement_System1.exe
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\obj\Debug\KTVManagement_System1.xml
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\obj\Debug\KTVManagement_System1.pdb
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\bin\Debug\KTVManagement_System1.exe
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\bin\Debug\KTVManagement_System1.pdb
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\bin\Debug\KTVManagement_System1.xml
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\bin\Debug\MySql.Data.Entity.EF5.dll
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\obj\Debug\KTVManagement_System.Form1.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\obj\Debug\KTVManagement_System.Resources.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement_System1\KTVManagement_System1\obj\Debug\KTVManagement_System1.vbproj.GenerateResource.Cache

@@ -8,7 +8,7 @@ Module Transactions
     Dim dataadapter As New MySqlDataAdapter
 
     Public Sub openConnection()
-        cnn.ConnectionString = ("server=localhost;user=root;password=123;database=KTVManagement")
+        cnn.ConnectionString = ("server=localhost;user=root;password=123456;database=KTVManagement")
         Try
             cnn.Open()
             MessageBox.Show("connected..")
