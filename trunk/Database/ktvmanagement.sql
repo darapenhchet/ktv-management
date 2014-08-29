@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : ktvManagement
-Source Server Version : 60004
+Source Server         : ktvmanagement
+Source Server Version : 50525
 Source Host           : localhost:3306
 Source Database       : ktvmanagement
 
 Target Server Type    : MYSQL
-Target Server Version : 60004
+Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2014-08-28 09:48:09
+Date: 2014-08-29 09:03:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,16 +20,17 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
-  `categoryId` int(11) NOT NULL,
+  `categoryId` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(50) DEFAULT NULL,
   `description` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`categoryId`),
-  CONSTRAINT `categories_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `songs` (`categoryId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`categoryId`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of categories
 -- ----------------------------
+INSERT INTO `categories` VALUES ('1', 'Modern', 'Modern Song in Cambodia');
+INSERT INTO `categories` VALUES ('2', 'POP', 'Pop Song in Cambodia');
 
 -- ----------------------------
 -- Table structure for guests
@@ -54,30 +55,34 @@ CREATE TABLE `guests` (
 -- ----------------------------
 DROP TABLE IF EXISTS `languages`;
 CREATE TABLE `languages` (
-  `languageId` int(11) NOT NULL,
+  `languageId` int(11) NOT NULL AUTO_INCREMENT,
   `language` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`languageId`),
-  CONSTRAINT `languages_ibfk_1` FOREIGN KEY (`languageId`) REFERENCES `songs` (`langaugeId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`languageId`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of languages
 -- ----------------------------
+INSERT INTO `languages` VALUES ('1', 'KHMER');
+INSERT INTO `languages` VALUES ('2', 'ENGLISH');
 
 -- ----------------------------
 -- Table structure for productions
 -- ----------------------------
 DROP TABLE IF EXISTS `productions`;
 CREATE TABLE `productions` (
-  `productionId` int(11) NOT NULL,
+  `productionId` int(11) NOT NULL AUTO_INCREMENT,
   `production` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`productionId`),
-  CONSTRAINT `productions_ibfk_1` FOREIGN KEY (`productionId`) REFERENCES `songs` (`productionId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`productionId`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of productions
 -- ----------------------------
+INSERT INTO `productions` VALUES ('2', 'RHM');
+INSERT INTO `productions` VALUES ('3', 'SUNDAY');
+INSERT INTO `productions` VALUES ('4', 'M');
+INSERT INTO `productions` VALUES ('5', 'TOWN');
 
 -- ----------------------------
 -- Table structure for rooms
@@ -121,34 +126,39 @@ CREATE TABLE `songdetails` (
   `songId` int(11) NOT NULL,
   KEY `singerId` (`singerId`),
   KEY `songId` (`songId`),
+  CONSTRAINT `songdetails_ibfk_2` FOREIGN KEY (`songId`) REFERENCES `songs` (`songid`),
   CONSTRAINT `songdetails_ibfk_1` FOREIGN KEY (`singerId`) REFERENCES `singers` (`singerId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of songdetails
 -- ----------------------------
+INSERT INTO `songdetails` VALUES ('1', '3');
 
 -- ----------------------------
 -- Table structure for songs
 -- ----------------------------
 DROP TABLE IF EXISTS `songs`;
 CREATE TABLE `songs` (
-  `songid` int(11) NOT NULL,
+  `songid` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL,
   `album` varchar(50) DEFAULT NULL,
   `categoryId` int(11) NOT NULL,
-  `langaugeId` int(11) NOT NULL,
+  `languageId` int(11) NOT NULL,
   `productionId` int(11) NOT NULL,
   PRIMARY KEY (`songid`),
   KEY `categoryId` (`categoryId`),
-  KEY `langaugeId` (`langaugeId`),
+  KEY `langaugeId` (`languageId`),
   KEY `productionId` (`productionId`),
-  CONSTRAINT `songs_ibfk_1` FOREIGN KEY (`songid`) REFERENCES `songdetails` (`songId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `songs_ibfk_3` FOREIGN KEY (`productionId`) REFERENCES `productions` (`productionId`),
+  CONSTRAINT `songs_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`categoryId`),
+  CONSTRAINT `songs_ibfk_2` FOREIGN KEY (`languageId`) REFERENCES `languages` (`languageId`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of songs
 -- ----------------------------
+INSERT INTO `songs` VALUES ('3', 'ចិត្តព្រៃផ្សៃ', '1', '1', '1', '2');
 
 -- ----------------------------
 -- Table structure for users
@@ -165,3 +175,43 @@ CREATE TABLE `users` (
 -- Records of users
 -- ----------------------------
 INSERT INTO `users` VALUES ('1', 'douen', '123');
+
+-- ----------------------------
+-- Procedure structure for spAddSinger
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `spAddSinger`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spAddSinger`(
+		singerId INT,
+		singerName VARCHAR(100),
+		gender VARCHAR(1)
+	)
+BEGIN
+	
+	INSERT INTO singers(singerId,singerName,gender)
+	VALUES(singerId,singerName,gender);
+
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Procedure structure for spAddSong
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `spAddSong`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spAddSong`(title VARCHAR(200),
+	singerId INT,
+	album VARCHAR(20),
+	categoryId INT,
+	productionId INT,
+	languageId INT)
+BEGIN
+	INSERT INTO songs(title,album,categoryId,productionId,languageId)
+	VALUES(title,album,categoryId,productionId,languageId);
+	
+	INSERT INTO songdetails(singerId,songId)
+	VALUES(singerId,LAST_INSERT_ID());
+END
+;;
+DELIMITER ;
