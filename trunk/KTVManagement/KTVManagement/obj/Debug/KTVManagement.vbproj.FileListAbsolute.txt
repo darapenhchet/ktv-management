@@ -1,1 +1,13 @@
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.exe.config
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.exe
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.pdb
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.xml
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\Interop.AXVLC.dll
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.vbproj.ResolveComReference.cache
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.Form1.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmPlaySong.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.Resources.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.vbproj.GenerateResource.Cache
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.xml
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.pdb
