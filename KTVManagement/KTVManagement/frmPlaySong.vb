@@ -77,14 +77,4 @@
 
     End Sub
 
-    Private Sub frmPlaySong_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Try
-
-        '    vlc.playlist.add("file:///" & "F:\សូមបងកោរពុកមាត់ (Jerk) Ros Serey Sothea - The Cambodian Vintage Music Archive.mpg")
-        'Catch Ex As Exception
-        '    vlc.playlist.items.clear()
-        '    Exit Sub
-        'End Try
-        'vlc.playlist.play()
-    End Sub
 End Class
