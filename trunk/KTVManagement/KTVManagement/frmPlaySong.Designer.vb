@@ -22,23 +22,26 @@ Partial Class frmPlaySong
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPlaySong))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnPause = New System.Windows.Forms.Button()
+        Me.btnPrevious = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
         Me.btnTurnOffSingerSound = New System.Windows.Forms.Button()
         Me.btnLoad = New System.Windows.Forms.Button()
         Me.btnPlay = New System.Windows.Forms.Button()
         Me.vlc = New AxAXVLC.AxVLCPlugin2()
         Me.openSong = New System.Windows.Forms.OpenFileDialog()
-        Me.btnNext = New System.Windows.Forms.Button()
-        Me.btnPrevious = New System.Windows.Forms.Button()
-        Me.btnPause = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.vlc, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,6 +59,7 @@ Partial Class frmPlaySong
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.ProgressBar1)
         Me.Panel2.Controls.Add(Me.Button6)
         Me.Panel2.Controls.Add(Me.Button5)
         Me.Panel2.Controls.Add(Me.Button4)
@@ -68,10 +72,100 @@ Partial Class frmPlaySong
         Me.Panel2.Controls.Add(Me.btnTurnOffSingerSound)
         Me.Panel2.Controls.Add(Me.btnLoad)
         Me.Panel2.Controls.Add(Me.btnPlay)
-        Me.Panel2.Location = New System.Drawing.Point(0, 416)
+        Me.Panel2.Location = New System.Drawing.Point(0, 357)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1159, 106)
+        Me.Panel2.Size = New System.Drawing.Size(1159, 165)
         Me.Panel2.TabIndex = 2
+        '
+        'Button6
+        '
+        Me.Button6.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button6.Location = New System.Drawing.Point(1016, 80)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(146, 23)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "++"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button5.Location = New System.Drawing.Point(1016, 28)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(146, 23)
+        Me.Button5.TabIndex = 10
+        Me.Button5.Text = "Mute"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button4.Location = New System.Drawing.Point(810, 80)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(180, 23)
+        Me.Button4.TabIndex = 9
+        Me.Button4.Text = "--"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button3.Location = New System.Drawing.Point(567, 83)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(180, 23)
+        Me.Button3.TabIndex = 8
+        Me.Button3.Text = ">>"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button2.Location = New System.Drawing.Point(810, 28)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(180, 23)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Stop"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button1.Location = New System.Drawing.Point(336, 80)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(180, 23)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Exit"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnPause
+        '
+        Me.btnPause.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.btnPause.Location = New System.Drawing.Point(567, 28)
+        Me.btnPause.Name = "btnPause"
+        Me.btnPause.Size = New System.Drawing.Size(180, 23)
+        Me.btnPause.TabIndex = 5
+        Me.btnPause.Text = "Pause"
+        Me.btnPause.UseVisualStyleBackColor = True
+        '
+        'btnPrevious
+        '
+        Me.btnPrevious.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.btnPrevious.Location = New System.Drawing.Point(336, 28)
+        Me.btnPrevious.Name = "btnPrevious"
+        Me.btnPrevious.Size = New System.Drawing.Size(180, 23)
+        Me.btnPrevious.TabIndex = 4
+        Me.btnPrevious.Text = "Previous"
+        Me.btnPrevious.UseVisualStyleBackColor = True
+        '
+        'btnNext
+        '
+        Me.btnNext.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.btnNext.Location = New System.Drawing.Point(120, 28)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(180, 23)
+        Me.btnNext.TabIndex = 3
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
         '
         'btnTurnOffSingerSound
         '
@@ -84,7 +178,7 @@ Partial Class frmPlaySong
         '
         'btnLoad
         '
-        Me.btnLoad.Location = New System.Drawing.Point(3, 3)
+        Me.btnLoad.Location = New System.Drawing.Point(0, 28)
         Me.btnLoad.Name = "btnLoad"
         Me.btnLoad.Size = New System.Drawing.Size(75, 23)
         Me.btnLoad.TabIndex = 1
@@ -110,95 +204,17 @@ Partial Class frmPlaySong
         Me.vlc.Size = New System.Drawing.Size(1162, 522)
         Me.vlc.TabIndex = 1
         '
-        'btnNext
+        'ProgressBar1
         '
-        Me.btnNext.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.btnNext.Location = New System.Drawing.Point(120, 28)
-        Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(180, 23)
-        Me.btnNext.TabIndex = 3
-        Me.btnNext.Text = "Next"
-        Me.btnNext.UseVisualStyleBackColor = True
+        Me.ProgressBar1.Location = New System.Drawing.Point(0, 3)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(1159, 23)
+        Me.ProgressBar1.TabIndex = 3
         '
-        'btnPrevious
+        'Timer1
         '
-        Me.btnPrevious.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.btnPrevious.Location = New System.Drawing.Point(336, 28)
-        Me.btnPrevious.Name = "btnPrevious"
-        Me.btnPrevious.Size = New System.Drawing.Size(180, 23)
-        Me.btnPrevious.TabIndex = 4
-        Me.btnPrevious.Text = "Previous"
-        Me.btnPrevious.UseVisualStyleBackColor = True
-        '
-        'btnPause
-        '
-        Me.btnPause.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.btnPause.Location = New System.Drawing.Point(567, 28)
-        Me.btnPause.Name = "btnPause"
-        Me.btnPause.Size = New System.Drawing.Size(180, 23)
-        Me.btnPause.TabIndex = 5
-        Me.btnPause.Text = "Pause"
-        Me.btnPause.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button1.Location = New System.Drawing.Point(336, 80)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(180, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Exit"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button2.Location = New System.Drawing.Point(810, 28)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(180, 23)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Stop"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button3.Location = New System.Drawing.Point(567, 83)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(180, 23)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = ">>"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button4.Location = New System.Drawing.Point(810, 80)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(180, 23)
-        Me.Button4.TabIndex = 9
-        Me.Button4.Text = "--"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button5.Location = New System.Drawing.Point(1016, 28)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(146, 23)
-        Me.Button5.TabIndex = 10
-        Me.Button5.Text = "Mute"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button6.Location = New System.Drawing.Point(1016, 80)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(146, 23)
-        Me.Button6.TabIndex = 11
-        Me.Button6.Text = "++"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 1
         '
         'frmPlaySong
         '
@@ -233,4 +249,6 @@ Partial Class frmPlaySong
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class
