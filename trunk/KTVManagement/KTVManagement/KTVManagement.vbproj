@@ -89,6 +89,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="ClsUser.vb" />
     <Compile Include="ClsUserTransaction.vb" />
     <Compile Include="frm.Designer.vb">

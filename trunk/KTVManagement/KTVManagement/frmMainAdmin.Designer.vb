@@ -31,7 +31,7 @@ Partial Class frmMainAdmin
         Me.btnReportInformation = New System.Windows.Forms.Button()
         Me.btnAboutUs = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblUsername = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnExitMain = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -152,22 +152,22 @@ Partial Class frmMainAdmin
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "KTV Management System"
         '
-        'Label2
+        'lblUsername
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Symbol", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(919, 7)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(228, 45)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Administrator"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.Font = New System.Drawing.Font("Segoe UI Symbol", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsername.ForeColor = System.Drawing.Color.Black
+        Me.lblUsername.Location = New System.Drawing.Point(919, 7)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(228, 45)
+        Me.lblUsername.TabIndex = 9
+        Me.lblUsername.Text = "Administrator"
+        Me.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.btnExitMain)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnAboutUs)
         Me.Panel1.Controls.Add(Me.btnReportInformation)
@@ -220,7 +220,7 @@ Partial Class frmMainAdmin
     Friend WithEvents btnReportInformation As System.Windows.Forms.Button
     Friend WithEvents btnAboutUs As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lblUsername As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents btnExitMain As System.Windows.Forms.Label
 End Class
