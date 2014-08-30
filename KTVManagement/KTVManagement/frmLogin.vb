@@ -16,18 +16,21 @@
         dsUser = userTransaction.getAllUsers()
         For Each row As DataRow In dsUser.Tables(0).Rows
             If row.Item(1).Equals(txtUsername.Text) And row.Item(2).Equals(txtPassword.Text) Then
+                UserLogin = New ClsUser
                 UserLogin.ID = row.Item(0)
                 UserLogin.Username = row.Item(1)
                 UserLogin.Password = row.Item(2)
                 UserLogin.Position = row.Item(3)
-                UserLogin.Photo = row.Item(4)
+                'If row.Item(4) Is Nothing Then
+                '    UserLogin.Photo = row.Item(4)
+                'End If
                 If row.Item(3).Equals(1) Then
                     frmMainAdmin.Show()
                 ElseIf row.Item(3).Equals(2) Then
                     frmMainStaff.Show()
                 ElseIf row.Item(3).Equals(3) Then
                 End If
-                Me.Close()
+                Me.Visible = False
             Else
                 closeConnection()
             End If
