@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2014-08-30 02:55:11
+Date: 2014-08-31 03:51:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -110,7 +110,7 @@ CREATE TABLE `singers` (
   `singerId` int(11) NOT NULL AUTO_INCREMENT,
   `singerName` varchar(50) NOT NULL,
   `gender` varchar(1) NOT NULL,
-  `photo` varchar(100) NOT NULL,
+  `photo` blob NOT NULL,
   PRIMARY KEY (`singerId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
@@ -171,14 +171,35 @@ CREATE TABLE `users` (
   `userid` int(11) NOT NULL,
   `username` varchar(50) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
-  `photo` varchar(100) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  `photo` blob,
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', 'douen', '123', null);
+INSERT INTO `users` VALUES ('1', 'douen', '123', '1', null);
+INSERT INTO `users` VALUES ('2', 'admin', 'admin', '1', null);
+
+-- ----------------------------
+-- Procedure structure for spAddNewUser
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `spAddNewUser`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spAddNewUser`(
+	userId INT,
+	username VARCHAR(50),
+	password VARCHAR(50),
+	position INT,
+	photo BLOB
+)
+BEGIN
+	INSERT INTO users(userId,username,password,position,photo)
+	VALUES(userID,username,password,position,photo);
+END
+;;
+DELIMITER ;
 
 -- ----------------------------
 -- Procedure structure for spAddSinger
@@ -213,6 +234,19 @@ BEGIN
 	
 	INSERT INTO songdetails(singerId,songId)
 	VALUES(singerId,LAST_INSERT_ID());
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Procedure structure for spGetAllUsers
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `spGetAllUsers`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spGetAllUsers`()
+BEGIN
+	SELECT UserId, username, password, position, photo
+	FROM users;
 END
 ;;
 DELIMITER ;
