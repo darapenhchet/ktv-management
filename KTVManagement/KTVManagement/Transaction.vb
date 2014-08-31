@@ -3,13 +3,13 @@ Imports MySql.Data.MySqlClient
 
 Module Transaction
 
-    Private con As MySqlConnection
+    Private _con As MySqlConnection
     Private _user As ClsUser
 
     Public Function openConnection() As Boolean
         Try
-            con = New MySqlConnection(ConfigurationManager.ConnectionStrings("MYSQLSERVER").ToString)
-            con.Open()
+            _con = New MySqlConnection(ConfigurationManager.ConnectionStrings("MYSQLSERVER").ToString)
+            _con.Open()
             Return True
         Catch ex As Exception
             MessageBox.Show("Connection failure!!! " + ex.Message)
@@ -17,9 +17,14 @@ Module Transaction
         End Try
     End Function
 
-    Public Function getConnection() As MySqlConnection
-        Return con
-    End Function
+    Public Property con As MySqlConnection
+        Get
+            Return _con
+        End Get
+        Set(value As MySqlConnection)
+            _con = value
+        End Set
+    End Property
 
     Public Function closeConnection() As Boolean
         Try

@@ -21,5 +21,4 @@ C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\De
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.xml
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.pdb
-C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.exe.CodeAnalysisLog.xml
-C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.exe.lastcodeanalysissucceeded
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmSingerInformation.resources
