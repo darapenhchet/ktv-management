@@ -25,7 +25,7 @@ Public Class frmSingerInformation
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim singer As New ClsSinger
         singer.Name = txtSingerName.Text
-        singer.Gender = cboGender.SelectedItem.ToString.Substring(0, 1)
+        singer.Gender = cboGender.SelectedItem.ToString
         singer.Photo = Photo
         If singerTransaction.addNewsinger(singer) = True Then
             dsSinger = singerTransaction.getAllSingers
@@ -71,5 +71,18 @@ Public Class frmSingerInformation
         txtID.Text = "Auto ID"
         txtSingerName.Text = ""
         cboGender.SelectedIndex = -1
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim singer As New ClsSinger
+        singer.ID = CInt(txtID.Text)
+        singer.Name = txtSingerName.Text
+        singer.Gender = cboGender.SelectedItem.ToString
+        singer.Photo = Photo
+        If singerTransaction.updateSinger(singer) = True Then
+            MessageBox.Show("You have been update successfully!!!")
+        Else
+            MessageBox.Show("You have not been update it!!!")
+        End If
     End Sub
 End Class
