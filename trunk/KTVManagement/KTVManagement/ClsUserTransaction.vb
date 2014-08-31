@@ -5,12 +5,9 @@ Public Class ClsUserTransaction
     ''' </summary>
     ''' <remarks></remarks>
     Private dsUser As New DataSet
-    Private con As New MySqlConnection
 
     Public Sub New()
-        If openConnection() = True Then
-            con = getConnection()
-        End If
+        openConnection()
     End Sub
 
     Public Function getAllUsers() As DataSet

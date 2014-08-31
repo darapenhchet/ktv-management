@@ -14,8 +14,11 @@
         Dim dsUser As New DataSet
         Dim userTransaction As New ClsUserTransaction
         dsUser = userTransaction.getAllUsers()
+        Dim found As Boolean = False
         For Each row As DataRow In dsUser.Tables(0).Rows
+            MessageBox.Show(row.Item(1) & vbTab & row.Item(2))
             If row.Item(1).Equals(txtUsername.Text) And row.Item(2).Equals(txtPassword.Text) Then
+                found = True
                 UserLogin = New ClsUser
                 UserLogin.ID = row.Item(0)
                 UserLogin.Username = row.Item(1)
@@ -31,10 +34,10 @@
                 ElseIf row.Item(3).Equals(3) Then
                 End If
                 Me.Visible = False
-            Else
-                closeConnection()
             End If
+
         Next
     End Sub
+
 
 End Class

@@ -90,6 +90,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="ClsSinger.vb" />
+    <Compile Include="ClsSingerTransaction.vb" />
     <Compile Include="ClsUser.vb" />
     <Compile Include="ClsUserTransaction.vb" />
     <Compile Include="frm.Designer.vb">
@@ -175,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlaySong.resx">
       <DependentUpon>frmPlaySong.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSingerInformation.resx">
+      <DependentUpon>frmSingerInformation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSongInformation.resx">
       <DependentUpon>frmSongInformation.vb</DependentUpon>
