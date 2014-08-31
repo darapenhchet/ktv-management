@@ -10,6 +10,8 @@
 
     Private Sub btnExitMain_Click(sender As Object, e As EventArgs) Handles btnExitMain.Click
         Me.Close()
+        closeConnection()
+        UserLogin = Nothing
         frmLogin.Visible = True
     End Sub
 

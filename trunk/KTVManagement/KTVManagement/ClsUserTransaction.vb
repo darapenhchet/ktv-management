@@ -38,6 +38,7 @@ Public Class ClsUserTransaction
                 Command.Parameters.AddWithValue("password", user.Password)
                 Command.Parameters.AddWithValue("position", user.Position)
                 Command.Parameters.AddWithValue("photo", user.Photo)
+
                 Command.ExecuteNonQuery()
                 Return True
             End Using
