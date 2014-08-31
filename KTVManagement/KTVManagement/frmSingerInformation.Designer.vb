@@ -22,8 +22,10 @@ Partial Class frmSingerInformation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnNew = New System.Windows.Forms.Button()
         Me.dgvSingerInformation = New System.Windows.Forms.DataGridView()
         Me.btnUpdate = New System.Windows.Forms.Button()
@@ -43,6 +45,8 @@ Partial Class frmSingerInformation
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.txtID)
+        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.btnNew)
         Me.Panel1.Controls.Add(Me.dgvSingerInformation)
         Me.Panel1.Controls.Add(Me.btnUpdate)
@@ -59,6 +63,22 @@ Partial Class frmSingerInformation
         Me.Panel1.Size = New System.Drawing.Size(794, 517)
         Me.Panel1.TabIndex = 0
         '
+        'txtID
+        '
+        Me.txtID.Location = New System.Drawing.Point(184, 79)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(305, 33)
+        Me.txtID.TabIndex = 14
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(87, 79)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 25)
+        Me.Label2.TabIndex = 13
+        Me.Label2.Text = "ID:"
+        '
         'btnNew
         '
         Me.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -74,14 +94,14 @@ Partial Class frmSingerInformation
         Me.dgvSingerInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSingerInformation.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
         Me.dgvSingerInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Symbol", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvSingerInformation.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Symbol", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSingerInformation.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvSingerInformation.GridColor = System.Drawing.Color.White
         Me.dgvSingerInformation.Location = New System.Drawing.Point(12, 297)
         Me.dgvSingerInformation.Name = "dgvSingerInformation"
@@ -126,14 +146,14 @@ Partial Class frmSingerInformation
         '
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.cboGender.Location = New System.Drawing.Point(187, 128)
+        Me.cboGender.Location = New System.Drawing.Point(184, 176)
         Me.cboGender.Name = "cboGender"
         Me.cboGender.Size = New System.Drawing.Size(190, 33)
         Me.cboGender.TabIndex = 7
         '
         'txtSingerName
         '
-        Me.txtSingerName.Location = New System.Drawing.Point(187, 79)
+        Me.txtSingerName.Location = New System.Drawing.Point(184, 127)
         Me.txtSingerName.Name = "txtSingerName"
         Me.txtSingerName.Size = New System.Drawing.Size(305, 33)
         Me.txtSingerName.TabIndex = 6
@@ -152,7 +172,7 @@ Partial Class frmSingerInformation
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(76, 131)
+        Me.Label4.Location = New System.Drawing.Point(73, 179)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 25)
         Me.Label4.TabIndex = 3
@@ -161,7 +181,7 @@ Partial Class frmSingerInformation
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(90, 79)
+        Me.Label3.Location = New System.Drawing.Point(87, 127)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 25)
         Me.Label3.TabIndex = 2
@@ -215,4 +235,6 @@ Partial Class frmSingerInformation
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnNew As System.Windows.Forms.Button
     Friend WithEvents OpenSingerPhoto As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents txtID As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

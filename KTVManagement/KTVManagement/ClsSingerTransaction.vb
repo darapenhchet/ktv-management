@@ -35,15 +35,39 @@ Public Class ClsSingerTransaction
             MessageBox.Show(ex.Message)
             Return False
         End Try
-        Return False
     End Function
 
     Public Function updateSinger(singer As ClsSinger) As Boolean
-        Return False
+        Try
+            Using Command As MySqlCommand = con.CreateCommand
+                Command.CommandText = "spUpdateSinger"
+                Command.CommandType = CommandType.StoredProcedure
+                Command.Parameters.AddWithValue("@singerID", singer.ID)
+                Command.Parameters.AddWithValue("@singerName", singer.Name)
+                Command.Parameters.AddWithValue("@gender", singer.Gender)
+                Command.Parameters.AddWithValue("@photo", getMemoryStream(singer.Photo).GetBuffer)
+                Command.ExecuteNonQuery()
+                Return True
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Return False
+        End Try
     End Function
 
     Public Function deleteSinger(id As Integer) As Boolean
-        Return False
+        Try
+            Using Command As MySqlCommand = con.CreateCommand
+                Command.CommandText = "spDeleteSinger"
+                Command.CommandType = CommandType.StoredProcedure
+                Command.Parameters.AddWithValue("@singerId", id)
+                Command.ExecuteNonQuery()
+                Return True
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Return False
+        End Try
     End Function
 
     Public Function searchSingerByKeyword(keyword As String) As DataSet
