@@ -40,8 +40,8 @@ Public Class ClsSingerTransaction
     Public Function updateSinger(singer As ClsSinger) As Boolean
         Try
             Using Command As MySqlCommand = con.CreateCommand
-                Command.CommandText = "spUpdateSinger"
-                Command.CommandType = CommandType.StoredProcedure
+                Command.CommandText = "UPDATE Singers SET singerName = @singerName, gender = @gender, photo = @photo WHERE singerID = @singerID"
+
                 Command.Parameters.AddWithValue("@singerID", singer.ID)
                 Command.Parameters.AddWithValue("@singerName", singer.Name)
                 Command.Parameters.AddWithValue("@gender", singer.Gender.Substring(0, 1))
