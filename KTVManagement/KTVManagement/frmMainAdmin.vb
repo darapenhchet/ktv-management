@@ -22,4 +22,8 @@
     Private Sub btnSingerInformation_Click(sender As Object, e As EventArgs) Handles btnSingerInformation.Click
         frmSingerInformation.Show()
     End Sub
+
+    Private Sub btnUserInformation_Click(sender As Object, e As EventArgs) Handles btnUserInformation.Click
+        frmUserInformation.Show()
+    End Sub
 End Class
