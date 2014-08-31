@@ -16,9 +16,9 @@ C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\De
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmSingerInformation.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmSongInformation.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmSplashScreen.resources
-C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUser.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.Resources.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.vbproj.GenerateResource.Cache
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.xml
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.pdb
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUserInformation.resources

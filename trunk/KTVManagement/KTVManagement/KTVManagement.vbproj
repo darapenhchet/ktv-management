@@ -151,12 +151,6 @@
     <Compile Include="frmSplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUser.Designer.vb">
-      <DependentUpon>frmUser.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmUser.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmUserInformation.Designer.vb">
       <DependentUpon>frmUserInformation.vb</DependentUpon>
     </Compile>
@@ -202,8 +196,8 @@
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUser.resx">
-      <DependentUpon>frmUser.vb</DependentUpon>
+    <EmbeddedResource Include="frmUserInformation.resx">
+      <DependentUpon>frmUserInformation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

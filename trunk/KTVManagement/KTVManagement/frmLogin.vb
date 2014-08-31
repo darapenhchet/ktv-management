@@ -11,6 +11,7 @@
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        openConnection()
         Dim dsUser As New DataSet
         Dim userTransaction As New ClsUserTransaction
         dsUser = userTransaction.getAllUsers()
@@ -26,13 +27,14 @@
                 'If row.Item(4) Is Nothing Then
                 '    UserLogin.Photo = row.Item(4)
                 'End If
-                If row.Item(3).Equals(1) Then
+                If row.Item(3).Equals("Admin") Then
+                    Me.Visible = False
                     frmMainAdmin.Show()
                 ElseIf row.Item(3).Equals(2) Then
                     frmMainStaff.Show()
                 ElseIf row.Item(3).Equals(3) Then
                 End If
-                Me.Visible = False
+
             End If
 
         Next

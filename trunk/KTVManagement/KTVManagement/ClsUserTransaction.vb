@@ -6,10 +6,6 @@ Public Class ClsUserTransaction
     ''' <remarks></remarks>
     Private dsUser As New DataSet
 
-    Public Sub New()
-        openConnection()
-    End Sub
-
     Public Function getAllUsers() As DataSet
         Dim sql As String = "spGetAllUsers"
         Try
