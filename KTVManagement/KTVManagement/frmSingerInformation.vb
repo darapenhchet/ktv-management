@@ -15,7 +15,8 @@ Public Class frmSingerInformation
         dgvSingerInformation.Columns(0).Width = 20
         dgvSingerInformation.Columns(1).Width = 100
         dgvSingerInformation.Columns(2).Width = 12
-        dgvSingerInformation.Columns(3).Width = -1
+        dgvSingerInformation.Columns(3).Width = 0
+
     End Sub
 
 
