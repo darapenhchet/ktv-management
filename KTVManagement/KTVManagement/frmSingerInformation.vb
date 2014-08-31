@@ -80,6 +80,7 @@ Public Class frmSingerInformation
         singer.Gender = cboGender.SelectedItem.ToString
         singer.Photo = Photo
         If singerTransaction.updateSinger(singer) = True Then
+            displaySingerInformation()
             MessageBox.Show("You have been update successfully!!!")
         Else
             MessageBox.Show("You have not been update it!!!")

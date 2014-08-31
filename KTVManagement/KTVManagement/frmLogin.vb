@@ -16,7 +16,6 @@
         dsUser = userTransaction.getAllUsers()
         Dim found As Boolean = False
         For Each row As DataRow In dsUser.Tables(0).Rows
-            MessageBox.Show(row.Item(1) & vbTab & row.Item(2))
             If row.Item(1).Equals(txtUsername.Text) And row.Item(2).Equals(txtPassword.Text) Then
                 found = True
                 UserLogin = New ClsUser
