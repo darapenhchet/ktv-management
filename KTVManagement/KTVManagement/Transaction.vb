@@ -45,4 +45,16 @@ Module Transaction
             _user = value
         End Set
     End Property
+
+    Public Function getArrayImage(pictureBoxName As PictureBox) As Byte()
+        Try
+            Using mStream As System.IO.MemoryStream = New System.IO.MemoryStream()
+                pictureBoxName.Image.Save(mStream, System.Drawing.Imaging.ImageFormat.Jpeg)
+                Return mStream.GetBuffer()
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Return Nothing
+        End Try
+    End Function
 End Module
