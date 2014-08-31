@@ -45,10 +45,6 @@ Public Class frmSingerInformation
         End If
     End Sub
 
-    Private Sub dgvSingerInformation_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSingerInformation.CellContentClick
-        
-    End Sub
-
     Private Sub dgvSingerInformation_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSingerInformation.CellClick
         Try
             txtID.Text = dgvSingerInformation.CurrentRow.Cells(0).Value
@@ -58,6 +54,7 @@ Public Class frmSingerInformation
             Else
                 cboGender.SelectedItem = "Female"
             End If
+            pbSingerPhoto.Image = dgvSingerInformation.CurrentRow.Cells(3).Value
         Catch ex As Exception
         End Try
     End Sub
