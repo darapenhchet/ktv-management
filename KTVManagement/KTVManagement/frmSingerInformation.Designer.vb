@@ -93,6 +93,7 @@ Partial Class frmSingerInformation
         '
         'dgvSingerInformation
         '
+        Me.dgvSingerInformation.AllowDrop = True
         Me.dgvSingerInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSingerInformation.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
         Me.dgvSingerInformation.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -123,6 +124,7 @@ Partial Class frmSingerInformation
         Me.dgvSingerInformation.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgvSingerInformation.RowTemplate.Height = 30
         Me.dgvSingerInformation.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvSingerInformation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvSingerInformation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvSingerInformation.Size = New System.Drawing.Size(805, 377)
         Me.dgvSingerInformation.TabIndex = 11
