@@ -8,8 +8,14 @@ Public Class frmSingerInformation
     Private Sub frmSingerInformation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Panel1.Left = (Me.Width - Panel1.Width) / 2
         Panel1.Top = (Me.Height - Panel1.Height) / 2
+
+
         dsSinger = singerTransaction.getAllSingers
         dgvSingerInformation.DataSource = dsSinger.Tables(0)
+        dgvSingerInformation.Columns(0).Width = 20
+        dgvSingerInformation.Columns(1).Width = 100
+        dgvSingerInformation.Columns(2).Width = 12
+        dgvSingerInformation.Columns(3).Width = -1
     End Sub
 
 
@@ -54,7 +60,11 @@ Public Class frmSingerInformation
             Else
                 cboGender.SelectedItem = "Female"
             End If
-            pbSingerPhoto.Image = dgvSingerInformation.CurrentRow.Cells(3).Value
+            Dim imageData As Byte() = CType(dgvSingerInformation.CurrentRow.Cells(3).Value, Byte())
+            If Not imageData Is Nothing Then
+                Dim ms As New System.IO.MemoryStream(imageData)
+                pbSingerPhoto.Image = Image.FromStream(ms)
+            End If
         Catch ex As Exception
         End Try
     End Sub
@@ -83,4 +93,5 @@ Public Class frmSingerInformation
             MessageBox.Show("You have not been update it!!!")
         End If
     End Sub
+
 End Class
