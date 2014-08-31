@@ -29,6 +29,7 @@ Public Class ClsSingerTransaction
                 Command.Parameters.AddWithValue("@gender", singer.Gender)
                 Command.Parameters.AddWithValue("@photo", getMemoryStream(singer.Photo).GetBuffer)
                 Command.ExecuteNonQuery()
+                Return True
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message)
