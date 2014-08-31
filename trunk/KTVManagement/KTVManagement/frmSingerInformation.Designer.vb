@@ -23,6 +23,7 @@ Partial Class frmSingerInformation
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -60,7 +61,7 @@ Partial Class frmSingerInformation
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(794, 517)
+        Me.Panel1.Size = New System.Drawing.Size(828, 688)
         Me.Panel1.TabIndex = 0
         '
         'txtID
@@ -94,23 +95,36 @@ Partial Class frmSingerInformation
         '
         Me.dgvSingerInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSingerInformation.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.dgvSingerInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSingerInformation.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Symbol", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HotTrack
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvSingerInformation.DefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvSingerInformation.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvSingerInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Symbol", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSingerInformation.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvSingerInformation.EnableHeadersVisualStyles = False
         Me.dgvSingerInformation.GridColor = System.Drawing.Color.White
         Me.dgvSingerInformation.Location = New System.Drawing.Point(12, 297)
         Me.dgvSingerInformation.Name = "dgvSingerInformation"
         Me.dgvSingerInformation.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvSingerInformation.RowHeadersVisible = False
         Me.dgvSingerInformation.RowHeadersWidth = 70
+        Me.dgvSingerInformation.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.dgvSingerInformation.RowTemplate.Height = 30
+        Me.dgvSingerInformation.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvSingerInformation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvSingerInformation.Size = New System.Drawing.Size(782, 217)
+        Me.dgvSingerInformation.Size = New System.Drawing.Size(805, 377)
         Me.dgvSingerInformation.TabIndex = 11
         '
         'btnUpdate
@@ -163,7 +177,7 @@ Partial Class frmSingerInformation
         '
         Me.pbSingerPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pbSingerPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbSingerPhoto.Location = New System.Drawing.Point(662, 79)
+        Me.pbSingerPhoto.Location = New System.Drawing.Point(549, 79)
         Me.pbSingerPhoto.Name = "pbSingerPhoto"
         Me.pbSingerPhoto.Size = New System.Drawing.Size(132, 146)
         Me.pbSingerPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -193,7 +207,7 @@ Partial Class frmSingerInformation
         Me.Label1.AutoSize = True
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Symbol", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(250, 9)
+        Me.Label1.Location = New System.Drawing.Point(282, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(304, 45)
         Me.Label1.TabIndex = 0
@@ -206,7 +220,7 @@ Partial Class frmSingerInformation
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(806, 519)
+        Me.ClientSize = New System.Drawing.Size(829, 700)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Segoe UI Symbol", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White

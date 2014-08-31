@@ -10,12 +10,13 @@ Public Class frmSingerInformation
         Panel1.Top = (Me.Height - Panel1.Height) / 2
 
 
-        dsSinger = singerTransaction.getAllSingers
-        dgvSingerInformation.DataSource = dsSinger.Tables(0)
-        dgvSingerInformation.Columns(0).Width = 20
-        dgvSingerInformation.Columns(1).Width = 100
-        dgvSingerInformation.Columns(2).Width = 12
-        dgvSingerInformation.Columns(3).Width = 0
+        'dsSinger = singerTransaction.getAllSingers
+        'dgvSingerInformation.DataSource = dsSinger.Tables(0)
+        'dgvSingerInformation.Columns(0).Width = 20
+        'dgvSingerInformation.Columns(1).Width = 100
+        'dgvSingerInformation.Columns(2).Width = 12
+        'dgvSingerInformation.Columns(3).Width = 0
+        displaySingerInformation()
 
     End Sub
 
@@ -73,12 +74,22 @@ Public Class frmSingerInformation
     Private Sub displaySingerInformation()
         dsSinger = singerTransaction.getAllSingers
         dgvSingerInformation.DataSource = dsSinger.Tables(0)
+        For Each column As DataGridViewColumn In dgvSingerInformation.Columns
+            column.Width = (dgvSingerInformation.Width - 4) / dgvSingerInformation.Columns.Count
+        Next
+
     End Sub
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
+        Clear()
+        txtSingerName.Focus()
+    End Sub
+
+    Private Sub Clear()
         txtID.Text = "Auto ID"
         txtSingerName.Text = ""
         cboGender.SelectedIndex = -1
+        pbSingerPhoto.Image = My.Resources.Photo
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
