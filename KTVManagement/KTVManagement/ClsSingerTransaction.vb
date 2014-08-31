@@ -26,7 +26,7 @@ Public Class ClsSingerTransaction
                 Command.CommandText = "spAddSinger"
                 Command.CommandType = CommandType.StoredProcedure
                 Command.Parameters.AddWithValue("@singerName", singer.Name)
-                Command.Parameters.AddWithValue("@gender", singer.Gender)
+                Command.Parameters.AddWithValue("@gender", singer.Gender.Substring(0, 1))
                 Command.Parameters.AddWithValue("@photo", getMemoryStream(singer.Photo).GetBuffer)
                 Command.ExecuteNonQuery()
                 Return True
@@ -44,7 +44,7 @@ Public Class ClsSingerTransaction
                 Command.CommandType = CommandType.StoredProcedure
                 Command.Parameters.AddWithValue("@singerID", singer.ID)
                 Command.Parameters.AddWithValue("@singerName", singer.Name)
-                Command.Parameters.AddWithValue("@gender", singer.Gender)
+                Command.Parameters.AddWithValue("@gender", singer.Gender.Substring(0, 1))
                 Command.Parameters.AddWithValue("@photo", getMemoryStream(singer.Photo).GetBuffer)
                 Command.ExecuteNonQuery()
                 Return True
