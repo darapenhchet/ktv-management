@@ -22,144 +22,137 @@ Partial Class frmSingerInformation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnNew = New System.Windows.Forms.Button()
         Me.dgvSingerInformation = New System.Windows.Forms.DataGridView()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.cboGender = New System.Windows.Forms.ComboBox()
+        Me.txtSingerName = New System.Windows.Forms.TextBox()
+        Me.pbSingerPhoto = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.OpenSingerPhoto = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvSingerInformation, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbSingerPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.btnNew)
         Me.Panel1.Controls.Add(Me.dgvSingerInformation)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.btnUpdate)
+        Me.Panel1.Controls.Add(Me.btnDelete)
+        Me.Panel1.Controls.Add(Me.btnSave)
+        Me.Panel1.Controls.Add(Me.cboGender)
+        Me.Panel1.Controls.Add(Me.txtSingerName)
+        Me.Panel1.Controls.Add(Me.pbSingerPhoto)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(805, 517)
+        Me.Panel1.Size = New System.Drawing.Size(794, 517)
         Me.Panel1.TabIndex = 0
         '
-        'Button4
+        'btnNew
         '
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(141, 238)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(130, 40)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "New"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNew.Location = New System.Drawing.Point(141, 238)
+        Me.btnNew.Name = "btnNew"
+        Me.btnNew.Size = New System.Drawing.Size(130, 40)
+        Me.btnNew.TabIndex = 12
+        Me.btnNew.Text = "New"
+        Me.btnNew.UseVisualStyleBackColor = True
         '
         'dgvSingerInformation
         '
         Me.dgvSingerInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSingerInformation.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
         Me.dgvSingerInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Symbol", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvSingerInformation.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Symbol", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSingerInformation.DefaultCellStyle = DataGridViewCellStyle4
         Me.dgvSingerInformation.GridColor = System.Drawing.Color.White
         Me.dgvSingerInformation.Location = New System.Drawing.Point(12, 297)
         Me.dgvSingerInformation.Name = "dgvSingerInformation"
         Me.dgvSingerInformation.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvSingerInformation.RowHeadersVisible = False
         Me.dgvSingerInformation.RowHeadersWidth = 70
         Me.dgvSingerInformation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvSingerInformation.Size = New System.Drawing.Size(782, 217)
         Me.dgvSingerInformation.TabIndex = 11
         '
-        'Button3
+        'btnUpdate
         '
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(549, 238)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(130, 40)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "Update"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdate.Location = New System.Drawing.Point(549, 238)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(130, 40)
+        Me.btnUpdate.TabIndex = 10
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnDelete
         '
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(413, 238)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(130, 40)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDelete.Location = New System.Drawing.Point(413, 238)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(130, 40)
+        Me.btnDelete.TabIndex = 9
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnSave
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(277, 238)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 40)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Location = New System.Drawing.Point(277, 238)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(130, 40)
+        Me.btnSave.TabIndex = 8
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'cboGender
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(187, 179)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(190, 33)
-        Me.ComboBox1.TabIndex = 7
+        Me.cboGender.FormattingEnabled = True
+        Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.cboGender.Location = New System.Drawing.Point(187, 128)
+        Me.cboGender.Name = "cboGender"
+        Me.cboGender.Size = New System.Drawing.Size(190, 33)
+        Me.cboGender.TabIndex = 7
         '
-        'TextBox2
+        'txtSingerName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(187, 129)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(305, 33)
-        Me.TextBox2.TabIndex = 6
+        Me.txtSingerName.Location = New System.Drawing.Point(187, 79)
+        Me.txtSingerName.Name = "txtSingerName"
+        Me.txtSingerName.Size = New System.Drawing.Size(305, 33)
+        Me.txtSingerName.TabIndex = 6
         '
-        'TextBox1
+        'pbSingerPhoto
         '
-        Me.TextBox1.Location = New System.Drawing.Point(187, 79)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(190, 33)
-        Me.TextBox1.TabIndex = 5
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(616, 79)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(132, 133)
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
+        Me.pbSingerPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbSingerPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbSingerPhoto.Location = New System.Drawing.Point(662, 79)
+        Me.pbSingerPhoto.Name = "pbSingerPhoto"
+        Me.pbSingerPhoto.Size = New System.Drawing.Size(132, 146)
+        Me.pbSingerPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbSingerPhoto.TabIndex = 4
+        Me.pbSingerPhoto.TabStop = False
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(76, 182)
+        Me.Label4.Location = New System.Drawing.Point(76, 131)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 25)
         Me.Label4.TabIndex = 3
@@ -168,20 +161,11 @@ Partial Class frmSingerInformation
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(90, 129)
+        Me.Label3.Location = New System.Drawing.Point(90, 79)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 25)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Name:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(124, 79)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 25)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "ID:"
         '
         'Label1
         '
@@ -214,22 +198,21 @@ Partial Class frmSingerInformation
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgvSingerInformation, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbSingerPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents dgvSingerInformation As System.Windows.Forms.DataGridView
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents btnUpdate As System.Windows.Forms.Button
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents cboGender As System.Windows.Forms.ComboBox
+    Friend WithEvents txtSingerName As System.Windows.Forms.TextBox
+    Friend WithEvents pbSingerPhoto As System.Windows.Forms.PictureBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents btnNew As System.Windows.Forms.Button
+    Friend WithEvents OpenSingerPhoto As System.Windows.Forms.OpenFileDialog
 End Class

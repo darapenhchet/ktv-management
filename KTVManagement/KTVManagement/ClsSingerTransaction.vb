@@ -21,6 +21,19 @@ Public Class ClsSingerTransaction
     End Function
 
     Public Function addNewsinger(singer As ClsSinger) As Boolean
+        Try
+            Using Command As MySqlCommand = con.CreateCommand
+                Command.CommandText = "spAddSinger"
+                Command.CommandType = CommandType.StoredProcedure
+                Command.Parameters.AddWithValue("@singerName", singer.Name)
+                Command.Parameters.AddWithValue("@gender", singer.Gender)
+                Command.Parameters.AddWithValue("@photo", getMemoryStream(singer.Photo).GetBuffer)
+                Command.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Return False
+        End Try
         Return False
     End Function
 

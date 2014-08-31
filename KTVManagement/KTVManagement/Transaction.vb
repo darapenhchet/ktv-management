@@ -46,11 +46,11 @@ Module Transaction
         End Set
     End Property
 
-    Public Function getArrayImage(pictureBoxName As PictureBox) As Byte()
+    Public Function getMemoryStream(FileName As String) As System.IO.MemoryStream
         Try
             Using mStream As System.IO.MemoryStream = New System.IO.MemoryStream()
-                pictureBoxName.Image.Save(mStream, System.Drawing.Imaging.ImageFormat.Jpeg)
-                Return mStream.GetBuffer()
+                Image.FromFile(FileName).Save(mStream, System.Drawing.Imaging.ImageFormat.Jpeg)
+                Return mStream
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message)
