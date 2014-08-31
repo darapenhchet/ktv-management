@@ -49,7 +49,7 @@ Module Transaction
     Public Function getMemoryStream(FileName As String) As System.IO.MemoryStream
         Try
             Using mStream As System.IO.MemoryStream = New System.IO.MemoryStream()
-                Image.FromFile(FileName).Save(mStream, System.Drawing.Imaging.ImageFormat.Jpeg)
+                Image.FromFile(FileName).Save(mStream, Image.FromFile(FileName).RawFormat)
                 Return mStream
             End Using
         Catch ex As Exception
