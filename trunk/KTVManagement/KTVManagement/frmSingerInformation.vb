@@ -36,10 +36,6 @@ Public Class frmSingerInformation
         End If
     End Sub
 
-    Private Sub cboGender_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboGender.SelectedIndexChanged
-        MessageBox.Show(cboGender.SelectedItem)
-    End Sub
-
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If singerTransaction.deleteSinger(CInt(txtID.Text)) = True Then
             displaySingerInformation()
@@ -69,5 +65,11 @@ Public Class frmSingerInformation
     Private Sub displaySingerInformation()
         dsSinger = singerTransaction.getAllSingers
         dgvSingerInformation.DataSource = dsSinger.Tables(0)
+    End Sub
+
+    Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
+        txtID.Text = "Auto ID"
+        txtSingerName.Text = ""
+        cboGender.SelectedIndex = -1
     End Sub
 End Class
