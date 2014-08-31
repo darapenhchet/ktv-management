@@ -28,6 +28,8 @@ Public Class frmSingerInformation
         singer.Gender = cboGender.SelectedItem.ToString.Substring(0, 1)
         singer.Photo = Photo
         If singerTransaction.addNewsinger(singer) = True Then
+            dsSinger = singerTransaction.getAllSingers
+            dgvSingerInformation.DataSource = dsSinger.Tables(0)
             MessageBox.Show("You have been inserted!!!")
         Else
             MessageBox.Show("You have not been inserted!!!")
@@ -40,8 +42,7 @@ Public Class frmSingerInformation
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If singerTransaction.deleteSinger(CInt(txtID.Text)) = True Then
-            dsSinger = singerTransaction.getAllSingers
-            dgvSingerInformation.DataSource = dsSinger.Tables(0)
+            displaySingerInformation()
             MessageBox.Show("You have been delete successfully!!!")
         Else
             MessageBox.Show("You have not been delete failure")
@@ -63,5 +64,10 @@ Public Class frmSingerInformation
             End If
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub displaySingerInformation()
+        dsSinger = singerTransaction.getAllSingers
+        dgvSingerInformation.DataSource = dsSinger.Tables(0)
     End Sub
 End Class

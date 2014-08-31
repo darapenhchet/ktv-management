@@ -58,8 +58,7 @@ Public Class ClsSingerTransaction
     Public Function deleteSinger(id As Integer) As Boolean
         Try
             Using Command As MySqlCommand = con.CreateCommand
-                Command.CommandText = "spDeleteSinger"
-                Command.CommandType = CommandType.StoredProcedure
+                Command.CommandText = "DELETE FROM Singers WHERE singerId = @singerId"
                 Command.Parameters.AddWithValue("@singerId", id)
                 Command.ExecuteNonQuery()
                 Return True
@@ -68,6 +67,7 @@ Public Class ClsSingerTransaction
             MessageBox.Show(ex.Message)
             Return False
         End Try
+
     End Function
 
     Public Function searchSingerByKeyword(keyword As String) As DataSet
