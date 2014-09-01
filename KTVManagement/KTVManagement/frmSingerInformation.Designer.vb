@@ -69,13 +69,13 @@ Partial Class frmSingerInformation
         Me.txtID.Location = New System.Drawing.Point(184, 79)
         Me.txtID.Name = "txtID"
         Me.txtID.ReadOnly = True
-        Me.txtID.Size = New System.Drawing.Size(190, 33)
+        Me.txtID.Size = New System.Drawing.Size(305, 33)
         Me.txtID.TabIndex = 14
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(87, 79)
+        Me.Label2.Location = New System.Drawing.Point(107, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(37, 25)
         Me.Label2.TabIndex = 13
@@ -165,7 +165,7 @@ Partial Class frmSingerInformation
         Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
         Me.cboGender.Location = New System.Drawing.Point(184, 176)
         Me.cboGender.Name = "cboGender"
-        Me.cboGender.Size = New System.Drawing.Size(190, 33)
+        Me.cboGender.Size = New System.Drawing.Size(305, 33)
         Me.cboGender.TabIndex = 7
         '
         'txtSingerName
@@ -189,7 +189,7 @@ Partial Class frmSingerInformation
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(73, 179)
+        Me.Label4.Location = New System.Drawing.Point(59, 179)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 25)
         Me.Label4.TabIndex = 3
@@ -198,7 +198,7 @@ Partial Class frmSingerInformation
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(87, 127)
+        Me.Label3.Location = New System.Drawing.Point(73, 127)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 25)
         Me.Label3.TabIndex = 2

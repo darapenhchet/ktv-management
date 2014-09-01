@@ -71,7 +71,18 @@
         End If
     End Sub
 
-    Private Sub dgvUserInformation_RowStateChanged(sender As Object, e As DataGridViewRowStateChangedEventArgs) Handles dgvUserInformation.RowStateChanged
+    Private Sub dgvUserInformation_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvUserInformation.CellClick
+        Try
+            txtID.Text = dgvUserInformation.CurrentRow.Cells(0).Value
+            txtUsername.Text = dgvUserInformation.CurrentRow.Cells(1).Value
+            txtPassword.Text = dgvUserInformation.CurrentRow.Cells(2).Value
 
+            Dim imageData As Byte() = CType(dgvUserInformation.CurrentRow.Cells(3).Value, Byte())
+            If Not imageData Is Nothing Then
+                Dim ms As New System.IO.MemoryStream(imageData)
+                pbUser.Image = Image.FromStream(ms)
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
 End Class
