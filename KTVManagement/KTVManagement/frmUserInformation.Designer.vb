@@ -22,8 +22,14 @@ Partial Class frmUserInformation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUserInformation))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dgvUserInformation = New System.Windows.Forms.DataGridView()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.cboPosition = New System.Windows.Forms.ComboBox()
         Me.pbUser = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
@@ -34,14 +40,10 @@ Partial Class frmUserInformation
         Me.btnNew = New System.Windows.Forms.Button()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cboPosition = New System.Windows.Forms.ComboBox()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.dgvUserInformation = New System.Windows.Forms.DataGridView()
+        Me.OpenUserPhoto = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
-        CType(Me.pbUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvUserInformation, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -66,6 +68,67 @@ Partial Class frmUserInformation
         Me.Panel1.Size = New System.Drawing.Size(1000, 504)
         Me.Panel1.TabIndex = 0
         '
+        'dgvUserInformation
+        '
+        Me.dgvUserInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvUserInformation.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.dgvUserInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvUserInformation.EnableHeadersVisualStyles = False
+        Me.dgvUserInformation.GridColor = System.Drawing.Color.White
+        Me.dgvUserInformation.Location = New System.Drawing.Point(178, 326)
+        Me.dgvUserInformation.Name = "dgvUserInformation"
+        Me.dgvUserInformation.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvUserInformation.RowHeadersVisible = False
+        Me.dgvUserInformation.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        Me.dgvUserInformation.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvUserInformation.RowTemplate.Height = 30
+        Me.dgvUserInformation.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvUserInformation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvUserInformation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvUserInformation.Size = New System.Drawing.Size(673, 175)
+        Me.dgvUserInformation.TabIndex = 15
+        '
+        'btnDelete
+        '
+        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDelete.Location = New System.Drawing.Point(662, 271)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(130, 40)
+        Me.btnDelete.TabIndex = 14
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdate.Location = New System.Drawing.Point(526, 271)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(130, 40)
+        Me.btnUpdate.TabIndex = 13
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Location = New System.Drawing.Point(390, 271)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(130, 40)
+        Me.btnSave.TabIndex = 12
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'cboPosition
+        '
+        Me.cboPosition.FormattingEnabled = True
+        Me.cboPosition.Items.AddRange(New Object() {"Admin", "Staff"})
+        Me.cboPosition.Location = New System.Drawing.Point(337, 222)
+        Me.cboPosition.Name = "cboPosition"
+        Me.cboPosition.Size = New System.Drawing.Size(149, 33)
+        Me.cboPosition.TabIndex = 11
+        '
         'pbUser
         '
         Me.pbUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -73,6 +136,7 @@ Partial Class frmUserInformation
         Me.pbUser.Location = New System.Drawing.Point(655, 105)
         Me.pbUser.Name = "pbUser"
         Me.pbUser.Size = New System.Drawing.Size(137, 150)
+        Me.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbUser.TabIndex = 10
         Me.pbUser.TabStop = False
         '
@@ -89,6 +153,7 @@ Partial Class frmUserInformation
         '
         Me.txtID.Location = New System.Drawing.Point(337, 105)
         Me.txtID.Name = "txtID"
+        Me.txtID.ReadOnly = True
         Me.txtID.Size = New System.Drawing.Size(149, 33)
         Me.txtID.TabIndex = 8
         '
@@ -115,6 +180,7 @@ Partial Class frmUserInformation
         '
         Me.txtPassword.Location = New System.Drawing.Point(337, 183)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(294, 33)
         Me.txtPassword.TabIndex = 4
         '
@@ -154,62 +220,6 @@ Partial Class frmUserInformation
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "User Management"
         '
-        'cboPosition
-        '
-        Me.cboPosition.FormattingEnabled = True
-        Me.cboPosition.Location = New System.Drawing.Point(337, 222)
-        Me.cboPosition.Name = "cboPosition"
-        Me.cboPosition.Size = New System.Drawing.Size(149, 33)
-        Me.cboPosition.TabIndex = 11
-        '
-        'btnSave
-        '
-        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Location = New System.Drawing.Point(390, 271)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(130, 40)
-        Me.btnSave.TabIndex = 12
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = True
-        '
-        'btnUpdate
-        '
-        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpdate.Location = New System.Drawing.Point(526, 271)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(130, 40)
-        Me.btnUpdate.TabIndex = 13
-        Me.btnUpdate.Text = "Update"
-        Me.btnUpdate.UseVisualStyleBackColor = True
-        '
-        'btnDelete
-        '
-        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDelete.Location = New System.Drawing.Point(662, 271)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(130, 40)
-        Me.btnDelete.TabIndex = 14
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
-        '
-        'dgvUserInformation
-        '
-        Me.dgvUserInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
-        Me.dgvUserInformation.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.dgvUserInformation.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvUserInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvUserInformation.EnableHeadersVisualStyles = False
-        Me.dgvUserInformation.GridColor = System.Drawing.Color.White
-        Me.dgvUserInformation.Location = New System.Drawing.Point(166, 326)
-        Me.dgvUserInformation.Name = "dgvUserInformation"
-        Me.dgvUserInformation.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvUserInformation.RowHeadersVisible = False
-        Me.dgvUserInformation.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.dgvUserInformation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgvUserInformation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvUserInformation.Size = New System.Drawing.Size(673, 175)
-        Me.dgvUserInformation.TabIndex = 15
-        '
         'frmUserInformation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
@@ -227,8 +237,8 @@ Partial Class frmUserInformation
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.pbUser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvUserInformation, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbUser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -248,4 +258,5 @@ Partial Class frmUserInformation
     Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents btnUpdate As System.Windows.Forms.Button
     Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents OpenUserPhoto As System.Windows.Forms.OpenFileDialog
 End Class

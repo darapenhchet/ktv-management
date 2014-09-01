@@ -36,8 +36,7 @@ Public Class frmSingerInformation
         singer.Gender = cboGender.SelectedItem.ToString
         singer.Photo = Photo
         If singerTransaction.addNewsinger(singer) = True Then
-            dsSinger = singerTransaction.getAllSingers
-            dgvSingerInformation.DataSource = dsSinger.Tables(0)
+            displaySingerInformation()
             MessageBox.Show("You have been inserted!!!")
         Else
             MessageBox.Show("You have not been inserted!!!")
