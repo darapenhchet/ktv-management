@@ -149,4 +149,7 @@
         AAAAAACDzz1seCP1S8G8es68R4C7AAAAD//Z
 </value>
   </data>
+  <metadata name="OpenUserPhoto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

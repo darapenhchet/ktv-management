@@ -29,16 +29,15 @@ Public Class ClsUserTransaction
             Using Command As MySqlCommand = con.CreateCommand
                 Command.CommandText = sql
                 Command.CommandType = CommandType.StoredProcedure
-                Command.Parameters.AddWithValue("userId", user.ID)
                 Command.Parameters.AddWithValue("username", user.Username)
                 Command.Parameters.AddWithValue("password", user.Password)
                 Command.Parameters.AddWithValue("position", user.Position)
-                Command.Parameters.AddWithValue("photo", user.Photo)
-
+                Command.Parameters.AddWithValue("photo", getMemoryStream(user.Photo).GetBuffer)
                 Command.ExecuteNonQuery()
                 Return True
             End Using
         Catch ex As Exception
+            MessageBox.Show(ex.Message)
             Return False
         End Try
     End Function
