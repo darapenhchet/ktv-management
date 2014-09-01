@@ -76,8 +76,9 @@
             txtID.Text = dgvUserInformation.CurrentRow.Cells(0).Value
             txtUsername.Text = dgvUserInformation.CurrentRow.Cells(1).Value
             txtPassword.Text = dgvUserInformation.CurrentRow.Cells(2).Value
+            cboPosition.SelectedItem = dgvUserInformation.CurrentRow.Cells(3).Value
 
-            Dim imageData As Byte() = CType(dgvUserInformation.CurrentRow.Cells(3).Value, Byte())
+            Dim imageData As Byte() = CType(dgvUserInformation.CurrentRow.Cells(4).Value, Byte())
             If Not imageData Is Nothing Then
                 Dim ms As New System.IO.MemoryStream(imageData)
                 pbUser.Image = Image.FromStream(ms)

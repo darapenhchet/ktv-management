@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.KTVManagement.frmPlaySong
+            Me.MainForm = Global.KTVManagement.frmSplashScreen
         End Sub
     End Class
 End Namespace
