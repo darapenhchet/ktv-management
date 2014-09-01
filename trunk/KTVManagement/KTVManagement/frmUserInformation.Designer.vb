@@ -22,7 +22,7 @@ Partial Class frmUserInformation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUserInformation))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgvUserInformation = New System.Windows.Forms.DataGridView()
@@ -80,9 +80,9 @@ Partial Class frmUserInformation
         Me.dgvUserInformation.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvUserInformation.RowHeadersVisible = False
         Me.dgvUserInformation.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.dgvUserInformation.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.dgvUserInformation.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvUserInformation.RowTemplate.Height = 30
         Me.dgvUserInformation.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvUserInformation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical

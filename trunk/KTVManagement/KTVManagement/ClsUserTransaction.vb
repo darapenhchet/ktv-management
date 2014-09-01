@@ -41,4 +41,40 @@ Public Class ClsUserTransaction
             Return False
         End Try
     End Function
+
+    Public Function updateUser(user As ClsUser) As Boolean
+        Dim sql As String = "UPDATE users SET username= @username, password=@password, position = @position, photo= @photo WHERE  userId = @userID"
+        Try
+            Using Command As MySqlCommand = con.CreateCommand
+                Command.CommandText = sql
+                Command.Parameters.AddWithValue("@username", user.Username)
+                Command.Parameters.AddWithValue("@password", user.Password)
+                Command.Parameters.AddWithValue("@position", user.Password)
+                Command.Parameters.AddWithValue("@photo", getMemoryStream(user.Photo).GetBuffer)
+                Command.Parameters.AddWithValue("@userId", user.ID)
+                Command.ExecuteNonQuery()
+                Return True
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Return False
+        End Try
+    End Function
+
+    Public Function deleteUser(id As Integer) As Boolean
+        Dim sql As String = "DELETE users WHERE userId = @userID"
+        Try
+            Using Command As MySqlCommand = con.CreateCommand
+                Command.CommandText = sql
+                Command.Parameters.AddWithValue("@userID", id)
+                Command.ExecuteNonQuery()
+                Return True
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Return False
+        End Try
+        Return False
+    End Function
+
 End Class
