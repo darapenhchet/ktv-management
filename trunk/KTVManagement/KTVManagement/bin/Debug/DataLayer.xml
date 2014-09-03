@@ -1,0 +1,68 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DataLayer
+</name>
+</assembly>
+<members>
+<member name="F:DataLayer.ClsSingerTransaction.dsSinger">
+	<summary>
+ dsSinger is a Dataset of the Singer Table
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DataLayer.ClsSingerTransaction.getAllSingers">
+	<summary>
+ getAllSingers Function
+ </summary>
+	<returns>DataSet</returns>
+	<remarks>This function is used to get all singers from the table Singers</remarks>
+</member><member name="M:DataLayer.ClsSingerTransaction.addNewsinger(DataLayer.ClsSinger)">
+	<summary>
+ addNewSinger Function
+ </summary>
+	<param name="singer"></param>
+	<returns>Boolean</returns>
+	<remarks>This function is used to add a new singer </remarks>
+</member><member name="M:DataLayer.ClsSingerTransaction.updateSinger(DataLayer.ClsSinger)">
+	<summary>
+ updateSinger Function
+ </summary>
+	<param name="singer"></param>
+	<returns>Boolean</returns>
+	<remarks>This function is used to update the singer by specified ID</remarks>
+</member><member name="M:DataLayer.ClsSingerTransaction.deleteSinger(System.Int32)">
+	<summary>
+ deleteSinger Function
+ </summary>
+	<param name="id"></param>
+	<returns>Boolean</returns>
+	<remarks>This function is used to delete a user </remarks>
+</member><member name="M:DataLayer.ClsSingerTransaction.searchSingerByKeyword(System.String)">
+	<summary>
+ searchSingerByKeyword
+ </summary>
+	<param name="keyword"></param>
+	<returns>Dataset</returns>
+	<remarks></remarks>
+</member><member name="P:DataLayer.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:DataLayer.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:DataLayer.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:DataLayer.ClsUserTransaction.dsUser">
+	<summary>
+ dsUser for storing the record of the users
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
