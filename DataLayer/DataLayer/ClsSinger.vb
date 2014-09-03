@@ -3,7 +3,7 @@
     Private _ID As Integer
     Private _Name As String
     Private _Gender As String
-    Private _Photo As String
+    Private _Photo As Byte()
 
     Public Property ID() As Integer
         Get
@@ -32,11 +32,11 @@
         End Set
     End Property
 
-    Public Property Photo() As String
+    Public Property Photo() As Byte()
         Get
             Return _Photo
         End Get
-        Set(value As String)
+        Set(value As Byte())
             _Photo = value
         End Set
     End Property

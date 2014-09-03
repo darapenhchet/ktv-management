@@ -1,56 +1,57 @@
 ﻿Imports System.Configuration
 Imports MySql.Data.MySqlClient
+Imports DataLayer
 
 Module Transaction
 
-    Private _con As MySqlConnection
-    Private _user As ClsUser
+    'Private _con As MySqlConnection
+    'Private _user As ClsUser
 
-    Public Function openConnection() As Boolean
-        Try
-            _con = New MySqlConnection(ConfigurationManager.ConnectionStrings("MYSQLSERVER").ToString)
-            _con.Open()
-            Return True
-        Catch ex As Exception
-            MessageBox.Show("Connection failure!!! " + ex.Message)
-            Return False
-        End Try
-    End Function
+    'Public Function openConnection() As Boolean
+    '    Try
+    '        _con = New MySqlConnection(ConfigurationManager.ConnectionStrings("MYSQLSERVER").ToString)
+    '        _con.Open()
+    '        Return True
+    '    Catch ex As Exception
+    '        ''MessageBox.Show("Connection failure!!! " + ex.Message)
+    '        Return False
+    '    End Try
+    'End Function
 
-    Public Property con As MySqlConnection
-        Get
-            Return _con
-        End Get
-        Set(value As MySqlConnection)
-            _con = value
-        End Set
-    End Property
+    'Public Property con As MySqlConnection
+    '    Get
+    '        Return _con
+    '    End Get
+    '    Set(value As MySqlConnection)
+    '        _con = value
+    '    End Set
+    'End Property
 
-    Public Function closeConnection() As Boolean
-        Try
-            con.Close()
-            con = Nothing
-            Return True
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-            Return False
-        End Try
-    End Function
+    'Public Function closeConnection() As Boolean
+    '    Try
+    '        con.Close()
+    '        con = Nothing
+    '        Return True
+    '    Catch ex As Exception
+    '        'MessageBox.Show(ex.Message)
+    '        Return False
+    '    End Try
+    'End Function
 
-    Public Property UserLogin() As ClsUser
-        Get
-            Return _user
-        End Get
-        Set(value As ClsUser)
-            _user = value
-        End Set
-    End Property
+    'Public Property UserLogin() As ClsUser
+    '    Get
+    '        Return _user
+    '    End Get
+    '    Set(value As ClsUser)
+    '        _user = value
+    '    End Set
+    'End Property
 
-    Public Function getMemoryStream(FileName As String) As System.IO.MemoryStream
+    Public Function getMemoryStream(FileName As String) As Byte()
         Try
             Using mStream As System.IO.MemoryStream = New System.IO.MemoryStream()
                 Image.FromFile(FileName).Save(mStream, Image.FromFile(FileName).RawFormat)
-                Return mStream
+                Return mStream.GetBuffer
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message)
