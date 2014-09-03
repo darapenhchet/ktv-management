@@ -1,8 +1,8 @@
 ﻿Public Class frmUserInformation
 
-    Private userTransaction As New ClsUserTransaction
+    Private userTransaction As New DataLayer.ClsUserTransaction
     Private dsUser As New DataSet
-    Private Photo As String
+    Private Photo As Byte()
 
     Private Sub frmUserInformation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Panel1.Left = (Me.Width - Panel1.Width) / 2
@@ -26,7 +26,7 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim user As New ClsUser
+        Dim user As New DataLayer.ClsUser
         user.Username = txtUsername.Text
         user.Password = txtPassword.Text
         user.Position = cboPosition.SelectedItem.ToString
@@ -41,7 +41,7 @@
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Dim user As New ClsUser
+        Dim user As New DataLayer.ClsUser
         user.ID = CInt(txtID.Text)
         user.Username = txtUsername.Text
         user.Password = txtPassword.Text
@@ -56,18 +56,23 @@
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        If userTransaction.deleteUser(CInt(txtID.Text)) = True Then
-            displayUserInformation()
-            MessageBox.Show("You have been deleted successfully!!!")
-        Else
-            MessageBox.Show("You have not been deleted!!!")
-        End If
+        Try
+            If userTransaction.deleteUser(CInt(txtID.Text)) = True Then
+                displayUserInformation()
+                MessageBox.Show("You have been deleted successfully!!!")
+            Else
+                MessageBox.Show("You have not been deleted!!!")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        
     End Sub
 
     Private Sub pbUser_Click(sender As Object, e As EventArgs) Handles pbUser.Click
         If OpenUserPhoto.ShowDialog() <> Windows.Forms.DialogResult.Cancel Then
             pbUser.Image = Image.FromFile(OpenUserPhoto.FileName)
-            Photo = OpenUserPhoto.FileName
+            Photo = getMemoryStream(OpenUserPhoto.FileName)
         End If
     End Sub
 
@@ -82,8 +87,11 @@
             If Not imageData Is Nothing Then
                 Dim ms As New System.IO.MemoryStream(imageData)
                 pbUser.Image = Image.FromStream(ms)
+                Photo = imageData
             End If
         Catch ex As Exception
         End Try
     End Sub
+    
+
 End Class

@@ -1,14 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class frmSingerInformation
 
-    Private singerTransaction As New ClsSingerTransaction
+    Private singerTransaction As New DataLayer.ClsSingerTransaction
     Private dsSinger As New DataSet
-    Dim Photo As String
+    Dim Photo As Byte()
 
     Private Sub frmSingerInformation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Panel1.Left = (Me.Width - Panel1.Width) / 2
         Panel1.Top = (Me.Height - Panel1.Height) / 2
-
 
         'dsSinger = singerTransaction.getAllSingers
         'dgvSingerInformation.DataSource = dsSinger.Tables(0)
@@ -25,13 +24,13 @@ Public Class frmSingerInformation
     Private Sub pbSingerPhoto_Click(sender As Object, e As EventArgs) Handles pbSingerPhoto.Click
         If OpenSingerPhoto.ShowDialog() <> Windows.Forms.DialogResult.Cancel Then
             pbSingerPhoto.Image = Image.FromFile(OpenSingerPhoto.FileName)
-            Photo = OpenSingerPhoto.FileName
+            Photo = getMemoryStream(OpenSingerPhoto.FileName)
         End If
     End Sub
 
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim singer As New ClsSinger
+        Dim singer As New DataLayer.ClsSinger
         singer.Name = txtSingerName.Text
         singer.Gender = cboGender.SelectedItem.ToString
         singer.Photo = Photo
@@ -92,7 +91,7 @@ Public Class frmSingerInformation
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Dim singer As New ClsSinger
+        Dim singer As New DataLayer.ClsSinger
         singer.ID = CInt(txtID.Text)
         singer.Name = txtSingerName.Text
         singer.Gender = cboGender.SelectedItem.ToString
@@ -104,5 +103,6 @@ Public Class frmSingerInformation
             MessageBox.Show("You have not been update it!!!")
         End If
     End Sub
+
 
 End Class

@@ -3,15 +3,15 @@
     Private Sub frmMainAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Panel1.Left = (Me.Width - Panel1.Width) / 2
         Panel1.Top = (Me.Height - Panel1.Height) / 2
-        lblUsername.Text = UserLogin.Username
+        lblUsername.Text = DataLayer.ClsConnection.UserLogin.Username
         lblUsername.TextAlign = ContentAlignment.MiddleRight
     End Sub
 
 
     Private Sub btnExitMain_Click(sender As Object, e As EventArgs) Handles btnExitMain.Click
         Me.Close()
-        closeConnection()
-        UserLogin = Nothing
+        DataLayer.ClsConnection.closeConnection()
+        DataLayer.ClsConnection.UserLogin = Nothing
         frmLogin.Visible = True
     End Sub
 
