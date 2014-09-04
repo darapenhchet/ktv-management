@@ -57,6 +57,8 @@ Partial Class frmSongInformation
         Me.Label1 = New System.Windows.Forms.Label()
         Me.openSongs = New System.Windows.Forms.OpenFileDialog()
         Me.ClsSingerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvSongerLists, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,9 +80,9 @@ Partial Class frmSongInformation
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.btnSaveAll)
-        Me.GroupBox2.Controls.Add(Me.btnBrowse)
         Me.GroupBox2.Controls.Add(Me.dgvSongerLists)
         Me.GroupBox2.Controls.Add(Me.btnDelete)
+        Me.GroupBox2.Controls.Add(Me.btnBrowse)
         Me.GroupBox2.Controls.Add(Me.btnUpdate)
         Me.GroupBox2.Location = New System.Drawing.Point(22, 244)
         Me.GroupBox2.Name = "GroupBox2"
@@ -165,6 +167,8 @@ Partial Class frmSongInformation
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.btnAdd)
         Me.GroupBox1.Controls.Add(Me.dgvSingerLists)
         Me.GroupBox1.Controls.Add(Me.txtID)
@@ -209,7 +213,7 @@ Partial Class frmSongInformation
         Me.dgvSingerLists.RowHeadersVisible = False
         Me.dgvSingerLists.RowTemplate.Height = 30
         Me.dgvSingerLists.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgvSingerLists.Size = New System.Drawing.Size(240, 81)
+        Me.dgvSingerLists.Size = New System.Drawing.Size(244, 58)
         Me.dgvSingerLists.TabIndex = 24
         '
         'Singer
@@ -348,6 +352,22 @@ Partial Class frmSongInformation
         '
         Me.ClsSingerBindingSource.DataSource = GetType(DataLayer.ClsSinger)
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(719, 172)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(244, 33)
+        Me.TextBox1.TabIndex = 32
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(565, 175)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(136, 25)
+        Me.Label9.TabIndex = 33
+        Me.Label9.Text = "Song Location:"
+        '
         'frmSongInformation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
@@ -404,4 +424,6 @@ Partial Class frmSongInformation
     Friend WithEvents Category As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Language As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cSinger As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class
