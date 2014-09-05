@@ -17,4 +17,19 @@ Public Class ClsSongDetailsTransaction
             Return False
         End Try
     End Function
+
+    Public Function getAllSongDetails() As DataSet
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = "spGetAllSongLists"
+                Command.CommandType = CommandType.StoredProcedure
+                Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
+                    adt.Fill(dsSongDetails)
+                End Using
+                Return dsSongDetails
+            End Using
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
 End Class
