@@ -18,6 +18,22 @@ Public Class ClsCategoryTransaction
         End Try
     End Function
 
+    Public Function getAllCategoryTwoColumns() As DataSet
+        Dim sql As String = "SELECT categoryId, category FROM categories ORDER BY Category"
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
+                    adt.Fill(dsCategory)
+                    Return dsCategory
+                End Using
+            End Using
+        Catch ex As Exception
+            Return Nothing
+        End Try
+
+    End Function
+
     Public Function searchCategoryBykeyword(keyword As String) As DataSet
         Dim sql As String = "SELECT categoryId, category, description FROM categories WHERE categoryId LIKE @ID OR category LIKE @Category OR description LIKE @Description"
         Try

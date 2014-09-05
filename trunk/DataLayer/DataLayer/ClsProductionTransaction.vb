@@ -18,6 +18,23 @@ Public Class ClsProductionTransaction
         End Try
     End Function
 
+    Public Function getAllProductionsTwoColumns() As DataSet
+        Dim sql As String = "SELECT productionId,production FROM productions ORDER BY production"
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
+                    adt.Fill(dsProduction)
+                    Return dsProduction
+                End Using
+            End Using
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+
+
     Public Function getProductionById(id As Integer) As ClsProduction
         Dim sql As String = "SELECT productionId,production,photo FROM productions WHERE productionId = @PID"
         Dim dr As MySqlDataReader

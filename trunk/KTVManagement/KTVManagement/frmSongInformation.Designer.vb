@@ -245,7 +245,6 @@ Partial Class frmSongInformation
         Me.cboSinger.Location = New System.Drawing.Point(558, 33)
         Me.cboSinger.Name = "cboSinger"
         Me.cboSinger.Size = New System.Drawing.Size(244, 33)
-        Me.cboSinger.Sorted = True
         Me.cboSinger.TabIndex = 35
         '
         'vlc
@@ -287,6 +286,7 @@ Partial Class frmSongInformation
         '
         Me.txtID.Location = New System.Drawing.Point(165, 39)
         Me.txtID.Name = "txtID"
+        Me.txtID.ReadOnly = True
         Me.txtID.Size = New System.Drawing.Size(164, 33)
         Me.txtID.TabIndex = 18
         '
