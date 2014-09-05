@@ -19,4 +19,15 @@ Public Class frmSongLists
             column.Width = (dgvSongLists.Width - 4) / dgvSongLists.Columns.Count
         Next
     End Sub
+
+    Private Sub btnTurnOff_Click(sender As Object, e As EventArgs) Handles btnTurnOff.Click
+
+        If vlc.audio.channel = 3 Then
+            vlc.audio.channel = 1
+            btnTurnOff.Text = "Turn Off"
+        Else
+            vlc.audio.channel = 3
+            btnTurnOff.Text = "Turn On"
+        End If
+    End Sub
 End Class
