@@ -96,10 +96,16 @@ Partial Class frmSongLists
         '
         'dgvSongLists
         '
+        Me.dgvSongLists.BackgroundColor = System.Drawing.Color.White
         Me.dgvSongLists.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSongLists.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.dgvSongLists.GridColor = System.Drawing.SystemColors.ControlDarkDark
         Me.dgvSongLists.Location = New System.Drawing.Point(0, 355)
         Me.dgvSongLists.Name = "dgvSongLists"
+        Me.dgvSongLists.RowTemplate.Height = 30
+        Me.dgvSongLists.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvSongLists.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvSongLists.ShowRowErrors = False
         Me.dgvSongLists.Size = New System.Drawing.Size(1261, 306)
         Me.dgvSongLists.TabIndex = 7
         '
