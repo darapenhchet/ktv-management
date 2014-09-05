@@ -50,11 +50,11 @@ Public Class ClsSongTransaction
     End Function
 
     Public Function addNewSong(song As ClsSong) As Boolean
-        Dim sql As String = "call spAddSong(@Title,@Album,@CategoryID,@ProductionID,@LanguageID,@Path)"
+        Dim sql As String = "INSERT INTO songs(title,album,categoryId,productionId,languageId,path) VALUES(@Title,@Album,@CategoryID,@ProductionID,@LanguageID,@Path);SELECT LAST_INSERT_ID();"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
-                Command.CommandType = CommandType.StoredProcedure
+                'Command.CommandType = CommandType.StoredProcedure
                 Command.Parameters.AddWithValue("@Title", song.Title)
                 Command.Parameters.AddWithValue("@Album", song.Album)
                 Command.Parameters.AddWithValue("@CategoryID", song.Category.ID)

@@ -1,8 +1,12 @@
 ﻿Imports DataLayer
+Imports System.IO
 
 Public Class frmSongInformation
+
     Private songs As New List(Of ClsSong)
     Private song As New ClsSong
+    Private songDetailsTransaction As New ClsSongDetailsTransaction
+    Private songDetails As New ClsSongDetails
     Private songTransaction As New ClsSongTransaction
     Private singerTransaction As New ClsSingerTransaction
     Private productionTransaction As New ClsProductionTransaction
@@ -88,18 +92,31 @@ Public Class frmSongInformation
     Private Sub btSave_Click(sender As Object, e As EventArgs) Handles btSave.Click
         Try
             song.Title = txtTitle.Text
-
             song.Album = txtAlbum.Text
             song.Production = New ClsProduction(cboProduction.SelectedValue, cboProduction.Text)
             song.Category = New ClsCategory(cboCategory.SelectedValue, cboCategory.Text)
             song.Language = New ClsLanguage(cboLanguage.SelectedValue, cboLanguage.Text)
             song.Path = txtSongLocation.Text
+            Dim Destination As String = "D:\KTV\" & song.Production.Production & "\" & song.Album
+            Try
+                If Not Directory.Exists(Destination) Then
+                    Directory.CreateDirectory(Destination)
+                End If
+                Dim file = New FileInfo(song.Path)
+                song.Path = Path.Combine(Destination, file.Name)
+                file.CopyTo(song.Path, True)
+            Catch ex As Exception
+
+            End Try
+            
             Dim strSingers As String = ""
             For Each singer As ClsSinger In lstSingers.Items
                 singer.ID = singer.ID
                 singer.Name = singer.Name
+                song.Singers.Add(singer)
                 strSingers = strSingers & singer.Name & ","
             Next
+            songs.Add(song)
             dgvSongerLists.CurrentRow.Cells(0).Value = song.Title
             dgvSongerLists.CurrentRow.Cells(1).Value = song.Album
             dgvSongerLists.CurrentRow.Cells(2).Value = song.Production.Production
@@ -114,7 +131,7 @@ Public Class frmSongInformation
         Try
             Dim index As Integer = lstSingers.SelectedIndex
             lstSingers.Items.RemoveAt(index)
-            song.Singers.RemoveAt(index)
+            ' song.Singers.RemoveAt(index)
         Catch ex As Exception
         End Try
     End Sub
@@ -123,18 +140,23 @@ Public Class frmSongInformation
         Dim singer As New ClsSinger
         singer.Name = cboSinger.Text
         singer.ID = cboSinger.SelectedValue
-        song.Singers.Add(singer)
+        'song.Singers.Add(singer)
         lstSingers.Items.Add(singer)
     End Sub
 
     Private Sub btnSaveAll_Click(sender As Object, e As EventArgs) Handles btnSaveAll.Click
+        MessageBox.Show("SAVE ALL")
         For Each song As ClsSong In songs
+            MessageBox.Show("SAVE ALL SONG")
             If songTransaction.addNewSong(song) = True Then
                 MessageBox.Show("Song has been inserted!!! " & song.ID)
             End If
             For Each singer As ClsSinger In song.Singers
-                If singerTransaction.addNewsinger(singer) Then
-
+                MessageBox.Show("SAVE ALL SONGDETAILS")
+                songDetails.SingerID = singer.ID
+                songDetails.SongID = song.ID
+                If songDetailsTransaction.addNewSongDetails(songDetails) = True Then
+                    MessageBox.Show("SongDetails has been inserted!!!")
                 End If
             Next
         Next
