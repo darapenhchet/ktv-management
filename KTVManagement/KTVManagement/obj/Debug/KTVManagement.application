@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="KTVManagement.exe.manifest" size="8084">
+    <dependentAssembly dependencyType="install" codebase="KTVManagement.exe.manifest" size="8386">
       <assemblyIdentity name="KTVManagement.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>W6HA1T5darzh1izcQKEKl7qfhThvm3EiX4Zg7PQOsAQ=</dsig:DigestValue>
+        <dsig:DigestValue>UhLubm128kIEcIkVe3wy9Gdfj67nC1s66sTpS5vA+jg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -23,31 +23,22 @@ Partial Class frmSongLists
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSongLists))
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.vlc = New AxAXVLC.AxVLCPlugin2()
         Me.btnPlayPuase = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnPrevious = New System.Windows.Forms.Button()
         Me.btnTurnOff = New System.Windows.Forms.Button()
         Me.btnSeek = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgvSongLists = New System.Windows.Forms.DataGridView()
         CType(Me.vlc, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvSongLists, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 372)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1257, 289)
-        Me.DataGridView1.TabIndex = 0
         '
         'vlc
         '
         Me.vlc.Enabled = True
         Me.vlc.Location = New System.Drawing.Point(857, 1)
+        Me.vlc.Margin = New System.Windows.Forms.Padding(6)
         Me.vlc.Name = "vlc"
         Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
         Me.vlc.Size = New System.Drawing.Size(399, 294)
@@ -55,73 +46,90 @@ Partial Class frmSongLists
         '
         'btnPlayPuase
         '
-        Me.btnPlayPuase.Location = New System.Drawing.Point(857, 301)
+        Me.btnPlayPuase.Location = New System.Drawing.Point(745, 15)
+        Me.btnPlayPuase.Margin = New System.Windows.Forms.Padding(6)
         Me.btnPlayPuase.Name = "btnPlayPuase"
-        Me.btnPlayPuase.Size = New System.Drawing.Size(75, 23)
+        Me.btnPlayPuase.Size = New System.Drawing.Size(100, 30)
         Me.btnPlayPuase.TabIndex = 2
         Me.btnPlayPuase.Text = "Play"
         Me.btnPlayPuase.UseVisualStyleBackColor = True
         '
         'btnNext
         '
-        Me.btnNext.Location = New System.Drawing.Point(938, 301)
+        Me.btnNext.Location = New System.Drawing.Point(745, 57)
+        Me.btnNext.Margin = New System.Windows.Forms.Padding(6)
         Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(75, 23)
+        Me.btnNext.Size = New System.Drawing.Size(100, 30)
         Me.btnNext.TabIndex = 3
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
         '
         'btnPrevious
         '
-        Me.btnPrevious.Location = New System.Drawing.Point(1019, 301)
+        Me.btnPrevious.Location = New System.Drawing.Point(745, 99)
+        Me.btnPrevious.Margin = New System.Windows.Forms.Padding(6)
         Me.btnPrevious.Name = "btnPrevious"
-        Me.btnPrevious.Size = New System.Drawing.Size(75, 23)
+        Me.btnPrevious.Size = New System.Drawing.Size(100, 30)
         Me.btnPrevious.TabIndex = 4
         Me.btnPrevious.Text = "Previous"
         Me.btnPrevious.UseVisualStyleBackColor = True
         '
         'btnTurnOff
         '
-        Me.btnTurnOff.Location = New System.Drawing.Point(1100, 301)
+        Me.btnTurnOff.Location = New System.Drawing.Point(745, 141)
+        Me.btnTurnOff.Margin = New System.Windows.Forms.Padding(6)
         Me.btnTurnOff.Name = "btnTurnOff"
-        Me.btnTurnOff.Size = New System.Drawing.Size(75, 23)
+        Me.btnTurnOff.Size = New System.Drawing.Size(100, 30)
         Me.btnTurnOff.TabIndex = 5
         Me.btnTurnOff.Text = "Turn off Singer"
         Me.btnTurnOff.UseVisualStyleBackColor = True
         '
         'btnSeek
         '
-        Me.btnSeek.Location = New System.Drawing.Point(1181, 301)
+        Me.btnSeek.Location = New System.Drawing.Point(745, 183)
+        Me.btnSeek.Margin = New System.Windows.Forms.Padding(6)
         Me.btnSeek.Name = "btnSeek"
-        Me.btnSeek.Size = New System.Drawing.Size(75, 23)
+        Me.btnSeek.Size = New System.Drawing.Size(100, 30)
         Me.btnSeek.TabIndex = 6
         Me.btnSeek.Text = "Seek"
         Me.btnSeek.UseVisualStyleBackColor = True
         '
+        'dgvSongLists
+        '
+        Me.dgvSongLists.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSongLists.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.dgvSongLists.Location = New System.Drawing.Point(0, 355)
+        Me.dgvSongLists.Name = "dgvSongLists"
+        Me.dgvSongLists.Size = New System.Drawing.Size(1261, 306)
+        Me.dgvSongLists.TabIndex = 7
+        '
         'frmSongLists
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1257, 661)
+        Me.ClientSize = New System.Drawing.Size(1261, 661)
+        Me.Controls.Add(Me.dgvSongLists)
         Me.Controls.Add(Me.btnSeek)
         Me.Controls.Add(Me.btnTurnOff)
         Me.Controls.Add(Me.btnPrevious)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnPlayPuase)
         Me.Controls.Add(Me.vlc)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Font = New System.Drawing.Font("Segoe UI Symbol", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "frmSongLists"
         Me.Text = "frmSongLists"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.vlc, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvSongLists, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents vlc As AxAXVLC.AxVLCPlugin2
     Friend WithEvents btnPlayPuase As System.Windows.Forms.Button
     Friend WithEvents btnNext As System.Windows.Forms.Button
     Friend WithEvents btnPrevious As System.Windows.Forms.Button
     Friend WithEvents btnTurnOff As System.Windows.Forms.Button
     Friend WithEvents btnSeek As System.Windows.Forms.Button
+    Friend WithEvents dgvSongLists As System.Windows.Forms.DataGridView
 End Class
