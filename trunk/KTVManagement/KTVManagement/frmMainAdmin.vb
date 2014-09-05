@@ -26,4 +26,9 @@
     Private Sub btnUserInformation_Click(sender As Object, e As EventArgs) Handles btnUserInformation.Click
         frmUserInformation.Show()
     End Sub
+
+    Private Sub btnAboutUs_Click(sender As Object, e As EventArgs) Handles btnAboutUs.Click
+        Me.Visible = False
+        frmSongLists.Visible = True
+    End Sub
 End Class
