@@ -16,7 +16,21 @@ Public Class ClsLanguageTransaction
         Catch ex As Exception
             Return Nothing
         End Try
+    End Function
 
+    Public Function getAllLanguagesTwoColumns() As DataSet
+        Dim sql As String = "SELECT languageId,language FROM languages ORDER BY language"
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
+                    adt.Fill(dsLanguage)
+                    Return dsLanguage
+                End Using
+            End Using
+        Catch ex As Exception
+            Return Nothing
+        End Try
     End Function
 
     Public Function getAllLanguageByKeyword(keyword As String) As DataSet

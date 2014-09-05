@@ -23,40 +23,33 @@ Public Class frmSongInformation
         Panel1.Left = (Me.Width - Panel1.Width) / 2
         Panel1.Top = (Me.Height - Panel1.Height) / 2
 
-        dsProduction = productionTransaction.getAllProductions
-        cboProduction.DataSource = dsProduction.Tables(0)
-        cboProduction.DisplayMember = "Production"
-        cboProduction.ValueMember = "ProductionId"
+        dsProduction = productionTransaction.getAllProductionsTwoColumns
+        AddDataIntoComboBox(cboProduction, dsProduction)
+        'dsProduction.Tables(0).Rows.Add(0, "Add New...")
+        'cboProduction.DataSource = dsProduction.Tables(0)
+        'cboProduction.DisplayMember = "Production"
+        'cboProduction.ValueMember = "ProductionId"
 
-        dsCategory = categoryTransaction.getAllCategory
-        cboCategory.DataSource = dsCategory.Tables(0)
-        cboCategory.DisplayMember = "Category"
-        cboCategory.ValueMember = "CategoryId"
+        dsCategory = categoryTransaction.getAllCategoryTwoColumns
+        AddDataIntoComboBox(cboCategory, dsCategory)
+        'dsCategory.Tables(0).Rows.Add(0, "Add New...")
+        'cboCategory.DataSource = dsCategory.Tables(0)
+        'cboCategory.DisplayMember = "Category"
+        'cboCategory.ValueMember = "CategoryId"
 
-        dsLanguage = languageTransaction.getAllLanguages
-        cboLanguage.DataSource = dsLanguage.Tables(0)
-        cboLanguage.DisplayMember = "Language"
-        cboLanguage.ValueMember = "LanguageId"
-        Dim cbSingerIds As New DataGridViewComboBoxColumn
-        Dim cbSingerNames As New DataGridViewComboBoxColumn
-
-        dsSinger = singerTransaction.getAllSingers
-        cbSingerIds.DataSource = dsSinger.Tables(0)
-        cbSingerIds.DisplayMember = dsSinger.Tables(0).Columns(1).ColumnName
-        cbSingerIds.ValueMember = dsSinger.Tables(0).Columns(0).ColumnName
-        'dgvSingerLists.Columns.Add(cbSingerIds)
-
-        dsSinger = singerTransaction.getAllSingers
-        'cbSingerNames.DataSource = dsSinger.Tables(0)
-        'cbSingerNames.DisplayMember = dsSinger.Tables(0).Columns(1).ColumnName
-        'cbSingerNames.ValueMember = dsSinger.Tables(0).Columns(1).ColumnName
-        'dgvSingerLists.Columns.Add(cbSingerNames)
-
-        'dgvSingerLists.Columns(0).Visible = 
-
-        cboSinger.DataSource = dsSinger.Tables(0)
-        cboSinger.DisplayMember = dsSinger.Tables(0).Columns(1).ColumnName
-        cboSinger.ValueMember = dsSinger.Tables(0).Columns(0).ColumnName
+        dsLanguage = languageTransaction.getAllLanguagesTwoColumns
+        AddDataIntoComboBox(cboLanguage, dsLanguage)
+        'dsLanguage.Tables(0).Rows.Add(0, "Add New...")
+        'cboLanguage.DataSource = dsLanguage.Tables(0)
+        'cboLanguage.DisplayMember = "Language"
+        'cboLanguage.ValueMember = "LanguageId"
+  
+        dsSinger = singerTransaction.getAllSingersTwoColumns()
+        AddDataIntoComboBox(cboSinger, dsSinger)
+        'dsSinger.Tables(0).Rows.Add(0, "Add New...")
+        'cboSinger.DataSource = dsSinger.Tables(0)
+        'cboSinger.DisplayMember = dsSinger.Tables(0).Columns(1).ColumnName
+        'cboSinger.ValueMember = dsSinger.Tables(0).Columns(0).ColumnName
     End Sub
 
     Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click
@@ -160,5 +153,35 @@ Public Class frmSongInformation
                 End If
             Next
         Next
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        dgvSongerLists.Rows.RemoveAt(dgvSongerLists.CurrentRow.Index)
+    End Sub
+
+    
+    Private Sub cboProduction_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboProduction.SelectedIndexChanged
+        If cboProduction.Text.Equals("Add New...") Then
+            frmProductionInformation.Visible = True
+        End If
+    End Sub
+
+
+    Private Sub cboCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategory.SelectedIndexChanged
+        If cboCategory.Text.Equals("Add New...") Then
+            frmCategoryInformation.Visible = True
+        End If
+    End Sub
+
+    Private Sub cboLanguage_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboLanguage.SelectedIndexChanged
+        If cboLanguage.Text.Equals("Add New...") Then
+            frmLanguageInformation.Visible = True
+        End If
+    End Sub
+
+    Private Sub cboSinger_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSinger.SelectedIndexChanged
+        If cboSinger.Text.Equals("Add New...") Then
+            frmSingerInformation.Visible = True
+        End If
     End Sub
 End Class

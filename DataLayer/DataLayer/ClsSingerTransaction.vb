@@ -29,6 +29,23 @@ Public Class ClsSingerTransaction
         End Try
     End Function
 
+    Public Function getAllSingersTwoColumns() As DataSet
+        Dim sql As String = "SELECT singerId , singerName  FROM Singers ORDER BY singerName"
+        Try
+            Using Command As MySqlCommand = DataLayer.ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
+                    dsSinger = New DataSet
+                    adt.Fill(dsSinger)
+                    Return dsSinger
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
     ''' <summary>
     ''' addNewSinger Function
     ''' </summary>
