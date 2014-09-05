@@ -5,6 +5,8 @@
     Private _Gender As String
     Private _Photo As Byte()
 
+
+
     Public Property ID() As Integer
         Get
             Return _ID
@@ -40,4 +42,8 @@
             _Photo = value
         End Set
     End Property
+
+    Public Overrides Function ToString() As String
+        Return Name
+    End Function
 End Class

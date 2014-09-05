@@ -50,10 +50,20 @@ Public Class ClsSongTransaction
     End Function
 
     Public Function addNewSong(song As ClsSong) As Boolean
+        Dim sql As String = "call spAddSong(@Title,@Album,@CategoryID,@ProductionID,@LanguageID,@Path)"
         Try
-
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Command.CommandType = CommandType.StoredProcedure
+                Command.Parameters.AddWithValue("@Title", song.Title)
+                Command.Parameters.AddWithValue("@Album", song.Album)
+                Command.Parameters.AddWithValue("@CategoryID", song.Category.ID)
+                Command.Parameters.AddWithValue("@ProductionID", song.Production.ID)
+                Command.Parameters.AddWithValue("@LanguageID", song.Production.ID)
+                Command.Parameters.AddWithValue("@Path", song.Path)
+            End Using
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Function
 

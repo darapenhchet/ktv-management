@@ -4,6 +4,24 @@
     Private _Language As String
     Private _Photo As Byte()
 
+    Public Sub New()
+        _ID = 0
+        _Language = ""
+        _Photo = Nothing
+    End Sub
+
+    Public Sub New(ID As Integer, Language As String)
+        _ID = ID
+        _Language = Language
+        _Photo = Nothing
+    End Sub
+
+    Public Sub New(ID As Integer, Language As String, Photo As Byte())
+        _ID = ID
+        _Language = Language
+        _Photo = Photo
+    End Sub
+
     Public Property ID As Integer
         Get
             Return _ID

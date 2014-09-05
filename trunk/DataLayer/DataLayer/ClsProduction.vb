@@ -4,6 +4,24 @@
     Private _Production As String
     Private _Photo As Byte()
 
+    Public Sub New()
+        _ID = 0
+        _Production = ""
+        _Photo = Nothing
+    End Sub
+
+    Public Sub New(ID As Integer, Production As String)
+        _ID = ID
+        _Production = Production
+        _Photo = Nothing
+    End Sub
+
+    Public Sub New(ID As Integer, Production As String, Photo As Byte())
+        _ID = ID
+        _Production = Production
+        _Photo = Photo
+    End Sub
+
     Public Property ID As Integer
         Get
             Return _ID
