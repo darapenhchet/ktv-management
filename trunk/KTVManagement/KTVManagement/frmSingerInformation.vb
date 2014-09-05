@@ -105,4 +105,7 @@ Public Class frmSingerInformation
     End Sub
 
 
+    Private Sub dgvSingerInformation_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvSingerInformation.DataError
+        Return
+    End Sub
 End Class

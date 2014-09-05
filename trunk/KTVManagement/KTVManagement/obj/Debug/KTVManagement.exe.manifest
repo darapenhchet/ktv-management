@@ -69,14 +69,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLayer.dll" size="48640">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLayer.dll" size="50176">
       <assemblyIdentity name="DataLayer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YQVnsolWGmEl4Jq7JH1aqSLbyoGLXmpkeUNgye0eGbk=</dsig:DigestValue>
+        <dsig:DigestValue>kw+DngsfMvaFfgUgPGSsKIM/gxj/UFeY/Yamw/MkJ2g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -93,14 +93,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KTVManagement.exe" size="109568">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KTVManagement.exe" size="111104">
       <assemblyIdentity name="KTVManagement" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TVuiYSGvBH5+CAk8+QGotT3YbTunT6pwjxNXh2VTJpg=</dsig:DigestValue>
+        <dsig:DigestValue>iHS7DqCLQU0hsdp3X52z0wT//fNSYtSnoKrIeUkprZI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -137,13 +137,13 @@
       <dsig:DigestValue>7SSlRnHVJDjesBiZ6Lo98e15W9o4x1RezonDkubOVmg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="KTVManagement.exe.config" size="706">
+  <file name="KTVManagement.exe.config" size="726">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>P7Wy1y9wkPQ45EHQt/godiMUO+3MSed+LFHUTFokOkc=</dsig:DigestValue>
+      <dsig:DigestValue>Jsbl6HOa65HVuDMZ9t7MOaP1/TfVQTt+k50CZH/LKQQ=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
