@@ -128,6 +128,15 @@ Public Class frmSongInformation
     End Sub
 
     Private Sub btnSaveAll_Click(sender As Object, e As EventArgs) Handles btnSaveAll.Click
-        For
+        For Each song As ClsSong In songs
+            If songTransaction.addNewSong(song) = True Then
+                MessageBox.Show("Song has been inserted!!! " & song.ID)
+            End If
+            For Each singer As ClsSinger In song.Singers
+                If singerTransaction.addNewsinger(singer) Then
+
+                End If
+            Next
+        Next
     End Sub
 End Class

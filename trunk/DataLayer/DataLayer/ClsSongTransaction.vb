@@ -61,9 +61,12 @@ Public Class ClsSongTransaction
                 Command.Parameters.AddWithValue("@ProductionID", song.Production.ID)
                 Command.Parameters.AddWithValue("@LanguageID", song.Production.ID)
                 Command.Parameters.AddWithValue("@Path", song.Path)
+                song.ID = CInt(Command.ExecuteScalar)
+                Return True
             End Using
         Catch ex As Exception
             MsgBox(ex.Message)
+            Return False
         End Try
     End Function
 

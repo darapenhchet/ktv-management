@@ -93,6 +93,8 @@
     <Compile Include="ClsSinger.vb" />
     <Compile Include="ClsSingerTransaction.vb" />
     <Compile Include="ClsSong.vb" />
+    <Compile Include="ClsSongDetails.vb" />
+    <Compile Include="ClsSongDetailsTransaction.vb" />
     <Compile Include="ClsSongTransaction.vb" />
     <Compile Include="ClsUser.vb" />
     <Compile Include="ClsUserTransaction.vb" />
