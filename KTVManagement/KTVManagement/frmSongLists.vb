@@ -7,9 +7,7 @@ Public Class frmSongLists
     End Sub
 
     Private Sub dgvSongLists_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSongLists.CellDoubleClick
-        vlc.playlist.items.clear()
-        vlc.playlist.add("file:///" & dgvSongLists.CurrentRow.Cells(6).Value)
-        vlc.playlist.play()
+        
     End Sub
 
     Public Sub DisplayInformation()
@@ -29,5 +27,11 @@ Public Class frmSongLists
             vlc.audio.channel = 3
             btnTurnOff.Text = "Turn On"
         End If
+    End Sub
+
+    Private Sub btnPlayPuase_Click(sender As Object, e As EventArgs) Handles btnPlayPuase.Click
+        vlc.playlist.items.clear()
+        vlc.playlist.add("file:///" & dgvSongLists.CurrentRow.Cells(7).Value)
+        vlc.playlist.play()
     End Sub
 End Class
