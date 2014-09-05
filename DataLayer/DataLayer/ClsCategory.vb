@@ -3,6 +3,23 @@
     Private _ID As Integer
     Private _Category As String
     Private _Description As String
+    Public Sub New()
+        _ID = 0
+        _Category = ""
+        _Description = Nothing
+    End Sub
+
+    Public Sub New(ID As Integer, Language As String)
+        _ID = ID
+        _Category = Language
+        _Description = Nothing
+    End Sub
+
+    Public Sub New(ID As Integer, Language As String, Description As String)
+        _ID = ID
+        _Category = Language
+        _Description = Description
+    End Sub
 
     Public Property ID As Integer
         Get
