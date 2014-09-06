@@ -25,9 +25,7 @@ Public Class frmLogin
                 DataLayer.ClsConnection.UserLogin.Username = row.Item(1)
                 DataLayer.ClsConnection.UserLogin.Password = row.Item(2)
                 DataLayer.ClsConnection.UserLogin.Position = row.Item(3)
-                'If row.Item(4) Is Nothing Then
-                '    UserLogin.Photo = row.Item(4)
-                'End If
+
                 If row.Item(3).Equals("Admin") Then
                     Me.Visible = False
                     frmMainAdmin.Show()

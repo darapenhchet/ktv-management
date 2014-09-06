@@ -34,4 +34,8 @@ Public Class frmSongLists
         vlc.playlist.add("file:///" & dgvSongLists.CurrentRow.Cells(7).Value)
         vlc.playlist.play()
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

@@ -46,7 +46,7 @@ Partial Class frmSongLists
         '
         'btnPlayPuase
         '
-        Me.btnPlayPuase.Location = New System.Drawing.Point(745, 15)
+        Me.btnPlayPuase.Location = New System.Drawing.Point(857, 307)
         Me.btnPlayPuase.Margin = New System.Windows.Forms.Padding(6)
         Me.btnPlayPuase.Name = "btnPlayPuase"
         Me.btnPlayPuase.Size = New System.Drawing.Size(100, 30)
@@ -56,7 +56,7 @@ Partial Class frmSongLists
         '
         'btnNext
         '
-        Me.btnNext.Location = New System.Drawing.Point(745, 57)
+        Me.btnNext.Location = New System.Drawing.Point(969, 307)
         Me.btnNext.Margin = New System.Windows.Forms.Padding(6)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(100, 30)
@@ -66,7 +66,7 @@ Partial Class frmSongLists
         '
         'btnPrevious
         '
-        Me.btnPrevious.Location = New System.Drawing.Point(745, 99)
+        Me.btnPrevious.Location = New System.Drawing.Point(1146, 391)
         Me.btnPrevious.Margin = New System.Windows.Forms.Padding(6)
         Me.btnPrevious.Name = "btnPrevious"
         Me.btnPrevious.Size = New System.Drawing.Size(100, 30)
@@ -76,7 +76,7 @@ Partial Class frmSongLists
         '
         'btnTurnOff
         '
-        Me.btnTurnOff.Location = New System.Drawing.Point(745, 141)
+        Me.btnTurnOff.Location = New System.Drawing.Point(1146, 433)
         Me.btnTurnOff.Margin = New System.Windows.Forms.Padding(6)
         Me.btnTurnOff.Name = "btnTurnOff"
         Me.btnTurnOff.Size = New System.Drawing.Size(100, 30)
@@ -86,7 +86,7 @@ Partial Class frmSongLists
         '
         'btnSeek
         '
-        Me.btnSeek.Location = New System.Drawing.Point(745, 183)
+        Me.btnSeek.Location = New System.Drawing.Point(1146, 475)
         Me.btnSeek.Margin = New System.Windows.Forms.Padding(6)
         Me.btnSeek.Name = "btnSeek"
         Me.btnSeek.Size = New System.Drawing.Size(100, 30)
@@ -98,15 +98,14 @@ Partial Class frmSongLists
         '
         Me.dgvSongLists.BackgroundColor = System.Drawing.Color.White
         Me.dgvSongLists.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSongLists.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.dgvSongLists.GridColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.dgvSongLists.Location = New System.Drawing.Point(0, 355)
+        Me.dgvSongLists.Location = New System.Drawing.Point(0, 148)
         Me.dgvSongLists.Name = "dgvSongLists"
         Me.dgvSongLists.RowTemplate.Height = 30
         Me.dgvSongLists.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvSongLists.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvSongLists.ShowRowErrors = False
-        Me.dgvSongLists.Size = New System.Drawing.Size(1261, 306)
+        Me.dgvSongLists.Size = New System.Drawing.Size(831, 513)
         Me.dgvSongLists.TabIndex = 7
         '
         'frmSongLists

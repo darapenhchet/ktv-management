@@ -4,7 +4,7 @@ Public Class ClsRoomTransaction
     Private dsRoom As New DataSet
 
     Public Function getAllRooms() As DataSet
-        Dim sql As String = "SELECT roomId, roomType, price FROM rooms"
+        Dim sql As String = "SELECT roomId, roomName ,roomType, price, discount FROM rooms"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -14,18 +14,21 @@ Public Class ClsRoomTransaction
                 End Using
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return Nothing
         End Try
     End Function
 
     Public Function getAllRoomByKeyword(keyword As String) As DataSet
-        Dim sql As String = "SELECT roomId, roomType, price FROM rooms WHERE roomId LIKE @RoomID OR roomType LIKE @RoomType OR price LIKE @Price"
+        Dim sql As String = "SELECT roomId, roomName, roomType, price, discount FROM rooms WHERE roomId LIKE @RoomID OR roomName LIKE @RoomName OR roomType LIKE @RoomType OR price LIKE @Price OR discount LIKE @Discount"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
                 Command.Parameters.AddWithValue("@RoomID", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@RoomName", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@RoomType", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@Price", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@Discount", "%" & keyword & "%")
                 Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
                     adt.Fill(dsRoom)
                     Return dsRoom
