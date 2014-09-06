@@ -39,7 +39,7 @@ Partial Class frmMainAdmin
         '
         'btnSongInformation
         '
-        Me.btnSongInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.btnSongInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnSongInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSongInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSongInformation.ForeColor = System.Drawing.Color.White
@@ -52,7 +52,7 @@ Partial Class frmMainAdmin
         '
         'btnSingerInformation
         '
-        Me.btnSingerInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.btnSingerInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnSingerInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSingerInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSingerInformation.ForeColor = System.Drawing.Color.White
@@ -65,7 +65,7 @@ Partial Class frmMainAdmin
         '
         'btnUserInformation
         '
-        Me.btnUserInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.btnUserInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnUserInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUserInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUserInformation.ForeColor = System.Drawing.Color.White
@@ -78,7 +78,7 @@ Partial Class frmMainAdmin
         '
         'btnRoomInformation
         '
-        Me.btnRoomInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.btnRoomInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnRoomInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRoomInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRoomInformation.ForeColor = System.Drawing.Color.White
@@ -91,7 +91,7 @@ Partial Class frmMainAdmin
         '
         'btnExpense
         '
-        Me.btnExpense.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.btnExpense.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExpense.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExpense.ForeColor = System.Drawing.Color.White
@@ -104,7 +104,7 @@ Partial Class frmMainAdmin
         '
         'btnIncome
         '
-        Me.btnIncome.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.btnIncome.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIncome.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIncome.ForeColor = System.Drawing.Color.White
@@ -117,7 +117,7 @@ Partial Class frmMainAdmin
         '
         'btnReportInformation
         '
-        Me.btnReportInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.btnReportInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnReportInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReportInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReportInformation.ForeColor = System.Drawing.Color.White
@@ -130,7 +130,7 @@ Partial Class frmMainAdmin
         '
         'btnAboutUs
         '
-        Me.btnAboutUs.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.btnAboutUs.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAboutUs.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAboutUs.ForeColor = System.Drawing.Color.White

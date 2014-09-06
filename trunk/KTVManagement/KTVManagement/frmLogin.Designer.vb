@@ -36,7 +36,7 @@ Partial Class frmLogin
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.lblLogin)
         Me.Panel1.Controls.Add(Me.btnExit)
@@ -65,13 +65,13 @@ Partial Class frmLogin
         'lblLogin
         '
         Me.lblLogin.AutoSize = True
-        Me.lblLogin.Font = New System.Drawing.Font("Segoe UI Light", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.lblLogin.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLogin.ForeColor = System.Drawing.Color.White
-        Me.lblLogin.Location = New System.Drawing.Point(494, 125)
+        Me.lblLogin.Location = New System.Drawing.Point(252, 127)
         Me.lblLogin.Name = "lblLogin"
-        Me.lblLogin.Size = New System.Drawing.Size(75, 32)
+        Me.lblLogin.Size = New System.Drawing.Size(264, 28)
         Me.lblLogin.TabIndex = 6
-        Me.lblLogin.Text = "Login"
+        Me.lblLogin.Text = "Login to your account"
         '
         'btnExit
         '
@@ -144,7 +144,7 @@ Partial Class frmLogin
         Me.AcceptButton = Me.btnLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1054, 483)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Bold)
