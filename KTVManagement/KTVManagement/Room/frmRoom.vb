@@ -33,10 +33,6 @@
         dgvRoomList.Columns(4).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
-    
-
-    
-
     Private Sub btnAddRoom_Click_1(sender As Object, e As EventArgs) Handles btnAddRoom.Click
         frmAddRoom.Visible = True
         Me.Close()
@@ -67,10 +63,11 @@
             frmUpdateRoom.cboType.Text = dgvRoomList.CurrentRow.Cells(2).Value
             frmUpdateRoom.txtUnitPrice.Text = dgvRoomList.CurrentRow.Cells(3).Value
             frmUpdateRoom.txtDiscount.Text = dgvRoomList.CurrentRow.Cells(4).Value
+            frmUpdateRoom.Visible = True
+            Me.Close()
         Catch ex As Exception
         End Try
-        frmUpdateRoom.Visible = True
-        Me.Close()
+        
     End Sub
 
     Private Sub btnBack_Click_1(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -85,6 +82,4 @@
         dsRoom = roomTransaction.getAllRoomByKeyword(txtSearch.Text)
         dgvRoomList.DataSource = dsRoom.Tables(0)
     End Sub
-
-
 End Class

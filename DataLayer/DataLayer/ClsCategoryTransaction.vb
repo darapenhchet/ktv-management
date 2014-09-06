@@ -14,6 +14,7 @@ Public Class ClsCategoryTransaction
                 End Using
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return Nothing
         End Try
     End Function
@@ -55,7 +56,7 @@ Public Class ClsCategoryTransaction
 
     Public Function getCategoryById(id As Integer) As ClsCategory
 
-        Dim sql As String = "SELECT categoryId,category,photo FROM categorys WHERE categoryId = @PID"
+        Dim sql As String = "SELECT categoryId,category,description FROM categorys WHERE categoryId = @PID"
         Dim dr As MySqlDataReader
         Dim category As New ClsCategory
 
@@ -77,7 +78,7 @@ Public Class ClsCategoryTransaction
     End Function
 
     Public Function addNewCategory(category As ClsCategory) As Boolean
-        Dim sql As String = "INSERT INTO categorys(category,photo) VALUES(@Category,@Description))"
+        Dim sql As String = "INSERT INTO categories(category,description) VALUES(@Category,@Description)"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -87,12 +88,13 @@ Public Class ClsCategoryTransaction
                 Return True
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
     End Function
 
     Public Function updateCategory(category As ClsCategory) As Boolean
-        Dim sql As String = "UPDATE categorys SET category = @category , description = @Description WHERE categoryId = @CID"
+        Dim sql As String = "UPDATE categories SET category = @category , description = @Description WHERE categoryId = @CID"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -103,6 +105,7 @@ Public Class ClsCategoryTransaction
                 Return True
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
     End Function
