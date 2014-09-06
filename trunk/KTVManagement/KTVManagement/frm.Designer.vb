@@ -23,6 +23,7 @@ Partial Class frmMainStaff
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAboutUs = New System.Windows.Forms.Button()
         Me.btnReportInformation = New System.Windows.Forms.Button()
@@ -32,7 +33,6 @@ Partial Class frmMainStaff
         Me.btnUserInformation = New System.Windows.Forms.Button()
         Me.btnSingerInformation = New System.Windows.Forms.Button()
         Me.btnSongInformation = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,6 +52,18 @@ Partial Class frmMainStaff
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1150, 466)
         Me.Panel1.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Symbol", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(919, 7)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(228, 45)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Administrator"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label1
         '
@@ -168,19 +180,7 @@ Partial Class frmMainStaff
         Me.btnSongInformation.Text = "Song Information"
         Me.btnSongInformation.UseVisualStyleBackColor = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Symbol", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(919, 7)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(228, 45)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Administrator"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'frmMainAdmin
+        'frmMainStaff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 30.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -189,7 +189,7 @@ Partial Class frmMainStaff
         Me.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
-        Me.Name = "frmMainAdmin"
+        Me.Name = "frmMainStaff"
         Me.Text = "frmMainAdmin"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)

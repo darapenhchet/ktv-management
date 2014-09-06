@@ -76,6 +76,7 @@
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar.Keyboard, Version=11.2.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.8.3\Assemblies\v4.5\MySql.Data.dll</HintPath>
@@ -119,16 +120,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Dialog1.Designer.vb">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm.Designer.vb">
       <DependentUpon>frm.vb</DependentUpon>
     </Compile>
     <Compile Include="frm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Room\frmAddRoom.Designer.vb">
+      <DependentUpon>frmAddRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Room\frmAddRoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCategoryInformation.Designer.vb">
       <DependentUpon>frmCategoryInformation.vb</DependentUpon>
     </Compile>
     <Compile Include="frmCategoryInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGuest.Designer.vb">
+      <DependentUpon>frmGuest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGuest.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLanguageInformation.Designer.vb">
@@ -161,28 +180,40 @@
     <Compile Include="frmProductionInformation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Room\frmRoom.Designer.vb">
+      <DependentUpon>frmRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Room\frmRoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSingerInformation.Designer.vb">
       <DependentUpon>frmSingerInformation.vb</DependentUpon>
     </Compile>
     <Compile Include="frmSingerInformation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSongInformation.Designer.vb">
+    <Compile Include="Song\frmSongInformation.Designer.vb">
       <DependentUpon>frmSongInformation.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmSongInformation.vb">
+    <Compile Include="Song\frmSongInformation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSongLists.Designer.vb">
+    <Compile Include="Song\frmSongLists.Designer.vb">
       <DependentUpon>frmSongLists.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmSongLists.vb">
+    <Compile Include="Song\frmSongLists.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSplashScreen.Designer.vb">
       <DependentUpon>frmSplashScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="frmSplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Room\frmUpdateRoom.Designer.vb">
+      <DependentUpon>frmUpdateRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Room\frmUpdateRoom.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUserInformation.Designer.vb">
@@ -209,8 +240,14 @@
     <Compile Include="Transaction.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialog1.resx">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm.resx">
       <DependentUpon>frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Room\frmAddRoom.resx">
+      <DependentUpon>frmAddRoom.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategoryInformation.resx">
       <DependentUpon>frmCategoryInformation.vb</DependentUpon>
@@ -230,17 +267,23 @@
     <EmbeddedResource Include="frmProductionInformation.resx">
       <DependentUpon>frmProductionInformation.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Room\frmRoom.resx">
+      <DependentUpon>frmRoom.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSingerInformation.resx">
       <DependentUpon>frmSingerInformation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSongInformation.resx">
+    <EmbeddedResource Include="Song\frmSongInformation.resx">
       <DependentUpon>frmSongInformation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSongLists.resx">
+    <EmbeddedResource Include="Song\frmSongLists.resx">
       <DependentUpon>frmSongLists.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Room\frmUpdateRoom.resx">
+      <DependentUpon>frmUpdateRoom.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserInformation.resx">
       <DependentUpon>frmUserInformation.vb</DependentUpon>
@@ -287,6 +330,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Photo.jpg" />
+    <None Include="Resources\background.png" />
+    <None Include="Resources\delete38.png" />
+    <None Include="Resources\delete38 %281%29.png" />
+    <None Include="Resources\verification5.png" />
+    <None Include="Resources\user91.png" />
+    <None Include="Resources\three115.png" />
+    <None Include="Resources\seo2.png" />
+    <None Include="Resources\rewind26.png" />
+    <None Include="Resources\reply.png" />
+    <None Include="Resources\next15.png" />
+    <None Include="Resources\next15 %281%29.png" />
+    <None Include="Resources\muted.png" />
+    <None Include="Resources\microphone44.png" />
+    <None Include="Resources\menu48.png" />
+    <None Include="Resources\market.png" />
+    <None Include="Resources\magnifier12.png" />
+    <None Include="Resources\machine2.png" />
+    <None Include="Resources\left164.png" />
+    <None Include="Resources\home63.png" />
+    <None Include="Resources\email20.png" />
+    <None Include="Resources\create1.png" />
+    <None Include="Resources\close13.png" />
+    <None Include="Resources\close11.png" />
+    <None Include="Resources\backward3.png" />
+    <None Include="Resources\back1.png" />
+    <None Include="Resources\arrow110.png" />
+    <None Include="Resources\arrow3.png" />
     <None Include="Resources\Photo.jpg" />
   </ItemGroup>
   <ItemGroup>

@@ -31,4 +31,9 @@
         Me.Visible = False
         frmSongLists.Visible = True
     End Sub
+
+    Private Sub btnRoomInformation_Click(sender As Object, e As EventArgs) Handles btnRoomInformation.Click
+        frmRoom.Show()
+        Me.Close()
+    End Sub
 End Class
