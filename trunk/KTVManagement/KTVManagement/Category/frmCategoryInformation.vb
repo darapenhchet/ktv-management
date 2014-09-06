@@ -60,4 +60,11 @@
         frmAddCategory.Visible = True
         Me.Close()
     End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        dsCategory.Tables(0).Clear()
+        dgvCategory.DataSource = dsCategory
+        dsCategory = categoryTransaction.getAllCategoryByKeyword(txtSearch.Text)
+        dgvCategory.DataSource = dsCategory.Tables(0)
+    End Sub
 End Class

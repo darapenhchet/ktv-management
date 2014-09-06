@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLayer.dll" size="52736">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLayer.dll" size="53248">
       <assemblyIdentity name="DataLayer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uM+Grjs5jojO7igB2qOH8hVBMGdrhJM+qy0qpRO2D9Q=</dsig:DigestValue>
+        <dsig:DigestValue>b1/RK0Bl/kAylwmpOTusUC/QV6C3hfaUWFUkGeBWwhA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -110,7 +110,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9Ms/H34vgjhMZfJX7SI4R5BdALnC+L4JEjsHbjdlnaQ=</dsig:DigestValue>
+        <dsig:DigestValue>tIz3VEiOMGCIscMakINT40FRt2Sr4lw2v/pKADbtzGk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
