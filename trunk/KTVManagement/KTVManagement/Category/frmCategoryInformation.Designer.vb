@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmRoom
+Partial Class frmCategoryInformation
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -37,19 +37,19 @@ Partial Class frmRoom
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
-        Me.dgvRoomList = New System.Windows.Forms.DataGridView()
+        Me.dgvCategory = New System.Windows.Forms.DataGridView()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.cmsModifyRoom = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.Delete = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Update = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmsModifyCategory = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.dgvRoomList, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.cmsModifyRoom.SuspendLayout()
+        CType(Me.dgvCategory, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.cmsModifyCategory.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -61,7 +61,7 @@ Partial Class frmRoom
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1024, 600)
-        Me.Panel1.TabIndex = 0
+        Me.Panel1.TabIndex = 1
         '
         'Panel2
         '
@@ -92,9 +92,9 @@ Partial Class frmRoom
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(62, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(193, 30)
+        Me.Label1.Size = New System.Drawing.Size(234, 30)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Manage Room"
+        Me.Label1.Text = "Manage Category"
         '
         'Panel3
         '
@@ -127,11 +127,11 @@ Partial Class frmRoom
         Me.btnUpdateRoom.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdateRoom.ForeColor = System.Drawing.Color.White
         Me.btnUpdateRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUpdateRoom.Location = New System.Drawing.Point(203, 0)
+        Me.btnUpdateRoom.Location = New System.Drawing.Point(260, 0)
         Me.btnUpdateRoom.Name = "btnUpdateRoom"
-        Me.btnUpdateRoom.Size = New System.Drawing.Size(100, 30)
+        Me.btnUpdateRoom.Size = New System.Drawing.Size(140, 30)
         Me.btnUpdateRoom.TabIndex = 4
-        Me.btnUpdateRoom.Text = "&Update"
+        Me.btnUpdateRoom.Text = "&Update Category"
         Me.btnUpdateRoom.UseVisualStyleBackColor = False
         '
         'btnAddRoom
@@ -145,11 +145,11 @@ Partial Class frmRoom
         Me.btnAddRoom.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddRoom.ForeColor = System.Drawing.Color.White
         Me.btnAddRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddRoom.Location = New System.Drawing.Point(100, 0)
+        Me.btnAddRoom.Location = New System.Drawing.Point(130, 0)
         Me.btnAddRoom.Name = "btnAddRoom"
-        Me.btnAddRoom.Size = New System.Drawing.Size(100, 30)
+        Me.btnAddRoom.Size = New System.Drawing.Size(130, 30)
         Me.btnAddRoom.TabIndex = 2
-        Me.btnAddRoom.Text = "Add Room"
+        Me.btnAddRoom.Text = "&Add Category"
         Me.btnAddRoom.UseVisualStyleBackColor = False
         '
         'btnRoomList
@@ -165,9 +165,9 @@ Partial Class frmRoom
         Me.btnRoomList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnRoomList.Location = New System.Drawing.Point(0, 0)
         Me.btnRoomList.Name = "btnRoomList"
-        Me.btnRoomList.Size = New System.Drawing.Size(100, 30)
+        Me.btnRoomList.Size = New System.Drawing.Size(130, 30)
         Me.btnRoomList.TabIndex = 1
-        Me.btnRoomList.Text = "Room List"
+        Me.btnRoomList.Text = "Category &List"
         Me.btnRoomList.UseVisualStyleBackColor = False
         '
         'Panel4
@@ -175,7 +175,7 @@ Partial Class frmRoom
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.txtSearch)
-        Me.Panel4.Controls.Add(Me.dgvRoomList)
+        Me.Panel4.Controls.Add(Me.dgvCategory)
         Me.Panel4.Controls.Add(Me.ShapeContainer1)
         Me.Panel4.ForeColor = System.Drawing.Color.White
         Me.Panel4.Location = New System.Drawing.Point(9, 104)
@@ -204,12 +204,12 @@ Partial Class frmRoom
         Me.txtSearch.Size = New System.Drawing.Size(300, 27)
         Me.txtSearch.TabIndex = 1
         '
-        'dgvRoomList
+        'dgvCategory
         '
-        Me.dgvRoomList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.dgvRoomList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvRoomList.BackgroundColor = System.Drawing.Color.White
-        Me.dgvRoomList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgvCategory.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.dgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvCategory.BackgroundColor = System.Drawing.Color.White
+        Me.dgvCategory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -217,8 +217,8 @@ Partial Class frmRoom
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRoomList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvRoomList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCategory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -226,18 +226,18 @@ Partial Class frmRoom
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvRoomList.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvRoomList.Location = New System.Drawing.Point(4, 116)
-        Me.dgvRoomList.Name = "dgvRoomList"
-        Me.dgvRoomList.RowHeadersVisible = False
-        Me.dgvRoomList.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvRoomList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.dgvRoomList.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.dgvRoomList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvRoomList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgvRoomList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRoomList.Size = New System.Drawing.Size(1000, 370)
-        Me.dgvRoomList.TabIndex = 0
+        Me.dgvCategory.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvCategory.Location = New System.Drawing.Point(4, 116)
+        Me.dgvCategory.Name = "dgvCategory"
+        Me.dgvCategory.RowHeadersVisible = False
+        Me.dgvCategory.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvCategory.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.dgvCategory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.dgvCategory.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvCategory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvCategory.Size = New System.Drawing.Size(1000, 370)
+        Me.dgvCategory.TabIndex = 0
         '
         'ShapeContainer1
         '
@@ -259,25 +259,25 @@ Partial Class frmRoom
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'cmsModifyRoom
+        'cmsModifyCategory
         '
-        Me.cmsModifyRoom.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Delete, Me.Update})
-        Me.cmsModifyRoom.Name = "cmsModifyRoom"
-        Me.cmsModifyRoom.Size = New System.Drawing.Size(113, 48)
+        Me.cmsModifyCategory.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem, Me.UpdateToolStripMenuItem})
+        Me.cmsModifyCategory.Name = "cmsModifyCategory"
+        Me.cmsModifyCategory.Size = New System.Drawing.Size(113, 48)
         '
-        'Delete
+        'DeleteToolStripMenuItem
         '
-        Me.Delete.Name = "Delete"
-        Me.Delete.Size = New System.Drawing.Size(112, 22)
-        Me.Delete.Text = "&Delete"
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.DeleteToolStripMenuItem.Text = "&Delete"
         '
-        'Update
+        'UpdateToolStripMenuItem
         '
-        Me.Update.Name = "Update"
-        Me.Update.Size = New System.Drawing.Size(112, 22)
-        Me.Update.Text = "&Update"
+        Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.UpdateToolStripMenuItem.Text = "&Update"
         '
-        'frmRoom
+        'frmCategoryInformation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -285,9 +285,9 @@ Partial Class frmRoom
         Me.ClientSize = New System.Drawing.Size(1024, 600)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmRoom"
+        Me.Name = "frmCategoryInformation"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmRoom"
+        Me.Text = "frmCategoryInformation"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -295,8 +295,8 @@ Partial Class frmRoom
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.dgvRoomList, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.cmsModifyRoom.ResumeLayout(False)
+        CType(Me.dgvCategory, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.cmsModifyCategory.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -305,17 +305,17 @@ Partial Class frmRoom
     Friend WithEvents btnBack As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents btnUpdateRoom As System.Windows.Forms.Button
+    Friend WithEvents btnAddRoom As System.Windows.Forms.Button
+    Friend WithEvents btnRoomList As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
-    Friend WithEvents dgvRoomList As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvCategory As System.Windows.Forms.DataGridView
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents btnAddRoom As System.Windows.Forms.Button
-    Friend WithEvents btnRoomList As System.Windows.Forms.Button
-    Friend WithEvents cmsModifyRoom As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents Delete As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Update As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents btnUpdateRoom As System.Windows.Forms.Button
+    Friend WithEvents cmsModifyCategory As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UpdateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

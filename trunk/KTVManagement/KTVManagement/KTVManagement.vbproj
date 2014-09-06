@@ -120,10 +120,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Dialog1.Designer.vb">
-      <DependentUpon>Dialog1.vb</DependentUpon>
+    <Compile Include="Category\frmAddCategory.Designer.vb">
+      <DependentUpon>frmAddCategory.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialog1.vb">
+    <Compile Include="Category\frmAddCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\frmUpdateCategory.Designer.vb">
+      <DependentUpon>frmUpdateCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Category\frmUpdateCategory.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm.Designer.vb">
@@ -138,10 +144,10 @@
     <Compile Include="Room\frmAddRoom.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCategoryInformation.Designer.vb">
+    <Compile Include="Category\frmCategoryInformation.Designer.vb">
       <DependentUpon>frmCategoryInformation.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCategoryInformation.vb">
+    <Compile Include="Category\frmCategoryInformation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGuest.Designer.vb">
@@ -240,8 +246,11 @@
     <Compile Include="Transaction.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dialog1.resx">
-      <DependentUpon>Dialog1.vb</DependentUpon>
+    <EmbeddedResource Include="Category\frmAddCategory.resx">
+      <DependentUpon>frmAddCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\frmUpdateCategory.resx">
+      <DependentUpon>frmUpdateCategory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm.resx">
       <DependentUpon>frm.vb</DependentUpon>
@@ -249,7 +258,7 @@
     <EmbeddedResource Include="Room\frmAddRoom.resx">
       <DependentUpon>frmAddRoom.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCategoryInformation.resx">
+    <EmbeddedResource Include="Category\frmCategoryInformation.resx">
       <DependentUpon>frmCategoryInformation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLanguageInformation.resx">
