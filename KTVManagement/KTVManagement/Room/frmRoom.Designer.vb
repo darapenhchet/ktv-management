@@ -149,7 +149,7 @@ Partial Class frmRoom
         Me.btnAddRoom.Name = "btnAddRoom"
         Me.btnAddRoom.Size = New System.Drawing.Size(100, 30)
         Me.btnAddRoom.TabIndex = 2
-        Me.btnAddRoom.Text = "Add Room"
+        Me.btnAddRoom.Text = "Add &Room"
         Me.btnAddRoom.UseVisualStyleBackColor = False
         '
         'btnRoomList
@@ -167,7 +167,7 @@ Partial Class frmRoom
         Me.btnRoomList.Name = "btnRoomList"
         Me.btnRoomList.Size = New System.Drawing.Size(100, 30)
         Me.btnRoomList.TabIndex = 1
-        Me.btnRoomList.Text = "Room List"
+        Me.btnRoomList.Text = "Room &List"
         Me.btnRoomList.UseVisualStyleBackColor = False
         '
         'Panel4
