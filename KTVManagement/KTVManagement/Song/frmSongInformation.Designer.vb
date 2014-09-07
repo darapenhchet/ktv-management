@@ -111,7 +111,7 @@ Partial Class frmSongInformation
         Me.dgvSongerLists.BackgroundColor = System.Drawing.Color.White
         Me.dgvSongerLists.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSongerLists.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Title, Me.Album, Me.Production, Me.Category, Me.Language, Me.cSinger})
-        Me.dgvSongerLists.Location = New System.Drawing.Point(81, 168)
+        Me.dgvSongerLists.Location = New System.Drawing.Point(14, 63)
         Me.dgvSongerLists.Name = "dgvSongerLists"
         Me.dgvSongerLists.RowTemplate.Height = 30
         Me.dgvSongerLists.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]

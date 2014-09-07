@@ -42,9 +42,12 @@ Public Class ClsSingerTransaction
                     singer.Name = dr.GetString(1)
                     singer.Gender = dr.GetString(2)
                     'Dim ms As New System.IO.MemoryStream
-                    'ms = dr.GetStream(3)
+                    'ms = dr.GetStream(3)C:\Users\DARA PENHCHET\Desktop\ktv-management\DataLayer\DataLayer\ClsSingerTransaction.vb
                     'singer.Photo = ms.GetBuffer
                 End While
+                dr.Close()
+                dr.Dispose()
+                dr = Nothing
                 Return singer
             End Using
         Catch ex As Exception

@@ -54,6 +54,9 @@ Public Class ClsProductionTransaction
                 End While
                 Return production
             End Using
+            dr.Close()
+            dr.Dispose()
+            dr = Nothing
         Catch ex As Exception
             Return Nothing
         End Try

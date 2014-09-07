@@ -40,12 +40,11 @@ Public Class frmSong
             frmUpdateSong.cboProduction.Text = dgvSongList.CurrentRow.Cells(4).Value
             frmUpdateSong.cboLanguage.Text = dgvSongList.CurrentRow.Cells(5).Value
 
+            Dim singerTransaction As New ClsSingerTransaction
             For Each singer As String In GetStrSingers(dgvSongList.CurrentRow.Cells(6).Value)
-                frmUpdateSong.cboSinger.Text = ""
-                frmUpdateSong.cboSinger.SelectedText = singer
                 Dim objSinger As New ClsSinger
-                objSinger.ID = frmUpdateSong.cboSinger.SelectedValue
-                objSinger.Name = frmUpdateSong.cboSinger.Text
+                objSinger = singerTransaction.getSingerBySingerName(singer)
+                MessageBox.Show(objSinger.ID)
                 frmUpdateSong.lstSingers.Items.Add(objSinger)
             Next
             frmUpdateSong.txtPath.Text = dgvSongList.CurrentRow.Cells(7).Value
