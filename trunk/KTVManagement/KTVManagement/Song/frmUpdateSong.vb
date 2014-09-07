@@ -81,6 +81,12 @@ Public Class frmUpdateSong
             song.Production = New ClsProduction(cboProduction.SelectedValue, cboProduction.Text)
             song.Language = New ClsLanguage(cboLanguage.SelectedValue, cboLanguage.Text)
             song.Path = txtPath.Text
+            For Each singer As ClsSinger In lstSingers.Items
+                MessageBox.Show(singer.ID)
+                singer.ID = singer.ID
+                singer.Name = singer.Name
+                song.Singers.Add(singer)
+            Next
             Dim Destination As String = "D:\KTV\" & song.Production.Production & "\" & song.Album
             Try
                 If Not Directory.Exists(Destination) Then
@@ -97,12 +103,13 @@ Public Class frmUpdateSong
                 MessageBox.Show("DELETE ALL DETAILS")
                 If songTransaction.updateSong(song) = True Then
                     MessageBox.Show("UPDATED SONG")
-                    For Each singer As ClsSinger In lstSingers.Items
-                        song.Singers.Add(singer)
+                    For Each singer As ClsSinger In song.Singers
                         songDetails.SongID = song.ID
                         songDetails.SingerID = singer.ID
-                        songDetailsTransaction.addNewSongDetails(songDetails)
-                        MessageBox.Show("DETAILS INSERTED")
+                        MessageBox.Show(songDetails.SingerID & songDetails.SongID)
+                        If songDetailsTransaction.addNewSongDetails(songDetails) = True Then
+                            MessageBox.Show("DETAILS INSERTED")
+                        End If
                     Next
                 End If
             End If

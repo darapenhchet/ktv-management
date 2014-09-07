@@ -21,16 +21,12 @@ Public Class frmSinger
         displaySingerInformation(txtSearch.Text)
     End Sub
 
-    Private Sub btnAddRoom_Click(sender As Object, e As EventArgs) Handles btnAddRoom.Click
-        frmAddSinger.Show()
-        Me.Close()
-    End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Close()
     End Sub
 
-    Private Sub btnUpdateRoom_Click(sender As Object, e As EventArgs) Handles btnUpdateRoom.Click
+    Private Sub btnUpdateSinger_Click(sender As Object, e As EventArgs) Handles btnUpdateSinger.Click
         Try
             frmUpdateSinger.Show()
             frmUpdateSinger.txtID.Text = dgvSingerList.CurrentRow.Cells(0).Value
@@ -46,8 +42,10 @@ Public Class frmSinger
         Catch ex As Exception
 
         End Try
-        
     End Sub
 
-
+    Private Sub btnAddSinger_Click(sender As Object, e As EventArgs) Handles btnAddSinger.Click
+        frmAddSinger.Show()
+        Me.Close()
+    End Sub
 End Class

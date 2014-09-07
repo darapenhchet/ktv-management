@@ -54,6 +54,9 @@ Public Class ClsRoomTransaction
                     room.RoomType = dr.GetString(1)
                     room.Price = dr.GetDouble(2)
                 End While
+                dr.Close()
+                dr.Dispose()
+                dr = Nothing
                 Return room
             End Using
         Catch ex As Exception
