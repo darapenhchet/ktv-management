@@ -138,6 +138,36 @@
     <Compile Include="frm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSongMain.Designer.vb">
+      <DependentUpon>frmSongMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSongMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Language\frmLanguage.Designer.vb">
+      <DependentUpon>frmLanguage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Language\frmLanguage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmAddProduction.Designer.vb">
+      <DependentUpon>frmAddProduction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmAddProduction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmProduction.Designer.vb">
+      <DependentUpon>frmProduction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmProduction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmUpdateProduction.Designer.vb">
+      <DependentUpon>frmUpdateProduction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmUpdateProduction.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Room\frmAddRoom.Designer.vb">
       <DependentUpon>frmAddRoom.vb</DependentUpon>
     </Compile>
@@ -216,6 +246,18 @@
     <Compile Include="Singer\frmUpdateSinger.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Song\frmAddSong.Designer.vb">
+      <DependentUpon>frmAddSong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Song\frmAddSong.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Song\frmSong.Designer.vb">
+      <DependentUpon>frmSong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Song\frmSong.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Song\frmSongInformation.Designer.vb">
       <DependentUpon>frmSongInformation.vb</DependentUpon>
     </Compile>
@@ -261,6 +303,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Song\frmUpdateSong.Designer.vb">
+      <DependentUpon>frmUpdateSong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Song\frmUpdateSong.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Transaction.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -272,6 +320,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm.resx">
       <DependentUpon>frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSongMain.resx">
+      <DependentUpon>frmSongMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\frmLanguage.resx">
+      <DependentUpon>frmLanguage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmAddProduction.resx">
+      <DependentUpon>frmAddProduction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmProduction.resx">
+      <DependentUpon>frmProduction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmUpdateProduction.resx">
+      <DependentUpon>frmUpdateProduction.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Room\frmAddRoom.resx">
       <DependentUpon>frmAddRoom.vb</DependentUpon>
@@ -309,6 +372,12 @@
     <EmbeddedResource Include="Singer\frmUpdateSinger.resx">
       <DependentUpon>frmUpdateSinger.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Song\frmAddSong.resx">
+      <DependentUpon>frmAddSong.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Song\frmSong.resx">
+      <DependentUpon>frmSong.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Song\frmSongInformation.resx">
       <DependentUpon>frmSongInformation.vb</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +398,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Song\frmUpdateSong.resx">
+      <DependentUpon>frmUpdateSong.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -366,6 +438,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Photo.jpg" />
+    <None Include="Resources\rounded3.png" />
+    <None Include="Resources\microphone52 %281%29.png" />
+    <None Include="Resources\microphone52.png" />
     <None Include="Resources\background.png" />
     <None Include="Resources\delete38.png" />
     <None Include="Resources\delete38 %281%29.png" />

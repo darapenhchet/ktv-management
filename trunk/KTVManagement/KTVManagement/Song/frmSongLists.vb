@@ -11,7 +11,7 @@ Public Class frmSongLists
     End Sub
 
     Public Sub DisplayInformation()
-        dsSongDetails = songDetailsTransaction.getAllSongDetails()
+        dsSongDetails = songDetailsTransaction.getAllSongDetails("")
         dgvSongLists.DataSource = dsSongDetails.Tables(0)
         For Each column As DataGridViewColumn In dgvSongLists.Columns
             column.Width = (dgvSongLists.Width - 4) / dgvSongLists.Columns.Count

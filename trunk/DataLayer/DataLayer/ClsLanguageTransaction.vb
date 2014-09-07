@@ -46,6 +46,7 @@ Public Class ClsLanguageTransaction
                 End Using
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return Nothing
         End Try
         Return Nothing
