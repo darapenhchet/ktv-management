@@ -24,28 +24,29 @@ Partial Class frmAddProduction
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnAddProduction = New System.Windows.Forms.Button()
         Me.btnProductionList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.Message = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtCategory = New System.Windows.Forms.TextBox()
+        Me.txtProduction = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.btnBack = New System.Windows.Forms.PictureBox()
-        Me.pbPhoto = New System.Windows.Forms.PictureBox()
+        Me.OpenPhoto = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,6 +72,17 @@ Partial Class frmAddProduction
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1024, 60)
         Me.Panel2.TabIndex = 2
+        '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.White
+        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
+        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBack.Location = New System.Drawing.Point(6, 3)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(50, 50)
+        Me.btnBack.TabIndex = 1
+        Me.btnBack.TabStop = False
         '
         'Label1
         '
@@ -145,7 +157,7 @@ Partial Class frmAddProduction
         Me.Panel4.Controls.Add(Me.btnSave)
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label3)
-        Me.Panel4.Controls.Add(Me.txtCategory)
+        Me.Panel4.Controls.Add(Me.txtProduction)
         Me.Panel4.Controls.Add(Me.Label8)
         Me.Panel4.Controls.Add(Me.txtID)
         Me.Panel4.Controls.Add(Me.ShapeContainer1)
@@ -154,6 +166,17 @@ Partial Class frmAddProduction
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
+        '
+        'pbPhoto
+        '
+        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.pbPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbPhoto.Location = New System.Drawing.Point(780, 55)
+        Me.pbPhoto.Name = "pbPhoto"
+        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
+        Me.pbPhoto.TabIndex = 37
+        Me.pbPhoto.TabStop = False
         '
         'Message
         '
@@ -210,14 +233,14 @@ Partial Class frmAddProduction
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Production:"
         '
-        'txtCategory
+        'txtProduction
         '
-        Me.txtCategory.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtCategory.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCategory.Location = New System.Drawing.Point(397, 193)
-        Me.txtCategory.Name = "txtCategory"
-        Me.txtCategory.Size = New System.Drawing.Size(300, 27)
-        Me.txtCategory.TabIndex = 17
+        Me.txtProduction.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtProduction.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProduction.Location = New System.Drawing.Point(397, 193)
+        Me.txtProduction.Name = "txtProduction"
+        Me.txtProduction.Size = New System.Drawing.Size(300, 27)
+        Me.txtProduction.TabIndex = 17
         '
         'Label8
         '
@@ -262,25 +285,9 @@ Partial Class frmAddProduction
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'btnBack
+        'OpenPhoto
         '
-        Me.btnBack.BackColor = System.Drawing.Color.White
-        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
-        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnBack.Location = New System.Drawing.Point(6, 3)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(50, 50)
-        Me.btnBack.TabIndex = 1
-        Me.btnBack.TabStop = False
-        '
-        'pbPhoto
-        '
-        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pbPhoto.Location = New System.Drawing.Point(780, 55)
-        Me.pbPhoto.Name = "pbPhoto"
-        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
-        Me.pbPhoto.TabIndex = 37
-        Me.pbPhoto.TabStop = False
+        Me.OpenPhoto.FileName = "OpenFileDialog1"
         '
         'frmAddProduction
         '
@@ -296,10 +303,10 @@ Partial Class frmAddProduction
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -317,10 +324,11 @@ Partial Class frmAddProduction
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtCategory As System.Windows.Forms.TextBox
+    Friend WithEvents txtProduction As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtID As System.Windows.Forms.TextBox
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
+    Friend WithEvents OpenPhoto As System.Windows.Forms.OpenFileDialog
 End Class

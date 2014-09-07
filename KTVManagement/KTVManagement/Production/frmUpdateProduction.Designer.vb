@@ -35,13 +35,14 @@ Partial Class frmUpdateProduction
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtCategory = New System.Windows.Forms.TextBox()
+        Me.txtProduction = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.pbPhoto = New System.Windows.Forms.PictureBox()
+        Me.OpenPhoto = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -165,7 +166,7 @@ Partial Class frmUpdateProduction
         Me.Panel4.Controls.Add(Me.btnSave)
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label3)
-        Me.Panel4.Controls.Add(Me.txtCategory)
+        Me.Panel4.Controls.Add(Me.txtProduction)
         Me.Panel4.Controls.Add(Me.Label8)
         Me.Panel4.Controls.Add(Me.txtID)
         Me.Panel4.Controls.Add(Me.ShapeContainer1)
@@ -230,14 +231,14 @@ Partial Class frmUpdateProduction
         Me.Label3.TabIndex = 31
         Me.Label3.Text = "Production:"
         '
-        'txtCategory
+        'txtProduction
         '
-        Me.txtCategory.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtCategory.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCategory.Location = New System.Drawing.Point(397, 193)
-        Me.txtCategory.Name = "txtCategory"
-        Me.txtCategory.Size = New System.Drawing.Size(300, 27)
-        Me.txtCategory.TabIndex = 30
+        Me.txtProduction.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtProduction.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProduction.Location = New System.Drawing.Point(397, 193)
+        Me.txtProduction.Name = "txtProduction"
+        Me.txtProduction.Size = New System.Drawing.Size(300, 27)
+        Me.txtProduction.TabIndex = 30
         '
         'Label8
         '
@@ -296,11 +297,17 @@ Partial Class frmUpdateProduction
         'pbPhoto
         '
         Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.pbPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pbPhoto.Location = New System.Drawing.Point(780, 55)
         Me.pbPhoto.Name = "pbPhoto"
         Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
         Me.pbPhoto.TabIndex = 36
         Me.pbPhoto.TabStop = False
+        '
+        'OpenPhoto
+        '
+        Me.OpenPhoto.FileName = "OpenFileDialog1"
         '
         'frmUpdateProduction
         '
@@ -340,8 +347,9 @@ Partial Class frmUpdateProduction
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtCategory As System.Windows.Forms.TextBox
+    Friend WithEvents txtProduction As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtID As System.Windows.Forms.TextBox
     Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
+    Friend WithEvents OpenPhoto As System.Windows.Forms.OpenFileDialog
 End Class

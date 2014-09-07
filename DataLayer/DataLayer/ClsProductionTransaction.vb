@@ -81,7 +81,7 @@ Public Class ClsProductionTransaction
     End Function
 
     Public Function addNewProduction(production As ClsProduction) As Boolean
-        Dim sql As String = "INSERT INTO productions(production,photo) VALUES(@Production,@Photo))"
+        Dim sql As String = "INSERT INTO productions(production,photo) VALUES(@Production,@Photo)"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -91,6 +91,7 @@ Public Class ClsProductionTransaction
                 Return True
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
 

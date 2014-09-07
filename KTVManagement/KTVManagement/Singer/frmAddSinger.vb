@@ -13,7 +13,7 @@
         Dim singer As New DataLayer.ClsSinger
         singer.Name = txtSingerName.Text
         singer.Gender = cboGender.SelectedItem.ToString
-        singer.Photo = Photo
+        singer.Photo = getMemoryStream(pbPhoto)
         If singerTransaction.addNewsinger(singer) = True Then
             Message.Visible = True
         Else
@@ -26,12 +26,11 @@
     Private Sub pbPhoto_Click(sender As Object, e As EventArgs) Handles pbPhoto.Click
         If OpenPhoto.ShowDialog() <> Windows.Forms.DialogResult.Cancel Then
             pbPhoto.Image = Image.FromFile(OpenPhoto.FileName)
-            Photo = getMemoryStream(OpenPhoto.FileName)
+            Photo = getMemoryStream(pbPhoto)
         End If
     End Sub
 
     Private Sub btnSingerList_Click(sender As Object, e As EventArgs) Handles btnSingerList.Click
-        MessageBox.Show("List")
         frmSinger.Show()
         Me.Close()
     End Sub

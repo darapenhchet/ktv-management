@@ -30,7 +30,6 @@ Partial Class frmUserInformation
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.cboPosition = New System.Windows.Forms.ComboBox()
-        Me.pbUser = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -41,9 +40,10 @@ Partial Class frmUserInformation
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.OpenUserPhoto = New System.Windows.Forms.OpenFileDialog()
+        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvUserInformation, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbUser, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -53,7 +53,7 @@ Partial Class frmUserInformation
         Me.Panel1.Controls.Add(Me.btnUpdate)
         Me.Panel1.Controls.Add(Me.btnSave)
         Me.Panel1.Controls.Add(Me.cboPosition)
-        Me.Panel1.Controls.Add(Me.pbUser)
+        Me.Panel1.Controls.Add(Me.pbPhoto)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.txtID)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -128,17 +128,6 @@ Partial Class frmUserInformation
         Me.cboPosition.Name = "cboPosition"
         Me.cboPosition.Size = New System.Drawing.Size(149, 33)
         Me.cboPosition.TabIndex = 11
-        '
-        'pbUser
-        '
-        Me.pbUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbUser.InitialImage = CType(resources.GetObject("pbUser.InitialImage"), System.Drawing.Image)
-        Me.pbUser.Location = New System.Drawing.Point(655, 105)
-        Me.pbUser.Name = "pbUser"
-        Me.pbUser.Size = New System.Drawing.Size(137, 150)
-        Me.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbUser.TabIndex = 10
-        Me.pbUser.TabStop = False
         '
         'Label5
         '
@@ -220,6 +209,17 @@ Partial Class frmUserInformation
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "User Management"
         '
+        'pbPhoto
+        '
+        Me.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbPhoto.InitialImage = CType(resources.GetObject("pbPhoto.InitialImage"), System.Drawing.Image)
+        Me.pbPhoto.Location = New System.Drawing.Point(655, 105)
+        Me.pbPhoto.Name = "pbPhoto"
+        Me.pbPhoto.Size = New System.Drawing.Size(137, 150)
+        Me.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbPhoto.TabIndex = 10
+        Me.pbPhoto.TabStop = False
+        '
         'frmUserInformation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
@@ -238,7 +238,7 @@ Partial Class frmUserInformation
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgvUserInformation, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbUser, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -246,7 +246,7 @@ Partial Class frmUserInformation
     Friend WithEvents btnNew As System.Windows.Forms.Button
     Friend WithEvents txtUsername As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents pbUser As System.Windows.Forms.PictureBox
+    Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtID As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label

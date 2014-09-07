@@ -5,10 +5,10 @@
     Public FOREGROUND_ACTIVE_TAB As Color = Color.FromArgb(44, 62, 80)
     Public FOREGROUND_INACTIVE_TAB As Color = Color.White
 
-    Public Function getMemoryStream(FileName As String) As Byte()
+    Public Function getMemoryStream(Picture As PictureBox) As Byte()
         Try
             Using mStream As System.IO.MemoryStream = New System.IO.MemoryStream()
-                Image.FromFile(FileName).Save(mStream, Image.FromFile(FileName).RawFormat)
+                Picture.Image.Save(mStream, Picture.Image.RawFormat)
                 Return mStream.GetBuffer
             End Using
         Catch ex As Exception
