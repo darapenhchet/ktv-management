@@ -77,7 +77,7 @@ Public Class ClsLanguageTransaction
     End Function
 
     Public Function addNewLanguage(language As ClsLanguage) As Boolean
-        Dim sql As String = "INSERT INTO languages(Language,photo) VALUES(@Language,@Photo))"
+        Dim sql As String = "INSERT INTO languages(Language,photo) VALUES(@Language,@Photo)"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -87,6 +87,7 @@ Public Class ClsLanguageTransaction
                 Return True
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
     End Function
@@ -103,6 +104,7 @@ Public Class ClsLanguageTransaction
                 Return True
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
     End Function
@@ -117,6 +119,7 @@ Public Class ClsLanguageTransaction
                 Return True
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
     End Function

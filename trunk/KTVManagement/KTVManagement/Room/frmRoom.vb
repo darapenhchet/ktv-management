@@ -65,7 +65,7 @@
             frmUpdateRoom.cboType.Text = dgvRoomList.CurrentRow.Cells(2).Value
             frmUpdateRoom.txtUnitPrice.Text = dgvRoomList.CurrentRow.Cells(3).Value
             frmUpdateRoom.txtDiscount.Text = dgvRoomList.CurrentRow.Cells(4).Value
-            frmUpdateRoom.Visible = True
+            frmUpdateRoom.Show()
             Me.Close()
         Catch ex As Exception
         End Try

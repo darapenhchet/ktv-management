@@ -18,4 +18,20 @@
         Panel1.Left = (Me.Width - Panel1.Width) / 2
         Panel1.Top = (Me.Height - Panel1.Height) / 2
     End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Dim language As New DataLayer.ClsLanguage
+        Dim languageTransaction As New DataLayer.ClsLanguageTransaction
+        Try
+            language.Language = txtLanguage.Text
+            language.Photo = getMemoryStream(pbPhoto)
+            If languageTransaction.addNewLanguage(language) = True Then
+
+            End If
+        Catch ex As Exception
+
+        End Try
+
+
+    End Sub
 End Class

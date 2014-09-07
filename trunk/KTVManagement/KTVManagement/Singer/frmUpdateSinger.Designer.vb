@@ -109,6 +109,7 @@ Partial Class frmUpdateSinger
         '
         'Panel5
         '
+        Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel5.Controls.Add(Me.btnUpdateRoom)
         Me.Panel5.Controls.Add(Me.btnAddRoom)
