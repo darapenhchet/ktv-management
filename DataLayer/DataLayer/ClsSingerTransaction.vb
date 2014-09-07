@@ -4,7 +4,7 @@ Public Class ClsSingerTransaction
     ''' dsSinger is a Dataset of the Singer Table
     ''' </summary>
     ''' <remarks></remarks>
-    Private dsSinger As DataSet
+    Private dsSinger As New DataSet
 
     ''' <summary>
     ''' getAllSingers Function
@@ -18,7 +18,6 @@ Public Class ClsSingerTransaction
                 Command.CommandText = sql
                 Command.CommandType = CommandType.StoredProcedure
                 Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
-                    dsSinger = New DataSet
                     adt.Fill(dsSinger)
                     Return dsSinger
                 End Using
@@ -27,6 +26,26 @@ Public Class ClsSingerTransaction
             MsgBox(ex.Message)
             Return Nothing
         End Try
+    End Function
+
+    Public Function getAllSingerByKeyword(keyword As String) As DataSet
+        Dim sql As String = "SELECT singerId, singerName, gender, photo FROM singers WHERE singerId LIKE @SingerID OR SingerName LIKE @SingerName OR gender LIKE @Gender"
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Command.Parameters.AddWithValue("@SingerID", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@SingerName", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@Gender", "%" & keyword & "%")
+                Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
+                    adt.Fill(dsSinger)
+                    Return dsSinger
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+
     End Function
 
     Public Function getAllSingersTwoColumns() As DataSet
@@ -54,7 +73,7 @@ Public Class ClsSingerTransaction
     ''' <remarks>This function is used to add a new singer </remarks>
     Public Function addNewsinger(singer As ClsSinger) As Boolean
         Try
-            Using Command As MySqlCommand = DataLayer.ClsConnection.con.CreateCommand
+            Using Command As MySqlCommand = DataLayer.ClsConnection.Con.CreateCommand
                 Command.CommandText = "spAddSinger"
                 Command.CommandType = CommandType.StoredProcedure
                 Command.Parameters.AddWithValue("@singerName", singer.Name)
@@ -77,7 +96,7 @@ Public Class ClsSingerTransaction
     ''' <remarks>This function is used to update the singer by specified ID</remarks>
     Public Function updateSinger(singer As ClsSinger) As Boolean
         Try
-            Using Command As MySqlCommand = DataLayer.ClsConnection.con.CreateCommand
+            Using Command As MySqlCommand = DataLayer.ClsConnection.Con.CreateCommand
                 Command.CommandText = "UPDATE Singers SET singerName = @singerName, gender = @gender, photo = @photo WHERE singerID = @singerID"
                 Command.Parameters.AddWithValue("@singerID", singer.ID)
                 Command.Parameters.AddWithValue("@singerName", singer.Name)
@@ -100,7 +119,7 @@ Public Class ClsSingerTransaction
     ''' <remarks>This function is used to delete a user </remarks>
     Public Function deleteSinger(id As Integer) As Boolean
         Try
-            Using Command As MySqlCommand = DataLayer.ClsConnection.con.CreateCommand
+            Using Command As MySqlCommand = DataLayer.ClsConnection.Con.CreateCommand
                 Command.CommandText = "DELETE FROM Singers WHERE singerId = @singerId"
                 Command.Parameters.AddWithValue("@singerId", id)
                 Command.ExecuteNonQuery()

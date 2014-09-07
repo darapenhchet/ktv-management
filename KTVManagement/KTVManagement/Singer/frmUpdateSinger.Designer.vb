@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmSinger
+Partial Class frmUpdateSinger
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,8 +22,6 @@ Partial Class frmSinger
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnBack = New System.Windows.Forms.PictureBox()
@@ -34,21 +32,29 @@ Partial Class frmSinger
         Me.btnAddRoom = New System.Windows.Forms.Button()
         Me.btnRoomList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtSearch = New System.Windows.Forms.TextBox()
-        Me.dgvSingerList = New System.Windows.Forms.DataGridView()
+        Me.Message = New System.Windows.Forms.Label()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtDescription = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtCategory = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.dgvSingerList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.Panel4)
@@ -56,7 +62,7 @@ Partial Class frmSinger
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1024, 600)
-        Me.Panel1.TabIndex = 2
+        Me.Panel1.TabIndex = 3
         '
         'Panel2
         '
@@ -114,13 +120,13 @@ Partial Class frmSinger
         'btnUpdateRoom
         '
         Me.btnUpdateRoom.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnUpdateRoom.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnUpdateRoom.BackColor = System.Drawing.Color.White
         Me.btnUpdateRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnUpdateRoom.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnUpdateRoom.FlatAppearance.BorderSize = 0
         Me.btnUpdateRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdateRoom.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdateRoom.ForeColor = System.Drawing.Color.White
+        Me.btnUpdateRoom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.btnUpdateRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnUpdateRoom.Location = New System.Drawing.Point(260, 0)
         Me.btnUpdateRoom.Name = "btnUpdateRoom"
@@ -150,13 +156,13 @@ Partial Class frmSinger
         'btnRoomList
         '
         Me.btnRoomList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnRoomList.BackColor = System.Drawing.Color.White
+        Me.btnRoomList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnRoomList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnRoomList.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnRoomList.FlatAppearance.BorderSize = 0
         Me.btnRoomList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRoomList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRoomList.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnRoomList.ForeColor = System.Drawing.Color.White
         Me.btnRoomList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnRoomList.Location = New System.Drawing.Point(0, 0)
         Me.btnRoomList.Name = "btnRoomList"
@@ -168,9 +174,16 @@ Partial Class frmSinger
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Panel4.Controls.Add(Me.Label2)
-        Me.Panel4.Controls.Add(Me.txtSearch)
-        Me.Panel4.Controls.Add(Me.dgvSingerList)
+        Me.Panel4.Controls.Add(Me.pbPhoto)
+        Me.Panel4.Controls.Add(Me.Message)
+        Me.Panel4.Controls.Add(Me.btnSave)
+        Me.Panel4.Controls.Add(Me.Label7)
+        Me.Panel4.Controls.Add(Me.txtDescription)
+        Me.Panel4.Controls.Add(Me.Label4)
+        Me.Panel4.Controls.Add(Me.Label3)
+        Me.Panel4.Controls.Add(Me.txtCategory)
+        Me.Panel4.Controls.Add(Me.Label8)
+        Me.Panel4.Controls.Add(Me.txtID)
         Me.Panel4.Controls.Add(Me.ShapeContainer1)
         Me.Panel4.ForeColor = System.Drawing.Color.White
         Me.Panel4.Location = New System.Drawing.Point(9, 104)
@@ -178,61 +191,113 @@ Partial Class frmSinger
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
         '
-        'Label2
+        'Message
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(13, 72)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 19)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Search:"
+        Me.Message.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Message.AutoSize = True
+        Me.Message.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Message.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Message.Location = New System.Drawing.Point(341, 375)
+        Me.Message.Name = "Message"
+        Me.Message.Size = New System.Drawing.Size(364, 23)
+        Me.Message.TabIndex = 34
+        Me.Message.Text = "You have been updated successfully!!!"
+        Me.Message.Visible = False
         '
-        'txtSearch
+        'btnSave
         '
-        Me.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtSearch.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(100, 68)
-        Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(300, 27)
-        Me.txtSearch.TabIndex = 1
+        Me.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSave.Location = New System.Drawing.Point(597, 285)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(100, 30)
+        Me.btnSave.TabIndex = 28
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = False
         '
-        'dgvSingerList
+        'Label7
         '
-        Me.dgvSingerList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.dgvSingerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvSingerList.BackgroundColor = System.Drawing.Color.White
-        Me.dgvSingerList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvSingerList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvSingerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvSingerList.DefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvSingerList.Location = New System.Drawing.Point(4, 116)
-        Me.dgvSingerList.Name = "dgvSingerList"
-        Me.dgvSingerList.RowHeadersVisible = False
-        Me.dgvSingerList.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvSingerList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.dgvSingerList.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.dgvSingerList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvSingerList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgvSingerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvSingerList.Size = New System.Drawing.Size(1000, 370)
-        Me.dgvSingerList.TabIndex = 0
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(38, 91)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(250, 23)
+        Me.Label7.TabIndex = 33
+        Me.Label7.Text = "Update Singer Information"
+        '
+        'txtDescription
+        '
+        Me.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtDescription.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescription.Location = New System.Drawing.Point(397, 235)
+        Me.txtDescription.Name = "txtDescription"
+        Me.txtDescription.Size = New System.Drawing.Size(300, 27)
+        Me.txtDescription.TabIndex = 32
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(290, 239)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(98, 19)
+        Me.Label4.TabIndex = 31
+        Me.Label4.Text = "Description:"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(305, 197)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(85, 19)
+        Me.Label3.TabIndex = 30
+        Me.Label3.Text = "Category:"
+        '
+        'txtCategory
+        '
+        Me.txtCategory.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtCategory.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCategory.Location = New System.Drawing.Point(397, 193)
+        Me.txtCategory.Name = "txtCategory"
+        Me.txtCategory.Size = New System.Drawing.Size(300, 27)
+        Me.txtCategory.TabIndex = 29
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(360, 154)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(28, 19)
+        Me.Label8.TabIndex = 27
+        Me.Label8.Text = "ID:"
+        '
+        'txtID
+        '
+        Me.txtID.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtID.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.Location = New System.Drawing.Point(397, 150)
+        Me.txtID.Name = "txtID"
+        Me.txtID.ReadOnly = True
+        Me.txtID.Size = New System.Drawing.Size(300, 27)
+        Me.txtID.TabIndex = 26
+        Me.txtID.Text = "Auto Number"
         '
         'ShapeContainer1
         '
@@ -254,7 +319,16 @@ Partial Class frmSinger
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'frmSinger
+        'pbPhoto
+        '
+        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
+        Me.pbPhoto.Name = "pbPhoto"
+        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
+        Me.pbPhoto.TabIndex = 35
+        Me.pbPhoto.TabStop = False
+        '
+        'frmUpdateSinger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -262,8 +336,8 @@ Partial Class frmSinger
         Me.ClientSize = New System.Drawing.Size(1024, 600)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmSinger"
-        Me.Text = "frmSinger"
+        Me.Name = "frmUpdateSinger"
+        Me.Text = "frmUpdateSinger"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -271,7 +345,7 @@ Partial Class frmSinger
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.dgvSingerList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -285,9 +359,16 @@ Partial Class frmSinger
     Friend WithEvents btnAddRoom As System.Windows.Forms.Button
     Friend WithEvents btnRoomList As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
-    Friend WithEvents dgvSingerList As System.Windows.Forms.DataGridView
+    Friend WithEvents Message As System.Windows.Forms.Label
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txtDescription As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtCategory As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtID As System.Windows.Forms.TextBox
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
 End Class
