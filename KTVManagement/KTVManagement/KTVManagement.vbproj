@@ -321,6 +321,9 @@
     <EmbeddedResource Include="frm.resx">
       <DependentUpon>frm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGuest.resx">
+      <DependentUpon>frmGuest.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSongMain.resx">
       <DependentUpon>frmSongMain.vb</DependentUpon>
     </EmbeddedResource>
