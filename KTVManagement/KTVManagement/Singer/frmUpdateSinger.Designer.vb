@@ -32,6 +32,7 @@ Partial Class frmUpdateSinger
         Me.btnAddRoom = New System.Windows.Forms.Button()
         Me.btnRoomList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.Message = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -43,7 +44,6 @@ Partial Class frmUpdateSinger
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -191,6 +191,15 @@ Partial Class frmUpdateSinger
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
         '
+        'pbPhoto
+        '
+        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
+        Me.pbPhoto.Name = "pbPhoto"
+        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
+        Me.pbPhoto.TabIndex = 35
+        Me.pbPhoto.TabStop = False
+        '
         'Message
         '
         Me.Message.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -319,15 +328,6 @@ Partial Class frmUpdateSinger
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'pbPhoto
-        '
-        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
-        Me.pbPhoto.Name = "pbPhoto"
-        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
-        Me.pbPhoto.TabIndex = 35
-        Me.pbPhoto.TabStop = False
-        '
         'frmUpdateSinger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -337,6 +337,7 @@ Partial Class frmUpdateSinger
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmUpdateSinger"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmUpdateSinger"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)

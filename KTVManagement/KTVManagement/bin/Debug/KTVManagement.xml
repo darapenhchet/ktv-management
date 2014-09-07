@@ -87,6 +87,14 @@ KTVManagement
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:KTVManagement.My.Resources.Resources.microphone52">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:KTVManagement.My.Resources.Resources.microphone52__1_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:KTVManagement.My.Resources.Resources.muted">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -108,6 +116,10 @@ KTVManagement
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:KTVManagement.My.Resources.Resources.rewind26">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:KTVManagement.My.Resources.Resources.rounded3">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -16,7 +16,8 @@
     End Sub
 
     Private Sub btnSongInformation_Click(sender As Object, e As EventArgs) Handles btnSongInformation.Click
-        frmSongInformation.Show()
+        frmSongMain.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnSingerInformation_Click(sender As Object, e As EventArgs) Handles btnSingerInformation.Click

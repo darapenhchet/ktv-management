@@ -31,18 +31,19 @@ Partial Class frmAddSinger
         Me.btnAddRoom = New System.Windows.Forms.Button()
         Me.btnSingerList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.cboGender = New System.Windows.Forms.ComboBox()
+        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.Message = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtGender = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtSingerName = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.pbPhoto = New System.Windows.Forms.PictureBox()
+        Me.OpenPhoto = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -153,14 +154,14 @@ Partial Class frmAddSinger
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.cboGender)
         Me.Panel4.Controls.Add(Me.pbPhoto)
         Me.Panel4.Controls.Add(Me.Message)
         Me.Panel4.Controls.Add(Me.btnSave)
         Me.Panel4.Controls.Add(Me.Label7)
-        Me.Panel4.Controls.Add(Me.txtGender)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.Label3)
-        Me.Panel4.Controls.Add(Me.txtName)
+        Me.Panel4.Controls.Add(Me.txtSingerName)
         Me.Panel4.Controls.Add(Me.Label8)
         Me.Panel4.Controls.Add(Me.txtID)
         Me.Panel4.Controls.Add(Me.ShapeContainer1)
@@ -169,6 +170,27 @@ Partial Class frmAddSinger
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
+        '
+        'cboGender
+        '
+        Me.cboGender.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cboGender.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboGender.FormattingEnabled = True
+        Me.cboGender.Items.AddRange(New Object() {"Female", "Male"})
+        Me.cboGender.Location = New System.Drawing.Point(397, 235)
+        Me.cboGender.Name = "cboGender"
+        Me.cboGender.Size = New System.Drawing.Size(300, 29)
+        Me.cboGender.TabIndex = 31
+        '
+        'pbPhoto
+        '
+        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
+        Me.pbPhoto.Name = "pbPhoto"
+        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
+        Me.pbPhoto.TabIndex = 27
+        Me.pbPhoto.TabStop = False
         '
         'Message
         '
@@ -213,15 +235,6 @@ Partial Class frmAddSinger
         Me.Label7.TabIndex = 25
         Me.Label7.Text = "Add New Singer Information"
         '
-        'txtGender
-        '
-        Me.txtGender.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtGender.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtGender.Location = New System.Drawing.Point(397, 235)
-        Me.txtGender.Name = "txtGender"
-        Me.txtGender.Size = New System.Drawing.Size(300, 27)
-        Me.txtGender.TabIndex = 20
-        '
         'Label4
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -246,14 +259,14 @@ Partial Class frmAddSinger
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Name:"
         '
-        'txtName
+        'txtSingerName
         '
-        Me.txtName.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(397, 193)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(300, 27)
-        Me.txtName.TabIndex = 17
+        Me.txtSingerName.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtSingerName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSingerName.Location = New System.Drawing.Point(397, 193)
+        Me.txtSingerName.Name = "txtSingerName"
+        Me.txtSingerName.Size = New System.Drawing.Size(300, 27)
+        Me.txtSingerName.TabIndex = 17
         '
         'Label8
         '
@@ -298,15 +311,6 @@ Partial Class frmAddSinger
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'pbPhoto
-        '
-        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
-        Me.pbPhoto.Name = "pbPhoto"
-        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
-        Me.pbPhoto.TabIndex = 27
-        Me.pbPhoto.TabStop = False
-        '
         'frmAddSinger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -316,6 +320,7 @@ Partial Class frmAddSinger
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAddSinger"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAddSinger"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -340,13 +345,14 @@ Partial Class frmAddSinger
     Friend WithEvents Message As System.Windows.Forms.Label
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents txtGender As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtName As System.Windows.Forms.TextBox
+    Friend WithEvents txtSingerName As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtID As System.Windows.Forms.TextBox
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
+    Friend WithEvents cboGender As System.Windows.Forms.ComboBox
+    Friend WithEvents OpenPhoto As System.Windows.Forms.OpenFileDialog
 End Class

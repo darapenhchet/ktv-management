@@ -34,11 +34,11 @@ Partial Class frmSingerInformation
         Me.btnSave = New System.Windows.Forms.Button()
         Me.cboGender = New System.Windows.Forms.ComboBox()
         Me.txtSingerName = New System.Windows.Forms.TextBox()
+        Me.pbSingerPhoto = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.OpenSingerPhoto = New System.Windows.Forms.OpenFileDialog()
-        Me.pbSingerPhoto = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvSingerInformation, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSingerPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,6 +175,17 @@ Partial Class frmSingerInformation
         Me.txtSingerName.Size = New System.Drawing.Size(305, 33)
         Me.txtSingerName.TabIndex = 6
         '
+        'pbSingerPhoto
+        '
+        Me.pbSingerPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbSingerPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbSingerPhoto.Location = New System.Drawing.Point(549, 79)
+        Me.pbSingerPhoto.Name = "pbSingerPhoto"
+        Me.pbSingerPhoto.Size = New System.Drawing.Size(132, 146)
+        Me.pbSingerPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbSingerPhoto.TabIndex = 4
+        Me.pbSingerPhoto.TabStop = False
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -204,17 +215,6 @@ Partial Class frmSingerInformation
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Singer Information"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'pbSingerPhoto
-        '
-        Me.pbSingerPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbSingerPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbSingerPhoto.Location = New System.Drawing.Point(549, 79)
-        Me.pbSingerPhoto.Name = "pbSingerPhoto"
-        Me.pbSingerPhoto.Size = New System.Drawing.Size(132, 146)
-        Me.pbSingerPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbSingerPhoto.TabIndex = 4
-        Me.pbSingerPhoto.TabStop = False
         '
         'frmSingerInformation
         '
