@@ -7,8 +7,6 @@
         Me.Close()
     End Sub
 
-
-
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim singer As New DataLayer.ClsSinger
         singer.Name = txtSingerName.Text

@@ -39,6 +39,7 @@ Partial Class frmUpdateLanguage
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtLanguage = New System.Windows.Forms.TextBox()
         Me.txtID = New System.Windows.Forms.TextBox()
+        Me.OpenPhoto = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -263,6 +264,10 @@ Partial Class frmUpdateLanguage
         Me.txtID.TabIndex = 45
         Me.txtID.Text = "Auto Number"
         '
+        'OpenPhoto
+        '
+        Me.OpenPhoto.FileName = "OpenFileDialog1"
+        '
         'frmUpdateLanguage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -303,4 +308,5 @@ Partial Class frmUpdateLanguage
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtLanguage As System.Windows.Forms.TextBox
     Friend WithEvents txtID As System.Windows.Forms.TextBox
+    Friend WithEvents OpenPhoto As System.Windows.Forms.OpenFileDialog
 End Class

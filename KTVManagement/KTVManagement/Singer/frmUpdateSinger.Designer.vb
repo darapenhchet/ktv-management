@@ -211,6 +211,7 @@ Partial Class frmUpdateSinger
         Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
         Me.pbPhoto.Name = "pbPhoto"
         Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
+        Me.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbPhoto.TabIndex = 35
         Me.pbPhoto.TabStop = False
         '
