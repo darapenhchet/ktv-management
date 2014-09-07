@@ -31,8 +31,22 @@ Public Class frmSinger
     End Sub
 
     Private Sub btnUpdateRoom_Click(sender As Object, e As EventArgs) Handles btnUpdateRoom.Click
-        frmUpdateSinger.Show()
-        Me.Close()
+        Try
+            frmUpdateSinger.Show()
+            frmUpdateSinger.txtID.Text = dgvSingerList.CurrentRow.Cells(0).Value
+            frmUpdateSinger.txtSingerName.Text = dgvSingerList.CurrentRow.Cells(1).Value
+            frmUpdateSinger.cboGender.Text = dgvSingerList.CurrentRow.Cells(2).Value
+            Dim imageData As Byte() = CType(dgvSingerList.CurrentRow.Cells(3).Value, Byte())
+            If Not imageData Is Nothing Then
+                Dim ms As New System.IO.MemoryStream(imageData)
+                frmUpdateSinger.pbPhoto.Image = Image.FromStream(ms)
+            End If
+            Me.Close()
+
+        Catch ex As Exception
+
+        End Try
+        
     End Sub
 
 

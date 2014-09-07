@@ -22,8 +22,8 @@ Partial Class frmAddSong
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAddSong))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -31,7 +31,6 @@ Partial Class frmAddSong
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnUpdateSong = New System.Windows.Forms.Button()
         Me.btnAddSong = New System.Windows.Forms.Button()
         Me.btnSongList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -73,6 +72,7 @@ Partial Class frmAddSong
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.OpenSong = New System.Windows.Forms.OpenFileDialog()
+        Me.btnUpdateSong = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,24 +145,6 @@ Partial Class frmAddSong
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1007, 30)
         Me.Panel5.TabIndex = 3
-        '
-        'btnUpdateSong
-        '
-        Me.btnUpdateSong.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnUpdateSong.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnUpdateSong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnUpdateSong.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnUpdateSong.FlatAppearance.BorderSize = 0
-        Me.btnUpdateSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpdateSong.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdateSong.ForeColor = System.Drawing.Color.White
-        Me.btnUpdateSong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUpdateSong.Location = New System.Drawing.Point(260, 0)
-        Me.btnUpdateSong.Name = "btnUpdateSong"
-        Me.btnUpdateSong.Size = New System.Drawing.Size(130, 30)
-        Me.btnUpdateSong.TabIndex = 3
-        Me.btnUpdateSong.Text = "&Update Song"
-        Me.btnUpdateSong.UseVisualStyleBackColor = False
         '
         'btnAddSong
         '
@@ -312,24 +294,24 @@ Partial Class frmAddSong
         Me.dgvSongList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSongList.BackgroundColor = System.Drawing.Color.White
         Me.dgvSongList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvSongList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSongList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvSongList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSongList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Title, Me.Album, Me.Production, Me.Category, Me.Language, Me.Singer, Me.CPath})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvSongList.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvSongList.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvSongList.Location = New System.Drawing.Point(7, 362)
         Me.dgvSongList.Name = "dgvSongList"
         Me.dgvSongList.RowHeadersVisible = False
@@ -688,6 +670,25 @@ Partial Class frmAddSong
         '
         Me.OpenSong.FileName = "OpenFileDialog1"
         '
+        'btnUpdateSong
+        '
+        Me.btnUpdateSong.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnUpdateSong.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnUpdateSong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnUpdateSong.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnUpdateSong.FlatAppearance.BorderSize = 0
+        Me.btnUpdateSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdateSong.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdateSong.ForeColor = System.Drawing.Color.White
+        Me.btnUpdateSong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUpdateSong.Location = New System.Drawing.Point(260, 0)
+        Me.btnUpdateSong.Name = "btnUpdateSong"
+        Me.btnUpdateSong.Size = New System.Drawing.Size(130, 30)
+        Me.btnUpdateSong.TabIndex = 3
+        Me.btnUpdateSong.Text = "&Update Song"
+        Me.btnUpdateSong.UseVisualStyleBackColor = False
+        Me.btnUpdateSong.Visible = False
+        '
         'frmAddSong
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -717,7 +718,6 @@ Partial Class frmAddSong
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents btnUpdateSong As System.Windows.Forms.Button
     Friend WithEvents btnAddSong As System.Windows.Forms.Button
     Friend WithEvents btnSongList As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
@@ -759,4 +759,5 @@ Partial Class frmAddSong
     Friend WithEvents CPath As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents vlc As AxAXVLC.AxVLCPlugin2
     Friend WithEvents txtAlbum As System.Windows.Forms.TextBox
+    Friend WithEvents btnUpdateSong As System.Windows.Forms.Button
 End Class

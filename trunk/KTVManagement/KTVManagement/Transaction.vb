@@ -51,4 +51,15 @@
 
         End Try
     End Sub
+
+    Public Function GetStrSingers(str As String) As String()
+        Try
+            Dim singers() As String
+            singers = str.Split(",")
+            Return singers
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
 End Module

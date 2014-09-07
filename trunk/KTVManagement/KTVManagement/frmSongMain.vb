@@ -7,17 +7,14 @@
 
     Private Sub btnProduction_Click(sender As Object, e As EventArgs) Handles btnProduction.Click
         frmProductionInformation.Show()
-        Me.Close()
     End Sub
 
     Private Sub btnLanguage_Click(sender As Object, e As EventArgs) Handles btnLanguage.Click
         frmLanguage.Show()
-        Me.Close()
     End Sub
 
     Private Sub btnSinger_Click(sender As Object, e As EventArgs) Handles btnSinger.Click
         frmSinger.Show()
-        Me.Close()
     End Sub
 
     Private Sub btnSong_Click(sender As Object, e As EventArgs) Handles btnSong.Click

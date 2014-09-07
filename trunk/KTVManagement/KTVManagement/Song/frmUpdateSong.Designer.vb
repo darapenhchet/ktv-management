@@ -33,13 +33,18 @@ Partial Class frmUpdateSong
         Me.btnAddSong = New System.Windows.Forms.Button()
         Me.btnSongList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnRemove = New System.Windows.Forms.Button()
+        Me.btnAddSinger = New System.Windows.Forms.Button()
+        Me.txtAlbum = New System.Windows.Forms.TextBox()
+        Me.cboLanguage = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.btnSingerOff = New System.Windows.Forms.Button()
         Me.btnFullScreen = New System.Windows.Forms.Button()
         Me.btnPlay = New System.Windows.Forms.Button()
         Me.vlc = New AxAXVLC.AxVLCPlugin2()
         Me.btnBrowse = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPath = New System.Windows.Forms.TextBox()
         Me.lstSingers = New System.Windows.Forms.ListBox()
         Me.cboSinger = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -48,7 +53,6 @@ Partial Class frmUpdateSong
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtAlbum = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -57,6 +61,7 @@ Partial Class frmUpdateSong
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.OpenSong = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -186,13 +191,18 @@ Partial Class frmUpdateSong
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.btnRemove)
+        Me.Panel4.Controls.Add(Me.btnAddSinger)
+        Me.Panel4.Controls.Add(Me.txtAlbum)
+        Me.Panel4.Controls.Add(Me.cboLanguage)
+        Me.Panel4.Controls.Add(Me.Label10)
         Me.Panel4.Controls.Add(Me.btnSingerOff)
         Me.Panel4.Controls.Add(Me.btnFullScreen)
         Me.Panel4.Controls.Add(Me.btnPlay)
         Me.Panel4.Controls.Add(Me.vlc)
         Me.Panel4.Controls.Add(Me.btnBrowse)
         Me.Panel4.Controls.Add(Me.Label9)
-        Me.Panel4.Controls.Add(Me.TextBox1)
+        Me.Panel4.Controls.Add(Me.txtPath)
         Me.Panel4.Controls.Add(Me.lstSingers)
         Me.Panel4.Controls.Add(Me.cboSinger)
         Me.Panel4.Controls.Add(Me.Label8)
@@ -201,7 +211,6 @@ Partial Class frmUpdateSong
         Me.Panel4.Controls.Add(Me.btnSave)
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label6)
-        Me.Panel4.Controls.Add(Me.txtAlbum)
         Me.Panel4.Controls.Add(Me.Label5)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.Label3)
@@ -214,6 +223,74 @@ Partial Class frmUpdateSong
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
+        '
+        'btnRemove
+        '
+        Me.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnRemove.FlatAppearance.BorderSize = 0
+        Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRemove.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRemove.ForeColor = System.Drawing.Color.White
+        Me.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRemove.Location = New System.Drawing.Point(561, 119)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(94, 30)
+        Me.btnRemove.TabIndex = 33
+        Me.btnRemove.Text = "Remove"
+        Me.btnRemove.UseVisualStyleBackColor = False
+        '
+        'btnAddSinger
+        '
+        Me.btnAddSinger.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnAddSinger.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnAddSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnAddSinger.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnAddSinger.FlatAppearance.BorderSize = 0
+        Me.btnAddSinger.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddSinger.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddSinger.ForeColor = System.Drawing.Color.White
+        Me.btnAddSinger.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddSinger.Location = New System.Drawing.Point(661, 119)
+        Me.btnAddSinger.Name = "btnAddSinger"
+        Me.btnAddSinger.Size = New System.Drawing.Size(94, 30)
+        Me.btnAddSinger.TabIndex = 32
+        Me.btnAddSinger.Text = "Add"
+        Me.btnAddSinger.UseVisualStyleBackColor = False
+        '
+        'txtAlbum
+        '
+        Me.txtAlbum.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtAlbum.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAlbum.Location = New System.Drawing.Point(130, 221)
+        Me.txtAlbum.Name = "txtAlbum"
+        Me.txtAlbum.Size = New System.Drawing.Size(300, 27)
+        Me.txtAlbum.TabIndex = 28
+        '
+        'cboLanguage
+        '
+        Me.cboLanguage.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cboLanguage.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboLanguage.FormattingEnabled = True
+        Me.cboLanguage.Items.AddRange(New Object() {"Normal", "VIP"})
+        Me.cboLanguage.Location = New System.Drawing.Point(130, 326)
+        Me.cboLanguage.Name = "cboLanguage"
+        Me.cboLanguage.Size = New System.Drawing.Size(300, 29)
+        Me.cboLanguage.TabIndex = 27
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(27, 330)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(94, 19)
+        Me.Label10.TabIndex = 26
+        Me.Label10.Text = "Language:"
         '
         'btnSingerOff
         '
@@ -273,10 +350,10 @@ Partial Class frmUpdateSong
         '
         Me.vlc.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.vlc.Enabled = True
-        Me.vlc.Location = New System.Drawing.Point(486, 57)
+        Me.vlc.Location = New System.Drawing.Point(771, 59)
         Me.vlc.Name = "vlc"
         Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.vlc.Size = New System.Drawing.Size(516, 252)
+        Me.vlc.Size = New System.Drawing.Size(226, 211)
         Me.vlc.TabIndex = 22
         '
         'btnBrowse
@@ -309,24 +386,24 @@ Partial Class frmUpdateSong
         Me.Label9.TabIndex = 20
         Me.Label9.Text = "Path:"
         '
-        'TextBox1
+        'txtPath
         '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(537, 361)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(359, 27)
-        Me.TextBox1.TabIndex = 19
+        Me.txtPath.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtPath.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPath.Location = New System.Drawing.Point(537, 361)
+        Me.txtPath.Name = "txtPath"
+        Me.txtPath.ReadOnly = True
+        Me.txtPath.Size = New System.Drawing.Size(359, 27)
+        Me.txtPath.TabIndex = 19
         '
         'lstSingers
         '
         Me.lstSingers.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstSingers.FormattingEnabled = True
         Me.lstSingers.ItemHeight = 21
-        Me.lstSingers.Location = New System.Drawing.Point(130, 389)
+        Me.lstSingers.Location = New System.Drawing.Point(528, 183)
         Me.lstSingers.Name = "lstSingers"
-        Me.lstSingers.Size = New System.Drawing.Size(300, 88)
+        Me.lstSingers.Size = New System.Drawing.Size(228, 88)
         Me.lstSingers.TabIndex = 18
         '
         'cboSinger
@@ -335,9 +412,9 @@ Partial Class frmUpdateSong
         Me.cboSinger.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboSinger.FormattingEnabled = True
         Me.cboSinger.Items.AddRange(New Object() {"Normal", "VIP"})
-        Me.cboSinger.Location = New System.Drawing.Point(130, 361)
+        Me.cboSinger.Location = New System.Drawing.Point(528, 155)
         Me.cboSinger.Name = "cboSinger"
-        Me.cboSinger.Size = New System.Drawing.Size(300, 29)
+        Me.cboSinger.Size = New System.Drawing.Size(228, 29)
         Me.cboSinger.TabIndex = 17
         '
         'Label8
@@ -346,7 +423,7 @@ Partial Class frmUpdateSong
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(60, 365)
+        Me.Label8.Location = New System.Drawing.Point(461, 159)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(61, 19)
         Me.Label8.TabIndex = 16
@@ -358,7 +435,7 @@ Partial Class frmUpdateSong
         Me.cboCategory.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCategory.FormattingEnabled = True
         Me.cboCategory.Items.AddRange(New Object() {"Normal", "VIP"})
-        Me.cboCategory.Location = New System.Drawing.Point(130, 320)
+        Me.cboCategory.Location = New System.Drawing.Point(130, 291)
         Me.cboCategory.Name = "cboCategory"
         Me.cboCategory.Size = New System.Drawing.Size(300, 29)
         Me.cboCategory.TabIndex = 15
@@ -369,7 +446,7 @@ Partial Class frmUpdateSong
         Me.cboProduction.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboProduction.FormattingEnabled = True
         Me.cboProduction.Items.AddRange(New Object() {"Normal", "VIP"})
-        Me.cboProduction.Location = New System.Drawing.Point(130, 280)
+        Me.cboProduction.Location = New System.Drawing.Point(130, 256)
         Me.cboProduction.Name = "cboProduction"
         Me.cboProduction.Size = New System.Drawing.Size(300, 29)
         Me.cboProduction.TabIndex = 14
@@ -410,22 +487,11 @@ Partial Class frmUpdateSong
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(36, 324)
+        Me.Label6.Location = New System.Drawing.Point(36, 295)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(85, 19)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Category:"
-        '
-        'txtAlbum
-        '
-        Me.txtAlbum.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtAlbum.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAlbum.FormattingEnabled = True
-        Me.txtAlbum.Items.AddRange(New Object() {"Normal", "VIP"})
-        Me.txtAlbum.Location = New System.Drawing.Point(130, 240)
-        Me.txtAlbum.Name = "txtAlbum"
-        Me.txtAlbum.Size = New System.Drawing.Size(300, 29)
-        Me.txtAlbum.TabIndex = 10
         '
         'Label5
         '
@@ -433,7 +499,7 @@ Partial Class frmUpdateSong
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(25, 284)
+        Me.Label5.Location = New System.Drawing.Point(25, 260)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(96, 19)
         Me.Label5.TabIndex = 9
@@ -445,7 +511,7 @@ Partial Class frmUpdateSong
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(55, 244)
+        Me.Label4.Location = New System.Drawing.Point(55, 225)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(66, 19)
         Me.Label4.TabIndex = 7
@@ -457,7 +523,7 @@ Partial Class frmUpdateSong
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(79, 202)
+        Me.Label3.Location = New System.Drawing.Point(79, 192)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(42, 19)
         Me.Label3.TabIndex = 5
@@ -467,7 +533,7 @@ Partial Class frmUpdateSong
         '
         Me.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtTitle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTitle.Location = New System.Drawing.Point(130, 198)
+        Me.txtTitle.Location = New System.Drawing.Point(130, 188)
         Me.txtTitle.Name = "txtTitle"
         Me.txtTitle.Size = New System.Drawing.Size(300, 27)
         Me.txtTitle.TabIndex = 4
@@ -514,6 +580,10 @@ Partial Class frmUpdateSong
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
+        'OpenSong
+        '
+        Me.OpenSong.FileName = "OpenFileDialog1"
+        '
         'frmUpdateSong
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -549,7 +619,6 @@ Partial Class frmUpdateSong
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents txtAlbum As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -564,10 +633,16 @@ Partial Class frmUpdateSong
     Friend WithEvents vlc As AxAXVLC.AxVLCPlugin2
     Friend WithEvents btnBrowse As System.Windows.Forms.Button
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtPath As System.Windows.Forms.TextBox
     Friend WithEvents lstSingers As System.Windows.Forms.ListBox
     Friend WithEvents cboSinger As System.Windows.Forms.ComboBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents cboCategory As System.Windows.Forms.ComboBox
     Friend WithEvents cboProduction As System.Windows.Forms.ComboBox
+    Friend WithEvents cboLanguage As System.Windows.Forms.ComboBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents txtAlbum As System.Windows.Forms.TextBox
+    Friend WithEvents OpenSong As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents btnRemove As System.Windows.Forms.Button
+    Friend WithEvents btnAddSinger As System.Windows.Forms.Button
 End Class
