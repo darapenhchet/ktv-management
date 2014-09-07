@@ -28,6 +28,31 @@ Public Class ClsSingerTransaction
         End Try
     End Function
 
+    Public Function getSingerBySingerName(singerName As String) As ClsSinger
+        Dim sql As String = "SELECT singerId, singerName, gender, photo FROM singers WHERE SingerName LIKE @SingerName"
+        Dim dr As MySqlDataReader
+        Dim singer As New ClsSinger
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Command.Parameters.AddWithValue("@SingerName", singerName)
+                dr = Command.ExecuteReader
+                While dr.Read
+                    singer.ID = dr.GetInt32(0)
+                    singer.Name = dr.GetString(1)
+                    singer.Gender = dr.GetString(2)
+                    'Dim ms As New System.IO.MemoryStream
+                    'ms = dr.GetStream(3)
+                    'singer.Photo = ms.GetBuffer
+                End While
+                Return singer
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
     Public Function getAllSingerByKeyword(keyword As String) As DataSet
         Dim sql As String = "SELECT singerId, singerName, gender, photo FROM singers WHERE singerId LIKE @SingerID OR SingerName LIKE @SingerName OR gender LIKE @Gender"
         Try
