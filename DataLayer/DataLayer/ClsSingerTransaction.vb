@@ -24,7 +24,7 @@ Public Class ClsSingerTransaction
                 End Using
             End Using
         Catch ex As Exception
-            'MessageBox.Show(ex.Message)
+            MsgBox(ex.Message)
             Return Nothing
         End Try
     End Function
