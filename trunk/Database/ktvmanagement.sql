@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50527
 File Encoding         : 65001
 
-Date: 2014-09-07 09:55:54
+Date: 2014-09-07 10:00:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -46,7 +46,8 @@ CREATE TABLE `guests` (
   `timeout` varchar(20) NOT NULL,
   `amount` double NOT NULL,
   PRIMARY KEY (`guestId`),
-  KEY `roomId` (`roomId`)
+  KEY `roomId` (`roomId`),
+  CONSTRAINT `guests_ibfk_1` FOREIGN KEY (`roomId`) REFERENCES `rooms` (`roomId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
