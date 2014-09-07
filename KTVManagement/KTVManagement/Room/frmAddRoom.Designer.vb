@@ -47,6 +47,8 @@ Partial Class frmAddRoom
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.success = New System.Windows.Forms.Label()
+        Me.fail = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,6 +111,7 @@ Partial Class frmAddRoom
         '
         'Panel5
         '
+        Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel5.Controls.Add(Me.btnAddRoom)
         Me.Panel5.Controls.Add(Me.btnRoomList)
@@ -156,6 +159,8 @@ Partial Class frmAddRoom
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.fail)
+        Me.Panel4.Controls.Add(Me.success)
         Me.Panel4.Controls.Add(Me.Label9)
         Me.Panel4.Controls.Add(Me.Label8)
         Me.Panel4.Controls.Add(Me.btnSave)
@@ -338,6 +343,7 @@ Partial Class frmAddRoom
         Me.txtID.ReadOnly = True
         Me.txtID.Size = New System.Drawing.Size(300, 27)
         Me.txtID.TabIndex = 1
+        Me.txtID.Text = "Auto Number"
         '
         'ShapeContainer1
         '
@@ -358,6 +364,32 @@ Partial Class frmAddRoom
         Me.LineShape1.X2 = 1001
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
+        '
+        'success
+        '
+        Me.success.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.success.AutoSize = True
+        Me.success.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.success.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.success.Location = New System.Drawing.Point(352, 59)
+        Me.success.Name = "success"
+        Me.success.Size = New System.Drawing.Size(358, 23)
+        Me.success.TabIndex = 16
+        Me.success.Text = "You have been inserted Successfully!!!"
+        Me.success.Visible = False
+        '
+        'fail
+        '
+        Me.fail.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.fail.AutoSize = True
+        Me.fail.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fail.ForeColor = System.Drawing.Color.Red
+        Me.fail.Location = New System.Drawing.Point(417, 59)
+        Me.fail.Name = "fail"
+        Me.fail.Size = New System.Drawing.Size(228, 23)
+        Me.fail.TabIndex = 17
+        Me.fail.Text = "Your inserting is failure!!!"
+        Me.fail.Visible = False
         '
         'frmAddRoom
         '
@@ -406,4 +438,6 @@ Partial Class frmAddRoom
     Friend WithEvents txtDiscount As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents fail As System.Windows.Forms.Label
+    Friend WithEvents success As System.Windows.Forms.Label
 End Class

@@ -1,4 +1,6 @@
 ﻿Imports DataLayer
+Imports System.IO
+
 Public Class frmLanguage
 
     Private dsLanguage As New DataSet
@@ -28,8 +30,24 @@ Public Class frmLanguage
     End Sub
 
     Private Sub btnUpdateLanguage_Click(sender As Object, e As EventArgs) Handles btnUpdateLanguage.Click
-        frmUpdateLanguage.Show()
-        Me.Close()
+        Try
+            frmUpdateLanguage.txtID.Text = dgvLanguageList.CurrentRow.Cells(0).Value
+            frmUpdateLanguage.txtLanguage.Text = dgvLanguageList.CurrentRow.Cells(1).Value
+            If dgvLanguageList.CurrentRow.Cells(2).Value Is DBNull.Value Then
+                frmUpdateProduction.pbPhoto.Image = My.Resources.Photo
+            Else
+                Dim imageData As Byte() = CType(dgvLanguageList.CurrentRow.Cells(2).Value, Byte())
+                If Not imageData Is Nothing Then
+                    Dim ms As New MemoryStream(imageData)
+                    frmUpdateProduction.pbPhoto.Image = Image.FromStream(ms)
+                End If
+            End If
+            frmUpdateLanguage.Show()
+            Me.Close()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged

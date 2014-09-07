@@ -46,6 +46,8 @@ Partial Class frmUpdateRoom
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnUpdateRoom = New System.Windows.Forms.Button()
         Me.btnAddRoom = New System.Windows.Forms.Button()
+        Me.fail = New System.Windows.Forms.Label()
+        Me.success = New System.Windows.Forms.Label()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +88,8 @@ Partial Class frmUpdateRoom
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.fail)
+        Me.Panel4.Controls.Add(Me.success)
         Me.Panel4.Controls.Add(Me.btnSave)
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label6)
@@ -306,6 +310,7 @@ Partial Class frmUpdateRoom
         '
         'Panel5
         '
+        Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel5.Controls.Add(Me.btnUpdateRoom)
         Me.Panel5.Controls.Add(Me.btnAddRoom)
@@ -350,6 +355,32 @@ Partial Class frmUpdateRoom
         Me.btnAddRoom.TabIndex = 2
         Me.btnAddRoom.Text = "&Add Room"
         Me.btnAddRoom.UseVisualStyleBackColor = False
+        '
+        'fail
+        '
+        Me.fail.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.fail.AutoSize = True
+        Me.fail.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fail.ForeColor = System.Drawing.Color.Red
+        Me.fail.Location = New System.Drawing.Point(406, 65)
+        Me.fail.Name = "fail"
+        Me.fail.Size = New System.Drawing.Size(228, 23)
+        Me.fail.TabIndex = 19
+        Me.fail.Text = "Your inserting is failure!!!"
+        Me.fail.Visible = False
+        '
+        'success
+        '
+        Me.success.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.success.AutoSize = True
+        Me.success.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.success.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.success.Location = New System.Drawing.Point(341, 65)
+        Me.success.Name = "success"
+        Me.success.Size = New System.Drawing.Size(358, 23)
+        Me.success.TabIndex = 18
+        Me.success.Text = "You have been inserted Successfully!!!"
+        Me.success.Visible = False
         '
         'frmUpdateRoom
         '
@@ -397,4 +428,6 @@ Partial Class frmUpdateRoom
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents btnUpdateRoom As System.Windows.Forms.Button
     Friend WithEvents btnAddRoom As System.Windows.Forms.Button
+    Friend WithEvents fail As System.Windows.Forms.Label
+    Friend WithEvents success As System.Windows.Forms.Label
 End Class

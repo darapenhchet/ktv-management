@@ -107,6 +107,7 @@ Partial Class frmAddSinger
         '
         'Panel5
         '
+        Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel5.Controls.Add(Me.btnAddRoom)
         Me.Panel5.Controls.Add(Me.btnSingerList)
@@ -190,6 +191,7 @@ Partial Class frmAddSinger
         Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
         Me.pbPhoto.Name = "pbPhoto"
         Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
+        Me.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbPhoto.TabIndex = 27
         Me.pbPhoto.TabStop = False
         '

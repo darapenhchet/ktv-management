@@ -40,7 +40,7 @@ Public Class ClsRoomTransaction
     End Function
 
     Public Function getRoomById(id As Integer) As ClsRoom
-        Dim sql As String = "SELECT roomId, roomType, price FROM rooms WHERE roomId = @ID"
+        Dim sql As String = "SELECT roomId, roomName, roomType, price, discount FROM rooms WHERE roomId = @ID"
         Dim dr As MySqlDataReader
         Dim room As New ClsRoom
 
@@ -51,8 +51,10 @@ Public Class ClsRoomTransaction
                 dr = Command.ExecuteReader
                 While dr.Read
                     room.ID = dr.GetInt32(0)
-                    room.RoomType = dr.GetString(1)
-                    room.Price = dr.GetDouble(2)
+                    room.RoomName = dr.GetString(1)
+                    room.RoomType = dr.GetString(2)
+                    room.Price = dr.GetDouble(3)
+                    room.Discount = dr.GetInt32(4)
                 End While
                 dr.Close()
                 dr.Dispose()
@@ -65,34 +67,42 @@ Public Class ClsRoomTransaction
     End Function
 
     Public Function addNewRoom(room As ClsRoom) As Boolean
-        Dim sql As String = "INSERT INTO rooms(roomType,price) VALUES(@RoomType,@Price))"
+        Dim sql As String = "INSERT INTO rooms(roomName, roomType, price, discount) VALUES(@RoomName,@RoomType,@Price,@Discount)"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
+                Command.Parameters.AddWithValue("@RoomName", room.RoomName)
                 Command.Parameters.AddWithValue("@RoomType", room.RoomType)
                 Command.Parameters.AddWithValue("@Price", room.Price)
+                Command.Parameters.AddWithValue("@Discount", room.Discount)
                 Command.ExecuteNonQuery()
                 Return True
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
     End Function
 
     Public Function updateRoom(room As ClsRoom) As Boolean
-        Dim sql As String = "UPDATE rooms SET roomType = @RoomType , Price = @Price WHERE roomId = @ID"
+        Dim sql As String = "UPDATE rooms SET roomName = @RoomName ,roomType = @RoomType , Price = @Price, discount = @Discount WHERE roomId = @ID"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
+                Command.Parameters.AddWithValue("@RoomName", room.RoomName)
                 Command.Parameters.AddWithValue("@RoomType", room.RoomType)
+                Command.Parameters.AddWithValue("@Price", room.Price)
                 Command.Parameters.AddWithValue("@ID", room.ID)
+                Command.Parameters.AddWithValue("@Discount", room.Discount)
                 Command.ExecuteNonQuery()
                 Return True
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
     End Function
+
 
     Public Function deleteRoom(id As ClsRoom) As Boolean
         Dim sql As String = "DELETE FROM rooma WHERE roomID = @ID"
@@ -104,6 +114,7 @@ Public Class ClsRoomTransaction
                 Return True
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
     End Function

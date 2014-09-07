@@ -22,20 +22,22 @@ Partial Class frmAddLanguage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnAddRoom = New System.Windows.Forms.Button()
-        Me.btnRoomList = New System.Windows.Forms.Button()
+        Me.btnAddLanguage = New System.Windows.Forms.Button()
+        Me.btnLanguage = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtSearch = New System.Windows.Forms.TextBox()
-        Me.dgvSingerList = New System.Windows.Forms.DataGridView()
+        Me.pbPhoto = New System.Windows.Forms.PictureBox()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtLanguage = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Panel1.SuspendLayout()
@@ -43,7 +45,7 @@ Partial Class frmAddLanguage
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.dgvSingerList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -101,56 +103,61 @@ Partial Class frmAddLanguage
         '
         'Panel5
         '
+        Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.btnAddRoom)
-        Me.Panel5.Controls.Add(Me.btnRoomList)
+        Me.Panel5.Controls.Add(Me.btnAddLanguage)
+        Me.Panel5.Controls.Add(Me.btnLanguage)
         Me.Panel5.Location = New System.Drawing.Point(9, 104)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1007, 30)
         Me.Panel5.TabIndex = 3
         '
-        'btnAddRoom
+        'btnAddLanguage
         '
-        Me.btnAddRoom.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAddRoom.BackColor = System.Drawing.Color.White
-        Me.btnAddRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAddRoom.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnAddRoom.FlatAppearance.BorderSize = 0
-        Me.btnAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddRoom.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddRoom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.btnAddRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddRoom.Location = New System.Drawing.Point(130, 0)
-        Me.btnAddRoom.Name = "btnAddRoom"
-        Me.btnAddRoom.Size = New System.Drawing.Size(136, 30)
-        Me.btnAddRoom.TabIndex = 2
-        Me.btnAddRoom.Text = "&Add Language"
-        Me.btnAddRoom.UseVisualStyleBackColor = False
+        Me.btnAddLanguage.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnAddLanguage.BackColor = System.Drawing.Color.White
+        Me.btnAddLanguage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnAddLanguage.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnAddLanguage.FlatAppearance.BorderSize = 0
+        Me.btnAddLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddLanguage.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddLanguage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnAddLanguage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddLanguage.Location = New System.Drawing.Point(130, 0)
+        Me.btnAddLanguage.Name = "btnAddLanguage"
+        Me.btnAddLanguage.Size = New System.Drawing.Size(136, 30)
+        Me.btnAddLanguage.TabIndex = 2
+        Me.btnAddLanguage.Text = "&Add Language"
+        Me.btnAddLanguage.UseVisualStyleBackColor = False
         '
-        'btnRoomList
+        'btnLanguage
         '
-        Me.btnRoomList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnRoomList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnRoomList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnRoomList.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnRoomList.FlatAppearance.BorderSize = 0
-        Me.btnRoomList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRoomList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRoomList.ForeColor = System.Drawing.Color.White
-        Me.btnRoomList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRoomList.Location = New System.Drawing.Point(0, 0)
-        Me.btnRoomList.Name = "btnRoomList"
-        Me.btnRoomList.Size = New System.Drawing.Size(130, 30)
-        Me.btnRoomList.TabIndex = 1
-        Me.btnRoomList.Text = "Language &List"
-        Me.btnRoomList.UseVisualStyleBackColor = False
+        Me.btnLanguage.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnLanguage.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnLanguage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnLanguage.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnLanguage.FlatAppearance.BorderSize = 0
+        Me.btnLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLanguage.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLanguage.ForeColor = System.Drawing.Color.White
+        Me.btnLanguage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLanguage.Location = New System.Drawing.Point(0, 0)
+        Me.btnLanguage.Name = "btnLanguage"
+        Me.btnLanguage.Size = New System.Drawing.Size(130, 30)
+        Me.btnLanguage.TabIndex = 1
+        Me.btnLanguage.Text = "Language &List"
+        Me.btnLanguage.UseVisualStyleBackColor = False
         '
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Panel4.Controls.Add(Me.Label2)
-        Me.Panel4.Controls.Add(Me.txtSearch)
-        Me.Panel4.Controls.Add(Me.dgvSingerList)
+        Me.Panel4.Controls.Add(Me.pbPhoto)
+        Me.Panel4.Controls.Add(Me.btnSave)
+        Me.Panel4.Controls.Add(Me.Label7)
+        Me.Panel4.Controls.Add(Me.Label3)
+        Me.Panel4.Controls.Add(Me.txtLanguage)
+        Me.Panel4.Controls.Add(Me.Label8)
+        Me.Panel4.Controls.Add(Me.txtID)
         Me.Panel4.Controls.Add(Me.ShapeContainer1)
         Me.Panel4.ForeColor = System.Drawing.Color.White
         Me.Panel4.Location = New System.Drawing.Point(9, 104)
@@ -158,61 +165,91 @@ Partial Class frmAddLanguage
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
         '
-        'Label2
+        'pbPhoto
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(13, 72)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 19)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Search:"
+        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.pbPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbPhoto.Location = New System.Drawing.Point(782, 62)
+        Me.pbPhoto.Name = "pbPhoto"
+        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
+        Me.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbPhoto.TabIndex = 44
+        Me.pbPhoto.TabStop = False
         '
-        'txtSearch
+        'btnSave
         '
-        Me.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtSearch.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(100, 68)
-        Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(300, 27)
-        Me.txtSearch.TabIndex = 1
+        Me.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSave.Location = New System.Drawing.Point(599, 292)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(100, 30)
+        Me.btnSave.TabIndex = 40
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = False
         '
-        'dgvSingerList
+        'Label7
         '
-        Me.dgvSingerList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.dgvSingerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvSingerList.BackgroundColor = System.Drawing.Color.White
-        Me.dgvSingerList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvSingerList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvSingerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvSingerList.DefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvSingerList.Location = New System.Drawing.Point(4, 116)
-        Me.dgvSingerList.Name = "dgvSingerList"
-        Me.dgvSingerList.RowHeadersVisible = False
-        Me.dgvSingerList.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvSingerList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.dgvSingerList.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.dgvSingerList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvSingerList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgvSingerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvSingerList.Size = New System.Drawing.Size(1000, 370)
-        Me.dgvSingerList.TabIndex = 0
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(40, 98)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(304, 23)
+        Me.Label7.TabIndex = 43
+        Me.Label7.Text = "Add New Language Information"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(297, 204)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(96, 19)
+        Me.Label3.TabIndex = 42
+        Me.Label3.Text = "Production:"
+        '
+        'txtLanguage
+        '
+        Me.txtLanguage.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtLanguage.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLanguage.Location = New System.Drawing.Point(399, 200)
+        Me.txtLanguage.Name = "txtLanguage"
+        Me.txtLanguage.Size = New System.Drawing.Size(300, 27)
+        Me.txtLanguage.TabIndex = 41
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(365, 161)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(28, 19)
+        Me.Label8.TabIndex = 39
+        Me.Label8.Text = "ID:"
+        '
+        'txtID
+        '
+        Me.txtID.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtID.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.Location = New System.Drawing.Point(399, 157)
+        Me.txtID.Name = "txtID"
+        Me.txtID.ReadOnly = True
+        Me.txtID.Size = New System.Drawing.Size(300, 27)
+        Me.txtID.TabIndex = 38
+        Me.txtID.Text = "Auto Number"
         '
         'ShapeContainer1
         '
@@ -253,7 +290,7 @@ Partial Class frmAddLanguage
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.dgvSingerList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -263,12 +300,16 @@ Partial Class frmAddLanguage
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents btnAddRoom As System.Windows.Forms.Button
-    Friend WithEvents btnRoomList As System.Windows.Forms.Button
+    Friend WithEvents btnAddLanguage As System.Windows.Forms.Button
+    Friend WithEvents btnLanguage As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
-    Friend WithEvents dgvSingerList As System.Windows.Forms.DataGridView
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtLanguage As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtID As System.Windows.Forms.TextBox
 End Class
