@@ -8,13 +8,6 @@ Public Class frmSingerInformation
     Private Sub frmSingerInformation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Panel1.Left = (Me.Width - Panel1.Width) / 2
         Panel1.Top = (Me.Height - Panel1.Height) / 2
-
-        'dsSinger = singerTransaction.getAllSingers
-        'dgvSingerInformation.DataSource = dsSinger.Tables(0)
-        'dgvSingerInformation.Columns(0).Width = 20
-        'dgvSingerInformation.Columns(1).Width = 100
-        'dgvSingerInformation.Columns(2).Width = 12
-        'dgvSingerInformation.Columns(3).Width = 0
         displaySingerInformation()
 
     End Sub
