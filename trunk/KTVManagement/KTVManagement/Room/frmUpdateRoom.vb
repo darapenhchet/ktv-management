@@ -18,4 +18,9 @@
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
 
     End Sub
+
+    Private Sub frmUpdateRoom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel1.Left = (Me.Width - Panel1.Width) / 2
+        Panel1.Top = (Me.Height - Panel1.Height) / 2
+    End Sub
 End Class

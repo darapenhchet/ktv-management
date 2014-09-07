@@ -105,6 +105,7 @@ Partial Class frmAddProduction
         '
         'Panel5
         '
+        Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel5.Controls.Add(Me.btnAddProduction)
         Me.Panel5.Controls.Add(Me.btnProductionList)
@@ -300,6 +301,7 @@ Partial Class frmAddProduction
         Me.Name = "frmAddProduction"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAddProduction"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

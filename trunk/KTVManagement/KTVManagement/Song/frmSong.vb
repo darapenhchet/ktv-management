@@ -5,6 +5,8 @@ Public Class frmSong
     Private songDetailsTransaction As New ClsSongDetailsTransaction
 
     Private Sub frmSong_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Panel1.Left = (Me.Width - Panel1.Width) / 2
+        Panel1.Top = (Me.Height - Panel1.Height) / 2
         DisplaySongInformation("")
     End Sub
     Private Sub btnAddSong_Click(sender As Object, e As EventArgs) Handles btnAddSong.Click
@@ -44,7 +46,6 @@ Public Class frmSong
             For Each singer As String In GetStrSingers(dgvSongList.CurrentRow.Cells(6).Value)
                 Dim objSinger As New ClsSinger
                 objSinger = singerTransaction.getSingerBySingerName(singer)
-                MessageBox.Show(objSinger.ID)
                 frmUpdateSong.lstSingers.Items.Add(objSinger)
             Next
             frmUpdateSong.txtPath.Text = dgvSongList.CurrentRow.Cells(7).Value
@@ -60,4 +61,6 @@ Public Class frmSong
         vlc.playlist.add("file:///" & dgvSongList.CurrentRow.Cells(7).Value)
         vlc.playlist.play()
     End Sub
+
+
 End Class

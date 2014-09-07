@@ -22,11 +22,12 @@ Partial Class frmSong
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSong))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSong))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -34,21 +35,20 @@ Partial Class frmSong
         Me.btnAddSong = New System.Windows.Forms.Button()
         Me.btnSongList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnPlay = New System.Windows.Forms.Button()
+        Me.vlc = New AxAXVLC.AxVLCPlugin2()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.dgvSongList = New System.Windows.Forms.DataGridView()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.btnBack = New System.Windows.Forms.PictureBox()
-        Me.vlc = New AxAXVLC.AxVLCPlugin2()
-        Me.btnPlay = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.dgvSongList, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.vlc, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvSongList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -74,6 +74,17 @@ Partial Class frmSong
         Me.Panel2.Size = New System.Drawing.Size(1024, 60)
         Me.Panel2.TabIndex = 2
         '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.White
+        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
+        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBack.Location = New System.Drawing.Point(6, 3)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(50, 50)
+        Me.btnBack.TabIndex = 1
+        Me.btnBack.TabStop = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -95,6 +106,7 @@ Partial Class frmSong
         '
         'Panel5
         '
+        Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel5.Controls.Add(Me.btnUpdateSong)
         Me.Panel5.Controls.Add(Me.btnAddSong)
@@ -161,8 +173,8 @@ Partial Class frmSong
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Panel4.Controls.Add(Me.btnPlay)
         Me.Panel4.Controls.Add(Me.vlc)
+        Me.Panel4.Controls.Add(Me.btnPlay)
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.txtSearch)
         Me.Panel4.Controls.Add(Me.dgvSongList)
@@ -172,6 +184,34 @@ Partial Class frmSong
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
+        '
+        'btnPlay
+        '
+        Me.btnPlay.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnPlay.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnPlay.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnPlay.FlatAppearance.BorderSize = 0
+        Me.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPlay.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPlay.ForeColor = System.Drawing.Color.White
+        Me.btnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPlay.Location = New System.Drawing.Point(260, 185)
+        Me.btnPlay.Name = "btnPlay"
+        Me.btnPlay.Size = New System.Drawing.Size(140, 30)
+        Me.btnPlay.TabIndex = 5
+        Me.btnPlay.Text = "&Play"
+        Me.btnPlay.UseVisualStyleBackColor = False
+        '
+        'vlc
+        '
+        Me.vlc.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.vlc.Enabled = True
+        Me.vlc.Location = New System.Drawing.Point(406, 55)
+        Me.vlc.Name = "vlc"
+        Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.vlc.Size = New System.Drawing.Size(596, 160)
+        Me.vlc.TabIndex = 4
         '
         'Label2
         '
@@ -196,7 +236,7 @@ Partial Class frmSong
         '
         'dgvSongList
         '
-        Me.dgvSongList.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.dgvSongList.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.dgvSongList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSongList.BackgroundColor = System.Drawing.Color.White
         Me.dgvSongList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -217,7 +257,7 @@ Partial Class frmSong
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvSongList.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvSongList.Location = New System.Drawing.Point(4, 114)
+        Me.dgvSongList.Location = New System.Drawing.Point(4, 221)
         Me.dgvSongList.Name = "dgvSongList"
         Me.dgvSongList.RowHeadersVisible = False
         Me.dgvSongList.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -226,7 +266,7 @@ Partial Class frmSong
         Me.dgvSongList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvSongList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvSongList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvSongList.Size = New System.Drawing.Size(1000, 372)
+        Me.dgvSongList.Size = New System.Drawing.Size(1000, 265)
         Me.dgvSongList.TabIndex = 0
         '
         'ShapeContainer1
@@ -249,45 +289,6 @@ Partial Class frmSong
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.White
-        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
-        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnBack.Location = New System.Drawing.Point(6, 3)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(50, 50)
-        Me.btnBack.TabIndex = 1
-        Me.btnBack.TabStop = False
-        '
-        'vlc
-        '
-        Me.vlc.Enabled = True
-        Me.vlc.Location = New System.Drawing.Point(561, 46)
-        Me.vlc.Name = "vlc"
-        Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.vlc.Size = New System.Drawing.Size(238, 62)
-        Me.vlc.TabIndex = 4
-        Me.vlc.Visible = False
-        '
-        'btnPlay
-        '
-        Me.btnPlay.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnPlay.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnPlay.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnPlay.FlatAppearance.BorderSize = 0
-        Me.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPlay.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPlay.ForeColor = System.Drawing.Color.White
-        Me.btnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPlay.Location = New System.Drawing.Point(862, 78)
-        Me.btnPlay.Name = "btnPlay"
-        Me.btnPlay.Size = New System.Drawing.Size(140, 30)
-        Me.btnPlay.TabIndex = 5
-        Me.btnPlay.Text = "&Play"
-        Me.btnPlay.UseVisualStyleBackColor = False
-        '
         'frmSong
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -299,15 +300,16 @@ Partial Class frmSong
         Me.Name = "frmSong"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmSong"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.dgvSongList, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.vlc, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvSongList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

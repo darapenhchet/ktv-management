@@ -32,6 +32,7 @@ Partial Class frmUpdateSinger
         Me.btnAddRoom = New System.Windows.Forms.Button()
         Me.btnRoomList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.cboGender = New System.Windows.Forms.ComboBox()
         Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.Message = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
@@ -43,7 +44,6 @@ Partial Class frmUpdateSinger
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.cboGender = New System.Windows.Forms.ComboBox()
         Me.OpenPhoto = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -192,6 +192,17 @@ Partial Class frmUpdateSinger
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
         '
+        'cboGender
+        '
+        Me.cboGender.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cboGender.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboGender.FormattingEnabled = True
+        Me.cboGender.Items.AddRange(New Object() {"Female", "Male"})
+        Me.cboGender.Location = New System.Drawing.Point(397, 235)
+        Me.cboGender.Name = "cboGender"
+        Me.cboGender.Size = New System.Drawing.Size(300, 29)
+        Me.cboGender.TabIndex = 36
+        '
         'pbPhoto
         '
         Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -321,17 +332,6 @@ Partial Class frmUpdateSinger
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'cboGender
-        '
-        Me.cboGender.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cboGender.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboGender.FormattingEnabled = True
-        Me.cboGender.Items.AddRange(New Object() {"Female", "Male"})
-        Me.cboGender.Location = New System.Drawing.Point(397, 235)
-        Me.cboGender.Name = "cboGender"
-        Me.cboGender.Size = New System.Drawing.Size(300, 29)
-        Me.cboGender.TabIndex = 36
-        '
         'OpenPhoto
         '
         Me.OpenPhoto.FileName = "OpenFileDialog1"
@@ -347,6 +347,7 @@ Partial Class frmUpdateSinger
         Me.Name = "frmUpdateSinger"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmUpdateSinger"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

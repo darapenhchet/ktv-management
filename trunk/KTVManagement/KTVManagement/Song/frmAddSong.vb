@@ -18,6 +18,8 @@ Public Class frmAddSong
     Private dsSinger As New DataSet
 
     Private Sub frmAddSong_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel1.Left = (Me.Width - Panel1.Width) / 2
+        Panel1.Top = (Me.Height - Panel1.Height) / 2
         setGrdHeaderText("Title|Album|Category|Production|Language|Singer|Path", dgvSongList)
         setGrdHeaderWidth("200|100|100|100|100|200|190", dgvSongList)
         AddDataIntoComboBox(cboCategory, categoryTransaction.getAllCategoryTwoColumns())

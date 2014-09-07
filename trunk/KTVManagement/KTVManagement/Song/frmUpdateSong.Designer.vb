@@ -125,6 +125,7 @@ Partial Class frmUpdateSong
         '
         'Panel5
         '
+        Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel5.Controls.Add(Me.btnUpdateSong)
         Me.Panel5.Controls.Add(Me.btnAddSong)
@@ -303,7 +304,7 @@ Partial Class frmUpdateSong
         Me.btnSingerOff.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSingerOff.ForeColor = System.Drawing.Color.White
         Me.btnSingerOff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSingerOff.Location = New System.Drawing.Point(902, 318)
+        Me.btnSingerOff.Location = New System.Drawing.Point(898, 284)
         Me.btnSingerOff.Name = "btnSingerOff"
         Me.btnSingerOff.Size = New System.Drawing.Size(100, 30)
         Me.btnSingerOff.TabIndex = 25
@@ -321,7 +322,7 @@ Partial Class frmUpdateSong
         Me.btnFullScreen.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFullScreen.ForeColor = System.Drawing.Color.White
         Me.btnFullScreen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFullScreen.Location = New System.Drawing.Point(796, 318)
+        Me.btnFullScreen.Location = New System.Drawing.Point(792, 284)
         Me.btnFullScreen.Name = "btnFullScreen"
         Me.btnFullScreen.Size = New System.Drawing.Size(100, 30)
         Me.btnFullScreen.TabIndex = 24
@@ -339,7 +340,7 @@ Partial Class frmUpdateSong
         Me.btnPlay.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPlay.ForeColor = System.Drawing.Color.White
         Me.btnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPlay.Location = New System.Drawing.Point(690, 318)
+        Me.btnPlay.Location = New System.Drawing.Point(686, 284)
         Me.btnPlay.Name = "btnPlay"
         Me.btnPlay.Size = New System.Drawing.Size(100, 30)
         Me.btnPlay.TabIndex = 23
@@ -367,7 +368,7 @@ Partial Class frmUpdateSong
         Me.btnBrowse.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBrowse.ForeColor = System.Drawing.Color.White
         Me.btnBrowse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBrowse.Location = New System.Drawing.Point(902, 359)
+        Me.btnBrowse.Location = New System.Drawing.Point(898, 325)
         Me.btnBrowse.Name = "btnBrowse"
         Me.btnBrowse.Size = New System.Drawing.Size(100, 30)
         Me.btnBrowse.TabIndex = 21
@@ -380,7 +381,7 @@ Partial Class frmUpdateSong
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(484, 365)
+        Me.Label9.Location = New System.Drawing.Point(464, 332)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(47, 19)
         Me.Label9.TabIndex = 20
@@ -390,7 +391,7 @@ Partial Class frmUpdateSong
         '
         Me.txtPath.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtPath.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPath.Location = New System.Drawing.Point(537, 361)
+        Me.txtPath.Location = New System.Drawing.Point(533, 328)
         Me.txtPath.Name = "txtPath"
         Me.txtPath.ReadOnly = True
         Me.txtPath.Size = New System.Drawing.Size(359, 27)
@@ -423,7 +424,7 @@ Partial Class frmUpdateSong
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(461, 159)
+        Me.Label8.Location = New System.Drawing.Point(454, 155)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(61, 19)
         Me.Label8.TabIndex = 16
@@ -462,7 +463,7 @@ Partial Class frmUpdateSong
         Me.btnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSave.Location = New System.Drawing.Point(902, 447)
+        Me.btnSave.Location = New System.Drawing.Point(898, 447)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(100, 30)
         Me.btnSave.TabIndex = 3
@@ -595,6 +596,7 @@ Partial Class frmUpdateSong
         Me.Name = "frmUpdateSong"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmUpdateSong"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

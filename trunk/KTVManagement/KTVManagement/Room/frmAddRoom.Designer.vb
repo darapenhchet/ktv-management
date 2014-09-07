@@ -24,6 +24,7 @@ Partial Class frmAddRoom
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -46,12 +47,11 @@ Partial Class frmAddRoom
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -76,6 +76,17 @@ Partial Class frmAddRoom
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1024, 60)
         Me.Panel2.TabIndex = 2
+        '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.White
+        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
+        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBack.Location = New System.Drawing.Point(6, 3)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(50, 50)
+        Me.btnBack.TabIndex = 1
+        Me.btnBack.TabStop = False
         '
         'Label1
         '
@@ -348,17 +359,6 @@ Partial Class frmAddRoom
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.White
-        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
-        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnBack.Location = New System.Drawing.Point(6, 3)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(50, 50)
-        Me.btnBack.TabIndex = 1
-        Me.btnBack.TabStop = False
-        '
         'frmAddRoom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -370,13 +370,14 @@ Partial Class frmAddRoom
         Me.Name = "frmAddRoom"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAddRoom"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

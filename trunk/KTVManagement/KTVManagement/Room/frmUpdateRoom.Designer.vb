@@ -362,6 +362,7 @@ Partial Class frmUpdateRoom
         Me.Name = "frmUpdateRoom"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmUpdateRoom"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel2.ResumeLayout(False)

@@ -24,6 +24,7 @@ Partial Class frmAddSinger
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -31,6 +32,7 @@ Partial Class frmAddSinger
         Me.btnSingerList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.cboGender = New System.Windows.Forms.ComboBox()
+        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.Message = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -42,13 +44,11 @@ Partial Class frmAddSinger
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.OpenPhoto = New System.Windows.Forms.OpenFileDialog()
-        Me.btnBack = New System.Windows.Forms.PictureBox()
-        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -74,6 +74,17 @@ Partial Class frmAddSinger
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1024, 60)
         Me.Panel2.TabIndex = 2
+        '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.White
+        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
+        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBack.Location = New System.Drawing.Point(6, 3)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(50, 50)
+        Me.btnBack.TabIndex = 1
+        Me.btnBack.TabStop = False
         '
         'Label1
         '
@@ -170,6 +181,17 @@ Partial Class frmAddSinger
         Me.cboGender.Name = "cboGender"
         Me.cboGender.Size = New System.Drawing.Size(300, 29)
         Me.cboGender.TabIndex = 31
+        '
+        'pbPhoto
+        '
+        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.pbPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
+        Me.pbPhoto.Name = "pbPhoto"
+        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
+        Me.pbPhoto.TabIndex = 27
+        Me.pbPhoto.TabStop = False
         '
         'Message
         '
@@ -290,28 +312,6 @@ Partial Class frmAddSinger
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.White
-        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
-        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnBack.Location = New System.Drawing.Point(6, 3)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(50, 50)
-        Me.btnBack.TabIndex = 1
-        Me.btnBack.TabStop = False
-        '
-        'pbPhoto
-        '
-        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pbPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
-        Me.pbPhoto.Name = "pbPhoto"
-        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
-        Me.pbPhoto.TabIndex = 27
-        Me.pbPhoto.TabStop = False
-        '
         'frmAddSinger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -323,13 +323,14 @@ Partial Class frmAddSinger
         Me.Name = "frmAddSinger"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAddSinger"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
