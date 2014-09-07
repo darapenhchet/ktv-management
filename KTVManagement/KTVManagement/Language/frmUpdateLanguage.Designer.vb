@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmLanguage
+Partial Class frmUpdateLanguage
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -26,7 +26,6 @@ Partial Class frmLanguage
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -39,12 +38,13 @@ Partial Class frmLanguage
         Me.dgvSingerList = New System.Windows.Forms.DataGridView()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.dgvSingerList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -56,7 +56,7 @@ Partial Class frmLanguage
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1024, 600)
-        Me.Panel1.TabIndex = 3
+        Me.Panel1.TabIndex = 4
         '
         'Panel2
         '
@@ -69,17 +69,6 @@ Partial Class frmLanguage
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1024, 60)
         Me.Panel2.TabIndex = 2
-        '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.White
-        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
-        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnBack.Location = New System.Drawing.Point(6, 3)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(50, 50)
-        Me.btnBack.TabIndex = 1
-        Me.btnBack.TabStop = False
         '
         'Label1
         '
@@ -114,13 +103,13 @@ Partial Class frmLanguage
         'btnUpdateLanguage
         '
         Me.btnUpdateLanguage.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnUpdateLanguage.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnUpdateLanguage.BackColor = System.Drawing.Color.White
         Me.btnUpdateLanguage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnUpdateLanguage.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnUpdateLanguage.FlatAppearance.BorderSize = 0
         Me.btnUpdateLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdateLanguage.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdateLanguage.ForeColor = System.Drawing.Color.White
+        Me.btnUpdateLanguage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.btnUpdateLanguage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnUpdateLanguage.Location = New System.Drawing.Point(266, 0)
         Me.btnUpdateLanguage.Name = "btnUpdateLanguage"
@@ -150,13 +139,13 @@ Partial Class frmLanguage
         'btnLanguageList
         '
         Me.btnLanguageList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnLanguageList.BackColor = System.Drawing.Color.White
+        Me.btnLanguageList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnLanguageList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnLanguageList.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnLanguageList.FlatAppearance.BorderSize = 0
         Me.btnLanguageList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLanguageList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLanguageList.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnLanguageList.ForeColor = System.Drawing.Color.White
         Me.btnLanguageList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLanguageList.Location = New System.Drawing.Point(0, 0)
         Me.btnLanguageList.Name = "btnLanguageList"
@@ -254,7 +243,18 @@ Partial Class frmLanguage
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'frmLanguage
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.White
+        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
+        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBack.Location = New System.Drawing.Point(6, 3)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(50, 50)
+        Me.btnBack.TabIndex = 1
+        Me.btnBack.TabStop = False
+        '
+        'frmUpdateLanguage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -262,17 +262,17 @@ Partial Class frmLanguage
         Me.ClientSize = New System.Drawing.Size(1024, 600)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmLanguage"
+        Me.Name = "frmUpdateLanguage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmLanguage"
+        Me.Text = "frmUpdateLanguage"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.dgvSingerList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

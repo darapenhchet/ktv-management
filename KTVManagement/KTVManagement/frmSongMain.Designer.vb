@@ -27,13 +27,13 @@ Partial Class frmSongMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnSong = New System.Windows.Forms.Button()
-        Me.btnRoomList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.btnCategory = New System.Windows.Forms.Button()
-        Me.btnProduction = New System.Windows.Forms.Button()
-        Me.btnLanguage = New System.Windows.Forms.Button()
         Me.btnSinger = New System.Windows.Forms.Button()
+        Me.btnLanguage = New System.Windows.Forms.Button()
+        Me.btnProduction = New System.Windows.Forms.Button()
+        Me.btnCategory = New System.Windows.Forms.Button()
+        Me.btnRoomList = New System.Windows.Forms.Button()
+        Me.btnSong = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -91,42 +91,6 @@ Partial Class frmSongMain
         Me.Panel5.Size = New System.Drawing.Size(1007, 30)
         Me.Panel5.TabIndex = 3
         '
-        'btnSong
-        '
-        Me.btnSong.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSong.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnSong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnSong.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnSong.FlatAppearance.BorderSize = 0
-        Me.btnSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSong.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSong.ForeColor = System.Drawing.Color.White
-        Me.btnSong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSong.Location = New System.Drawing.Point(104, 106)
-        Me.btnSong.Name = "btnSong"
-        Me.btnSong.Size = New System.Drawing.Size(200, 100)
-        Me.btnSong.TabIndex = 2
-        Me.btnSong.Text = "&Song"
-        Me.btnSong.UseVisualStyleBackColor = False
-        '
-        'btnRoomList
-        '
-        Me.btnRoomList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnRoomList.BackColor = System.Drawing.Color.White
-        Me.btnRoomList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnRoomList.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnRoomList.FlatAppearance.BorderSize = 0
-        Me.btnRoomList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRoomList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRoomList.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.btnRoomList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRoomList.Location = New System.Drawing.Point(71, 281)
-        Me.btnRoomList.Name = "btnRoomList"
-        Me.btnRoomList.Size = New System.Drawing.Size(100, 30)
-        Me.btnRoomList.TabIndex = 1
-        Me.btnRoomList.Text = "Room &List"
-        Me.btnRoomList.UseVisualStyleBackColor = False
-        '
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -142,41 +106,23 @@ Partial Class frmSongMain
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
         '
-        'btnCategory
+        'btnSinger
         '
-        Me.btnCategory.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnCategory.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCategory.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnCategory.FlatAppearance.BorderSize = 0
-        Me.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCategory.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCategory.ForeColor = System.Drawing.Color.White
-        Me.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCategory.Location = New System.Drawing.Point(310, 106)
-        Me.btnCategory.Name = "btnCategory"
-        Me.btnCategory.Size = New System.Drawing.Size(200, 100)
-        Me.btnCategory.TabIndex = 5
-        Me.btnCategory.Text = "&Category"
-        Me.btnCategory.UseVisualStyleBackColor = False
-        '
-        'btnProduction
-        '
-        Me.btnProduction.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnProduction.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnProduction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnProduction.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnProduction.FlatAppearance.BorderSize = 0
-        Me.btnProduction.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnProduction.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProduction.ForeColor = System.Drawing.Color.White
-        Me.btnProduction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnProduction.Location = New System.Drawing.Point(516, 106)
-        Me.btnProduction.Name = "btnProduction"
-        Me.btnProduction.Size = New System.Drawing.Size(200, 100)
-        Me.btnProduction.TabIndex = 6
-        Me.btnProduction.Text = "&Production"
-        Me.btnProduction.UseVisualStyleBackColor = False
+        Me.btnSinger.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnSinger.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnSinger.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnSinger.FlatAppearance.BorderSize = 0
+        Me.btnSinger.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSinger.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSinger.ForeColor = System.Drawing.Color.White
+        Me.btnSinger.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSinger.Location = New System.Drawing.Point(414, 212)
+        Me.btnSinger.Name = "btnSinger"
+        Me.btnSinger.Size = New System.Drawing.Size(200, 100)
+        Me.btnSinger.TabIndex = 8
+        Me.btnSinger.Text = "&Singer"
+        Me.btnSinger.UseVisualStyleBackColor = False
         '
         'btnLanguage
         '
@@ -196,23 +142,77 @@ Partial Class frmSongMain
         Me.btnLanguage.Text = "&Language"
         Me.btnLanguage.UseVisualStyleBackColor = False
         '
-        'btnSinger
+        'btnProduction
         '
-        Me.btnSinger.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSinger.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnSinger.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnSinger.FlatAppearance.BorderSize = 0
-        Me.btnSinger.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSinger.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSinger.ForeColor = System.Drawing.Color.White
-        Me.btnSinger.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSinger.Location = New System.Drawing.Point(414, 212)
-        Me.btnSinger.Name = "btnSinger"
-        Me.btnSinger.Size = New System.Drawing.Size(200, 100)
-        Me.btnSinger.TabIndex = 8
-        Me.btnSinger.Text = "&Singer"
-        Me.btnSinger.UseVisualStyleBackColor = False
+        Me.btnProduction.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnProduction.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnProduction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnProduction.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnProduction.FlatAppearance.BorderSize = 0
+        Me.btnProduction.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnProduction.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnProduction.ForeColor = System.Drawing.Color.White
+        Me.btnProduction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnProduction.Location = New System.Drawing.Point(516, 106)
+        Me.btnProduction.Name = "btnProduction"
+        Me.btnProduction.Size = New System.Drawing.Size(200, 100)
+        Me.btnProduction.TabIndex = 6
+        Me.btnProduction.Text = "&Production"
+        Me.btnProduction.UseVisualStyleBackColor = False
+        '
+        'btnCategory
+        '
+        Me.btnCategory.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnCategory.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnCategory.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnCategory.FlatAppearance.BorderSize = 0
+        Me.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCategory.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCategory.ForeColor = System.Drawing.Color.White
+        Me.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCategory.Location = New System.Drawing.Point(310, 106)
+        Me.btnCategory.Name = "btnCategory"
+        Me.btnCategory.Size = New System.Drawing.Size(200, 100)
+        Me.btnCategory.TabIndex = 5
+        Me.btnCategory.Text = "&Category"
+        Me.btnCategory.UseVisualStyleBackColor = False
+        '
+        'btnRoomList
+        '
+        Me.btnRoomList.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnRoomList.BackColor = System.Drawing.Color.White
+        Me.btnRoomList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnRoomList.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnRoomList.FlatAppearance.BorderSize = 0
+        Me.btnRoomList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRoomList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRoomList.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnRoomList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRoomList.Location = New System.Drawing.Point(71, 281)
+        Me.btnRoomList.Name = "btnRoomList"
+        Me.btnRoomList.Size = New System.Drawing.Size(100, 30)
+        Me.btnRoomList.TabIndex = 1
+        Me.btnRoomList.Text = "Room &List"
+        Me.btnRoomList.UseVisualStyleBackColor = False
+        '
+        'btnSong
+        '
+        Me.btnSong.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnSong.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnSong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnSong.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnSong.FlatAppearance.BorderSize = 0
+        Me.btnSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSong.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSong.ForeColor = System.Drawing.Color.White
+        Me.btnSong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSong.Location = New System.Drawing.Point(104, 106)
+        Me.btnSong.Name = "btnSong"
+        Me.btnSong.Size = New System.Drawing.Size(200, 100)
+        Me.btnSong.TabIndex = 2
+        Me.btnSong.Text = "&Song"
+        Me.btnSong.UseVisualStyleBackColor = False
         '
         'btnBack
         '

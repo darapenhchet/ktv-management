@@ -144,10 +144,22 @@
     <Compile Include="frmSongMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Language\frmAddLanguage.Designer.vb">
+      <DependentUpon>frmAddLanguage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Language\frmAddLanguage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Language\frmLanguage.Designer.vb">
       <DependentUpon>frmLanguage.vb</DependentUpon>
     </Compile>
     <Compile Include="Language\frmLanguage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Language\frmUpdateLanguage.Designer.vb">
+      <DependentUpon>frmUpdateLanguage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Language\frmUpdateLanguage.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Production\frmAddProduction.Designer.vb">
@@ -327,8 +339,14 @@
     <EmbeddedResource Include="frmSongMain.resx">
       <DependentUpon>frmSongMain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Language\frmAddLanguage.resx">
+      <DependentUpon>frmAddLanguage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Language\frmLanguage.resx">
       <DependentUpon>frmLanguage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\frmUpdateLanguage.resx">
+      <DependentUpon>frmUpdateLanguage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmAddProduction.resx">
       <DependentUpon>frmAddProduction.vb</DependentUpon>
