@@ -24,7 +24,6 @@ Partial Class frmUpdateCategory
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -32,6 +31,7 @@ Partial Class frmUpdateCategory
         Me.btnAddRoom = New System.Windows.Forms.Button()
         Me.btnRoomList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Message = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtDescription = New System.Windows.Forms.TextBox()
@@ -42,12 +42,12 @@ Partial Class frmUpdateCategory
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Message = New System.Windows.Forms.Label()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -73,17 +73,6 @@ Partial Class frmUpdateCategory
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1024, 60)
         Me.Panel2.TabIndex = 2
-        '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.White
-        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
-        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnBack.Location = New System.Drawing.Point(6, 3)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(50, 50)
-        Me.btnBack.TabIndex = 1
-        Me.btnBack.TabStop = False
         '
         'Label1
         '
@@ -187,6 +176,19 @@ Partial Class frmUpdateCategory
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
+        '
+        'Message
+        '
+        Me.Message.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Message.AutoSize = True
+        Me.Message.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Message.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Message.Location = New System.Drawing.Point(341, 375)
+        Me.Message.Name = "Message"
+        Me.Message.Size = New System.Drawing.Size(364, 23)
+        Me.Message.TabIndex = 34
+        Me.Message.Text = "You have been updated successfully!!!"
+        Me.Message.Visible = False
         '
         'btnSave
         '
@@ -303,18 +305,16 @@ Partial Class frmUpdateCategory
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'Message
+        'btnBack
         '
-        Me.Message.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Message.AutoSize = True
-        Me.Message.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Message.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Message.Location = New System.Drawing.Point(341, 375)
-        Me.Message.Name = "Message"
-        Me.Message.Size = New System.Drawing.Size(364, 23)
-        Me.Message.TabIndex = 34
-        Me.Message.Text = "You have been updated successfully!!!"
-        Me.Message.Visible = False
+        Me.btnBack.BackColor = System.Drawing.Color.White
+        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
+        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBack.Location = New System.Drawing.Point(6, 3)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(50, 50)
+        Me.btnBack.TabIndex = 1
+        Me.btnBack.TabStop = False
         '
         'frmUpdateCategory
         '
@@ -330,10 +330,10 @@ Partial Class frmUpdateCategory
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

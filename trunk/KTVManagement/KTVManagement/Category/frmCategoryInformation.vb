@@ -10,7 +10,6 @@
 
     Private Sub DisplayCategoryInformation()
         dsCategory = categoryTransaction.getAllCategory()
-        MessageBox.Show(dsCategory.Tables(0).Rows.Count)
         dgvCategory.DataSource = dsCategory.Tables(0)
         setGrdHeaderText("ID|Category|Description", dgvCategory)
         setGrdHeaderWidth("100|400|500", dgvCategory)
@@ -19,7 +18,6 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        frmMainAdmin.Show()
         Me.Close()
     End Sub
 
@@ -67,4 +65,5 @@
         dsCategory = categoryTransaction.getAllCategoryByKeyword(txtSearch.Text)
         dgvCategory.DataSource = dsCategory.Tables(0)
     End Sub
+
 End Class

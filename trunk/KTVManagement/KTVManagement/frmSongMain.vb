@@ -2,11 +2,10 @@
 
     Private Sub btnCategory_Click(sender As Object, e As EventArgs) Handles btnCategory.Click
         frmCategoryInformation.Show()
-        Me.Close()
     End Sub
 
     Private Sub btnProduction_Click(sender As Object, e As EventArgs) Handles btnProduction.Click
-        frmProductionInformation.Show()
+        frmProduction.Show()
     End Sub
 
     Private Sub btnLanguage_Click(sender As Object, e As EventArgs) Handles btnLanguage.Click
@@ -19,5 +18,10 @@
 
     Private Sub btnSong_Click(sender As Object, e As EventArgs) Handles btnSong.Click
         frmSong.Show()
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        frmMainAdmin.Show()
+        Me.Close()
     End Sub
 End Class
