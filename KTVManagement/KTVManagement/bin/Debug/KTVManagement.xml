@@ -15,6 +15,10 @@ KTVManagement
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:KTVManagement.My.Resources.Resources.add121">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:KTVManagement.My.Resources.Resources.arrow110">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -43,7 +47,15 @@ KTVManagement
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:KTVManagement.My.Resources.Resources.close33">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:KTVManagement.My.Resources.Resources.create1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:KTVManagement.My.Resources.Resources.create11">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

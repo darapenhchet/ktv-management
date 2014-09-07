@@ -63,8 +63,6 @@ Public Class frmAddSong
 
             Dim strSingers As String = ""
             For Each singer As ClsSinger In lstSingers.Items
-                singer.ID = singer.ID
-                singer.Name = singer.Name
                 song.Singers.Add(singer)
                 strSingers = strSingers & singer.Name & ","
             Next
@@ -154,4 +152,5 @@ Public Class frmAddSong
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Close()
     End Sub
+
 End Class

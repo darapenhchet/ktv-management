@@ -29,4 +29,36 @@ Public Class frmSong
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Close()
     End Sub
+
+    Private Sub btnUpdateSong_Click(sender As Object, e As EventArgs) Handles btnUpdateSong.Click
+        Try
+            frmUpdateSong.Show()
+            frmUpdateSong.txtID.Text = dgvSongList.CurrentRow.Cells(0).Value
+            frmUpdateSong.txtTitle.Text = dgvSongList.CurrentRow.Cells(1).Value
+            frmUpdateSong.txtAlbum.Text = dgvSongList.CurrentRow.Cells(2).Value
+            frmUpdateSong.cboCategory.Text = dgvSongList.CurrentRow.Cells(3).Value
+            frmUpdateSong.cboProduction.Text = dgvSongList.CurrentRow.Cells(4).Value
+            frmUpdateSong.cboLanguage.Text = dgvSongList.CurrentRow.Cells(5).Value
+
+            For Each singer As String In GetStrSingers(dgvSongList.CurrentRow.Cells(6).Value)
+                frmUpdateSong.cboSinger.Text = ""
+                frmUpdateSong.cboSinger.SelectedText = singer
+                Dim objSinger As New ClsSinger
+                objSinger.ID = frmUpdateSong.cboSinger.SelectedValue
+                objSinger.Name = frmUpdateSong.cboSinger.Text
+                frmUpdateSong.lstSingers.Items.Add(objSinger)
+            Next
+            frmUpdateSong.txtPath.Text = dgvSongList.CurrentRow.Cells(7).Value
+            Me.Close()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
+    Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
+        vlc.playlist.items.clear()
+        vlc.playlist.add("file:///" & dgvSongList.CurrentRow.Cells(7).Value)
+        vlc.playlist.play()
+    End Sub
 End Class

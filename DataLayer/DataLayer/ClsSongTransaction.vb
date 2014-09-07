@@ -59,7 +59,7 @@ Public Class ClsSongTransaction
                 Command.Parameters.AddWithValue("@Album", song.Album)
                 Command.Parameters.AddWithValue("@CategoryID", song.Category.ID)
                 Command.Parameters.AddWithValue("@ProductionID", song.Production.ID)
-                Command.Parameters.AddWithValue("@LanguageID", song.Production.ID)
+                Command.Parameters.AddWithValue("@LanguageID", song.Language.ID)
                 Command.Parameters.AddWithValue("@Path", song.Path)
                 song.ID = CInt(Command.ExecuteScalar)
                 Return True
@@ -79,10 +79,24 @@ Public Class ClsSongTransaction
     End Function
 
     Public Function updateSong(song As ClsSong) As Boolean
+        Dim Sql As String = "UPDATE songs SET title = @Title, album = @Album, categoryId = @CategoryID, productionId = @ProductionID, languageId = @LanguageID, path =@Path WHERE songId = @ID"
         Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = Sql
+                Command.Parameters.AddWithValue("@Title", song.Title)
+                Command.Parameters.AddWithValue("@Album", song.Album)
+                Command.Parameters.AddWithValue("@CategoryID", song.Category.ID)
+                Command.Parameters.AddWithValue("@ProductionID", song.Production.ID)
+                Command.Parameters.AddWithValue("@LanguageID", song.Language.ID)
+                Command.Parameters.AddWithValue("@Path", song.Path)
+                Command.Parameters.AddWithValue("@ID", song.ID)
+                Command.ExecuteNonQuery()
+                Return True
+            End Using
 
         Catch ex As Exception
-
+            MsgBox(ex.Message)
+            Return False
         End Try
     End Function
 End Class

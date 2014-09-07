@@ -438,6 +438,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Photo.jpg" />
+    <None Include="Resources\add121.png" />
+    <None Include="Resources\create11.png" />
+    <None Include="Resources\close33.png" />
     <None Include="Resources\rounded3.png" />
     <None Include="Resources\microphone52 %281%29.png" />
     <None Include="Resources\microphone52.png" />
