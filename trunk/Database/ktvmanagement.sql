@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50527
 File Encoding         : 65001
 
-Date: 2014-09-05 16:20:05
+Date: 2014-09-07 09:55:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,12 +24,15 @@ CREATE TABLE `categories` (
   `category` varchar(50) DEFAULT NULL,
   `description` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`categoryId`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of categories
 -- ----------------------------
-INSERT INTO `categories` VALUES ('1', 'MODERN', null);
+INSERT INTO `categories` VALUES ('1', 'KHMER', 'This category is about the modern song');
+INSERT INTO `categories` VALUES ('2', 'POP', 'This category is for POP songs.');
+INSERT INTO `categories` VALUES ('3', 'Traditional', 'This song is for traditional khmer music.');
+INSERT INTO `categories` VALUES ('4', 'JAZZ', 'JAZZ Song');
 
 -- ----------------------------
 -- Table structure for guests
@@ -92,15 +95,18 @@ INSERT INTO `productions` VALUES ('4', 'TWON', null);
 DROP TABLE IF EXISTS `rooms`;
 CREATE TABLE `rooms` (
   `roomId` int(11) NOT NULL,
+  `roomName` varchar(100) DEFAULT NULL,
   `roomType` varchar(10) DEFAULT NULL,
   `price` double DEFAULT NULL,
-  PRIMARY KEY (`roomId`),
-  CONSTRAINT `rooms_ibfk_1` FOREIGN KEY (`roomId`) REFERENCES `guests` (`roomId`)
+  `discount` int(11) DEFAULT '0',
+  PRIMARY KEY (`roomId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of rooms
 -- ----------------------------
+INSERT INTO `rooms` VALUES ('1', 'Phnom Penh', 'Normal', '5', '0');
+INSERT INTO `rooms` VALUES ('2', 'Kompong Som', 'Normal', '5', '0');
 
 -- ----------------------------
 -- Table structure for singers
@@ -108,7 +114,7 @@ CREATE TABLE `rooms` (
 DROP TABLE IF EXISTS `singers`;
 CREATE TABLE `singers` (
   `singerId` int(11) NOT NULL AUTO_INCREMENT,
-  `singerName` varchar(50) NOT NULL,
+  `singerName` varchar(100) NOT NULL,
   `gender` varchar(1) NOT NULL,
   `photo` mediumblob NOT NULL,
   PRIMARY KEY (`singerId`)
@@ -291,7 +297,7 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `spGetAllSongLists`()
 BEGIN
 	SELECT songs.songid AS ID ,songs.title AS Title ,songs.album AS Album,categories.category AS Category,
-				 productions.production AS Production,languages.`language` AS Language,songs.path AS Path,GROUP_CONCAT(singerName) As singer
+				 productions.production AS Production,languages.`language` AS Language,GROUP_CONCAT(singerName) As singer,songs.path AS Path
 	FROM singers 
 	INNER JOIN songdetails ON singers.singerId = songdetails.singerId
 	INNER JOIN songs ON songs.songid = songdetails.songId
@@ -304,15 +310,32 @@ END
 DELIMITER ;
 
 -- ----------------------------
--- Procedure structure for spGetAllSongs
+-- Procedure structure for spGetAllSongsBySearch
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `spGetAllSongs`;
+DROP PROCEDURE IF EXISTS `spGetAllSongsBySearch`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `spGetAllSongs`()
-BEGIN 
-	SELECT *
-	FROM (songs INNER JOIN songdetails ON songs.songid = songdetails.songId)
-	INNER JOIN singers ON singers.singerId = songdetails.singerId;		
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spGetAllSongsBySearch`(
+	STitle VARCHAR(200),
+	SAlbum VARCHAR(50),
+	SCategory VARCHAR(50),
+	SProduction VARCHAR(50),
+	SLanguage VARCHAR(50),
+	SSinger VARCHAR(100)
+)
+BEGIN
+SELECT songs.songid AS ID ,songs.title AS Title ,songs.album AS Album,categories.category AS Category,
+				 productions.production AS Production,languages.`language` AS Language,GROUP_CONCAT(singerName) As singer,songs.path AS Path
+FROM singers 
+INNER JOIN songdetails ON singers.singerId = songdetails.singerId
+INNER JOIN songs ON songs.songid = songdetails.songId
+INNER JOIN categories ON songs.categoryId = categories.categoryId
+INNER JOIN productions ON songs.productionId = productions.productionId
+INNER JOIN languages ON songs.languageId = languages.languageId
+WHERE songs.title LIKE STitle OR songs.album LIKE SAlbum OR categories.category LIKE SCategory 
+   OR productions.production LIKE SProduction  
+	 OR languages.`language` LIKE SLanguage 
+	 OR singers.singerName LIKE SSinger
+GROUP BY songs.songId;
 END
 ;;
 DELIMITER ;
@@ -346,5 +369,14 @@ BEGIN
 	SET singerName = singerName, gender = gender, photo = photo
 	WHERE singerID = singerId;
 END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for hh
+-- ----------------------------
+DROP EVENT IF EXISTS `hh`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `hh` ON SCHEDULE AT '2014-09-05 16:49:54' ON COMPLETION NOT PRESERVE ENABLE DO CALL spGetAllSongLists
 ;;
 DELIMITER ;
