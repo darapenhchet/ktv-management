@@ -40,6 +40,7 @@ Partial Class frmAddLanguage
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.OpenPhoto = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -271,6 +272,10 @@ Partial Class frmAddLanguage
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
+        'OpenPhoto
+        '
+        Me.OpenPhoto.FileName = "OpenFileDialog1"
+        '
         'frmAddLanguage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -312,4 +317,5 @@ Partial Class frmAddLanguage
     Friend WithEvents txtLanguage As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtID As System.Windows.Forms.TextBox
+    Friend WithEvents OpenPhoto As System.Windows.Forms.OpenFileDialog
 End Class

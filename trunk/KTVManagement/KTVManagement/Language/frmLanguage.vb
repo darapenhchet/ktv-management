@@ -31,6 +31,7 @@ Public Class frmLanguage
 
     Private Sub btnUpdateLanguage_Click(sender As Object, e As EventArgs) Handles btnUpdateLanguage.Click
         Try
+            frmUpdateLanguage.Show()
             frmUpdateLanguage.txtID.Text = dgvLanguageList.CurrentRow.Cells(0).Value
             frmUpdateLanguage.txtLanguage.Text = dgvLanguageList.CurrentRow.Cells(1).Value
             If dgvLanguageList.CurrentRow.Cells(2).Value Is DBNull.Value Then
@@ -42,10 +43,8 @@ Public Class frmLanguage
                     frmUpdateProduction.pbPhoto.Image = Image.FromStream(ms)
                 End If
             End If
-            frmUpdateLanguage.Show()
             Me.Close()
         Catch ex As Exception
-
         End Try
 
     End Sub
