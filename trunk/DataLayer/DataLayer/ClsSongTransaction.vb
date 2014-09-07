@@ -41,13 +41,6 @@ Public Class ClsSongTransaction
             Return Nothing
         End Try
     End Function
-    Public Function searchSongByKeyword(keyword As String) As DataSet
-        Try
-
-        Catch ex As Exception
-
-        End Try
-    End Function
 
     Public Function addNewSong(song As ClsSong) As Boolean
         Dim sql As String = "INSERT INTO songs(title,album,categoryId,productionId,languageId,path) VALUES(@Title,@Album,@CategoryID,@ProductionID,@LanguageID,@Path);SELECT LAST_INSERT_ID();"
@@ -71,10 +64,16 @@ Public Class ClsSongTransaction
     End Function
 
     Public Function deleteSong(id As Integer) As Boolean
+        Dim sql As String = "DELETE FROM songs WHERE songId = @SongID"
         Try
-
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Command.Parameters.AddWithValue("@SongID", id)
+                Command.ExecuteNonQuery()
+                Return True
+            End Using
         Catch ex As Exception
-
+            Return False
         End Try
     End Function
 
@@ -93,7 +92,6 @@ Public Class ClsSongTransaction
                 Command.ExecuteNonQuery()
                 Return True
             End Using
-
         Catch ex As Exception
             MsgBox(ex.Message)
             Return False

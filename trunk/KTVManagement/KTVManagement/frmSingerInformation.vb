@@ -14,10 +14,10 @@ Public Class frmSingerInformation
 
 
 
-    Private Sub pbSingerPhoto_Click(sender As Object, e As EventArgs) Handles pbSingerPhoto.Click
+    Private Sub pbSingerPhoto_Click(sender As Object, e As EventArgs) Handles pbPhoto.Click
         If OpenSingerPhoto.ShowDialog() <> Windows.Forms.DialogResult.Cancel Then
-            pbSingerPhoto.Image = Image.FromFile(OpenSingerPhoto.FileName)
-            Photo = getMemoryStream(OpenSingerPhoto.FileName)
+            pbPhoto.Image = Image.FromFile(OpenSingerPhoto.FileName)
+            Photo = getMemoryStream(pbPhoto)
         End If
     End Sub
 
@@ -56,7 +56,7 @@ Public Class frmSingerInformation
             Dim imageData As Byte() = CType(dgvSingerInformation.CurrentRow.Cells(3).Value, Byte())
             If Not imageData Is Nothing Then
                 Dim ms As New System.IO.MemoryStream(imageData)
-                pbSingerPhoto.Image = Image.FromStream(ms)
+                pbPhoto.Image = Image.FromStream(ms)
             End If
         Catch ex As Exception
         End Try
@@ -80,7 +80,7 @@ Public Class frmSingerInformation
         txtID.Text = "Auto ID"
         txtSingerName.Text = ""
         cboGender.SelectedIndex = -1
-        pbSingerPhoto.Image = My.Resources.Photo
+        pbPhoto.Image = My.Resources.Photo
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click

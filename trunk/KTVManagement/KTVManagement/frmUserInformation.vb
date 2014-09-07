@@ -22,7 +22,7 @@
         txtID.Text = "Auto ID"
         txtUsername.Text = ""
         txtPassword.Text = ""
-        pbUser.Image = My.Resources.Photo
+        pbPhoto.Image = My.Resources.Photo
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -66,13 +66,13 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-        
+
     End Sub
 
-    Private Sub pbUser_Click(sender As Object, e As EventArgs) Handles pbUser.Click
+    Private Sub pbUser_Click(sender As Object, e As EventArgs) Handles pbPhoto.Click
         If OpenUserPhoto.ShowDialog() <> Windows.Forms.DialogResult.Cancel Then
-            pbUser.Image = Image.FromFile(OpenUserPhoto.FileName)
-            Photo = getMemoryStream(OpenUserPhoto.FileName)
+            pbPhoto.Image = Image.FromFile(OpenUserPhoto.FileName)
+            Photo = getMemoryStream(pbPhoto)
         End If
     End Sub
 
@@ -86,7 +86,7 @@
             Dim imageData As Byte() = CType(dgvUserInformation.CurrentRow.Cells(4).Value, Byte())
             If Not imageData Is Nothing Then
                 Dim ms As New System.IO.MemoryStream(imageData)
-                pbUser.Image = Image.FromStream(ms)
+                pbPhoto.Image = Image.FromStream(ms)
                 Photo = imageData
             End If
         Catch ex As Exception

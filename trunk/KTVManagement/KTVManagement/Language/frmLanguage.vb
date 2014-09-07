@@ -6,14 +6,14 @@ Public Class frmLanguage
 
     Private Sub frmLanguage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DisplayLanguageInformation("")
+        setGrdHeaderText("ID|Language|Photo", dgvLanguageList)
+        setGrdHeaderWidth("100|300|600", dgvLanguageList)
+        dgvLanguageList.Columns(2).Visible = False
     End Sub
 
     Public Sub DisplayLanguageInformation(keyword As String)
         dsLanguage = languageTransaction.getAllLanguageByKeyword(keyword)
-        dgvSingerList.DataSource = dsLanguage.Tables(0)
-        setGrdHeaderText("ID|Language|Photo", dgvSingerList)
-        setGrdHeaderWidth("100|300|600", dgvSingerList)
-        dgvSingerList.Columns(2).Visible = False
+        dgvLanguageList.DataSource = dsLanguage.Tables(0)
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -28,5 +28,11 @@ Public Class frmLanguage
     Private Sub btnUpdateLanguage_Click(sender As Object, e As EventArgs) Handles btnUpdateLanguage.Click
         frmUpdateLanguage.Show()
         Me.Close()
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        dsLanguage.Tables(0).Clear()
+        dgvLanguageList.DataSource = dsLanguage.Tables(0)
+        DisplayLanguageInformation(txtSearch.Text)
     End Sub
 End Class

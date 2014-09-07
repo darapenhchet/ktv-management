@@ -6,15 +6,15 @@
 
     Private Sub frmCategoryInformation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DisplayCategoryInformation()
+        setGrdHeaderText("ID|Category|Description", dgvCategory)
+        setGrdHeaderWidth("100|400|500", dgvCategory)
+        dgvCategory.RowHeadersWidth = 30
+
     End Sub
 
     Private Sub DisplayCategoryInformation()
         dsCategory = categoryTransaction.getAllCategory()
         dgvCategory.DataSource = dsCategory.Tables(0)
-        setGrdHeaderText("ID|Category|Description", dgvCategory)
-        setGrdHeaderWidth("100|400|500", dgvCategory)
-        dgvCategory.RowHeadersWidth = 30
-
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -65,5 +65,6 @@
         dsCategory = categoryTransaction.getAllCategoryByKeyword(txtSearch.Text)
         dgvCategory.DataSource = dsCategory.Tables(0)
     End Sub
+
 
 End Class

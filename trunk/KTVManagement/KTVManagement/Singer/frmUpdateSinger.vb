@@ -1,7 +1,7 @@
 ﻿Public Class frmUpdateSinger
 
     Private singerTransaction As New DataLayer.ClsSingerTransaction
-    Private Photo As Byte()
+    Public Photo As Byte()
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Close()
@@ -21,8 +21,8 @@
         Dim singer As New DataLayer.ClsSinger
         singer.ID = CInt(txtID.Text)
         singer.Name = txtSingerName.Text
-        singer.Gender = cboGender.SelectedItem.ToString
-        singer.Photo = Photo
+        singer.Gender = cboGender.Text
+        singer.Photo = getMemoryStream(pbPhoto)
         If singerTransaction.updateSinger(singer) = True Then
             Message.Visible = True
         Else
@@ -34,7 +34,7 @@
     Private Sub pbPhoto_Click(sender As Object, e As EventArgs) Handles pbPhoto.Click
         If OpenPhoto.ShowDialog() <> Windows.Forms.DialogResult.Cancel Then
             pbPhoto.Image = Image.FromFile(OpenPhoto.FileName)
-            Photo = getMemoryStream(OpenPhoto.FileName)
+            Photo = getMemoryStream(pbPhoto)
         End If
     End Sub
 End Class
