@@ -5,6 +5,8 @@ Public Class frmLanguage
     Private languageTransaction As New ClsLanguageTransaction
 
     Private Sub frmLanguage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel1.Left = (Me.Width - Panel1.Width) / 2
+        Panel1.Top = (Me.Height - Panel1.Height) / 2
         DisplayLanguageInformation("")
         setGrdHeaderText("ID|Language|Photo", dgvLanguageList)
         setGrdHeaderWidth("100|300|600", dgvLanguageList)

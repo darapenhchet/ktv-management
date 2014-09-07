@@ -1,4 +1,6 @@
-﻿Public Class frmProduction
+﻿Imports System.IO
+
+Public Class frmProduction
 
     Private productionTransaction As New DataLayer.ClsProductionTransaction
     Private dsProduction As New DataSet
@@ -18,6 +20,8 @@
     End Sub
 
     Private Sub frmProduction_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel1.Left = (Me.Width - Panel1.Width) / 2
+        Panel1.Top = (Me.Height - Panel1.Height) / 2
         DisplayProductionInformation("")
         setGrdHeaderText("ID|Production|Photo", dgvProductionList)
         setGrdHeaderWidth("100|300|600", dgvProductionList)
@@ -34,21 +38,20 @@
             frmUpdateProduction.Show()
             frmUpdateProduction.txtID.Text = dgvProductionList.CurrentRow.Cells(0).Value
             frmUpdateProduction.txtProduction.Text = dgvProductionList.CurrentRow.Cells(1).Value
-            Dim imageData As Byte() = {}
-            Try
-                imageData = CType(dgvProductionList.CurrentRow.Cells(2).Value, Byte())
-            Catch ex As Exception
-            End Try
-
-            If Not imageData Is Nothing Then
-                Dim ms As New System.IO.MemoryStream(imageData)
-                frmUpdateProduction.pbPhoto.Image = Image.FromStream(ms)
+            If dgvProductionList.CurrentRow.Cells(2).Value Is DBNull.Value Then
+                frmUpdateProduction.pbPhoto.Image = My.Resources.Photo
+            Else
+                Dim imageData As Byte() = CType(dgvProductionList.CurrentRow.Cells(2).Value, Byte())
+                If Not imageData Is Nothing Then
+                    Dim ms As New MemoryStream(imageData)
+                    frmUpdateProduction.pbPhoto.Image = Image.FromStream(ms)
+                End If
             End If
             Me.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-        
+
     End Sub
 
     Private Sub btnBack_Click_1(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -60,4 +63,6 @@
         dgvProductionList.DataSource = dsProduction.Tables(0)
         DisplayProductionInformation(txtSearch.Text)
     End Sub
+
+ 
 End Class

@@ -5,6 +5,8 @@
     Private RowIndex As Integer
 
     Private Sub frmCategoryInformation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel1.Left = (Me.Width - Panel1.Width) / 2
+        Panel1.Top = (Me.Height - Panel1.Height) / 2
         DisplayCategoryInformation()
         setGrdHeaderText("ID|Category|Description", dgvCategory)
         setGrdHeaderWidth("100|400|500", dgvCategory)

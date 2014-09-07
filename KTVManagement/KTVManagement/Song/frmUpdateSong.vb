@@ -17,6 +17,8 @@ Public Class frmUpdateSong
     End Sub
 
     Private Sub frmUpdateSong_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel1.Left = (Me.Width - Panel1.Width) / 2
+        Panel1.Top = (Me.Height - Panel1.Height) / 2
         AddDataIntoComboBox(cboCategory, categoryTransaction.getAllCategoryTwoColumns())
         AddDataIntoComboBox(cboProduction, productionTransaction.getAllProductionsTwoColumns())
         AddDataIntoComboBox(cboLanguage, languageTransaction.getAllLanguagesTwoColumns())
