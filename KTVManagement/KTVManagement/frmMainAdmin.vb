@@ -25,7 +25,8 @@
     End Sub
 
     Private Sub btnUserInformation_Click(sender As Object, e As EventArgs) Handles btnUserInformation.Click
-        frmUserInformation.Show()
+        'frmUserInformation.Show()
+        frmUser.Show()
     End Sub
 
     Private Sub btnAboutUs_Click(sender As Object, e As EventArgs) Handles btnAboutUs.Click

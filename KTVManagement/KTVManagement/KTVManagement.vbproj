@@ -325,6 +325,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transaction.vb" />
+    <Compile Include="User\frmAddUser.Designer.vb">
+      <DependentUpon>frmAddUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmAddUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUpdaterUser.Designer.vb">
+      <DependentUpon>frmUpdaterUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUpdaterUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUser.Designer.vb">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Category\frmAddCategory.resx">
@@ -425,6 +443,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Song\frmUpdateSong.resx">
       <DependentUpon>frmUpdateSong.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmAddUser.resx">
+      <DependentUpon>frmAddUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUpdaterUser.resx">
+      <DependentUpon>frmUpdaterUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUser.resx">
+      <DependentUpon>frmUser.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

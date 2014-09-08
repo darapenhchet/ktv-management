@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmAddUser
+Partial Class frmUpdaterUser
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -28,8 +28,9 @@ Partial Class frmAddUser
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnAddRoom = New System.Windows.Forms.Button()
-        Me.btnRoomList = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnAddUser = New System.Windows.Forms.Button()
+        Me.btnUserList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.fail = New System.Windows.Forms.Label()
@@ -41,7 +42,7 @@ Partial Class frmAddUser
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
@@ -64,7 +65,7 @@ Partial Class frmAddUser
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1024, 600)
-        Me.Panel1.TabIndex = 2
+        Me.Panel1.TabIndex = 3
         '
         'Panel2
         '
@@ -112,48 +113,67 @@ Partial Class frmAddUser
         '
         Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.btnAddRoom)
-        Me.Panel5.Controls.Add(Me.btnRoomList)
+        Me.Panel5.Controls.Add(Me.btnUpdate)
+        Me.Panel5.Controls.Add(Me.btnAddUser)
+        Me.Panel5.Controls.Add(Me.btnUserList)
         Me.Panel5.Location = New System.Drawing.Point(9, 104)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1007, 30)
         Me.Panel5.TabIndex = 3
         '
-        'btnAddRoom
+        'btnUpdate
         '
-        Me.btnAddRoom.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAddRoom.BackColor = System.Drawing.Color.White
-        Me.btnAddRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAddRoom.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnAddRoom.FlatAppearance.BorderSize = 0
-        Me.btnAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddRoom.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddRoom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.btnAddRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddRoom.Location = New System.Drawing.Point(100, 0)
-        Me.btnAddRoom.Name = "btnAddRoom"
-        Me.btnAddRoom.Size = New System.Drawing.Size(100, 30)
-        Me.btnAddRoom.TabIndex = 2
-        Me.btnAddRoom.Text = "Add User"
-        Me.btnAddRoom.UseVisualStyleBackColor = False
+        Me.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnUpdate.BackColor = System.Drawing.Color.White
+        Me.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnUpdate.FlatAppearance.BorderSize = 0
+        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUpdate.Location = New System.Drawing.Point(200, 0)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(121, 30)
+        Me.btnUpdate.TabIndex = 3
+        Me.btnUpdate.Text = "Update User"
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
-        'btnRoomList
+        'btnAddUser
         '
-        Me.btnRoomList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnRoomList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnRoomList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnRoomList.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnRoomList.FlatAppearance.BorderSize = 0
-        Me.btnRoomList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRoomList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRoomList.ForeColor = System.Drawing.Color.White
-        Me.btnRoomList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRoomList.Location = New System.Drawing.Point(0, 0)
-        Me.btnRoomList.Name = "btnRoomList"
-        Me.btnRoomList.Size = New System.Drawing.Size(100, 30)
-        Me.btnRoomList.TabIndex = 1
-        Me.btnRoomList.Text = "User List"
-        Me.btnRoomList.UseVisualStyleBackColor = False
+        Me.btnAddUser.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnAddUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnAddUser.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnAddUser.FlatAppearance.BorderSize = 0
+        Me.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddUser.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddUser.ForeColor = System.Drawing.Color.White
+        Me.btnAddUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddUser.Location = New System.Drawing.Point(100, 0)
+        Me.btnAddUser.Name = "btnAddUser"
+        Me.btnAddUser.Size = New System.Drawing.Size(100, 30)
+        Me.btnAddUser.TabIndex = 2
+        Me.btnAddUser.Text = "Add User"
+        Me.btnAddUser.UseVisualStyleBackColor = False
+        '
+        'btnUserList
+        '
+        Me.btnUserList.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnUserList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnUserList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnUserList.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnUserList.FlatAppearance.BorderSize = 0
+        Me.btnUserList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUserList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUserList.ForeColor = System.Drawing.Color.White
+        Me.btnUserList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUserList.Location = New System.Drawing.Point(0, 0)
+        Me.btnUserList.Name = "btnUserList"
+        Me.btnUserList.Size = New System.Drawing.Size(100, 30)
+        Me.btnUserList.TabIndex = 1
+        Me.btnUserList.Text = "User List"
+        Me.btnUserList.UseVisualStyleBackColor = False
         '
         'Panel4
         '
@@ -168,7 +188,7 @@ Partial Class frmAddUser
         Me.Panel4.Controls.Add(Me.txtPassword)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.Label3)
-        Me.Panel4.Controls.Add(Me.txtUsername)
+        Me.Panel4.Controls.Add(Me.txtName)
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.txtID)
         Me.Panel4.Controls.Add(Me.ShapeContainer1)
@@ -241,9 +261,9 @@ Partial Class frmAddUser
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Label7.Location = New System.Drawing.Point(38, 91)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(253, 23)
+        Me.Label7.Size = New System.Drawing.Size(236, 23)
         Me.Label7.TabIndex = 13
-        Me.Label7.Text = "Add New User Information:"
+        Me.Label7.Text = "Update User Information:"
         '
         'cboPosition
         '
@@ -301,14 +321,14 @@ Partial Class frmAddUser
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Username:"
         '
-        'txtUsername
+        'txtName
         '
-        Me.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtUsername.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(386, 188)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(300, 27)
-        Me.txtUsername.TabIndex = 4
+        Me.txtName.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtName.Location = New System.Drawing.Point(386, 188)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(300, 27)
+        Me.txtName.TabIndex = 4
         '
         'Label2
         '
@@ -357,7 +377,7 @@ Partial Class frmAddUser
         '
         Me.OpenPhoto.FileName = "OpenFileDialog1"
         '
-        'frmAddUser
+        'frmUpdaterUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -365,9 +385,9 @@ Partial Class frmAddUser
         Me.ClientSize = New System.Drawing.Size(1024, 600)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmAddUser"
+        Me.Name = "frmUpdaterUser"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmAddUser"
+        Me.Text = "frmUpdaterUser"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -386,23 +406,24 @@ Partial Class frmAddUser
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents btnAddRoom As System.Windows.Forms.Button
-    Friend WithEvents btnRoomList As System.Windows.Forms.Button
+    Friend WithEvents btnAddUser As System.Windows.Forms.Button
+    Friend WithEvents btnUserList As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
     Friend WithEvents fail As System.Windows.Forms.Label
     Friend WithEvents success As System.Windows.Forms.Label
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents cboPosition As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtUsername As System.Windows.Forms.TextBox
+    Friend WithEvents txtName As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtID As System.Windows.Forms.TextBox
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
-    Friend WithEvents cboPosition As System.Windows.Forms.ComboBox
+    Friend WithEvents btnUpdate As System.Windows.Forms.Button
     Friend WithEvents OpenPhoto As System.Windows.Forms.OpenFileDialog
 End Class

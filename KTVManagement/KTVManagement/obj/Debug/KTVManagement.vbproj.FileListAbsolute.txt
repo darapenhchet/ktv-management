@@ -3,7 +3,6 @@ C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\De
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\AxInterop.AXVLC.dll
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.vbproj.ResolveComReference.cache
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe
-C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.xml
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.pdb
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.exe.manifest
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.application
@@ -21,8 +20,11 @@ C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\De
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmAddCategory.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUpdateCategory.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmMainStaff.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmGuest.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmSongMain.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmAddLanguage.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmLanguage.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUpdateLanguage.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmAddProduction.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmProduction.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUpdateProduction.resources
@@ -47,9 +49,10 @@ C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\De
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUserInformation.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.Resources.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUpdateSong.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmAddUser.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUpdaterUser.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUser.resources
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.vbproj.GenerateResource.Cache
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe.manifest
 C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.application
-C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmGuest.resources
-C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmAddLanguage.resources
-C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUpdateLanguage.resources
+C:\Users\DARA PENHCHET\Desktop\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.xml

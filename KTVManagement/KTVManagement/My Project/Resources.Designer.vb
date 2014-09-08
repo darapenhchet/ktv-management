@@ -326,7 +326,7 @@ Namespace My.Resources
         Friend ReadOnly Property Photo() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Photo", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
+                Return CType(obj, System.Drawing.Bitmap)
             End Get
         End Property
         
