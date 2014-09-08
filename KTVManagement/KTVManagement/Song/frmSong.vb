@@ -67,4 +67,9 @@ Public Class frmSong
         vlc.playlist.play()
     End Sub
 
+    Private Sub vlc_MediaPlayerPlaying(sender As Object, e As EventArgs) Handles vlc.MediaPlayerPlaying
+        If vlc.input.state = 6 Then
+
+        End If
+    End Sub
 End Class

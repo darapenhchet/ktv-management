@@ -57,11 +57,19 @@
                 frmCheckInGuest.txtRoomType.Text = dgvRoomList.CurrentRow.Cells(2).Value
                 frmCheckInGuest.txtPrice.Text = dgvRoomList.CurrentRow.Cells(3).Value
                 frmCheckInGuest.txtDiscount.Text = dgvRoomList.CurrentRow.Cells(4).Value
+                frmCheckInGuest.txtAmount.Text = "0"
+                frmCheckInGuest.txtDuration.Focus()
+                Me.Close()
             Else
                 MessageBox.Show("This room is busy. Please wait a moment!!!")
             End If
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub btnGuestUsingList_Click(sender As Object, e As EventArgs) Handles btnGuestUsingList.Click
+        frmGuest.Show()
+        Me.Close()
     End Sub
 End Class

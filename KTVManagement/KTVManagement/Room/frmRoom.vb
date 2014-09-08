@@ -16,7 +16,7 @@
     End Sub
 
     Public Sub DisplayRoomInformation()
-        dsRoom = roomTransaction.getAllRooms()
+        dsRoom = roomTransaction.getAllRoomByKeyword("")
         dgvRoomList.DataSource = dsRoom.Tables(0)
         setGrdHeaderText("ID|Room|Room Type|Unit Price|Discount|Status", dgvRoomList)
         setGrdHeaderWidth("100|250|200|200|150|100", dgvRoomList)
@@ -79,11 +79,15 @@
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-        dsRoom.Tables(0).Clear()
-        dgvRoomList.DataSource = dsRoom.Tables(0)
-        dgvRoomList.Refresh()
-        dsRoom = roomTransaction.getAllRoomByKeyword(txtSearch.Text)
-        dgvRoomList.DataSource = dsRoom.Tables(0)
+        Try
+            dsRoom.Tables(0).Clear()
+            dgvRoomList.DataSource = dsRoom.Tables(0)
+            dsRoom = roomTransaction.getAllRoomByKeyword(txtSearch.Text)
+            dgvRoomList.DataSource = dsRoom.Tables(0)
+        Catch Ex As Exception
+            MessageBox.Show(Ex.Message)
+        End Try
     End Sub
+
 
 End Class

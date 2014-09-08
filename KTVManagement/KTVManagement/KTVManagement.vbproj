@@ -378,6 +378,9 @@
     <EmbeddedResource Include="frmSongMain.resx">
       <DependentUpon>frmSongMain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Guest\frmUpdateGuest.resx">
+      <DependentUpon>frmUpdateGuest.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Language\frmAddLanguage.resx">
       <DependentUpon>frmAddLanguage.vb</DependentUpon>
     </EmbeddedResource>

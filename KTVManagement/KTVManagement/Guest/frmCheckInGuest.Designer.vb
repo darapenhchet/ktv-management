@@ -22,17 +22,25 @@ Partial Class frmCheckInGuest
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Time = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnCheckInGuest = New System.Windows.Forms.Button()
-        Me.btnUpdateSinger = New System.Windows.Forms.Button()
-        Me.btnAddSinger = New System.Windows.Forms.Button()
-        Me.btnSingerList = New System.Windows.Forms.Button()
+        Me.btnUpdateGuest = New System.Windows.Forms.Button()
+        Me.btnGuestList = New System.Windows.Forms.Button()
+        Me.btnRoomList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.fail = New System.Windows.Forms.Label()
+        Me.success = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtDuration = New System.Windows.Forms.TextBox()
@@ -54,11 +62,8 @@ Partial Class frmCheckInGuest
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.fail = New System.Windows.Forms.Label()
-        Me.success = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,6 +86,7 @@ Partial Class frmCheckInGuest
         '
         Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.Time)
         Me.Panel2.Controls.Add(Me.btnBack)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Panel3)
@@ -88,6 +94,17 @@ Partial Class frmCheckInGuest
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1024, 60)
         Me.Panel2.TabIndex = 2
+        '
+        'Time
+        '
+        Me.Time.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Time.AutoSize = True
+        Me.Time.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Time.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Time.Location = New System.Drawing.Point(746, 27)
+        Me.Time.Name = "Time"
+        Me.Time.Size = New System.Drawing.Size(0, 25)
+        Me.Time.TabIndex = 67
         '
         'btnBack
         '
@@ -124,9 +141,9 @@ Partial Class frmCheckInGuest
         Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel5.Controls.Add(Me.btnCheckInGuest)
-        Me.Panel5.Controls.Add(Me.btnUpdateSinger)
-        Me.Panel5.Controls.Add(Me.btnAddSinger)
-        Me.Panel5.Controls.Add(Me.btnSingerList)
+        Me.Panel5.Controls.Add(Me.btnUpdateGuest)
+        Me.Panel5.Controls.Add(Me.btnGuestList)
+        Me.Panel5.Controls.Add(Me.btnRoomList)
         Me.Panel5.Location = New System.Drawing.Point(9, 104)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1007, 30)
@@ -150,63 +167,66 @@ Partial Class frmCheckInGuest
         Me.btnCheckInGuest.Text = "&Check In "
         Me.btnCheckInGuest.UseVisualStyleBackColor = False
         '
-        'btnUpdateSinger
+        'btnUpdateGuest
         '
-        Me.btnUpdateSinger.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnUpdateSinger.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnUpdateSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnUpdateSinger.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnUpdateSinger.FlatAppearance.BorderSize = 0
-        Me.btnUpdateSinger.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpdateSinger.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdateSinger.ForeColor = System.Drawing.Color.White
-        Me.btnUpdateSinger.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUpdateSinger.Location = New System.Drawing.Point(260, 0)
-        Me.btnUpdateSinger.Name = "btnUpdateSinger"
-        Me.btnUpdateSinger.Size = New System.Drawing.Size(140, 30)
-        Me.btnUpdateSinger.TabIndex = 4
-        Me.btnUpdateSinger.Text = "&Update Guest"
-        Me.btnUpdateSinger.UseVisualStyleBackColor = False
+        Me.btnUpdateGuest.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnUpdateGuest.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnUpdateGuest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnUpdateGuest.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnUpdateGuest.FlatAppearance.BorderSize = 0
+        Me.btnUpdateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdateGuest.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdateGuest.ForeColor = System.Drawing.Color.White
+        Me.btnUpdateGuest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUpdateGuest.Location = New System.Drawing.Point(396, 0)
+        Me.btnUpdateGuest.Name = "btnUpdateGuest"
+        Me.btnUpdateGuest.Size = New System.Drawing.Size(140, 30)
+        Me.btnUpdateGuest.TabIndex = 4
+        Me.btnUpdateGuest.Text = "&Update Guest"
+        Me.btnUpdateGuest.UseVisualStyleBackColor = False
+        Me.btnUpdateGuest.Visible = False
         '
-        'btnAddSinger
+        'btnGuestList
         '
-        Me.btnAddSinger.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAddSinger.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnAddSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAddSinger.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnAddSinger.FlatAppearance.BorderSize = 0
-        Me.btnAddSinger.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddSinger.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddSinger.ForeColor = System.Drawing.Color.White
-        Me.btnAddSinger.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddSinger.Location = New System.Drawing.Point(400, 0)
-        Me.btnAddSinger.Name = "btnAddSinger"
-        Me.btnAddSinger.Size = New System.Drawing.Size(130, 30)
-        Me.btnAddSinger.TabIndex = 2
-        Me.btnAddSinger.Text = "&Guest List"
-        Me.btnAddSinger.UseVisualStyleBackColor = False
+        Me.btnGuestList.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnGuestList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnGuestList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnGuestList.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnGuestList.FlatAppearance.BorderSize = 0
+        Me.btnGuestList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuestList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuestList.ForeColor = System.Drawing.Color.White
+        Me.btnGuestList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuestList.Location = New System.Drawing.Point(260, 0)
+        Me.btnGuestList.Name = "btnGuestList"
+        Me.btnGuestList.Size = New System.Drawing.Size(130, 30)
+        Me.btnGuestList.TabIndex = 2
+        Me.btnGuestList.Text = "&Guest List"
+        Me.btnGuestList.UseVisualStyleBackColor = False
         '
-        'btnSingerList
+        'btnRoomList
         '
-        Me.btnSingerList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSingerList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnSingerList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnSingerList.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnSingerList.FlatAppearance.BorderSize = 0
-        Me.btnSingerList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSingerList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSingerList.ForeColor = System.Drawing.Color.White
-        Me.btnSingerList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSingerList.Location = New System.Drawing.Point(0, 0)
-        Me.btnSingerList.Name = "btnSingerList"
-        Me.btnSingerList.Size = New System.Drawing.Size(130, 30)
-        Me.btnSingerList.TabIndex = 1
-        Me.btnSingerList.Text = "Room List"
-        Me.btnSingerList.UseVisualStyleBackColor = False
+        Me.btnRoomList.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnRoomList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnRoomList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnRoomList.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnRoomList.FlatAppearance.BorderSize = 0
+        Me.btnRoomList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRoomList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRoomList.ForeColor = System.Drawing.Color.White
+        Me.btnRoomList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRoomList.Location = New System.Drawing.Point(0, 0)
+        Me.btnRoomList.Name = "btnRoomList"
+        Me.btnRoomList.Size = New System.Drawing.Size(130, 30)
+        Me.btnRoomList.TabIndex = 1
+        Me.btnRoomList.Text = "Room List"
+        Me.btnRoomList.UseVisualStyleBackColor = False
         '
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.Button1)
+        Me.Panel4.Controls.Add(Me.Label14)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.fail)
         Me.Panel4.Controls.Add(Me.success)
@@ -238,6 +258,80 @@ Partial Class frmCheckInGuest
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
         '
+        'Label14
+        '
+        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label14.Location = New System.Drawing.Point(638, 354)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(37, 19)
+        Me.Label14.TabIndex = 66
+        Me.Label14.Text = "h(s)"
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(638, 399)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(18, 19)
+        Me.Label13.TabIndex = 65
+        Me.Label13.Text = "$"
+        '
+        'fail
+        '
+        Me.fail.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.fail.AutoSize = True
+        Me.fail.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fail.ForeColor = System.Drawing.Color.Red
+        Me.fail.Location = New System.Drawing.Point(370, 58)
+        Me.fail.Name = "fail"
+        Me.fail.Size = New System.Drawing.Size(228, 23)
+        Me.fail.TabIndex = 64
+        Me.fail.Text = "Your inserting is failure!!!"
+        Me.fail.Visible = False
+        '
+        'success
+        '
+        Me.success.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.success.AutoSize = True
+        Me.success.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.success.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.success.Location = New System.Drawing.Point(305, 58)
+        Me.success.Name = "success"
+        Me.success.Size = New System.Drawing.Size(358, 23)
+        Me.success.TabIndex = 63
+        Me.success.Text = "You have been inserted Successfully!!!"
+        Me.success.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(638, 312)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(23, 19)
+        Me.Label11.TabIndex = 62
+        Me.Label11.Text = "%"
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(638, 268)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(18, 19)
+        Me.Label12.TabIndex = 61
+        Me.Label12.Text = "$"
+        '
         'btnPrint
         '
         Me.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -249,11 +343,11 @@ Partial Class frmCheckInGuest
         Me.btnPrint.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrint.ForeColor = System.Drawing.Color.White
         Me.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPrint.Location = New System.Drawing.Point(789, 133)
+        Me.btnPrint.Location = New System.Drawing.Point(843, 392)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(100, 30)
         Me.btnPrint.TabIndex = 60
-        Me.btnPrint.Text = "Print"
+        Me.btnPrint.Text = "&Print"
         Me.btnPrint.UseVisualStyleBackColor = False
         '
         'Label10
@@ -276,6 +370,7 @@ Partial Class frmCheckInGuest
         Me.txtDuration.Name = "txtDuration"
         Me.txtDuration.Size = New System.Drawing.Size(300, 27)
         Me.txtDuration.TabIndex = 58
+        Me.txtDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label9
         '
@@ -298,6 +393,7 @@ Partial Class frmCheckInGuest
         Me.txtAmount.ReadOnly = True
         Me.txtAmount.Size = New System.Drawing.Size(300, 27)
         Me.txtAmount.TabIndex = 56
+        Me.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
         '
@@ -320,6 +416,7 @@ Partial Class frmCheckInGuest
         Me.txtDiscount.ReadOnly = True
         Me.txtDiscount.Size = New System.Drawing.Size(300, 27)
         Me.txtDiscount.TabIndex = 54
+        Me.txtDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
         '
@@ -342,6 +439,7 @@ Partial Class frmCheckInGuest
         Me.txtPrice.ReadOnly = True
         Me.txtPrice.Size = New System.Drawing.Size(300, 27)
         Me.txtPrice.TabIndex = 52
+        Me.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
         '
@@ -398,11 +496,11 @@ Partial Class frmCheckInGuest
         Me.btnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSave.Location = New System.Drawing.Point(789, 95)
+        Me.btnSave.Location = New System.Drawing.Point(843, 320)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(100, 30)
         Me.btnSave.TabIndex = 45
-        Me.btnSave.Text = "Save"
+        Me.btnSave.Text = "&Save"
         Me.btnSave.UseVisualStyleBackColor = False
         '
         'Label3
@@ -482,67 +580,27 @@ Partial Class frmCheckInGuest
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
-        'fail
+        'Timer1
         '
-        Me.fail.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.fail.AutoSize = True
-        Me.fail.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fail.ForeColor = System.Drawing.Color.Red
-        Me.fail.Location = New System.Drawing.Point(370, 58)
-        Me.fail.Name = "fail"
-        Me.fail.Size = New System.Drawing.Size(228, 23)
-        Me.fail.TabIndex = 64
-        Me.fail.Text = "Your inserting is failure!!!"
-        Me.fail.Visible = False
+        Me.Timer1.Interval = 1000
         '
-        'success
+        'Button1
         '
-        Me.success.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.success.AutoSize = True
-        Me.success.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.success.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.success.Location = New System.Drawing.Point(305, 58)
-        Me.success.Name = "success"
-        Me.success.Size = New System.Drawing.Size(358, 23)
-        Me.success.TabIndex = 63
-        Me.success.Text = "You have been inserted Successfully!!!"
-        Me.success.Visible = False
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(638, 312)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(23, 19)
-        Me.Label11.TabIndex = 62
-        Me.Label11.Text = "%"
-        '
-        'Label12
-        '
-        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(638, 268)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(18, 19)
-        Me.Label12.TabIndex = 61
-        Me.Label12.Text = "$"
-        '
-        'Label13
-        '
-        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(638, 399)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(18, 19)
-        Me.Label13.TabIndex = 65
-        Me.Label13.Text = "$"
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(843, 356)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 30)
+        Me.Button1.TabIndex = 67
+        Me.Button1.Text = "&Update"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'frmCheckInGuest
         '
@@ -573,9 +631,9 @@ Partial Class frmCheckInGuest
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents btnCheckInGuest As System.Windows.Forms.Button
-    Friend WithEvents btnUpdateSinger As System.Windows.Forms.Button
-    Friend WithEvents btnAddSinger As System.Windows.Forms.Button
-    Friend WithEvents btnSingerList As System.Windows.Forms.Button
+    Friend WithEvents btnUpdateGuest As System.Windows.Forms.Button
+    Friend WithEvents btnGuestList As System.Windows.Forms.Button
+    Friend WithEvents btnRoomList As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
@@ -603,4 +661,8 @@ Partial Class frmCheckInGuest
     Friend WithEvents success As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Time As System.Windows.Forms.Label
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
