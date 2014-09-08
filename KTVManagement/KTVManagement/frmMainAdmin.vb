@@ -20,10 +20,6 @@
         Me.Close()
     End Sub
 
-    Private Sub btnSingerInformation_Click(sender As Object, e As EventArgs) Handles btnSingerInformation.Click
-        frmSinger.Show()
-    End Sub
-
     Private Sub btnUserInformation_Click(sender As Object, e As EventArgs) Handles btnUserInformation.Click
         'frmUserInformation.Show()
         frmUser.Show()
@@ -42,5 +38,9 @@
 
     Private Sub btnGuest_Click(sender As Object, e As EventArgs) Handles btnGuest.Click
         frmCheckInGuest.Show()
+    End Sub
+
+    Private Sub btnIncome_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class
