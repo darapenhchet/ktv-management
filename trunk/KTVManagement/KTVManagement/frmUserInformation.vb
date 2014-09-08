@@ -12,10 +12,15 @@
 
     Private Sub displayUserInformation()
         dsUser = userTransaction.getAllUsers()
-        dgvUserInformation.DataSource = dsUser.Tables(0)
-        For Each column As DataGridViewColumn In dgvUserInformation.Columns
-            column.Width = (dgvUserInformation.Width - 4) / dgvUserInformation.Columns.Count
-        Next
+        Try
+            dgvUserInformation.DataSource = dsUser.Tables(0)
+            For Each column As DataGridViewColumn In dgvUserInformation.Columns
+                column.Width = (dgvUserInformation.Width - 4) / dgvUserInformation.Columns.Count
+            Next
+        Catch ex As Exception
+            Exit Sub
+        End Try
+       
     End Sub
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
