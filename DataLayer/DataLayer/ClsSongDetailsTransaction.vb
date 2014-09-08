@@ -44,11 +44,10 @@ Public Class ClsSongDetailsTransaction
                                       " INNER JOIN categories ON songs.categoryId = categories.categoryId " & _
                                       " INNER JOIN productions ON songs.productionId = productions.productionId " & _
                                       " INNER JOIN languages ON songs.languageId = languages.languageId " & _
-                                      " WHERE songs.songId = @SongID OR songs.title LIKE @Title OR songs.album LIKE @Album OR categories.category LIKE @Category " & _
+                                      " WHERE songs.songId LIKE @SongID OR songs.title LIKE @Title OR songs.album LIKE @Album OR categories.category LIKE @Category " & _
                                       " OR productions.production LIKE @Production OR languages.language LIKE @Language  OR singers.singerName LIKE @Singer" & _
                                       " GROUP BY songs.songId "
-
-
+                MsgBox(keyword)
                 Command.Parameters.AddWithValue("@SongID", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@Title", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@Album", "%" & keyword & "%")
@@ -56,6 +55,16 @@ Public Class ClsSongDetailsTransaction
                 Command.Parameters.AddWithValue("@Production", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@Language", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@Singer", "%" & keyword & "%")
+
+                'Command.CommandText = "spGetAllSongsBySearch"
+                'Command.CommandType = CommandType.StoredProcedure
+                'Command.Parameters.AddWithValue("@SSongID", "%" & keyword & "%")
+                'Command.Parameters.AddWithValue("@STitle", "%" & keyword & "%")
+                'Command.Parameters.AddWithValue("@SAlbum", "%" & keyword & "%")
+                'Command.Parameters.AddWithValue("@SCategory", "%" & keyword & "%")
+                'Command.Parameters.AddWithValue("@SProduction", "%" & keyword & "%")
+                'Command.Parameters.AddWithValue("@SLanguage", "%" & keyword & "%")
+                'Command.Parameters.AddWithValue("@SSinger", "%" & keyword & "%")
                 Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
                     adt.Fill(dsSongDetails)
                 End Using

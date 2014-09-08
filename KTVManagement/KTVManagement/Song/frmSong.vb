@@ -16,10 +16,14 @@ Public Class frmSong
     End Sub
 
     Public Sub DisplaySongInformation(keyword As String)
-        dsSongDetails = songDetailsTransaction.getAllSongDetails(keyword)
-        dgvSongList.DataSource = dsSongDetails.Tables(0)
-        setGrdHeaderText("ID|Title|Album|Category|Production|Language|Singers|Path", dgvSongList)
-        setGrdHeaderWidth("100|200|100|100|100|100|150|150", dgvSongList)
+        Try
+            dsSongDetails = songDetailsTransaction.getAllSongDetails(keyword)
+            dgvSongList.DataSource = dsSongDetails.Tables(0)
+            setGrdHeaderText("ID|Title|Album|Category|Production|Language|Singers|Path", dgvSongList)
+            setGrdHeaderWidth("100|200|100|100|100|100|150|150", dgvSongList)
+        Catch ex As Exception
+        End Try
+        
     End Sub
 
 

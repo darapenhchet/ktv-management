@@ -62,4 +62,9 @@
         End Try
     End Function
 
+    Public Sub Center(panel As Panel, form As Form)
+        panel.Left = (form.Width - panel.Width) / 2
+        panel.Top = (form.Height - panel.Height) / 2
+    End Sub
+
 End Module
