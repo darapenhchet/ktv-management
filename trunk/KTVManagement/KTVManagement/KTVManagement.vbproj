@@ -147,6 +147,12 @@
     <Compile Include="Guest\frmCheckInGuest.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Guest\frmRoomList.Designer.vb">
+      <DependentUpon>frmRoomList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\frmRoomList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Guest\frmGuestReport.Designer.vb">
       <DependentUpon>frmGuestReport.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,12 @@
       <DependentUpon>frmSongMain.vb</DependentUpon>
     </Compile>
     <Compile Include="frmSongMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\frmUpdateGuest.Designer.vb">
+      <DependentUpon>frmUpdateGuest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\frmUpdateGuest.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Language\frmAddLanguage.Designer.vb">
@@ -356,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Guest\frmCheckInGuest.resx">
       <DependentUpon>frmCheckInGuest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\frmRoomList.resx">
+      <DependentUpon>frmRoomList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guest\frmGuest.resx">
       <DependentUpon>frmGuest.vb</DependentUpon>

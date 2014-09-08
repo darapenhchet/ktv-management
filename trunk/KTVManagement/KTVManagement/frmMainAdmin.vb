@@ -37,7 +37,7 @@
 
 
     Private Sub btnGuest_Click(sender As Object, e As EventArgs) Handles btnGuest.Click
-        frmCheckInGuest.Show()
+        frmRoomList.Show()
     End Sub
 
     Private Sub btnIncome_Click(sender As Object, e As EventArgs)

@@ -17,6 +17,7 @@ Public Class frmSinger
         setGrdHeaderText("ID|Singer's Name|Gender|Photo", dgvSingerList)
         setGrdHeaderWidth("100|300|100|500", dgvSingerList)
         dgvSingerList.Columns(3).Visible = False
+
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
@@ -59,4 +60,5 @@ Public Class frmSinger
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+
 End Class

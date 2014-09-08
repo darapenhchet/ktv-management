@@ -59,9 +59,6 @@ F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVMan
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\Interop.AXVLC.dll
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\AxInterop.AXVLC.dll
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.vbproj.ResolveComReference.cache
-F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe
-F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.xml
-F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.pdb
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.exe.manifest
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.application
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.exe
@@ -112,3 +109,7 @@ F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVMan
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.vbproj.GenerateResource.Cache
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe.manifest
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.application
+F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe
+F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.xml
+F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.pdb
+F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmRoomList.resources
