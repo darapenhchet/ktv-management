@@ -23,11 +23,9 @@ Partial Class frmMainAdmin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnSongInformation = New System.Windows.Forms.Button()
-        Me.btnSingerInformation = New System.Windows.Forms.Button()
         Me.btnUserInformation = New System.Windows.Forms.Button()
         Me.btnRoomInformation = New System.Windows.Forms.Button()
         Me.btnGuest = New System.Windows.Forms.Button()
-        Me.btnIncome = New System.Windows.Forms.Button()
         Me.btnReportInformation = New System.Windows.Forms.Button()
         Me.btnAboutUs = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -49,20 +47,6 @@ Partial Class frmMainAdmin
         Me.btnSongInformation.TabIndex = 0
         Me.btnSongInformation.Text = "Song Details"
         Me.btnSongInformation.UseVisualStyleBackColor = False
-        '
-        'btnSingerInformation
-        '
-        Me.btnSingerInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnSingerInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSingerInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSingerInformation.ForeColor = System.Drawing.Color.White
-        Me.btnSingerInformation.Location = New System.Drawing.Point(578, 253)
-        Me.btnSingerInformation.Name = "btnSingerInformation"
-        Me.btnSingerInformation.Size = New System.Drawing.Size(250, 100)
-        Me.btnSingerInformation.TabIndex = 1
-        Me.btnSingerInformation.Text = "Singer Information"
-        Me.btnSingerInformation.UseVisualStyleBackColor = False
-        Me.btnSingerInformation.Visible = False
         '
         'btnUserInformation
         '
@@ -102,20 +86,6 @@ Partial Class frmMainAdmin
         Me.btnGuest.TabIndex = 4
         Me.btnGuest.Text = "Guest Details"
         Me.btnGuest.UseVisualStyleBackColor = False
-        '
-        'btnIncome
-        '
-        Me.btnIncome.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIncome.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIncome.ForeColor = System.Drawing.Color.White
-        Me.btnIncome.Location = New System.Drawing.Point(834, 253)
-        Me.btnIncome.Name = "btnIncome"
-        Me.btnIncome.Size = New System.Drawing.Size(250, 100)
-        Me.btnIncome.TabIndex = 5
-        Me.btnIncome.Text = "Income Information"
-        Me.btnIncome.UseVisualStyleBackColor = False
-        Me.btnIncome.Visible = False
         '
         'btnReportInformation
         '
@@ -173,11 +143,9 @@ Partial Class frmMainAdmin
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnAboutUs)
         Me.Panel1.Controls.Add(Me.btnReportInformation)
-        Me.Panel1.Controls.Add(Me.btnIncome)
         Me.Panel1.Controls.Add(Me.btnGuest)
         Me.Panel1.Controls.Add(Me.btnRoomInformation)
         Me.Panel1.Controls.Add(Me.btnUserInformation)
-        Me.Panel1.Controls.Add(Me.btnSingerInformation)
         Me.Panel1.Controls.Add(Me.btnSongInformation)
         Me.Panel1.Location = New System.Drawing.Point(12, -34)
         Me.Panel1.Name = "Panel1"
@@ -214,11 +182,9 @@ Partial Class frmMainAdmin
 
     End Sub
     Friend WithEvents btnSongInformation As System.Windows.Forms.Button
-    Friend WithEvents btnSingerInformation As System.Windows.Forms.Button
     Friend WithEvents btnUserInformation As System.Windows.Forms.Button
     Friend WithEvents btnRoomInformation As System.Windows.Forms.Button
     Friend WithEvents btnGuest As System.Windows.Forms.Button
-    Friend WithEvents btnIncome As System.Windows.Forms.Button
     Friend WithEvents btnReportInformation As System.Windows.Forms.Button
     Friend WithEvents btnAboutUs As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
