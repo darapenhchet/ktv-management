@@ -47,7 +47,7 @@ Partial Class frmMainAdmin
         Me.btnSongInformation.Name = "btnSongInformation"
         Me.btnSongInformation.Size = New System.Drawing.Size(250, 100)
         Me.btnSongInformation.TabIndex = 0
-        Me.btnSongInformation.Text = "Song Information"
+        Me.btnSongInformation.Text = "Song Details"
         Me.btnSongInformation.UseVisualStyleBackColor = False
         '
         'btnSingerInformation
@@ -56,12 +56,13 @@ Partial Class frmMainAdmin
         Me.btnSingerInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSingerInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSingerInformation.ForeColor = System.Drawing.Color.White
-        Me.btnSingerInformation.Location = New System.Drawing.Point(322, 147)
+        Me.btnSingerInformation.Location = New System.Drawing.Point(578, 253)
         Me.btnSingerInformation.Name = "btnSingerInformation"
         Me.btnSingerInformation.Size = New System.Drawing.Size(250, 100)
         Me.btnSingerInformation.TabIndex = 1
         Me.btnSingerInformation.Text = "Singer Information"
         Me.btnSingerInformation.UseVisualStyleBackColor = False
+        Me.btnSingerInformation.Visible = False
         '
         'btnUserInformation
         '
@@ -69,11 +70,11 @@ Partial Class frmMainAdmin
         Me.btnUserInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUserInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUserInformation.ForeColor = System.Drawing.Color.White
-        Me.btnUserInformation.Location = New System.Drawing.Point(578, 147)
+        Me.btnUserInformation.Location = New System.Drawing.Point(322, 147)
         Me.btnUserInformation.Name = "btnUserInformation"
         Me.btnUserInformation.Size = New System.Drawing.Size(250, 100)
         Me.btnUserInformation.TabIndex = 2
-        Me.btnUserInformation.Text = "User Information"
+        Me.btnUserInformation.Text = "User Details"
         Me.btnUserInformation.UseVisualStyleBackColor = False
         '
         'btnRoomInformation
@@ -82,11 +83,11 @@ Partial Class frmMainAdmin
         Me.btnRoomInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRoomInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRoomInformation.ForeColor = System.Drawing.Color.White
-        Me.btnRoomInformation.Location = New System.Drawing.Point(66, 253)
+        Me.btnRoomInformation.Location = New System.Drawing.Point(578, 147)
         Me.btnRoomInformation.Name = "btnRoomInformation"
         Me.btnRoomInformation.Size = New System.Drawing.Size(250, 100)
         Me.btnRoomInformation.TabIndex = 3
-        Me.btnRoomInformation.Text = "Room Information"
+        Me.btnRoomInformation.Text = "Room Details"
         Me.btnRoomInformation.UseVisualStyleBackColor = False
         '
         'btnExpense
@@ -95,11 +96,11 @@ Partial Class frmMainAdmin
         Me.btnExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExpense.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExpense.ForeColor = System.Drawing.Color.White
-        Me.btnExpense.Location = New System.Drawing.Point(322, 253)
+        Me.btnExpense.Location = New System.Drawing.Point(834, 147)
         Me.btnExpense.Name = "btnExpense"
         Me.btnExpense.Size = New System.Drawing.Size(250, 100)
         Me.btnExpense.TabIndex = 4
-        Me.btnExpense.Text = "Expense Information"
+        Me.btnExpense.Text = "Guest Details"
         Me.btnExpense.UseVisualStyleBackColor = False
         '
         'btnIncome
@@ -108,12 +109,13 @@ Partial Class frmMainAdmin
         Me.btnIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIncome.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIncome.ForeColor = System.Drawing.Color.White
-        Me.btnIncome.Location = New System.Drawing.Point(578, 253)
+        Me.btnIncome.Location = New System.Drawing.Point(834, 253)
         Me.btnIncome.Name = "btnIncome"
         Me.btnIncome.Size = New System.Drawing.Size(250, 100)
         Me.btnIncome.TabIndex = 5
         Me.btnIncome.Text = "Income Information"
         Me.btnIncome.UseVisualStyleBackColor = False
+        Me.btnIncome.Visible = False
         '
         'btnReportInformation
         '
@@ -121,11 +123,11 @@ Partial Class frmMainAdmin
         Me.btnReportInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReportInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReportInformation.ForeColor = System.Drawing.Color.White
-        Me.btnReportInformation.Location = New System.Drawing.Point(834, 147)
+        Me.btnReportInformation.Location = New System.Drawing.Point(66, 253)
         Me.btnReportInformation.Name = "btnReportInformation"
         Me.btnReportInformation.Size = New System.Drawing.Size(250, 100)
         Me.btnReportInformation.TabIndex = 6
-        Me.btnReportInformation.Text = "Reports"
+        Me.btnReportInformation.Text = "Report Details"
         Me.btnReportInformation.UseVisualStyleBackColor = False
         '
         'btnAboutUs
@@ -134,7 +136,7 @@ Partial Class frmMainAdmin
         Me.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAboutUs.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAboutUs.ForeColor = System.Drawing.Color.White
-        Me.btnAboutUs.Location = New System.Drawing.Point(834, 253)
+        Me.btnAboutUs.Location = New System.Drawing.Point(322, 253)
         Me.btnAboutUs.Name = "btnAboutUs"
         Me.btnAboutUs.Size = New System.Drawing.Size(250, 100)
         Me.btnAboutUs.TabIndex = 7
@@ -177,9 +179,9 @@ Partial Class frmMainAdmin
         Me.Panel1.Controls.Add(Me.btnUserInformation)
         Me.Panel1.Controls.Add(Me.btnSingerInformation)
         Me.Panel1.Controls.Add(Me.btnSongInformation)
-        Me.Panel1.Location = New System.Drawing.Point(12, 2)
+        Me.Panel1.Location = New System.Drawing.Point(12, -34)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1158, 472)
+        Me.Panel1.Size = New System.Drawing.Size(1158, 508)
         Me.Panel1.TabIndex = 1
         '
         'btnExitMain

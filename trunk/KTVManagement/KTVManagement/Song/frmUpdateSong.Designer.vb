@@ -62,6 +62,8 @@ Partial Class frmUpdateSong
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.OpenSong = New System.Windows.Forms.OpenFileDialog()
+        Me.success = New System.Windows.Forms.Label()
+        Me.fail = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -192,6 +194,8 @@ Partial Class frmUpdateSong
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.fail)
+        Me.Panel4.Controls.Add(Me.success)
         Me.Panel4.Controls.Add(Me.btnRemove)
         Me.Panel4.Controls.Add(Me.btnAddSinger)
         Me.Panel4.Controls.Add(Me.txtAlbum)
@@ -354,7 +358,7 @@ Partial Class frmUpdateSong
         Me.vlc.Location = New System.Drawing.Point(771, 59)
         Me.vlc.Name = "vlc"
         Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.vlc.Size = New System.Drawing.Size(226, 211)
+        Me.vlc.Size = New System.Drawing.Size(226, 212)
         Me.vlc.TabIndex = 22
         '
         'btnBrowse
@@ -585,6 +589,32 @@ Partial Class frmUpdateSong
         '
         Me.OpenSong.FileName = "OpenFileDialog1"
         '
+        'success
+        '
+        Me.success.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.success.AutoSize = True
+        Me.success.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.success.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.success.Location = New System.Drawing.Point(318, 59)
+        Me.success.Name = "success"
+        Me.success.Size = New System.Drawing.Size(360, 23)
+        Me.success.TabIndex = 34
+        Me.success.Text = "Song has been updated successfully!!!"
+        Me.success.Visible = False
+        '
+        'fail
+        '
+        Me.fail.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.fail.AutoSize = True
+        Me.fail.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fail.ForeColor = System.Drawing.Color.Red
+        Me.fail.Location = New System.Drawing.Point(363, 59)
+        Me.fail.Name = "fail"
+        Me.fail.Size = New System.Drawing.Size(281, 23)
+        Me.fail.TabIndex = 35
+        Me.fail.Text = "Song has not been updated!!!"
+        Me.fail.Visible = False
+        '
         'frmUpdateSong
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -647,4 +677,6 @@ Partial Class frmUpdateSong
     Friend WithEvents OpenSong As System.Windows.Forms.OpenFileDialog
     Friend WithEvents btnRemove As System.Windows.Forms.Button
     Friend WithEvents btnAddSinger As System.Windows.Forms.Button
+    Friend WithEvents fail As System.Windows.Forms.Label
+    Friend WithEvents success As System.Windows.Forms.Label
 End Class

@@ -18,8 +18,8 @@
     Public Sub DisplayRoomInformation()
         dsRoom = roomTransaction.getAllRooms()
         dgvRoomList.DataSource = dsRoom.Tables(0)
-        setGrdHeaderText("ID|Room|Room Type|Unit Price|Discount", dgvRoomList)
-        setGrdHeaderWidth("100|250|250|250|150", dgvRoomList)
+        setGrdHeaderText("ID|Room|Room Type|Unit Price|Discount|Status", dgvRoomList)
+        setGrdHeaderWidth("100|250|200|200|150|100", dgvRoomList)
         dgvRoomList.RowHeadersWidth = 30
 
         Dim UnitPriceCellStyle As New DataGridViewCellStyle
@@ -65,6 +65,7 @@
             frmUpdateRoom.cboType.Text = dgvRoomList.CurrentRow.Cells(2).Value
             frmUpdateRoom.txtUnitPrice.Text = dgvRoomList.CurrentRow.Cells(3).Value
             frmUpdateRoom.txtDiscount.Text = dgvRoomList.CurrentRow.Cells(4).Value
+            frmUpdateRoom.cboStatus.Text = dgvRoomList.CurrentRow.Cells(5).Value
             frmUpdateRoom.Show()
             Me.Close()
         Catch ex As Exception

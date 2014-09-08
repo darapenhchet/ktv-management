@@ -28,6 +28,7 @@
             room.Price = CDbl(txtUnitPrice.Text)
             room.RoomType = cboType.Text
             room.Discount = CInt(txtDiscount.Text)
+            room.Status = False
             If roomTransaction.addNewRoom(room) = True Then
                 success.Visible = True
             Else

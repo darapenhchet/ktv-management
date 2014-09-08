@@ -38,4 +38,8 @@
         frmRoom.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnExpense_Click(sender As Object, e As EventArgs) Handles btnExpense.Click
+
+    End Sub
 End Class

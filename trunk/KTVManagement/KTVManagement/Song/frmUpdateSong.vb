@@ -84,7 +84,7 @@ Public Class frmUpdateSong
             song.Language = New ClsLanguage(cboLanguage.SelectedValue, cboLanguage.Text)
             song.Path = txtPath.Text
             For Each singer As ClsSinger In lstSingers.Items
-                MessageBox.Show(singer.ID)
+                'MessageBox.Show(singer.ID)
                 singer.ID = singer.ID
                 singer.Name = singer.Name
                 song.Singers.Add(singer)
@@ -102,20 +102,21 @@ Public Class frmUpdateSong
             End Try
 
             If songDetailsTransaction.DeleteSongDetails(song.ID) = True Then
-                MessageBox.Show("DELETE ALL DETAILS")
+                'MessageBox.Show("DELETE ALL DETAILS")
                 If songTransaction.updateSong(song) = True Then
-                    MessageBox.Show("UPDATED SONG")
+                    'MessageBox.Show("UPDATED SONG")
                     For Each singer As ClsSinger In song.Singers
                         songDetails.SongID = song.ID
                         songDetails.SingerID = singer.ID
-                        MessageBox.Show(songDetails.SingerID & songDetails.SongID)
+                        'MessageBox.Show(songDetails.SingerID & songDetails.SongID)
                         If songDetailsTransaction.addNewSongDetails(songDetails) = True Then
-                            MessageBox.Show("DETAILS INSERTED")
+                            success.Visible = True
+                        Else
+                            fail.Visible = True
                         End If
                     Next
                 End If
             End If
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

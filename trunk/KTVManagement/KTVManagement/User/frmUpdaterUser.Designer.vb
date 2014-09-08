@@ -42,7 +42,7 @@ Partial Class frmUpdaterUser
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
@@ -188,7 +188,7 @@ Partial Class frmUpdaterUser
         Me.Panel4.Controls.Add(Me.txtPassword)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.Label3)
-        Me.Panel4.Controls.Add(Me.txtName)
+        Me.Panel4.Controls.Add(Me.txtUsername)
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.txtID)
         Me.Panel4.Controls.Add(Me.ShapeContainer1)
@@ -202,6 +202,7 @@ Partial Class frmUpdaterUser
         '
         Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pbPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
         Me.pbPhoto.Name = "pbPhoto"
         Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
@@ -294,6 +295,7 @@ Partial Class frmUpdaterUser
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.Location = New System.Drawing.Point(386, 230)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(300, 27)
         Me.txtPassword.TabIndex = 8
         '
@@ -321,14 +323,14 @@ Partial Class frmUpdaterUser
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Username:"
         '
-        'txtName
+        'txtUsername
         '
-        Me.txtName.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(386, 188)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(300, 27)
-        Me.txtName.TabIndex = 4
+        Me.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtUsername.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.Location = New System.Drawing.Point(386, 188)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(300, 27)
+        Me.txtUsername.TabIndex = 4
         '
         'Label2
         '
@@ -419,7 +421,7 @@ Partial Class frmUpdaterUser
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtName As System.Windows.Forms.TextBox
+    Friend WithEvents txtUsername As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtID As System.Windows.Forms.TextBox
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer

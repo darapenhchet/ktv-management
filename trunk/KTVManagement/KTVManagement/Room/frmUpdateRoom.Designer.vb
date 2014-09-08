@@ -25,6 +25,10 @@ Partial Class frmUpdateRoom
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.fail = New System.Windows.Forms.Label()
+        Me.success = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtDiscount = New System.Windows.Forms.TextBox()
         Me.cboType = New System.Windows.Forms.ComboBox()
@@ -46,8 +50,7 @@ Partial Class frmUpdateRoom
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnUpdateRoom = New System.Windows.Forms.Button()
         Me.btnAddRoom = New System.Windows.Forms.Button()
-        Me.fail = New System.Windows.Forms.Label()
-        Me.success = New System.Windows.Forms.Label()
+        Me.cboStatus = New System.Windows.Forms.ComboBox()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,7 +69,7 @@ Partial Class frmUpdateRoom
         Me.btnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSave.Location = New System.Drawing.Point(586, 360)
+        Me.btnSave.Location = New System.Drawing.Point(586, 377)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(100, 30)
         Me.btnSave.TabIndex = 3
@@ -88,6 +91,9 @@ Partial Class frmUpdateRoom
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.cboStatus)
+        Me.Panel4.Controls.Add(Me.Label8)
+        Me.Panel4.Controls.Add(Me.CheckBox1)
         Me.Panel4.Controls.Add(Me.fail)
         Me.Panel4.Controls.Add(Me.success)
         Me.Panel4.Controls.Add(Me.btnSave)
@@ -108,6 +114,54 @@ Partial Class frmUpdateRoom
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(299, 350)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(56, 19)
+        Me.Label8.TabIndex = 22
+        Me.Label8.Text = "Status:"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(0, 0)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox1.TabIndex = 20
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'fail
+        '
+        Me.fail.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.fail.AutoSize = True
+        Me.fail.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fail.ForeColor = System.Drawing.Color.Red
+        Me.fail.Location = New System.Drawing.Point(406, 65)
+        Me.fail.Name = "fail"
+        Me.fail.Size = New System.Drawing.Size(228, 23)
+        Me.fail.TabIndex = 19
+        Me.fail.Text = "Your inserting is failure!!!"
+        Me.fail.Visible = False
+        '
+        'success
+        '
+        Me.success.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.success.AutoSize = True
+        Me.success.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.success.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.success.Location = New System.Drawing.Point(341, 65)
+        Me.success.Name = "success"
+        Me.success.Size = New System.Drawing.Size(358, 23)
+        Me.success.TabIndex = 18
+        Me.success.Text = "You have been inserted Successfully!!!"
+        Me.success.Visible = False
         '
         'Label6
         '
@@ -356,31 +410,16 @@ Partial Class frmUpdateRoom
         Me.btnAddRoom.Text = "&Add Room"
         Me.btnAddRoom.UseVisualStyleBackColor = False
         '
-        'fail
+        'cboStatus
         '
-        Me.fail.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.fail.AutoSize = True
-        Me.fail.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fail.ForeColor = System.Drawing.Color.Red
-        Me.fail.Location = New System.Drawing.Point(406, 65)
-        Me.fail.Name = "fail"
-        Me.fail.Size = New System.Drawing.Size(228, 23)
-        Me.fail.TabIndex = 19
-        Me.fail.Text = "Your inserting is failure!!!"
-        Me.fail.Visible = False
-        '
-        'success
-        '
-        Me.success.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.success.AutoSize = True
-        Me.success.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.success.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.success.Location = New System.Drawing.Point(341, 65)
-        Me.success.Name = "success"
-        Me.success.Size = New System.Drawing.Size(358, 23)
-        Me.success.TabIndex = 18
-        Me.success.Text = "You have been inserted Successfully!!!"
-        Me.success.Visible = False
+        Me.cboStatus.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cboStatus.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboStatus.FormattingEnabled = True
+        Me.cboStatus.Items.AddRange(New Object() {"FREE", "BUSY"})
+        Me.cboStatus.Location = New System.Drawing.Point(386, 343)
+        Me.cboStatus.Name = "cboStatus"
+        Me.cboStatus.Size = New System.Drawing.Size(300, 29)
+        Me.cboStatus.TabIndex = 23
         '
         'frmUpdateRoom
         '
@@ -430,4 +469,7 @@ Partial Class frmUpdateRoom
     Friend WithEvents btnAddRoom As System.Windows.Forms.Button
     Friend WithEvents fail As System.Windows.Forms.Label
     Friend WithEvents success As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents cboStatus As System.Windows.Forms.ComboBox
 End Class

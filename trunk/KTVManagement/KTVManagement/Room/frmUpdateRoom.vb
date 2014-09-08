@@ -23,6 +23,11 @@
         room.RoomType = cboType.Text
         room.Price = CDbl(txtUnitPrice.Text)
         room.Discount = CInt(txtDiscount.Text)
+        If cboType.SelectedText.Equals("Free") Then
+            room.Status = False
+        Else
+            room.Status = True
+        End If
         If roomTransaction.updateRoom(room) = True Then
             success.Visible = True
         Else
@@ -34,4 +39,5 @@
         Panel1.Left = (Me.Width - Panel1.Width) / 2
         Panel1.Top = (Me.Height - Panel1.Height) / 2
     End Sub
+
 End Class

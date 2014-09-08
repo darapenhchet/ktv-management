@@ -4,7 +4,7 @@ Public Class ClsRoomTransaction
     Private dsRoom As New DataSet
 
     Public Function getAllRooms() As DataSet
-        Dim sql As String = "SELECT roomId, roomName ,roomType, price, discount FROM rooms"
+        Dim sql As String = "SELECT roomId, roomName ,roomType, price, discount, status FROM rooms"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -20,7 +20,7 @@ Public Class ClsRoomTransaction
     End Function
 
     Public Function getAllRoomByKeyword(keyword As String) As DataSet
-        Dim sql As String = "SELECT roomId, roomName, roomType, price, discount FROM rooms WHERE roomId LIKE @RoomID OR roomName LIKE @RoomName OR roomType LIKE @RoomType OR price LIKE @Price OR discount LIKE @Discount"
+        Dim sql As String = "SELECT roomId, roomName, roomType, price, discount, status FROM rooms WHERE roomId LIKE @RoomID OR roomName LIKE @RoomName OR roomType LIKE @RoomType OR price LIKE @Price OR discount LIKE @Discount"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -40,7 +40,7 @@ Public Class ClsRoomTransaction
     End Function
 
     Public Function getRoomById(id As Integer) As ClsRoom
-        Dim sql As String = "SELECT roomId, roomName, roomType, price, discount FROM rooms WHERE roomId = @ID"
+        Dim sql As String = "SELECT roomId, roomName, roomType, price, discount, status FROM rooms WHERE roomId = @ID"
         Dim dr As MySqlDataReader
         Dim room As New ClsRoom
 
@@ -67,7 +67,7 @@ Public Class ClsRoomTransaction
     End Function
 
     Public Function addNewRoom(room As ClsRoom) As Boolean
-        Dim sql As String = "INSERT INTO rooms(roomName, roomType, price, discount) VALUES(@RoomName,@RoomType,@Price,@Discount)"
+        Dim sql As String = "INSERT INTO rooms(roomName, roomType, price, discount,status) VALUES(@RoomName,@RoomType,@Price,@Discount,@Status)"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -75,6 +75,7 @@ Public Class ClsRoomTransaction
                 Command.Parameters.AddWithValue("@RoomType", room.RoomType)
                 Command.Parameters.AddWithValue("@Price", room.Price)
                 Command.Parameters.AddWithValue("@Discount", room.Discount)
+                Command.Parameters.AddWithValue("@Status", room.Status)
                 Command.ExecuteNonQuery()
                 Return True
             End Using
@@ -85,7 +86,7 @@ Public Class ClsRoomTransaction
     End Function
 
     Public Function updateRoom(room As ClsRoom) As Boolean
-        Dim sql As String = "UPDATE rooms SET roomName = @RoomName ,roomType = @RoomType , Price = @Price, discount = @Discount WHERE roomId = @ID"
+        Dim sql As String = "UPDATE rooms SET roomName = @RoomName ,roomType = @RoomType , Price = @Price, discount = @Discount, status = @Status WHERE roomId = @ID"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -94,6 +95,7 @@ Public Class ClsRoomTransaction
                 Command.Parameters.AddWithValue("@Price", room.Price)
                 Command.Parameters.AddWithValue("@ID", room.ID)
                 Command.Parameters.AddWithValue("@Discount", room.Discount)
+                Command.Parameters.AddWithValue("@Status", room.Status)
                 Command.ExecuteNonQuery()
                 Return True
             End Using

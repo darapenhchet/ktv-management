@@ -5,6 +5,7 @@
     Private _RoomType As String
     Private _Price As Double
     Private _Discount As Integer
+    Private _Status As Boolean
 
     Public Property ID As Integer
         Get
@@ -48,6 +49,15 @@
         End Get
         Set(value As Integer)
             _Discount = value
+        End Set
+    End Property
+
+    Public Property Status As Boolean
+        Get
+            Return _Status
+        End Get
+        Set(value As Boolean)
+            _Status = value
         End Set
     End Property
 End Class
