@@ -48,7 +48,12 @@
             Return _Discount
         End Get
         Set(value As Integer)
-            _Discount = value
+            If value < 0 Or value > 100 Then
+                MsgBox("Discount is count less than 0 or greater than 100")
+            Else
+                _Discount = value
+            End If
+
         End Set
     End Property
 

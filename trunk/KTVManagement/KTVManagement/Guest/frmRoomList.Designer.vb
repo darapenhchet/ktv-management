@@ -26,13 +26,12 @@ Partial Class frmRoomList
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnCheckInGuest = New System.Windows.Forms.Button()
-        Me.btnUpdateSinger = New System.Windows.Forms.Button()
-        Me.btnAddSinger = New System.Windows.Forms.Button()
+        Me.btnUpdateGuest = New System.Windows.Forms.Button()
+        Me.btnGuestUsingList = New System.Windows.Forms.Button()
         Me.btnSingerList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -40,12 +39,13 @@ Partial Class frmRoomList
         Me.dgvRoomList = New System.Windows.Forms.DataGridView()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.dgvRoomList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -71,17 +71,6 @@ Partial Class frmRoomList
         Me.Panel2.Size = New System.Drawing.Size(1024, 60)
         Me.Panel2.TabIndex = 2
         '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.White
-        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
-        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnBack.Location = New System.Drawing.Point(6, 3)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(50, 50)
-        Me.btnBack.TabIndex = 1
-        Me.btnBack.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -106,9 +95,9 @@ Partial Class frmRoomList
         Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel5.Controls.Add(Me.btnCheckInGuest)
-        Me.Panel5.Controls.Add(Me.btnUpdateSinger)
-        Me.Panel5.Controls.Add(Me.btnAddSinger)
+        Me.Panel5.Controls.Add(Me.btnGuestUsingList)
         Me.Panel5.Controls.Add(Me.btnSingerList)
+        Me.Panel5.Controls.Add(Me.btnUpdateGuest)
         Me.Panel5.Location = New System.Drawing.Point(9, 104)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1007, 30)
@@ -132,41 +121,42 @@ Partial Class frmRoomList
         Me.btnCheckInGuest.Text = "&Check In "
         Me.btnCheckInGuest.UseVisualStyleBackColor = False
         '
-        'btnUpdateSinger
+        'btnUpdateGuest
         '
-        Me.btnUpdateSinger.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnUpdateSinger.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnUpdateSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnUpdateSinger.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnUpdateSinger.FlatAppearance.BorderSize = 0
-        Me.btnUpdateSinger.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpdateSinger.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdateSinger.ForeColor = System.Drawing.Color.White
-        Me.btnUpdateSinger.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUpdateSinger.Location = New System.Drawing.Point(260, 0)
-        Me.btnUpdateSinger.Name = "btnUpdateSinger"
-        Me.btnUpdateSinger.Size = New System.Drawing.Size(140, 30)
-        Me.btnUpdateSinger.TabIndex = 4
-        Me.btnUpdateSinger.Text = "&Update Guest"
-        Me.btnUpdateSinger.UseVisualStyleBackColor = False
+        Me.btnUpdateGuest.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnUpdateGuest.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnUpdateGuest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnUpdateGuest.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnUpdateGuest.FlatAppearance.BorderSize = 0
+        Me.btnUpdateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdateGuest.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdateGuest.ForeColor = System.Drawing.Color.White
+        Me.btnUpdateGuest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUpdateGuest.Location = New System.Drawing.Point(400, 0)
+        Me.btnUpdateGuest.Name = "btnUpdateGuest"
+        Me.btnUpdateGuest.Size = New System.Drawing.Size(140, 30)
+        Me.btnUpdateGuest.TabIndex = 4
+        Me.btnUpdateGuest.Text = "&Update Guest"
+        Me.btnUpdateGuest.UseVisualStyleBackColor = False
+        Me.btnUpdateGuest.Visible = False
         '
-        'btnAddSinger
+        'btnGuestUsingList
         '
-        Me.btnAddSinger.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAddSinger.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnAddSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAddSinger.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnAddSinger.FlatAppearance.BorderSize = 0
-        Me.btnAddSinger.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddSinger.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddSinger.ForeColor = System.Drawing.Color.White
-        Me.btnAddSinger.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddSinger.Location = New System.Drawing.Point(400, 0)
-        Me.btnAddSinger.Name = "btnAddSinger"
-        Me.btnAddSinger.Size = New System.Drawing.Size(130, 30)
-        Me.btnAddSinger.TabIndex = 2
-        Me.btnAddSinger.Text = "&Guest List"
-        Me.btnAddSinger.UseVisualStyleBackColor = False
+        Me.btnGuestUsingList.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnGuestUsingList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnGuestUsingList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnGuestUsingList.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnGuestUsingList.FlatAppearance.BorderSize = 0
+        Me.btnGuestUsingList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuestUsingList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuestUsingList.ForeColor = System.Drawing.Color.White
+        Me.btnGuestUsingList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuestUsingList.Location = New System.Drawing.Point(260, 0)
+        Me.btnGuestUsingList.Name = "btnGuestUsingList"
+        Me.btnGuestUsingList.Size = New System.Drawing.Size(130, 30)
+        Me.btnGuestUsingList.TabIndex = 2
+        Me.btnGuestUsingList.Text = "&Guest List"
+        Me.btnGuestUsingList.UseVisualStyleBackColor = False
         '
         'btnSingerList
         '
@@ -276,6 +266,17 @@ Partial Class frmRoomList
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.White
+        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
+        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBack.Location = New System.Drawing.Point(6, 3)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(50, 50)
+        Me.btnBack.TabIndex = 1
+        Me.btnBack.TabStop = False
+        '
         'frmRoomList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -290,11 +291,11 @@ Partial Class frmRoomList
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.dgvRoomList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -304,8 +305,8 @@ Partial Class frmRoomList
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents btnUpdateSinger As System.Windows.Forms.Button
-    Friend WithEvents btnAddSinger As System.Windows.Forms.Button
+    Friend WithEvents btnUpdateGuest As System.Windows.Forms.Button
+    Friend WithEvents btnGuestUsingList As System.Windows.Forms.Button
     Friend WithEvents btnSingerList As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label

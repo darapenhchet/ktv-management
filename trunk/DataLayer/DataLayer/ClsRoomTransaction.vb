@@ -35,6 +35,7 @@ Public Class ClsRoomTransaction
                 End Using
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return Nothing
         End Try
     End Function

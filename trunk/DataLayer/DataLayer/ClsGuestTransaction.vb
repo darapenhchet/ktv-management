@@ -4,10 +4,26 @@ Public Class ClsGuestTransaction
     Private dsGuest As New DataSet
 
     Public Function getAllGuests() As DataSet
-        Dim sql As String = "SELECT guestId,duration,roomId,timein,timeout,amount FROM guests"
+        Dim sql As String = "SELECT guestId,roomId,duration,timein,timeout,amount FROM guests"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
+                Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
+                    adt.Fill(dsGuest)
+                    Return dsGuest
+                End Using
+            End Using
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Public Function getGuestUsingDetails() As DataSet
+        'Dim sql As String = "SELECT guestId,duration,roomId,timein,timeout,amount FROM guests"
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = "spGetGuestUsingDetails"
+                Command.CommandType = CommandType.StoredProcedure
                 Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
                     adt.Fill(dsGuest)
                     Return dsGuest
@@ -49,7 +65,9 @@ Public Class ClsGuestTransaction
                 dr = Command.ExecuteReader
                 While dr.Read
                     guest.ID = dr.GetInt32(0)
-                    guest.RoomID = dr.GetInt32(1)
+                    Dim room As New ClsRoom
+                    room.ID = dr.GetInt32(1)
+                    guest.Room = room
                     guest.Duration = dr.GetInt32(2)
                     guest.TimeIn = dr.GetDateTime(3)
                     guest.TimeOut = dr.GetDateTime(4)
@@ -64,13 +82,14 @@ Public Class ClsGuestTransaction
     End Function
 
     Public Function addNewGuest(guest As ClsGuest) As Boolean
-        Dim sql As String = "INSERT INTO guests(roomId,duration,timeIn) VALUES(@RoomID,@Duration,@TimeIn))"
+        'Dim sql As String = "INSERT INTO guests(roomId,duration,timeIn) VALUES(@RoomID,@Duration,@TimeIn)"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
-                Command.CommandText = sql
-                Command.Parameters.AddWithValue("@RoomID", guest.RoomID)
-                Command.Parameters.AddWithValue("@Duration", guest.Duration)
-                Command.Parameters.AddWithValue("@TimeIn", guest.TimeIn)
+                Command.CommandText = "spAddNewGuest"
+                Command.CommandType = CommandType.StoredProcedure
+                Command.Parameters.AddWithValue("@SRoomID", guest.Room.ID)
+                Command.Parameters.AddWithValue("@SDuration", guest.Duration)
+                Command.Parameters.AddWithValue("@SAmount", guest.Amount)
                 Command.ExecuteNonQuery()
                 Return True
             End Using
@@ -84,7 +103,7 @@ Public Class ClsGuestTransaction
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
-                Command.Parameters.AddWithValue("@RoomID", guest.RoomID)
+                Command.Parameters.AddWithValue("@RoomID", guest.Room.ID)
                 Command.Parameters.AddWithValue("@Duration", guest.Duration)
                 Command.Parameters.AddWithValue("@TimeIn", guest.TimeIn)
                 Command.Parameters.AddWithValue("@TimeOut", guest.TimeOut)

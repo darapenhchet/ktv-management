@@ -1,6 +1,6 @@
 ﻿Public Class ClsGuest
     Private _ID As Integer
-    Private _roomID As Integer
+    Private _Room As ClsRoom
     Private _duration As Integer
     Private _timeIn As New DateTime
     Private _timeout As New DateTime
@@ -15,12 +15,12 @@
         End Set
     End Property
 
-    Public Property RoomID As Integer
+    Public Property Room As ClsRoom
         Get
-            Return _roomID
+            Return _Room
         End Get
-        Set(value As Integer)
-            _roomID = value
+        Set(value As ClsRoom)
+            _Room = value
         End Set
     End Property
 
@@ -29,7 +29,11 @@
             Return _duration
         End Get
         Set(value As Integer)
-            _duration = value
+            If value < 0 Then
+                MsgBox("The duration of the singing is cannot less than 0")
+            Else
+                _duration = value
+            End If
         End Set
     End Property
 
