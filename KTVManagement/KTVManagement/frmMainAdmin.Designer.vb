@@ -26,7 +26,7 @@ Partial Class frmMainAdmin
         Me.btnSingerInformation = New System.Windows.Forms.Button()
         Me.btnUserInformation = New System.Windows.Forms.Button()
         Me.btnRoomInformation = New System.Windows.Forms.Button()
-        Me.btnExpense = New System.Windows.Forms.Button()
+        Me.btnGuest = New System.Windows.Forms.Button()
         Me.btnIncome = New System.Windows.Forms.Button()
         Me.btnReportInformation = New System.Windows.Forms.Button()
         Me.btnAboutUs = New System.Windows.Forms.Button()
@@ -90,18 +90,18 @@ Partial Class frmMainAdmin
         Me.btnRoomInformation.Text = "Room Details"
         Me.btnRoomInformation.UseVisualStyleBackColor = False
         '
-        'btnExpense
+        'btnGuest
         '
-        Me.btnExpense.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExpense.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExpense.ForeColor = System.Drawing.Color.White
-        Me.btnExpense.Location = New System.Drawing.Point(834, 147)
-        Me.btnExpense.Name = "btnExpense"
-        Me.btnExpense.Size = New System.Drawing.Size(250, 100)
-        Me.btnExpense.TabIndex = 4
-        Me.btnExpense.Text = "Guest Details"
-        Me.btnExpense.UseVisualStyleBackColor = False
+        Me.btnGuest.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuest.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuest.ForeColor = System.Drawing.Color.White
+        Me.btnGuest.Location = New System.Drawing.Point(834, 147)
+        Me.btnGuest.Name = "btnGuest"
+        Me.btnGuest.Size = New System.Drawing.Size(250, 100)
+        Me.btnGuest.TabIndex = 4
+        Me.btnGuest.Text = "Guest Details"
+        Me.btnGuest.UseVisualStyleBackColor = False
         '
         'btnIncome
         '
@@ -174,7 +174,7 @@ Partial Class frmMainAdmin
         Me.Panel1.Controls.Add(Me.btnAboutUs)
         Me.Panel1.Controls.Add(Me.btnReportInformation)
         Me.Panel1.Controls.Add(Me.btnIncome)
-        Me.Panel1.Controls.Add(Me.btnExpense)
+        Me.Panel1.Controls.Add(Me.btnGuest)
         Me.Panel1.Controls.Add(Me.btnRoomInformation)
         Me.Panel1.Controls.Add(Me.btnUserInformation)
         Me.Panel1.Controls.Add(Me.btnSingerInformation)
@@ -217,7 +217,7 @@ Partial Class frmMainAdmin
     Friend WithEvents btnSingerInformation As System.Windows.Forms.Button
     Friend WithEvents btnUserInformation As System.Windows.Forms.Button
     Friend WithEvents btnRoomInformation As System.Windows.Forms.Button
-    Friend WithEvents btnExpense As System.Windows.Forms.Button
+    Friend WithEvents btnGuest As System.Windows.Forms.Button
     Friend WithEvents btnIncome As System.Windows.Forms.Button
     Friend WithEvents btnReportInformation As System.Windows.Forms.Button
     Friend WithEvents btnAboutUs As System.Windows.Forms.Button

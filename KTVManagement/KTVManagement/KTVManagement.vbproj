@@ -141,6 +141,18 @@
     <Compile Include="frm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Guest\frmCheckInGuest.Designer.vb">
+      <DependentUpon>frmCheckInGuest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\frmCheckInGuest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\frmGuestReport.Designer.vb">
+      <DependentUpon>frmGuestReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\frmGuestReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSongMain.Designer.vb">
       <DependentUpon>frmSongMain.vb</DependentUpon>
     </Compile>
@@ -195,16 +207,10 @@
     <Compile Include="Category\frmCategoryInformation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGuest.Designer.vb">
+    <Compile Include="Guest\frmGuest.Designer.vb">
       <DependentUpon>frmGuest.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmGuest.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLanguageInformation.Designer.vb">
-      <DependentUpon>frmLanguageInformation.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmLanguageInformation.vb">
+    <Compile Include="Guest\frmGuest.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.vb">
@@ -223,12 +229,6 @@
       <DependentUpon>frmPlaySong.vb</DependentUpon>
     </Compile>
     <Compile Include="frmPlaySong.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmProductionInformation.Designer.vb">
-      <DependentUpon>frmProductionInformation.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmProductionInformation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Room\frmRoom.Designer.vb">
@@ -354,7 +354,10 @@
     <EmbeddedResource Include="frm.resx">
       <DependentUpon>frm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGuest.resx">
+    <EmbeddedResource Include="Guest\frmCheckInGuest.resx">
+      <DependentUpon>frmCheckInGuest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\frmGuest.resx">
       <DependentUpon>frmGuest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSongMain.resx">
@@ -384,9 +387,6 @@
     <EmbeddedResource Include="Category\frmCategoryInformation.resx">
       <DependentUpon>frmCategoryInformation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLanguageInformation.resx">
-      <DependentUpon>frmLanguageInformation.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -395,9 +395,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlaySong.resx">
       <DependentUpon>frmPlaySong.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmProductionInformation.resx">
-      <DependentUpon>frmProductionInformation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Room\frmRoom.resx">
       <DependentUpon>frmRoom.vb</DependentUpon>

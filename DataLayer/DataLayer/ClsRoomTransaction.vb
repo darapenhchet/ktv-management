@@ -20,7 +20,7 @@ Public Class ClsRoomTransaction
     End Function
 
     Public Function getAllRoomByKeyword(keyword As String) As DataSet
-        Dim sql As String = "SELECT roomId, roomName, roomType, price, discount, status FROM rooms WHERE roomId LIKE @RoomID OR roomName LIKE @RoomName OR roomType LIKE @RoomType OR price LIKE @Price OR discount LIKE @Discount"
+        Dim sql As String = "SELECT roomId, roomName, roomType, price, discount, CASE status WHEN 0 THEN 'FREE' WHEN 1 THEN 'BUSY' END AS STATUS FROM rooms WHERE roomId LIKE @RoomID OR roomName LIKE @RoomName OR roomType LIKE @RoomType OR price LIKE @Price OR discount LIKE @Discount"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql

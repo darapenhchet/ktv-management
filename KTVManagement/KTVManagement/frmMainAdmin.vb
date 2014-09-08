@@ -39,7 +39,8 @@
         Me.Close()
     End Sub
 
-    Private Sub btnExpense_Click(sender As Object, e As EventArgs) Handles btnExpense.Click
 
+    Private Sub btnGuest_Click(sender As Object, e As EventArgs) Handles btnGuest.Click
+        frmCheckInGuest.Show()
     End Sub
 End Class
