@@ -35,8 +35,8 @@ Partial Class frmSong
         Me.btnAddSong = New System.Windows.Forms.Button()
         Me.btnSongList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.btnPlay = New System.Windows.Forms.Button()
         Me.vlc = New AxAXVLC.AxVLCPlugin2()
+        Me.btnPlay = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.dgvSongList = New System.Windows.Forms.DataGridView()
@@ -185,6 +185,16 @@ Partial Class frmSong
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
         '
+        'vlc
+        '
+        Me.vlc.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.vlc.Enabled = True
+        Me.vlc.Location = New System.Drawing.Point(406, 55)
+        Me.vlc.Name = "vlc"
+        Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.vlc.Size = New System.Drawing.Size(595, 159)
+        Me.vlc.TabIndex = 4
+        '
         'btnPlay
         '
         Me.btnPlay.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -202,16 +212,6 @@ Partial Class frmSong
         Me.btnPlay.TabIndex = 5
         Me.btnPlay.Text = "&Play"
         Me.btnPlay.UseVisualStyleBackColor = False
-        '
-        'vlc
-        '
-        Me.vlc.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.vlc.Enabled = True
-        Me.vlc.Location = New System.Drawing.Point(406, 55)
-        Me.vlc.Name = "vlc"
-        Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.vlc.Size = New System.Drawing.Size(596, 160)
-        Me.vlc.TabIndex = 4
         '
         'Label2
         '
@@ -263,6 +263,7 @@ Partial Class frmSong
         Me.dgvSongList.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvSongList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.dgvSongList.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.dgvSongList.RowTemplate.Height = 30
         Me.dgvSongList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvSongList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvSongList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
