@@ -17,26 +17,30 @@ Public Class frmLogin
         Dim userTransaction As New DataLayer.ClsUserTransaction
         dsUser = userTransaction.getAllUsers()
         Dim found As Boolean = False
-        For Each row As DataRow In dsUser.Tables(0).Rows
-            If row.Item(1).Equals(txtUsername.Text) And row.Item(2).Equals(txtPassword.Text) Then
-                found = True
-                DataLayer.ClsConnection.UserLogin = New DataLayer.ClsUser
-                DataLayer.ClsConnection.UserLogin.ID = row.Item(0)
-                DataLayer.ClsConnection.UserLogin.Username = row.Item(1)
-                DataLayer.ClsConnection.UserLogin.Password = row.Item(2)
-                DataLayer.ClsConnection.UserLogin.Position = row.Item(3)
+        Try
+            For Each row As DataRow In dsUser.Tables(0).Rows
+                If row.Item(1).Equals(txtUsername.Text) And row.Item(2).Equals(txtPassword.Text) Then
+                    found = True
+                    DataLayer.ClsConnection.UserLogin = New DataLayer.ClsUser
+                    DataLayer.ClsConnection.UserLogin.ID = row.Item(0)
+                    DataLayer.ClsConnection.UserLogin.Username = row.Item(1)
+                    DataLayer.ClsConnection.UserLogin.Password = row.Item(2)
+                    DataLayer.ClsConnection.UserLogin.Position = row.Item(3)
 
-                If row.Item(3).Equals("Admin") Then
-                    Me.Visible = False
-                    frmMainAdmin.Show()
-                ElseIf row.Item(3).Equals(2) Then
-                    frmMainStaff.Show()
-                ElseIf row.Item(3).Equals(3) Then
+                    If row.Item(3).Equals("Admin") Then
+                        Me.Visible = False
+                        frmMainAdmin.Show()
+                    ElseIf row.Item(3).Equals("Staff") Then
+                        Me.Visible = False
+                        frmMainStaff.Show()
+                    End If
+
                 End If
-
-            End If
-
-        Next
+            Next
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        
     End Sub
 
 

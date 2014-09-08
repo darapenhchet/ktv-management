@@ -32,7 +32,7 @@ Public Class frmUser
         Try
             frmUpdaterUser.Show()
             frmUpdaterUser.txtID.Text = dgvUserList.CurrentRow.Cells(0).Value
-            frmUpdaterUser.txtName.Text = dgvUserList.CurrentRow.Cells(1).Value
+            frmUpdaterUser.txtUsername.Text = dgvUserList.CurrentRow.Cells(1).Value
             frmUpdaterUser.txtPassword.Text = dgvUserList.CurrentRow.Cells(2).Value
             frmUpdaterUser.cboPosition.Text = dgvUserList.CurrentRow.Cells(3).Value
             If dgvUserList.CurrentRow.Cells(4).Value Is DBNull.Value Then

@@ -25,7 +25,7 @@
         Dim userTransaction As New DataLayer.ClsUserTransaction
         Try
             user.ID = CInt(txtID.Text)
-            user.Username = txtName.Text
+            user.Username = txtUsername.Text
             user.Password = txtPassword.Text
             user.Position = cboPosition.Text
             user.Photo = getMemoryStream(pbPhoto)
