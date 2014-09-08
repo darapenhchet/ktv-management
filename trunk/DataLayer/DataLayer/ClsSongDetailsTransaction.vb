@@ -47,7 +47,6 @@ Public Class ClsSongDetailsTransaction
                                       " WHERE songs.songId LIKE @SongID OR songs.title LIKE @Title OR songs.album LIKE @Album OR categories.category LIKE @Category " & _
                                       " OR productions.production LIKE @Production OR languages.language LIKE @Language  OR singers.singerName LIKE @Singer" & _
                                       " GROUP BY songs.songId "
-                MsgBox(keyword)
                 Command.Parameters.AddWithValue("@SongID", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@Title", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@Album", "%" & keyword & "%")
