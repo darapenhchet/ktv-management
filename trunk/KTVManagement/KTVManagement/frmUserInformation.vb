@@ -99,4 +99,7 @@
     End Sub
     
 
+    Private Sub dgvUserInformation_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvUserInformation.CellContentClick
+
+    End Sub
 End Class

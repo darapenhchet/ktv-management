@@ -23,10 +23,30 @@ Public Class ClsUserTransaction
         End Try
     End Function
 
+    Public Function getUsersByKeyword(keyword As String) As DataSet
+        Dim sql As String = "SELECT userId, username, password, position, photo FROM users " & _
+                            "WHERE userId LIKE @UserID OR username LIKE @Username OR Position LIKE @Position "
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Command.Parameters.AddWithValue("@UserID", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@Username", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@Position", "%" & keyword & "%")
+                Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
+                    adt.Fill(dsUser)
+                    Return dsUser
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
     Public Function addNewUser(user As ClsUser) As Boolean
         Dim sql As String = "spAddNewUser"
         Try
-            Using Command As MySqlCommand = DataLayer.ClsConnection.con.CreateCommand
+            Using Command As MySqlCommand = DataLayer.ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
                 Command.CommandType = CommandType.StoredProcedure
                 Command.Parameters.AddWithValue("username", user.Username)
@@ -37,15 +57,16 @@ Public Class ClsUserTransaction
                 Return True
             End Using
         Catch ex As Exception
-            'MessageBox.Show(ex.Message)
+            MsgBox(ex.Message)
             Return False
         End Try
+
     End Function
 
     Public Function updateUser(user As ClsUser) As Boolean
         Dim sql As String = "UPDATE users SET username= @username, password=@password, position = @position, photo= @photo WHERE  userId = @userID"
         Try
-            Using Command As MySqlCommand = DataLayer.ClsConnection.con.CreateCommand
+            Using Command As MySqlCommand = DataLayer.ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
                 Command.Parameters.AddWithValue("@username", user.Username)
                 Command.Parameters.AddWithValue("@password", user.Password)
@@ -56,7 +77,7 @@ Public Class ClsUserTransaction
                 Return True
             End Using
         Catch ex As Exception
-            'MessageBox.Show(ex.Message)
+            MsgBox(ex.Message)
             Return False
         End Try
     End Function
@@ -64,14 +85,14 @@ Public Class ClsUserTransaction
     Public Function deleteUser(id As Integer) As Boolean
         Dim sql As String = "DELETE FROM users WHERE userId = @userID"
         Try
-            Using Command As MySqlCommand = DataLayer.ClsConnection.con.CreateCommand
+            Using Command As MySqlCommand = DataLayer.ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
                 Command.Parameters.AddWithValue("@userID", id)
                 Command.ExecuteNonQuery()
                 Return True
             End Using
         Catch ex As Exception
-            'MessageBox.Show(ex.Message)
+            MsgBox(ex.Message)
             Return False
         End Try
         Return False
