@@ -142,7 +142,7 @@ Public Class frmAddSong
 
     Private Sub cboLanguage_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboLanguage.SelectedIndexChanged
         If cboLanguage.Text.Equals("Add New...") Then
-            frmLanguageInformation.Visible = True
+            'frmLanguageInformation.Visible = True
         End If
     End Sub
 

@@ -162,7 +162,7 @@ Public Class frmSongInformation
     
     Private Sub cboProduction_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboProduction.SelectedIndexChanged
         If cboProduction.Text.Equals("Add New...") Then
-            frmProductionInformation.Visible = True
+            'frmProductionInformation.Visible = True
         End If
     End Sub
 
@@ -175,7 +175,7 @@ Public Class frmSongInformation
 
     Private Sub cboLanguage_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboLanguage.SelectedIndexChanged
         If cboLanguage.Text.Equals("Add New...") Then
-            frmLanguageInformation.Visible = True
+            'frmLanguageInformation.Visible = True
         End If
     End Sub
 

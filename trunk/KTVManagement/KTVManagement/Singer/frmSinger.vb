@@ -1,4 +1,6 @@
 ﻿Imports DataLayer
+Imports System.IO
+
 Public Class frmSinger
 
     Private dsSinger As New DataSet
@@ -16,7 +18,7 @@ Public Class frmSinger
         setGrdHeaderWidth("100|300|100|500", dgvSingerList)
         dgvSingerList.Columns(3).Visible = False
     End Sub
- 
+
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         dsSinger.Tables(0).Clear()
         dgvSingerList.DataSource = dsSinger.Tables(0)
@@ -34,15 +36,14 @@ Public Class frmSinger
             frmUpdateSinger.txtID.Text = dgvSingerList.CurrentRow.Cells(0).Value
             frmUpdateSinger.txtSingerName.Text = dgvSingerList.CurrentRow.Cells(1).Value
             frmUpdateSinger.cboGender.Text = dgvSingerList.CurrentRow.Cells(2).Value
-            Dim imageData As Byte() = {}
-            Try
-                imageData = CType(dgvSingerList.CurrentRow.Cells(3).Value, Byte())
-            Catch ex As Exception
-
-            End Try
-            If Not imageData Is Nothing Then
-                Dim ms As New System.IO.MemoryStream(imageData)
-                frmUpdateSinger.pbPhoto.Image = Image.FromStream(ms)
+            If dgvSingerList.CurrentRow.Cells(3).Value Is DBNull.Value Then
+                frmUpdateSinger.pbPhoto.Image = My.Resources.Photo
+            Else
+                Dim imageData As Byte() = CType(dgvSingerList.CurrentRow.Cells(3).Value, Byte())
+                If Not imageData Is Nothing Then
+                    Dim ms As New MemoryStream(imageData)
+                    frmUpdateSinger.pbPhoto.Image = Image.FromStream(ms)
+                End If
             End If
             Me.Close()
         Catch ex As Exception
@@ -52,5 +53,10 @@ Public Class frmSinger
     Private Sub btnAddSinger_Click(sender As Object, e As EventArgs) Handles btnAddSinger.Click
         frmAddSinger.Show()
         Me.Close()
+    End Sub
+
+    
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
