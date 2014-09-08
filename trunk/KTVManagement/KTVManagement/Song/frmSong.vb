@@ -7,7 +7,7 @@ Public Class frmSong
     Private Sub frmSong_Load(sender As Object, e As EventArgs) Handles Me.Load
         Panel1.Left = (Me.Width - Panel1.Width) / 2
         Panel1.Top = (Me.Height - Panel1.Height) / 2
-        vlc.Toolbar = False
+        'vlc.Toolbar = False
         DisplaySongInformation("")
     End Sub
     Private Sub btnAddSong_Click(sender As Object, e As EventArgs) Handles btnAddSong.Click
@@ -62,6 +62,5 @@ Public Class frmSong
         vlc.playlist.add("file:///" & dgvSongList.CurrentRow.Cells(7).Value)
         vlc.playlist.play()
     End Sub
-
 
 End Class

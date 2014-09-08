@@ -229,6 +229,7 @@ Partial Class frmUser
         Me.dgvUserList.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvUserList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.dgvUserList.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.dgvUserList.RowTemplate.Height = 30
         Me.dgvUserList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvUserList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvUserList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect

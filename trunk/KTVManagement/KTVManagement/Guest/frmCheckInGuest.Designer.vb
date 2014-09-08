@@ -249,6 +249,7 @@ Partial Class frmCheckInGuest
         Me.dgvRoomList.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvRoomList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.dgvRoomList.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.dgvRoomList.RowTemplate.Height = 30
         Me.dgvRoomList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvRoomList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvRoomList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
