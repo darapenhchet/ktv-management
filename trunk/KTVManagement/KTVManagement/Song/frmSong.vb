@@ -60,16 +60,10 @@ Public Class frmSong
         End Try
     End Sub
 
-
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
         vlc.playlist.items.clear()
         vlc.playlist.add("file:///" & dgvSongList.CurrentRow.Cells(7).Value)
         vlc.playlist.play()
     End Sub
 
-    Private Sub vlc_MediaPlayerPlaying(sender As Object, e As EventArgs) Handles vlc.MediaPlayerPlaying
-        If vlc.input.state = 6 Then
-
-        End If
-    End Sub
 End Class
