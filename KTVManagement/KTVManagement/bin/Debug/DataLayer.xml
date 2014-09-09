@@ -6,7 +6,25 @@ DataLayer
 </name>
 </assembly>
 <members>
-<member name="F:DataLayer.ClsSingerTransaction.dsSinger">
+<member name="P:DataLayer.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:DataLayer.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:DataLayer.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:DataLayer.ClsUserTransaction.dsUser">
+	<summary>
+ dsUser for storing the record of the users
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DataLayer.ClsSingerTransaction.dsSinger">
 	<summary>
  dsSinger is a Dataset of the Singer Table
  </summary>
@@ -44,24 +62,6 @@ DataLayer
  </summary>
 	<param name="keyword"></param>
 	<returns>Dataset</returns>
-	<remarks></remarks>
-</member><member name="P:DataLayer.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:DataLayer.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:DataLayer.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="F:DataLayer.ClsUserTransaction.dsUser">
-	<summary>
- dsUser for storing the record of the users
- </summary>
 	<remarks></remarks>
 </member>
 </members>
