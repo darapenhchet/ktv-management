@@ -114,6 +114,9 @@ F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVMan
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.xml
 F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.pdb
+<<<<<<< .mine
+F:\RUPP\E6YEAR4\OOAD\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmProducts.resources
+=======
 D:\ktv-management\KTVManagement\KTVManagement\bin\Debug\KTVManagement.exe.config
 D:\ktv-management\KTVManagement\KTVManagement\obj\Debug\Interop.AXVLC.dll
 D:\ktv-management\KTVManagement\KTVManagement\obj\Debug\AxInterop.AXVLC.dll
@@ -173,3 +176,4 @@ D:\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.frmUser.re
 D:\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.vbproj.GenerateResource.Cache
 D:\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.exe.manifest
 D:\ktv-management\KTVManagement\KTVManagement\obj\Debug\KTVManagement.application
+>>>>>>> .r95
