@@ -255,12 +255,6 @@
     <Compile Include="frmSingerInformation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SE\frmProducts.Designer.vb">
-      <DependentUpon>frmProducts.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SE\frmProducts.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Singer\frmAddSinger.Designer.vb">
       <DependentUpon>frmAddSinger.vb</DependentUpon>
     </Compile>
@@ -425,9 +419,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSingerInformation.resx">
       <DependentUpon>frmSingerInformation.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SE\frmProducts.resx">
-      <DependentUpon>frmProducts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Singer\frmAddSinger.resx">
       <DependentUpon>frmAddSinger.vb</DependentUpon>

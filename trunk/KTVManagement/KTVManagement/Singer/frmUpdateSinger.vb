@@ -23,6 +23,7 @@
         singer.Name = txtSingerName.Text
         singer.Gender = cboGender.Text
         singer.Photo = getMemoryStream(pbPhoto)
+        singer.Nationality = txtNationality.Text
         If singerTransaction.updateSinger(singer) = True Then
             Message.Visible = True
         Else

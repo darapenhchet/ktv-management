@@ -44,6 +44,8 @@ Partial Class frmAddSinger
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.OpenPhoto = New System.Windows.Forms.OpenFileDialog()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtNationality = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -155,6 +157,8 @@ Partial Class frmAddSinger
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.txtNationality)
+        Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.cboGender)
         Me.Panel4.Controls.Add(Me.pbPhoto)
         Me.Panel4.Controls.Add(Me.Message)
@@ -219,7 +223,7 @@ Partial Class frmAddSinger
         Me.btnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSave.Location = New System.Drawing.Point(597, 285)
+        Me.btnSave.Location = New System.Drawing.Point(597, 313)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(100, 30)
         Me.btnSave.TabIndex = 16
@@ -314,6 +318,27 @@ Partial Class frmAddSinger
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(287, 282)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
+        Me.Label2.TabIndex = 32
+        Me.Label2.Text = "Nationality:"
+        '
+        'txtNationality
+        '
+        Me.txtNationality.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtNationality.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNationality.Location = New System.Drawing.Point(397, 278)
+        Me.txtNationality.Name = "txtNationality"
+        Me.txtNationality.Size = New System.Drawing.Size(300, 27)
+        Me.txtNationality.TabIndex = 34
+        '
         'frmAddSinger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -359,4 +384,6 @@ Partial Class frmAddSinger
     Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
     Friend WithEvents cboGender As System.Windows.Forms.ComboBox
     Friend WithEvents OpenPhoto As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents txtNationality As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
