@@ -243,16 +243,22 @@
     <Compile Include="frmPlaySong.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Room\frmRoom.Designer.vb">
+    <Compile Include="Singer\frmRoom.Designer.vb">
       <DependentUpon>frmRoom.vb</DependentUpon>
     </Compile>
-    <Compile Include="Room\frmRoom.vb">
+    <Compile Include="Singer\frmRoom.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSingerInformation.Designer.vb">
       <DependentUpon>frmSingerInformation.vb</DependentUpon>
     </Compile>
     <Compile Include="frmSingerInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SE\frmProducts.Designer.vb">
+      <DependentUpon>frmProducts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SE\frmProducts.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Singer\frmAddSinger.Designer.vb">
@@ -414,11 +420,14 @@
     <EmbeddedResource Include="frmPlaySong.resx">
       <DependentUpon>frmPlaySong.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Room\frmRoom.resx">
+    <EmbeddedResource Include="Singer\frmRoom.resx">
       <DependentUpon>frmRoom.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSingerInformation.resx">
       <DependentUpon>frmSingerInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SE\frmProducts.resx">
+      <DependentUpon>frmProducts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Singer\frmAddSinger.resx">
       <DependentUpon>frmAddSinger.vb</DependentUpon>
