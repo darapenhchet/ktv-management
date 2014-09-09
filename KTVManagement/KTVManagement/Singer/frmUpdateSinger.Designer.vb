@@ -24,6 +24,7 @@ Partial Class frmUpdateSinger
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -32,6 +33,7 @@ Partial Class frmUpdateSinger
         Me.btnRoomList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.cboGender = New System.Windows.Forms.ComboBox()
+        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.Message = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -43,13 +45,13 @@ Partial Class frmUpdateSinger
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.OpenPhoto = New System.Windows.Forms.OpenFileDialog()
-        Me.btnBack = New System.Windows.Forms.PictureBox()
-        Me.pbPhoto = New System.Windows.Forms.PictureBox()
+        Me.txtNationality = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -76,6 +78,17 @@ Partial Class frmUpdateSinger
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1024, 60)
         Me.Panel2.TabIndex = 2
+        '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.White
+        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
+        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBack.Location = New System.Drawing.Point(6, 3)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(50, 50)
+        Me.btnBack.TabIndex = 1
+        Me.btnBack.TabStop = False
         '
         'Label1
         '
@@ -165,6 +178,8 @@ Partial Class frmUpdateSinger
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.txtNationality)
+        Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.cboGender)
         Me.Panel4.Controls.Add(Me.pbPhoto)
         Me.Panel4.Controls.Add(Me.Message)
@@ -193,6 +208,17 @@ Partial Class frmUpdateSinger
         Me.cboGender.Size = New System.Drawing.Size(300, 29)
         Me.cboGender.TabIndex = 36
         '
+        'pbPhoto
+        '
+        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.pbPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
+        Me.pbPhoto.Name = "pbPhoto"
+        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
+        Me.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbPhoto.TabIndex = 35
+        Me.pbPhoto.TabStop = False
+        '
         'Message
         '
         Me.Message.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -217,7 +243,7 @@ Partial Class frmUpdateSinger
         Me.btnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSave.Location = New System.Drawing.Point(597, 285)
+        Me.btnSave.Location = New System.Drawing.Point(597, 328)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(100, 30)
         Me.btnSave.TabIndex = 28
@@ -316,27 +342,26 @@ Partial Class frmUpdateSinger
         '
         Me.OpenPhoto.FileName = "OpenFileDialog1"
         '
-        'btnBack
+        'txtNationality
         '
-        Me.btnBack.BackColor = System.Drawing.Color.White
-        Me.btnBack.BackgroundImage = Global.KTVManagement.My.Resources.Resources.arrow3
-        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnBack.Location = New System.Drawing.Point(6, 3)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(50, 50)
-        Me.btnBack.TabIndex = 1
-        Me.btnBack.TabStop = False
+        Me.txtNationality.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtNationality.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNationality.Location = New System.Drawing.Point(397, 278)
+        Me.txtNationality.Name = "txtNationality"
+        Me.txtNationality.Size = New System.Drawing.Size(300, 27)
+        Me.txtNationality.TabIndex = 38
         '
-        'pbPhoto
+        'Label2
         '
-        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pbPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbPhoto.Location = New System.Drawing.Point(783, 55)
-        Me.pbPhoto.Name = "pbPhoto"
-        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
-        Me.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbPhoto.TabIndex = 35
-        Me.pbPhoto.TabStop = False
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(287, 282)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
+        Me.Label2.TabIndex = 37
+        Me.Label2.Text = "Nationality:"
         '
         'frmUpdateSinger
         '
@@ -353,10 +378,10 @@ Partial Class frmUpdateSinger
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -384,4 +409,6 @@ Partial Class frmUpdateSinger
     Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
     Friend WithEvents cboGender As System.Windows.Forms.ComboBox
     Friend WithEvents OpenPhoto As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents txtNationality As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

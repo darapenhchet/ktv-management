@@ -29,7 +29,7 @@ Public Class ClsSingerTransaction
     End Function
 
     Public Function getSingerBySingerName(singerName As String) As ClsSinger
-        Dim sql As String = "SELECT singerId, singerName, gender, photo FROM singers WHERE SingerName LIKE @SingerName"
+        Dim sql As String = "SELECT singerId, singerName, gender, nationality, photo FROM singers WHERE SingerName LIKE @SingerName"
         Dim dr As MySqlDataReader
         Dim singer As New ClsSinger
         Try
@@ -57,13 +57,14 @@ Public Class ClsSingerTransaction
     End Function
 
     Public Function getAllSingerByKeyword(keyword As String) As DataSet
-        Dim sql As String = "SELECT singerId, singerName, gender, photo FROM singers WHERE singerId LIKE @SingerID OR SingerName LIKE @SingerName OR gender LIKE @Gender"
+        Dim sql As String = "SELECT singerId, singerName, gender,nationality, photo FROM singers WHERE singerId LIKE @SingerID OR SingerName LIKE @SingerName OR gender LIKE @Gender OR nationality LIKE @Nationality"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
                 Command.Parameters.AddWithValue("@SingerID", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@SingerName", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@Gender", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@Nationality", "%" & keyword & "%")
                 Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
                     adt.Fill(dsSinger)
                     Return dsSinger
@@ -107,6 +108,7 @@ Public Class ClsSingerTransaction
                 Command.Parameters.AddWithValue("@singerName", singer.Name)
                 Command.Parameters.AddWithValue("@gender", singer.Gender.Substring(0, 1))
                 Command.Parameters.AddWithValue("@photo", singer.Photo)
+                Command.Parameters.AddWithValue("@nationality", singer.Nationality)
                 Command.ExecuteNonQuery()
                 Return True
             End Using
@@ -129,6 +131,7 @@ Public Class ClsSingerTransaction
                 Command.Parameters.AddWithValue("@singerID", singer.ID)
                 Command.Parameters.AddWithValue("@singerName", singer.Name)
                 Command.Parameters.AddWithValue("@gender", singer.Gender.Substring(0, 1))
+                Command.Parameters.AddWithValue("@nationality", singer.Nationality)
                 Command.Parameters.AddWithValue("@photo", singer.Photo)
                 Command.ExecuteNonQuery()
                 Return True

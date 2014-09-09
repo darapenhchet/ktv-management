@@ -3,6 +3,7 @@
     Private _ID As Integer
     Private _Name As String
     Private _Gender As String
+    Private _Nationality As String
     Private _Photo As Byte()
 
 
@@ -31,6 +32,15 @@
         End Get
         Set(value As String)
             _Gender = value
+        End Set
+    End Property
+
+    Public Property Nationality As String
+        Get
+            Return _Nationality
+        End Get
+        Set(value As String)
+            _Nationality = value
         End Set
     End Property
 
