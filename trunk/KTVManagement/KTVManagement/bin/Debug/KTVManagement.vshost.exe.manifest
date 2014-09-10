@@ -292,13 +292,13 @@
       <dsig:DigestValue>JwqRXDUj2Myd06lv5zW4szlZgeex5JTexCY7GzzdhFw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="KTVManagement.exe.config" size="741">
+  <file name="KTVManagement.exe.config" size="726">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7qjIgvXCZYm2OPSu1O4V+Lh5FnsNtDG3bFiX1PhcUjU=</dsig:DigestValue>
+      <dsig:DigestValue>Jsbl6HOa65HVuDMZ9t7MOaP1/TfVQTt+k50CZH/LKQQ=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
