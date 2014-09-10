@@ -28,6 +28,7 @@ Public Class ClsGuestTransaction
                     adt.Fill(dsGuest)
                     Return dsGuest
                 End Using
+
             End Using
         Catch ex As Exception
             Return Nothing
@@ -35,7 +36,7 @@ Public Class ClsGuestTransaction
     End Function
 
     Public Function searchGuestByKeyword(keyword As String) As DataSet
-        Dim sql As String = "SELECT guestId,duration,roomId,timein,timeout,amount FROM guests WHERE roomId LIKE @RoomID OR timein LIKE @TimeIn OR timeout LIKE @TimeOut OR amount LIKE @Amount"
+        Dim sql As String = "SELECT guestId,guests.roomId,roomName,roomType,timein,timeout,duration,TIMEDIFF(guests.timeOut,NOW()) AS LEFTTIME,price,amount FROM guests INNER JOIN rooms ON guests.roomId = rooms.roomId WHERE (TIMEDIFF(guests.timeOut,NOW()) > 0) AND (guests.roomId LIKE @RoomID OR timein LIKE @TimeIn OR timeout LIKE @TimeOut OR amount LIKE @Amount)"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -49,6 +50,43 @@ Public Class ClsGuestTransaction
                 End Using
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+    Public Function getGuestHistory(keyword As String) As DataSet
+        Dim sql As String = "SELECT guestId,guests.roomId,roomName,roomType,timein,timeout,duration,price,amount FROM guests INNER JOIN rooms ON guests.roomId = rooms.roomId WHERE guests.roomId LIKE @RoomID OR rooms.roomName LIKE @RoomName OR timein LIKE @TimeIn OR timeout LIKE @TimeOut OR amount LIKE @Amount"
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Command.Parameters.AddWithValue("@RoomID", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@TimeIn", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@TimeOut", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@Amount", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@RoomName", "%" & keyword & "%")
+                Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
+                    adt.Fill(dsGuest)
+                    Return dsGuest
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+    Public Function getCheckInRoom() As DataSet
+        Dim sql As String = "SELECT rooms.roomId, timeOut FROM rooms INNER JOIN guests ON rooms.roomId = guests.roomId WHERE status = 1 AND TIMEDIFF(guests.timeOut,NOW()) > 0"
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
+                    adt.Fill(dsGuest)
+                    Return dsGuest
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
             Return Nothing
         End Try
     End Function

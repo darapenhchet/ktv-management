@@ -21,13 +21,13 @@
     End Sub
 
     Private Sub btnUserInformation_Click(sender As Object, e As EventArgs) Handles btnUserInformation.Click
-        'frmUserInformation.Show()
         frmUser.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnAboutUs_Click(sender As Object, e As EventArgs) Handles btnAboutUs.Click
+        frmAboutus.Show()
         Me.Visible = False
-        frmSongLists.Visible = True
     End Sub
 
     Private Sub btnRoomInformation_Click(sender As Object, e As EventArgs) Handles btnRoomInformation.Click
@@ -38,9 +38,8 @@
 
     Private Sub btnGuest_Click(sender As Object, e As EventArgs) Handles btnGuest.Click
         frmRoomList.Show()
+        Me.Close()
     End Sub
 
-    Private Sub btnIncome_Click(sender As Object, e As EventArgs)
 
-    End Sub
 End Class

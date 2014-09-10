@@ -13,7 +13,6 @@ Public Class frmLanguage
             DisplayLanguageInformation("")
             setGrdHeaderText("ID|Language", dgvLanguageList)
             setGrdHeaderWidth("100|300", dgvLanguageList)
-            dgvLanguageList.Columns(2).Visible = False
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

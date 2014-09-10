@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmRoomList
+Partial Class frmGuestHistory
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,21 +22,20 @@ Partial Class frmRoomList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnCheckInGuest = New System.Windows.Forms.Button()
-        Me.btnGuestUsingList = New System.Windows.Forms.Button()
-        Me.btnSingerList = New System.Windows.Forms.Button()
         Me.btnGuestHistory = New System.Windows.Forms.Button()
+        Me.btnGuestList = New System.Windows.Forms.Button()
+        Me.btnRoomList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
-        Me.dgvRoomList = New System.Windows.Forms.DataGridView()
+        Me.dgvGuestHistory = New System.Windows.Forms.DataGridView()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.btnBack = New System.Windows.Forms.PictureBox()
@@ -44,7 +43,7 @@ Partial Class frmRoomList
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.dgvRoomList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvGuestHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -57,7 +56,7 @@ Partial Class frmRoomList
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1024, 600)
-        Me.Panel1.TabIndex = 3
+        Me.Panel1.TabIndex = 5
         '
         'Panel2
         '
@@ -94,93 +93,74 @@ Partial Class frmRoomList
         '
         Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.btnCheckInGuest)
-        Me.Panel5.Controls.Add(Me.btnGuestUsingList)
-        Me.Panel5.Controls.Add(Me.btnSingerList)
         Me.Panel5.Controls.Add(Me.btnGuestHistory)
+        Me.Panel5.Controls.Add(Me.btnGuestList)
+        Me.Panel5.Controls.Add(Me.btnRoomList)
         Me.Panel5.Location = New System.Drawing.Point(9, 104)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1007, 30)
         Me.Panel5.TabIndex = 3
         '
-        'btnCheckInGuest
-        '
-        Me.btnCheckInGuest.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnCheckInGuest.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnCheckInGuest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCheckInGuest.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnCheckInGuest.FlatAppearance.BorderSize = 0
-        Me.btnCheckInGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCheckInGuest.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCheckInGuest.ForeColor = System.Drawing.Color.White
-        Me.btnCheckInGuest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCheckInGuest.Location = New System.Drawing.Point(130, 0)
-        Me.btnCheckInGuest.Name = "btnCheckInGuest"
-        Me.btnCheckInGuest.Size = New System.Drawing.Size(130, 30)
-        Me.btnCheckInGuest.TabIndex = 5
-        Me.btnCheckInGuest.Text = "&Check In "
-        Me.btnCheckInGuest.UseVisualStyleBackColor = False
-        '
-        'btnGuestUsingList
-        '
-        Me.btnGuestUsingList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnGuestUsingList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnGuestUsingList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnGuestUsingList.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnGuestUsingList.FlatAppearance.BorderSize = 0
-        Me.btnGuestUsingList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuestUsingList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuestUsingList.ForeColor = System.Drawing.Color.White
-        Me.btnGuestUsingList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGuestUsingList.Location = New System.Drawing.Point(260, 0)
-        Me.btnGuestUsingList.Name = "btnGuestUsingList"
-        Me.btnGuestUsingList.Size = New System.Drawing.Size(130, 30)
-        Me.btnGuestUsingList.TabIndex = 2
-        Me.btnGuestUsingList.Text = "&Check In List"
-        Me.btnGuestUsingList.UseVisualStyleBackColor = False
-        '
-        'btnSingerList
-        '
-        Me.btnSingerList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSingerList.BackColor = System.Drawing.Color.White
-        Me.btnSingerList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnSingerList.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnSingerList.FlatAppearance.BorderSize = 0
-        Me.btnSingerList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSingerList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSingerList.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.btnSingerList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSingerList.Location = New System.Drawing.Point(0, 0)
-        Me.btnSingerList.Name = "btnSingerList"
-        Me.btnSingerList.Size = New System.Drawing.Size(130, 30)
-        Me.btnSingerList.TabIndex = 1
-        Me.btnSingerList.Text = "Room List"
-        Me.btnSingerList.UseVisualStyleBackColor = False
-        '
         'btnGuestHistory
         '
         Me.btnGuestHistory.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnGuestHistory.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnGuestHistory.BackColor = System.Drawing.Color.White
         Me.btnGuestHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnGuestHistory.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnGuestHistory.FlatAppearance.BorderSize = 0
         Me.btnGuestHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuestHistory.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuestHistory.ForeColor = System.Drawing.Color.White
+        Me.btnGuestHistory.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.btnGuestHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGuestHistory.Location = New System.Drawing.Point(400, 0)
+        Me.btnGuestHistory.Location = New System.Drawing.Point(260, 0)
         Me.btnGuestHistory.Name = "btnGuestHistory"
-        Me.btnGuestHistory.Size = New System.Drawing.Size(140, 30)
-        Me.btnGuestHistory.TabIndex = 4
-        Me.btnGuestHistory.Text = "Guest &History"
+        Me.btnGuestHistory.Size = New System.Drawing.Size(130, 30)
+        Me.btnGuestHistory.TabIndex = 3
+        Me.btnGuestHistory.Text = "&Guest History"
         Me.btnGuestHistory.UseVisualStyleBackColor = False
+        '
+        'btnGuestList
+        '
+        Me.btnGuestList.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnGuestList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnGuestList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnGuestList.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnGuestList.FlatAppearance.BorderSize = 0
+        Me.btnGuestList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuestList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuestList.ForeColor = System.Drawing.Color.White
+        Me.btnGuestList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuestList.Location = New System.Drawing.Point(130, 0)
+        Me.btnGuestList.Name = "btnGuestList"
+        Me.btnGuestList.Size = New System.Drawing.Size(130, 30)
+        Me.btnGuestList.TabIndex = 2
+        Me.btnGuestList.Text = "&Check In List"
+        Me.btnGuestList.UseVisualStyleBackColor = False
+        '
+        'btnRoomList
+        '
+        Me.btnRoomList.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnRoomList.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnRoomList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnRoomList.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnRoomList.FlatAppearance.BorderSize = 0
+        Me.btnRoomList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRoomList.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRoomList.ForeColor = System.Drawing.Color.White
+        Me.btnRoomList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRoomList.Location = New System.Drawing.Point(0, 0)
+        Me.btnRoomList.Name = "btnRoomList"
+        Me.btnRoomList.Size = New System.Drawing.Size(130, 30)
+        Me.btnRoomList.TabIndex = 1
+        Me.btnRoomList.Text = "Room List"
+        Me.btnRoomList.UseVisualStyleBackColor = False
         '
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.txtSearch)
-        Me.Panel4.Controls.Add(Me.dgvRoomList)
+        Me.Panel4.Controls.Add(Me.dgvGuestHistory)
         Me.Panel4.Controls.Add(Me.ShapeContainer1)
         Me.Panel4.ForeColor = System.Drawing.Color.White
         Me.Panel4.Location = New System.Drawing.Point(9, 104)
@@ -206,44 +186,44 @@ Partial Class frmRoomList
         Me.txtSearch.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSearch.Location = New System.Drawing.Point(100, 68)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(300, 27)
+        Me.txtSearch.Size = New System.Drawing.Size(234, 27)
         Me.txtSearch.TabIndex = 1
         '
-        'dgvRoomList
+        'dgvGuestHistory
         '
-        Me.dgvRoomList.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.dgvRoomList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvRoomList.BackgroundColor = System.Drawing.Color.White
-        Me.dgvRoomList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRoomList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
-        Me.dgvRoomList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvRoomList.DefaultCellStyle = DataGridViewCellStyle8
-        Me.dgvRoomList.Location = New System.Drawing.Point(4, 116)
-        Me.dgvRoomList.Name = "dgvRoomList"
-        Me.dgvRoomList.RowHeadersVisible = False
-        Me.dgvRoomList.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvRoomList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.dgvRoomList.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.dgvRoomList.RowTemplate.Height = 30
-        Me.dgvRoomList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvRoomList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgvRoomList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRoomList.Size = New System.Drawing.Size(1000, 370)
-        Me.dgvRoomList.TabIndex = 0
+        Me.dgvGuestHistory.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.dgvGuestHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvGuestHistory.BackgroundColor = System.Drawing.Color.White
+        Me.dgvGuestHistory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvGuestHistory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvGuestHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvGuestHistory.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvGuestHistory.Location = New System.Drawing.Point(4, 116)
+        Me.dgvGuestHistory.Name = "dgvGuestHistory"
+        Me.dgvGuestHistory.RowHeadersVisible = False
+        Me.dgvGuestHistory.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvGuestHistory.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.dgvGuestHistory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.dgvGuestHistory.RowTemplate.Height = 30
+        Me.dgvGuestHistory.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvGuestHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvGuestHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvGuestHistory.Size = New System.Drawing.Size(1000, 370)
+        Me.dgvGuestHistory.TabIndex = 0
         '
         'ShapeContainer1
         '
@@ -276,7 +256,7 @@ Partial Class frmRoomList
         Me.btnBack.TabIndex = 1
         Me.btnBack.TabStop = False
         '
-        'frmRoomList
+        'frmGuestHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -284,8 +264,9 @@ Partial Class frmRoomList
         Me.ClientSize = New System.Drawing.Size(1024, 600)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmRoomList"
-        Me.Text = "frmCheckInGuest"
+        Me.Name = "frmGuestHistory"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "frmGuestHistory"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -293,7 +274,7 @@ Partial Class frmRoomList
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.dgvRoomList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvGuestHistory, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -304,14 +285,13 @@ Partial Class frmRoomList
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents btnGuestHistory As System.Windows.Forms.Button
-    Friend WithEvents btnGuestUsingList As System.Windows.Forms.Button
-    Friend WithEvents btnSingerList As System.Windows.Forms.Button
+    Friend WithEvents btnGuestList As System.Windows.Forms.Button
+    Friend WithEvents btnRoomList As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
-    Friend WithEvents dgvRoomList As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvGuestHistory As System.Windows.Forms.DataGridView
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents btnCheckInGuest As System.Windows.Forms.Button
+    Friend WithEvents btnGuestHistory As System.Windows.Forms.Button
 End Class

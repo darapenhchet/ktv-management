@@ -52,7 +52,7 @@ Public Class frmAddSong
             song.Category = New ClsCategory(cboCategory.SelectedValue, cboCategory.Text)
             song.Language = New ClsLanguage(cboLanguage.SelectedValue, cboLanguage.Text)
             song.Path = txtPath.Text
-            Dim Destination As String = "D:\KTV\" & song.Production.Production & "\" & song.Album
+            Dim Destination As String = "D:\KTV\" & song.Production.Production & " \ " & song.Album
             Try
                 If Not Directory.Exists(Destination) Then
                     Directory.CreateDirectory(Destination)
@@ -71,14 +71,8 @@ Public Class frmAddSong
             songs.Add(song)
             dgvSongList.Rows.Add(song.Title, song.Album, song.Category.Category, song.Production.Production, song.Language.Language, strSingers.Substring(0, strSingers.Length() - 1), song.Path)
         Catch ex As Exception
+            MessageBox.Show(ex.Message)
         End Try
-    End Sub
-
-    Private Sub btnAddSinger_Click(sender As Object, e As EventArgs) Handles btnAddSinger.Click
-        Dim singer As New ClsSinger
-        singer.Name = cboSinger.Text
-        singer.ID = cboSinger.SelectedValue
-        lstSingers.Items.Add(singer)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -128,23 +122,19 @@ Public Class frmAddSong
         End If
     End Sub
 
-    Private Sub cboCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategory.SelectedIndexChanged
-        If cboCategory.Text.Equals("Add New...") Then
-            frmAddCategory.Visible = True
-        End If
-    End Sub
-
     Private Sub cboSinger_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSinger.SelectedIndexChanged
-        If cboSinger.Text.Equals("Add New...") Then
-            frmAddSinger.Visible = True
-        End If
+        Try
+            Dim singer As New ClsSinger
+            If cboSinger.Text = "" Then
+                Exit Sub
+            End If
+            singer.Name = cboSinger.Text
+            singer.ID = cboSinger.SelectedValue
+            lstSingers.Items.Add(singer)
+        Catch ex As Exception
+        End Try
     End Sub
 
-    Private Sub cboLanguage_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboLanguage.SelectedIndexChanged
-        If cboLanguage.Text.Equals("Add New...") Then
-            'frmLanguageInformation.Visible = True
-        End If
-    End Sub
 
     Private Sub btnSongList_Click(sender As Object, e As EventArgs) Handles btnSongList.Click
         frmSong.Show()

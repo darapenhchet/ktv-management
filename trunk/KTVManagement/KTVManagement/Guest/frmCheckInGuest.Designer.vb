@@ -30,11 +30,13 @@ Partial Class frmCheckInGuest
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btnGuestHistory = New System.Windows.Forms.Button()
         Me.btnCheckInGuest = New System.Windows.Forms.Button()
         Me.btnUpdateGuest = New System.Windows.Forms.Button()
         Me.btnGuestList = New System.Windows.Forms.Button()
         Me.btnRoomList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.fail = New System.Windows.Forms.Label()
@@ -63,7 +65,6 @@ Partial Class frmCheckInGuest
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -140,6 +141,7 @@ Partial Class frmCheckInGuest
         '
         Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.btnGuestHistory)
         Me.Panel5.Controls.Add(Me.btnCheckInGuest)
         Me.Panel5.Controls.Add(Me.btnUpdateGuest)
         Me.Panel5.Controls.Add(Me.btnGuestList)
@@ -148,6 +150,24 @@ Partial Class frmCheckInGuest
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1007, 30)
         Me.Panel5.TabIndex = 3
+        '
+        'btnGuestHistory
+        '
+        Me.btnGuestHistory.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnGuestHistory.BackColor = System.Drawing.Color.White
+        Me.btnGuestHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnGuestHistory.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnGuestHistory.FlatAppearance.BorderSize = 0
+        Me.btnGuestHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuestHistory.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuestHistory.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnGuestHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuestHistory.Location = New System.Drawing.Point(396, 0)
+        Me.btnGuestHistory.Name = "btnGuestHistory"
+        Me.btnGuestHistory.Size = New System.Drawing.Size(130, 30)
+        Me.btnGuestHistory.TabIndex = 6
+        Me.btnGuestHistory.Text = "&Guest History"
+        Me.btnGuestHistory.UseVisualStyleBackColor = False
         '
         'btnCheckInGuest
         '
@@ -178,7 +198,7 @@ Partial Class frmCheckInGuest
         Me.btnUpdateGuest.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdateGuest.ForeColor = System.Drawing.Color.White
         Me.btnUpdateGuest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUpdateGuest.Location = New System.Drawing.Point(396, 0)
+        Me.btnUpdateGuest.Location = New System.Drawing.Point(535, 0)
         Me.btnUpdateGuest.Name = "btnUpdateGuest"
         Me.btnUpdateGuest.Size = New System.Drawing.Size(140, 30)
         Me.btnUpdateGuest.TabIndex = 4
@@ -201,7 +221,7 @@ Partial Class frmCheckInGuest
         Me.btnGuestList.Name = "btnGuestList"
         Me.btnGuestList.Size = New System.Drawing.Size(130, 30)
         Me.btnGuestList.TabIndex = 2
-        Me.btnGuestList.Text = "&Guest List"
+        Me.btnGuestList.Text = "&Check In List"
         Me.btnGuestList.UseVisualStyleBackColor = False
         '
         'btnRoomList
@@ -257,6 +277,25 @@ Partial Class frmCheckInGuest
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(843, 320)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 30)
+        Me.Button1.TabIndex = 67
+        Me.Button1.Text = "&Update"
+        Me.Button1.UseVisualStyleBackColor = False
+        Me.Button1.Visible = False
         '
         'Label14
         '
@@ -496,7 +535,7 @@ Partial Class frmCheckInGuest
         Me.btnSave.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSave.Location = New System.Drawing.Point(843, 320)
+        Me.btnSave.Location = New System.Drawing.Point(843, 356)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(100, 30)
         Me.btnSave.TabIndex = 45
@@ -584,24 +623,6 @@ Partial Class frmCheckInGuest
         '
         Me.Timer1.Interval = 1000
         '
-        'Button1
-        '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(843, 356)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 30)
-        Me.Button1.TabIndex = 67
-        Me.Button1.Text = "&Update"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'frmCheckInGuest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -665,4 +686,5 @@ Partial Class frmCheckInGuest
     Friend WithEvents Time As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnGuestHistory As System.Windows.Forms.Button
 End Class
