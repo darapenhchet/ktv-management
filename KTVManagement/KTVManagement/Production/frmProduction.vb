@@ -29,8 +29,13 @@ Public Class frmProduction
     End Sub
 
     Public Sub DisplayProductionInformation(keyword As String)
-        dsProduction = productionTransaction.getProductionByKeyword(keyword)
-        dgvProductionList.DataSource = dsProduction.Tables(0)
+        Try
+            dsProduction = productionTransaction.getProductionByKeyword(keyword)
+            dgvProductionList.DataSource = dsProduction.Tables(0)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 
     Private Sub btnUpdateProduction_Click_1(sender As Object, e As EventArgs) Handles btnUpdateProduction.Click
@@ -59,10 +64,14 @@ Public Class frmProduction
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-        dsProduction.Tables(0).Clear()
-        dgvProductionList.DataSource = dsProduction.Tables(0)
-        DisplayProductionInformation(txtSearch.Text)
+        Try
+            dsProduction.Tables(0).Clear()
+            dgvProductionList.DataSource = dsProduction.Tables(0)
+            DisplayProductionInformation(txtSearch.Text)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 
- 
 End Class

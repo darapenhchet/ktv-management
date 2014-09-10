@@ -7,17 +7,25 @@ Public Class frmLanguage
     Private languageTransaction As New ClsLanguageTransaction
 
     Private Sub frmLanguage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Panel1.Left = (Me.Width - Panel1.Width) / 2
-        Panel1.Top = (Me.Height - Panel1.Height) / 2
-        DisplayLanguageInformation("")
-        setGrdHeaderText("ID|Language|Photo", dgvLanguageList)
-        setGrdHeaderWidth("100|300|600", dgvLanguageList)
-        dgvLanguageList.Columns(2).Visible = False
+        Try
+            Panel1.Left = (Me.Width - Panel1.Width) / 2
+            Panel1.Top = (Me.Height - Panel1.Height) / 2
+            DisplayLanguageInformation("")
+            setGrdHeaderText("ID|Language", dgvLanguageList)
+            setGrdHeaderWidth("100|300", dgvLanguageList)
+            dgvLanguageList.Columns(2).Visible = False
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Public Sub DisplayLanguageInformation(keyword As String)
-        dsLanguage = languageTransaction.getAllLanguageByKeyword(keyword)
-        dgvLanguageList.DataSource = dsLanguage.Tables(0)
+        Try
+            dsLanguage = languageTransaction.getAllLanguageByKeyword(keyword)
+            dgvLanguageList.DataSource = dsLanguage.Tables(0)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -50,8 +58,12 @@ Public Class frmLanguage
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-        dsLanguage.Tables(0).Clear()
-        dgvLanguageList.DataSource = dsLanguage.Tables(0)
-        DisplayLanguageInformation(txtSearch.Text)
+        Try
+            dsLanguage.Tables(0).Clear()
+            dgvLanguageList.DataSource = dsLanguage.Tables(0)
+            DisplayLanguageInformation(txtSearch.Text)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

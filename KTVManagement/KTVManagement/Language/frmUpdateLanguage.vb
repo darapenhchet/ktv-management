@@ -21,28 +21,19 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim language As New DataLayer.ClsLanguage
-        Dim languageTransaction As New DataLayer.ClsLanguageTransaction
         Try
+            Dim language As New DataLayer.ClsLanguage
+            Dim languageTransaction As New DataLayer.ClsLanguageTransaction
             language.ID = CInt(txtID.Text)
             language.Language = txtLanguage.Text
-            language.Photo = getMemoryStream(pbPhoto)
             If languageTransaction.updateLanguage(language) = True Then
                 MessageBox.Show("Successfully!!!")
             Else
                 MessageBox.Show("Unsuccessfully!!!")
             End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message)
         End Try
-
-
     End Sub
 
-    Private Sub pbPhoto_Click(sender As Object, e As EventArgs) Handles pbPhoto.Click
-        If OpenPhoto.ShowDialog = Windows.Forms.DialogResult.OK Then
-            pbPhoto.Image = Image.FromFile(OpenPhoto.FileName)
-            Photo = getMemoryStream(pbPhoto)
-        End If
-    End Sub
 End Class

@@ -73,7 +73,4 @@
         Me.Close()
     End Sub
 
-    Private Sub btnCheckInGuest_Click(sender As Object, e As EventArgs) Handles btnCheckInGuest.Click
-
-    End Sub
 End Class

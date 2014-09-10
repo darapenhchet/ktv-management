@@ -30,9 +30,9 @@ Partial Class frmRoomList
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnCheckInGuest = New System.Windows.Forms.Button()
-        Me.btnUpdateGuest = New System.Windows.Forms.Button()
         Me.btnGuestUsingList = New System.Windows.Forms.Button()
         Me.btnSingerList = New System.Windows.Forms.Button()
+        Me.btnUpdateGuest = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
@@ -121,25 +121,6 @@ Partial Class frmRoomList
         Me.btnCheckInGuest.Text = "&Check In "
         Me.btnCheckInGuest.UseVisualStyleBackColor = False
         '
-        'btnUpdateGuest
-        '
-        Me.btnUpdateGuest.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnUpdateGuest.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnUpdateGuest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnUpdateGuest.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnUpdateGuest.FlatAppearance.BorderSize = 0
-        Me.btnUpdateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpdateGuest.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdateGuest.ForeColor = System.Drawing.Color.White
-        Me.btnUpdateGuest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUpdateGuest.Location = New System.Drawing.Point(400, 0)
-        Me.btnUpdateGuest.Name = "btnUpdateGuest"
-        Me.btnUpdateGuest.Size = New System.Drawing.Size(140, 30)
-        Me.btnUpdateGuest.TabIndex = 4
-        Me.btnUpdateGuest.Text = "&Update Guest"
-        Me.btnUpdateGuest.UseVisualStyleBackColor = False
-        Me.btnUpdateGuest.Visible = False
-        '
         'btnGuestUsingList
         '
         Me.btnGuestUsingList.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -175,6 +156,25 @@ Partial Class frmRoomList
         Me.btnSingerList.TabIndex = 1
         Me.btnSingerList.Text = "Room List"
         Me.btnSingerList.UseVisualStyleBackColor = False
+        '
+        'btnUpdateGuest
+        '
+        Me.btnUpdateGuest.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnUpdateGuest.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.btnUpdateGuest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnUpdateGuest.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnUpdateGuest.FlatAppearance.BorderSize = 0
+        Me.btnUpdateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdateGuest.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdateGuest.ForeColor = System.Drawing.Color.White
+        Me.btnUpdateGuest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUpdateGuest.Location = New System.Drawing.Point(400, 0)
+        Me.btnUpdateGuest.Name = "btnUpdateGuest"
+        Me.btnUpdateGuest.Size = New System.Drawing.Size(140, 30)
+        Me.btnUpdateGuest.TabIndex = 4
+        Me.btnUpdateGuest.Text = "&Update Guest"
+        Me.btnUpdateGuest.UseVisualStyleBackColor = False
+        Me.btnUpdateGuest.Visible = False
         '
         'Panel4
         '

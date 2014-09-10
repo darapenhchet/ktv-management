@@ -8,18 +8,22 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim singer As New DataLayer.ClsSinger
-        singer.Name = txtSingerName.Text
-        singer.Gender = cboGender.SelectedItem.ToString
-        singer.Photo = getMemoryStream(pbPhoto)
-        singer.Nationality = txtNationality.Text
-        If singerTransaction.addNewsinger(singer) = True Then
-            Message.Visible = True
-        Else
-            Message.Visible = True
-            Message.Text = "Inserting is failure!!!"
-            Message.ForeColor = Color.Red
-        End If
+        Try
+            Dim singer As New DataLayer.ClsSinger
+            singer.Name = txtSingerName.Text
+            singer.Gender = cboGender.SelectedItem.ToString
+            singer.Photo = getMemoryStream(pbPhoto)
+            singer.Nationality = txtNationality.Text
+            If singerTransaction.addNewsinger(singer) = True Then
+                Message.Visible = True
+            Else
+                Message.Visible = True
+                Message.Text = "Inserting is failure!!!"
+                Message.ForeColor = Color.Red
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub pbPhoto_Click(sender As Object, e As EventArgs) Handles pbPhoto.Click

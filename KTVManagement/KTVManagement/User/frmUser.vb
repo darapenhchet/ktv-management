@@ -15,8 +15,12 @@ Public Class frmUser
     End Sub
 
     Public Sub DisplayInformationUser(keyword As String)
-        dsUser = userTransaction.getUsersByKeyword(keyword)
-        dgvUserList.DataSource = dsUser.Tables(0)
+        Try
+            dsUser = userTransaction.getUsersByKeyword(keyword)
+            dgvUserList.DataSource = dsUser.Tables(0)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -52,8 +56,13 @@ Public Class frmUser
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-        dsUser.Tables(0).Clear()
-        dgvUserList.DataSource = dsUser.Tables(0)
-        DisplayInformationUser(txtSearch.Text)
+        Try
+            dsUser.Tables(0).Clear()
+            dgvUserList.DataSource = dsUser.Tables(0)
+            DisplayInformationUser(txtSearch.Text)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
+
 End Class

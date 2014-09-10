@@ -25,11 +25,6 @@
         Dim languageTransaction As New DataLayer.ClsLanguageTransaction
         Try
             language.Language = txtLanguage.Text
-            If pbPhoto Is Nothing Then
-                pbPhoto.Image = My.Resources.Photo
-                language.Photo = getMemoryStream(pbPhoto)
-            End If
-            language.Photo = getMemoryStream(pbPhoto)
             If languageTransaction.addNewLanguage(language) = True Then
                 MessageBox.Show("Successfully!!!")
             Else
@@ -39,10 +34,4 @@
         End Try
     End Sub
 
-    Private Sub pbPhoto_Click(sender As Object, e As EventArgs) Handles pbPhoto.Click
-        If OpenPhoto.ShowDialog = Windows.Forms.DialogResult.OK Then
-            pbPhoto.Image = Image.FromFile(OpenPhoto.FileName)
-            Photo = getMemoryStream(pbPhoto)
-        End If
-    End Sub
 End Class
