@@ -12,18 +12,26 @@ Public Class frmSinger
     End Sub
 
     Private Sub displaySingerInformation(keyword As String)
-        dsSinger = singerTransaction.getAllSingerByKeyword(keyword)
-        dgvSingerList.DataSource = dsSinger.Tables(0)
-        setGrdHeaderText("ID|Singer's Name|Gender|Photo", dgvSingerList)
-        setGrdHeaderWidth("100|300|100|500", dgvSingerList)
-        dgvSingerList.Columns(3).Visible = False
+        Try
+            dsSinger = singerTransaction.getAllSingerByKeyword(keyword)
+            dgvSingerList.DataSource = dsSinger.Tables(0)
+            setGrdHeaderText("ID|Singer's Name|Gender|Photo", dgvSingerList)
+            setGrdHeaderWidth("100|300|100|500", dgvSingerList)
+            dgvSingerList.Columns(3).Visible = False
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-        dsSinger.Tables(0).Clear()
-        dgvSingerList.DataSource = dsSinger.Tables(0)
-        displaySingerInformation(txtSearch.Text)
+        Try
+            dsSinger.Tables(0).Clear()
+            dgvSingerList.DataSource = dsSinger.Tables(0)
+            displaySingerInformation(txtSearch.Text)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
 
@@ -54,11 +62,6 @@ Public Class frmSinger
     Private Sub btnAddSinger_Click(sender As Object, e As EventArgs) Handles btnAddSinger.Click
         frmAddSinger.Show()
         Me.Close()
-    End Sub
-
-    
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
     End Sub
 
 End Class

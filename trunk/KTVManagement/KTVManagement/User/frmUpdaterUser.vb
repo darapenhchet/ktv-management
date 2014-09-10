@@ -21,9 +21,9 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim user As New DataLayer.ClsUser
-        Dim userTransaction As New DataLayer.ClsUserTransaction
         Try
+            Dim user As New DataLayer.ClsUser
+            Dim userTransaction As New DataLayer.ClsUserTransaction
             user.ID = CInt(txtID.Text)
             user.Username = txtUsername.Text
             user.Password = txtPassword.Text

@@ -1,6 +1,5 @@
 ﻿Public Class frmAddRoom
 
-    Private roomTransaction As New DataLayer.ClsRoomTransaction
     Private Sub btnAddRoom_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -22,8 +21,9 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim room As New DataLayer.ClsRoom
         Try
+            Dim roomTransaction As New DataLayer.ClsRoomTransaction
+            Dim room As New DataLayer.ClsRoom
             room.RoomName = txtName.Text
             room.Price = CDbl(txtUnitPrice.Text)
             room.RoomType = cboType.Text

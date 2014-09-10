@@ -18,7 +18,6 @@
     End Function
 
     Public Sub AddDataIntoComboBox(cboName As ComboBox, ds As DataSet)
-        ds.Tables(0).Rows.Add(0, "Add New...")
         With cboName
             .DataSource = ds.Tables(0)
             .DisplayMember = ds.Tables(0).Columns(1).ColumnName

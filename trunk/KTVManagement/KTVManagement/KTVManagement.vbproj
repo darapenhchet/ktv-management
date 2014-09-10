@@ -243,10 +243,10 @@
     <Compile Include="frmPlaySong.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Singer\frmRoom.Designer.vb">
+    <Compile Include="Room\frmRoom.Designer.vb">
       <DependentUpon>frmRoom.vb</DependentUpon>
     </Compile>
-    <Compile Include="Singer\frmRoom.vb">
+    <Compile Include="Room\frmRoom.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSingerInformation.Designer.vb">
@@ -369,6 +369,9 @@
     <EmbeddedResource Include="Guest\frmCheckInGuest.resx">
       <DependentUpon>frmCheckInGuest.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Guest\frmGuestReport.resx">
+      <DependentUpon>frmGuestReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Guest\frmRoomList.resx">
       <DependentUpon>frmRoomList.vb</DependentUpon>
     </EmbeddedResource>
@@ -414,7 +417,7 @@
     <EmbeddedResource Include="frmPlaySong.resx">
       <DependentUpon>frmPlaySong.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Singer\frmRoom.resx">
+    <EmbeddedResource Include="Room\frmRoom.resx">
       <DependentUpon>frmRoom.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSingerInformation.resx">
@@ -540,12 +543,6 @@
     <None Include="Resources\Photo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DataLayer\DataLayer\DataLayer.vbproj">
-      <Project>{aa5a1df8-6af9-4dab-b28c-48dac00e8288}</Project>
-      <Name>DataLayer</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
@@ -562,7 +559,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataLayer\DataLayer\DataLayer.vbproj">
+      <Project>{aa5a1df8-6af9-4dab-b28c-48dac00e8288}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

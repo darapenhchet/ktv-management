@@ -4,7 +4,7 @@ Public Class ClsLanguageTransaction
     Private dsLanguage As New DataSet
 
     Public Function getAllLanguages() As DataSet
-        Dim sql As String = "SELECT languageId,language,photo FROM languages"
+        Dim sql As String = "SELECT languageId,language FROM languages"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -34,7 +34,7 @@ Public Class ClsLanguageTransaction
     End Function
 
     Public Function getAllLanguageByKeyword(keyword As String) As DataSet
-        Dim sql As String = "SELECT languageId, language, Photo FROM languages WHERE language LIKE @Language OR languageId LIKE @LID"
+        Dim sql As String = "SELECT languageId, language FROM languages WHERE language LIKE @Language OR languageId LIKE @LID"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -53,7 +53,7 @@ Public Class ClsLanguageTransaction
     End Function
 
     Public Function getLanguageById(id As Integer) As ClsLanguage
-        Dim sql As String = "SELECT languageId,language,photo FROM languages WHERE languageId = @LID"
+        Dim sql As String = "SELECT languageId,language FROM languages WHERE languageId = @LID"
         Dim dr As MySqlDataReader
         Dim language As New ClsLanguage
 
@@ -77,12 +77,12 @@ Public Class ClsLanguageTransaction
     End Function
 
     Public Function addNewLanguage(language As ClsLanguage) As Boolean
-        Dim sql As String = "INSERT INTO languages(Language,photo) VALUES(@Language,@Photo)"
+        Dim sql As String = "INSERT INTO languages(Language) VALUES(@Language)"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
                 Command.Parameters.AddWithValue("@Language", language.Language)
-                Command.Parameters.AddWithValue("@Photo", language.Photo)
+                'Command.Parameters.AddWithValue("@Photo", language.Photo)
                 Command.ExecuteNonQuery()
                 Return True
             End Using
@@ -93,12 +93,12 @@ Public Class ClsLanguageTransaction
     End Function
 
     Public Function updateLanguage(language As ClsLanguage) As Boolean
-        Dim sql As String = "UPDATE languages SET language = @Language , Photo = @Photo WHERE languageId = @LID"
+        Dim sql As String = "UPDATE languages SET language = @Language WHERE languageId = @LID"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
                 Command.Parameters.AddWithValue("@Language", language.Language)
-                Command.Parameters.AddWithValue("@Photo", language.Photo)
+                'Command.Parameters.AddWithValue("@Photo", language.Photo)
                 Command.Parameters.AddWithValue("@LID", language.ID)
                 Command.ExecuteNonQuery()
                 Return True

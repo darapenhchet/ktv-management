@@ -99,7 +99,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>T7ENYIWun1rUUlCj3p90uS411caClQIZw0brhce7vek=</dsig:DigestValue>
+        <dsig:DigestValue>ID6qix8FDJ4si/gu5n4F3EosG9RU6vK49jVW5ax6I6g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,7 +111,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Kbm0B7QJsN33JrvTOokUBqc1T72igoG2Q2d3qvL9aN4=</dsig:DigestValue>
+        <dsig:DigestValue>iQ11EaDioKYRpP3IBcQAA0XfrF0K8hmbk2w+7gE6g5Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -123,19 +123,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>17G3bjFhPV4gSNIvN6rZUk3/e3LBz3zLVwg4Eed/eFs=</dsig:DigestValue>
+        <dsig:DigestValue>LYddbTP8scIK9XuepXild8q2VM/BmBt1hCFfR0edCQA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KTVManagement.exe" size="598528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KTVManagement.exe" size="599552">
       <assemblyIdentity name="KTVManagement" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5N2hoKfVb2FVYMU6EkueztGmmxa1hkWCa5SL8YhDwCg=</dsig:DigestValue>
+        <dsig:DigestValue>4itqWtfD7TzKqm1f34l4vDaqa0n0hyoEigIG7vC4oog=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -32,20 +32,18 @@ Partial Class frmUpdateLanguage
         Me.btnAddLanguage = New System.Windows.Forms.Button()
         Me.btnLanguageList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtLanguage = New System.Windows.Forms.TextBox()
         Me.txtID = New System.Windows.Forms.TextBox()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.OpenPhoto = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -170,7 +168,6 @@ Partial Class frmUpdateLanguage
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Panel4.Controls.Add(Me.pbPhoto)
         Me.Panel4.Controls.Add(Me.btnSave)
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.txtLanguage)
@@ -181,38 +178,6 @@ Partial Class frmUpdateLanguage
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
-        '
-        'ShapeContainer1
-        '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1007, 490)
-        Me.ShapeContainer1.TabIndex = 3
-        Me.ShapeContainer1.TabStop = False
-        '
-        'LineShape1
-        '
-        Me.LineShape1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LineShape1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 6
-        Me.LineShape1.X2 = 1001
-        Me.LineShape1.Y1 = 46
-        Me.LineShape1.Y2 = 46
-        '
-        'pbPhoto
-        '
-        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pbPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbPhoto.Location = New System.Drawing.Point(782, 62)
-        Me.pbPhoto.Name = "pbPhoto"
-        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
-        Me.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbPhoto.TabIndex = 49
-        Me.pbPhoto.TabStop = False
         '
         'btnSave
         '
@@ -264,6 +229,26 @@ Partial Class frmUpdateLanguage
         Me.txtID.TabIndex = 45
         Me.txtID.Text = "Auto Number"
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1007, 490)
+        Me.ShapeContainer1.TabIndex = 3
+        Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape1
+        '
+        Me.LineShape1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.LineShape1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 6
+        Me.LineShape1.X2 = 1001
+        Me.LineShape1.Y1 = 46
+        Me.LineShape1.Y2 = 46
+        '
         'OpenPhoto
         '
         Me.OpenPhoto.FileName = "OpenFileDialog1"
@@ -287,7 +272,6 @@ Partial Class frmUpdateLanguage
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -303,7 +287,6 @@ Partial Class frmUpdateLanguage
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtLanguage As System.Windows.Forms.TextBox

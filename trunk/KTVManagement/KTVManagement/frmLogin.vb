@@ -27,13 +27,15 @@ Public Class frmLogin
                     DataLayer.ClsConnection.UserLogin.Password = row.Item(2)
                     DataLayer.ClsConnection.UserLogin.Position = row.Item(3)
 
-                    If row.Item(3).Equals("Admin") Then
-                        Me.Visible = False
-                        frmMainAdmin.Show()
-                    ElseIf row.Item(3).Equals("Staff") Then
-                        Me.Visible = False
-                        frmMainStaff.Show()
-                    End If
+                    frmMainAdmin.Show()
+                    Me.Visible = False
+                    'If row.Item(3).Equals("Admin") Then
+                    '    Me.Visible = False
+                    '    frmMainAdmin.Show()
+                    'ElseIf row.Item(3).Equals("Staff") Then
+                    '    Me.Visible = False
+                    '    frmMainStaff.Show()
+                    'End If
 
                 End If
             Next

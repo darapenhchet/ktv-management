@@ -16,23 +16,27 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim room As New DataLayer.ClsRoom
-        Dim roomTransaction As New DataLayer.ClsRoomTransaction
-        room.ID = CInt(txtID.Text)
-        room.RoomName = txtName.Text
-        room.RoomType = cboType.Text
-        room.Price = CDbl(txtUnitPrice.Text)
-        room.Discount = CInt(txtDiscount.Text)
-        If cboType.SelectedText.Equals("Free") Then
-            room.Status = False
-        Else
-            room.Status = True
-        End If
-        If roomTransaction.updateRoom(room) = True Then
-            success.Visible = True
-        Else
-            fail.Visible = True
-        End If
+        Try
+            Dim room As New DataLayer.ClsRoom
+            Dim roomTransaction As New DataLayer.ClsRoomTransaction
+            room.ID = CInt(txtID.Text)
+            room.RoomName = txtName.Text
+            room.RoomType = cboType.Text
+            room.Price = CDbl(txtUnitPrice.Text)
+            room.Discount = CInt(txtDiscount.Text)
+            If cboType.SelectedText.Equals("Free") Then
+                room.Status = False
+            Else
+                room.Status = True
+            End If
+            If roomTransaction.updateRoom(room) = True Then
+                success.Visible = True
+            Else
+                fail.Visible = True
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub frmUpdateRoom_Load(sender As Object, e As EventArgs) Handles MyBase.Load

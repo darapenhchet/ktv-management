@@ -170,7 +170,6 @@ Public Class ClsSingerTransaction
     ''' <returns>Dataset</returns>
     ''' <remarks></remarks>
     Public Function searchSingerByKeyword(keyword As String) As DataSet
-
         Return Nothing
     End Function
 End Class

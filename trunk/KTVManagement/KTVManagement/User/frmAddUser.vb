@@ -23,9 +23,9 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim user As New DataLayer.ClsUser
-        Dim userTransaction As New DataLayer.ClsUserTransaction
         Try
+            Dim user As New DataLayer.ClsUser
+            Dim userTransaction As New DataLayer.ClsUserTransaction
             user.Username = txtUsername.Text
             user.Password = txtPassword.Text
             user.Position = cboPosition.Text
@@ -37,7 +37,7 @@
                 fail.Visible = True
             End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 End Class

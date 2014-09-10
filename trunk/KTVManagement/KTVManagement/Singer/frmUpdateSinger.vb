@@ -18,18 +18,22 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim singer As New DataLayer.ClsSinger
-        singer.ID = CInt(txtID.Text)
-        singer.Name = txtSingerName.Text
-        singer.Gender = cboGender.Text
-        singer.Photo = getMemoryStream(pbPhoto)
-        singer.Nationality = txtNationality.Text
-        If singerTransaction.updateSinger(singer) = True Then
-            Message.Visible = True
-        Else
-            Message.Visible = True
-            Message.Text = "You have not been update it!!!"
-        End If
+        Try
+            Dim singer As New DataLayer.ClsSinger
+            singer.ID = CInt(txtID.Text)
+            singer.Name = txtSingerName.Text
+            singer.Gender = cboGender.Text
+            singer.Photo = getMemoryStream(pbPhoto)
+            singer.Nationality = txtNationality.Text
+            If singerTransaction.updateSinger(singer) = True Then
+                Message.Visible = True
+            Else
+                Message.Visible = True
+                Message.Text = "You have not been update it!!!"
+            End If
+        Catch Ex As Exception
+            MessageBox.Show(Ex.Message)
+        End Try
     End Sub
 
     Private Sub pbPhoto_Click(sender As Object, e As EventArgs) Handles pbPhoto.Click

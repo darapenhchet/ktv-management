@@ -11,12 +11,15 @@
         setGrdHeaderText("ID|Category|Description", dgvCategory)
         setGrdHeaderWidth("100|400|500", dgvCategory)
         dgvCategory.RowHeadersWidth = 30
-
     End Sub
 
     Private Sub DisplayCategoryInformation()
-        dsCategory = categoryTransaction.getAllCategory()
-        dgvCategory.DataSource = dsCategory.Tables(0)
+        Try
+            dsCategory = categoryTransaction.getAllCategory()
+            dgvCategory.DataSource = dsCategory.Tables(0)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -32,7 +35,16 @@
     End Sub
 
     Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
-        dgvCategory.Rows.RemoveAt(RowIndex)
+        Try
+            If categoryTransaction.deleteCategory(CInt(dgvCategory.Rows(RowIndex).Cells(0).Value)) Then
+                'dgvCategory.Rows.RemoveAt(RowIndex)
+                MessageBox.Show("You category has been deleted!!!")
+            Else
+                MessageBox.Show("You cannot delete this category!!!")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub UpdateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateToolStripMenuItem.Click
@@ -62,11 +74,14 @@
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-        dsCategory.Tables(0).Clear()
-        dgvCategory.DataSource = dsCategory
-        dsCategory = categoryTransaction.getAllCategoryByKeyword(txtSearch.Text)
-        dgvCategory.DataSource = dsCategory.Tables(0)
+        Try
+            dsCategory.Tables(0).Clear()
+            dgvCategory.DataSource = dsCategory
+            dsCategory = categoryTransaction.getAllCategoryByKeyword(txtSearch.Text)
+            dgvCategory.DataSource = dsCategory.Tables(0)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
-
 
 End Class

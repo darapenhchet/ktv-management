@@ -38,6 +38,8 @@ Partial Class frmGuest
         Me.dgvGuestList = New System.Windows.Forms.DataGridView()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,6 +151,8 @@ Partial Class frmGuest
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.Label3)
+        Me.Panel4.Controls.Add(Me.DateTimePicker1)
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.txtSearch)
         Me.Panel4.Controls.Add(Me.dgvGuestList)
@@ -177,7 +181,7 @@ Partial Class frmGuest
         Me.txtSearch.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSearch.Location = New System.Drawing.Point(100, 68)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(300, 27)
+        Me.txtSearch.Size = New System.Drawing.Size(234, 27)
         Me.txtSearch.TabIndex = 1
         '
         'dgvGuestList
@@ -236,6 +240,27 @@ Partial Class frmGuest
         Me.LineShape1.Y1 = 46
         Me.LineShape1.Y2 = 46
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(802, 68)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 26)
+        Me.DateTimePicker1.TabIndex = 4
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(725, 72)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 19)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Date:"
+        '
         'frmGuest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -273,4 +298,6 @@ Partial Class frmGuest
     Friend WithEvents dgvGuestList As System.Windows.Forms.DataGridView
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
 End Class

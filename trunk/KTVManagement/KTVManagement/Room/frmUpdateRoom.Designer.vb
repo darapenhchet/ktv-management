@@ -25,6 +25,7 @@ Partial Class frmUpdateRoom
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.cboStatus = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.fail = New System.Windows.Forms.Label()
@@ -50,7 +51,8 @@ Partial Class frmUpdateRoom
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnUpdateRoom = New System.Windows.Forms.Button()
         Me.btnAddRoom = New System.Windows.Forms.Button()
-        Me.cboStatus = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,6 +93,8 @@ Partial Class frmUpdateRoom
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.Label9)
+        Me.Panel4.Controls.Add(Me.Label10)
         Me.Panel4.Controls.Add(Me.cboStatus)
         Me.Panel4.Controls.Add(Me.Label8)
         Me.Panel4.Controls.Add(Me.CheckBox1)
@@ -114,6 +118,17 @@ Partial Class frmUpdateRoom
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
+        '
+        'cboStatus
+        '
+        Me.cboStatus.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cboStatus.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboStatus.FormattingEnabled = True
+        Me.cboStatus.Items.AddRange(New Object() {"FREE", "BUSY"})
+        Me.cboStatus.Location = New System.Drawing.Point(386, 343)
+        Me.cboStatus.Name = "cboStatus"
+        Me.cboStatus.Size = New System.Drawing.Size(300, 29)
+        Me.cboStatus.TabIndex = 23
         '
         'Label8
         '
@@ -410,16 +425,29 @@ Partial Class frmUpdateRoom
         Me.btnAddRoom.Text = "&Add Room"
         Me.btnAddRoom.UseVisualStyleBackColor = False
         '
-        'cboStatus
+        'Label9
         '
-        Me.cboStatus.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cboStatus.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboStatus.FormattingEnabled = True
-        Me.cboStatus.Items.AddRange(New Object() {"FREE", "BUSY"})
-        Me.cboStatus.Location = New System.Drawing.Point(386, 343)
-        Me.cboStatus.Name = "cboStatus"
-        Me.cboStatus.Size = New System.Drawing.Size(300, 29)
-        Me.cboStatus.TabIndex = 23
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(692, 314)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(23, 19)
+        Me.Label9.TabIndex = 25
+        Me.Label9.Text = "%"
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(692, 274)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(18, 19)
+        Me.Label10.TabIndex = 24
+        Me.Label10.Text = "$"
         '
         'frmUpdateRoom
         '
@@ -472,4 +500,6 @@ Partial Class frmUpdateRoom
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents cboStatus As System.Windows.Forms.ComboBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class

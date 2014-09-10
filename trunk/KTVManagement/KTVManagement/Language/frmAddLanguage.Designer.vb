@@ -31,7 +31,6 @@ Partial Class frmAddLanguage
         Me.btnAddLanguage = New System.Windows.Forms.Button()
         Me.btnLanguage = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.pbPhoto = New System.Windows.Forms.PictureBox()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -46,7 +45,6 @@ Partial Class frmAddLanguage
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -152,7 +150,6 @@ Partial Class frmAddLanguage
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Panel4.Controls.Add(Me.pbPhoto)
         Me.Panel4.Controls.Add(Me.btnSave)
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label3)
@@ -165,18 +162,6 @@ Partial Class frmAddLanguage
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1007, 490)
         Me.Panel4.TabIndex = 4
-        '
-        'pbPhoto
-        '
-        Me.pbPhoto.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pbPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbPhoto.Location = New System.Drawing.Point(782, 62)
-        Me.pbPhoto.Name = "pbPhoto"
-        Me.pbPhoto.Size = New System.Drawing.Size(150, 165)
-        Me.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbPhoto.TabIndex = 44
-        Me.pbPhoto.TabStop = False
         '
         'btnSave
         '
@@ -295,7 +280,6 @@ Partial Class frmAddLanguage
         Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.pbPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -310,7 +294,6 @@ Partial Class frmAddLanguage
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents pbPhoto As System.Windows.Forms.PictureBox
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
