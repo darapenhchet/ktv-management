@@ -15,9 +15,9 @@ Public Class frmSinger
         Try
             dsSinger = singerTransaction.getAllSingerByKeyword(keyword)
             dgvSingerList.DataSource = dsSinger.Tables(0)
-            setGrdHeaderText("ID|Singer's Name|Gender|Photo", dgvSingerList)
-            setGrdHeaderWidth("100|300|100|500", dgvSingerList)
-            dgvSingerList.Columns(3).Visible = False
+            setGrdHeaderText("ID|Singer's Name|Gender|Nationality|Photo", dgvSingerList)
+            setGrdHeaderWidth("100|300|200|200|200", dgvSingerList)
+            dgvSingerList.Columns(4).Visible = False
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -45,10 +45,11 @@ Public Class frmSinger
             frmUpdateSinger.txtID.Text = dgvSingerList.CurrentRow.Cells(0).Value
             frmUpdateSinger.txtSingerName.Text = dgvSingerList.CurrentRow.Cells(1).Value
             frmUpdateSinger.cboGender.Text = dgvSingerList.CurrentRow.Cells(2).Value
+            frmUpdateSinger.txtNationality.Text = dgvSingerList.CurrentRow.Cells(3).Value
             If dgvSingerList.CurrentRow.Cells(3).Value Is DBNull.Value Then
                 frmUpdateSinger.pbPhoto.Image = My.Resources.Photo
             Else
-                Dim imageData As Byte() = CType(dgvSingerList.CurrentRow.Cells(3).Value, Byte())
+                Dim imageData As Byte() = CType(dgvSingerList.CurrentRow.Cells(4).Value, Byte())
                 If Not imageData Is Nothing Then
                     Dim ms As New MemoryStream(imageData)
                     frmUpdateSinger.pbPhoto.Image = Image.FromStream(ms)

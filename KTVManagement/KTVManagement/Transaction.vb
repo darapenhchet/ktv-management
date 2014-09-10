@@ -5,6 +5,8 @@
     Public FOREGROUND_ACTIVE_TAB As Color = Color.FromArgb(44, 62, 80)
     Public FOREGROUND_INACTIVE_TAB As Color = Color.White
 
+    Public dsCheckInGuests As New DataSet
+
     Public Function getMemoryStream(Picture As PictureBox) As Byte()
         Try
             Using mStream As System.IO.MemoryStream = New System.IO.MemoryStream()

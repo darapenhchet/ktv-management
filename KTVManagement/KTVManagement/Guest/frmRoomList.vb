@@ -29,6 +29,7 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        frmMainAdmin.Visible = True
         Me.Close()
     End Sub
 
@@ -45,7 +46,6 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-        
     End Sub
 
     Private Sub btnCheckInGuest_Click(sender As Object, e As EventArgs) Handles btnCheckInGuest.Click
@@ -64,7 +64,6 @@
                 MessageBox.Show("This room is busy. Please wait a moment!!!")
             End If
         Catch ex As Exception
-
         End Try
     End Sub
 
@@ -73,4 +72,7 @@
         Me.Close()
     End Sub
 
+    Private Sub btnGuestHistory_Click(sender As Object, e As EventArgs) Handles btnGuestHistory.Click
+        frmGuestHistory.Show()
+    End Sub
 End Class

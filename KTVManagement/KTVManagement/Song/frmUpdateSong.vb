@@ -59,7 +59,7 @@ Public Class frmUpdateSong
         End If
     End Sub
 
-    Private Sub btnAddSinger_Click(sender As Object, e As EventArgs) Handles btnAddSinger.Click
+    Private Sub btnAddSinger_Click(sender As Object, e As EventArgs)
         Dim singer As New ClsSinger
         singer.ID = cboSinger.SelectedValue
         singer.Name = cboSinger.Text
@@ -121,5 +121,18 @@ Public Class frmUpdateSong
             MessageBox.Show(ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub cboSinger_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSinger.SelectedIndexChanged
+        Try
+            Dim singer As New ClsSinger
+            If cboSinger.Text = "" Then
+                Exit Sub
+            End If
+            singer.Name = cboSinger.Text
+            singer.ID = cboSinger.SelectedValue
+            lstSingers.Items.Add(singer)
+        Catch ex As Exception
+        End Try
     End Sub
 End Class

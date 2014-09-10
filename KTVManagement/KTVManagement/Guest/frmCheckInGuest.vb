@@ -12,6 +12,7 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        frmMainAdmin.Visible = True
         Me.Close()
     End Sub
 
@@ -45,6 +46,7 @@
             guest.Amount = CDbl(txtAmount.Text)
             If guestTransaction.addNewGuest(guest) = True Then
                 success.Visible = True
+                dsCheckInGuests = guestTransaction.getCheckInRoom
             Else
                 fail.Visible = True
             End If
@@ -63,13 +65,18 @@
         Me.Close()
     End Sub
 
-    Private Sub btnUpdateGuest_Click(sender As Object, e As EventArgs) Handles btnUpdateGuest.Click
-        frmUpdateGuest.Show()
+    Private Sub btnGuestList_Click(sender As Object, e As EventArgs) Handles btnGuestList.Click
+        frmGuest.Show()
         Me.Close()
     End Sub
 
-    Private Sub btnGuestList_Click(sender As Object, e As EventArgs) Handles btnGuestList.Click
-        frmGuest.Show()
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        frmGuestInvoice.Show()
+
+    End Sub
+
+    Private Sub btnGuestHistory_Click(sender As Object, e As EventArgs) Handles btnGuestHistory.Click
+        frmGuestHistory.Show()
         Me.Close()
     End Sub
 

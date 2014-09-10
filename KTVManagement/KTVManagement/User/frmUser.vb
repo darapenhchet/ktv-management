@@ -24,6 +24,7 @@ Public Class frmUser
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        frmMainAdmin.Show()
         Me.Close()
     End Sub
 

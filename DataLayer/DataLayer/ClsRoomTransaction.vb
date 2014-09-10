@@ -20,7 +20,7 @@ Public Class ClsRoomTransaction
     End Function
 
     Public Function getAllRoomByKeyword(keyword As String) As DataSet
-        Dim sql As String = "SELECT roomId, roomName, roomType, price, discount, CASE status WHEN 0 THEN 'FREE' WHEN 1 THEN 'BUSY' END AS STATUS FROM rooms WHERE roomId LIKE @RoomID OR roomName LIKE @RoomName OR roomType LIKE @RoomType OR price LIKE @Price OR discount LIKE @Discount"
+        Dim sql As String = "SELECT rooms.roomId, roomName, roomType, price, discount, CASE status WHEN 0 THEN 'FREE' WHEN 1 THEN 'BUSY' END AS STATUS FROM rooms WHERE rooms.roomId LIKE @RoomID OR roomName LIKE @RoomName OR roomType LIKE @RoomType OR price LIKE @Price OR discount LIKE @Discount"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -97,6 +97,21 @@ Public Class ClsRoomTransaction
                 Command.Parameters.AddWithValue("@ID", room.ID)
                 Command.Parameters.AddWithValue("@Discount", room.Discount)
                 Command.Parameters.AddWithValue("@Status", room.Status)
+                Command.ExecuteNonQuery()
+                Return True
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        End Try
+    End Function
+
+    Public Function updateRoom(id As Integer) As Boolean
+        Dim sql As String = "UPDATE rooms SET status = 0 WHERE roomId = @ID"
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Command.Parameters.AddWithValue("@ID", id)
                 Command.ExecuteNonQuery()
                 Return True
             End Using

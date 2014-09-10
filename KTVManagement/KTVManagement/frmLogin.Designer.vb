@@ -22,6 +22,7 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblLogin = New System.Windows.Forms.Label()
@@ -31,6 +32,7 @@ Partial Class frmLogin
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblUsername = New System.Windows.Forms.Label()
+        Me.CheckInGuestTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -139,6 +141,10 @@ Partial Class frmLogin
         Me.lblUsername.TabIndex = 0
         Me.lblUsername.Text = "Username:"
         '
+        'CheckInGuestTimer
+        '
+        Me.CheckInGuestTimer.Interval = 1000
+        '
         'frmLogin
         '
         Me.AcceptButton = Me.btnLogin
@@ -168,4 +174,5 @@ Partial Class frmLogin
     Friend WithEvents txtUsername As System.Windows.Forms.TextBox
     Friend WithEvents lblUsername As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents CheckInGuestTimer As System.Windows.Forms.Timer
 End Class

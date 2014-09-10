@@ -26,7 +26,6 @@ Partial Class frmMainAdmin
         Me.btnUserInformation = New System.Windows.Forms.Button()
         Me.btnRoomInformation = New System.Windows.Forms.Button()
         Me.btnGuest = New System.Windows.Forms.Button()
-        Me.btnReportInformation = New System.Windows.Forms.Button()
         Me.btnAboutUs = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
@@ -87,26 +86,13 @@ Partial Class frmMainAdmin
         Me.btnGuest.Text = "Guest Details"
         Me.btnGuest.UseVisualStyleBackColor = False
         '
-        'btnReportInformation
-        '
-        Me.btnReportInformation.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnReportInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReportInformation.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReportInformation.ForeColor = System.Drawing.Color.White
-        Me.btnReportInformation.Location = New System.Drawing.Point(66, 253)
-        Me.btnReportInformation.Name = "btnReportInformation"
-        Me.btnReportInformation.Size = New System.Drawing.Size(250, 100)
-        Me.btnReportInformation.TabIndex = 6
-        Me.btnReportInformation.Text = "Report Details"
-        Me.btnReportInformation.UseVisualStyleBackColor = False
-        '
         'btnAboutUs
         '
         Me.btnAboutUs.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAboutUs.Font = New System.Drawing.Font("Segoe UI Symbol", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAboutUs.ForeColor = System.Drawing.Color.White
-        Me.btnAboutUs.Location = New System.Drawing.Point(322, 253)
+        Me.btnAboutUs.Location = New System.Drawing.Point(466, 253)
         Me.btnAboutUs.Name = "btnAboutUs"
         Me.btnAboutUs.Size = New System.Drawing.Size(250, 100)
         Me.btnAboutUs.TabIndex = 7
@@ -142,7 +128,6 @@ Partial Class frmMainAdmin
         Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnAboutUs)
-        Me.Panel1.Controls.Add(Me.btnReportInformation)
         Me.Panel1.Controls.Add(Me.btnGuest)
         Me.Panel1.Controls.Add(Me.btnRoomInformation)
         Me.Panel1.Controls.Add(Me.btnUserInformation)
@@ -185,7 +170,6 @@ Partial Class frmMainAdmin
     Friend WithEvents btnUserInformation As System.Windows.Forms.Button
     Friend WithEvents btnRoomInformation As System.Windows.Forms.Button
     Friend WithEvents btnGuest As System.Windows.Forms.Button
-    Friend WithEvents btnReportInformation As System.Windows.Forms.Button
     Friend WithEvents btnAboutUs As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lblUsername As System.Windows.Forms.Label

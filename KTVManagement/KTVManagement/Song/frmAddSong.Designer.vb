@@ -48,7 +48,6 @@ Partial Class frmAddSong
         Me.Language = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Singer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CPath = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnAddSinger = New System.Windows.Forms.Button()
         Me.btnSingerOff = New System.Windows.Forms.Button()
         Me.btnFullScreen = New System.Windows.Forms.Button()
         Me.btnPlay = New System.Windows.Forms.Button()
@@ -211,7 +210,6 @@ Partial Class frmAddSong
         Me.Panel4.Controls.Add(Me.Label10)
         Me.Panel4.Controls.Add(Me.btnAdd)
         Me.Panel4.Controls.Add(Me.dgvSongList)
-        Me.Panel4.Controls.Add(Me.btnAddSinger)
         Me.Panel4.Controls.Add(Me.btnSingerOff)
         Me.Panel4.Controls.Add(Me.btnFullScreen)
         Me.Panel4.Controls.Add(Me.btnPlay)
@@ -260,7 +258,7 @@ Partial Class frmAddSong
         Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(571, 79)
+        Me.Button1.Location = New System.Drawing.Point(671, 79)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(94, 30)
         Me.Button1.TabIndex = 31
@@ -379,24 +377,6 @@ Partial Class frmAddSong
         Me.CPath.HeaderText = "Path"
         Me.CPath.Name = "CPath"
         '
-        'btnAddSinger
-        '
-        Me.btnAddSinger.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAddSinger.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.btnAddSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAddSinger.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnAddSinger.FlatAppearance.BorderSize = 0
-        Me.btnAddSinger.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddSinger.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddSinger.ForeColor = System.Drawing.Color.White
-        Me.btnAddSinger.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddSinger.Location = New System.Drawing.Point(671, 79)
-        Me.btnAddSinger.Name = "btnAddSinger"
-        Me.btnAddSinger.Size = New System.Drawing.Size(94, 30)
-        Me.btnAddSinger.TabIndex = 26
-        Me.btnAddSinger.Text = "Add"
-        Me.btnAddSinger.UseVisualStyleBackColor = False
-        '
         'btnSingerOff
         '
         Me.btnSingerOff.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -458,7 +438,7 @@ Partial Class frmAddSong
         Me.vlc.Location = New System.Drawing.Point(771, 59)
         Me.vlc.Name = "vlc"
         Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.vlc.Size = New System.Drawing.Size(227, 173)
+        Me.vlc.Size = New System.Drawing.Size(226, 172)
         Me.vlc.TabIndex = 22
         '
         'btnBrowse
@@ -745,7 +725,6 @@ Partial Class frmAddSong
     Friend WithEvents txtID As System.Windows.Forms.TextBox
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents btnAddSinger As System.Windows.Forms.Button
     Friend WithEvents dgvSongList As System.Windows.Forms.DataGridView
     Friend WithEvents btnAdd As System.Windows.Forms.Button
     Friend WithEvents OpenSong As System.Windows.Forms.OpenFileDialog
