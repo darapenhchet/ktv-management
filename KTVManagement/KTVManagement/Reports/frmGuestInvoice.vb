@@ -1,19 +1,33 @@
-﻿Public Class frmGuestInvoice
-
-    Private Property DataSetName As String
-
-    Private Property SchemaSerializationMode As SchemaSerializationMode
+﻿Imports Microsoft.Reporting.WinForms
+Public Class frmGuestInvoice
 
     Private Sub frmGuestInvoice_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim dsGuest As New DataSet
-        Dim guestTransaction As New DataLayer.ClsGuestTransaction
-        dsGuest = guestTransaction.getAllGuests()
-        'GuestInvoice = dsGuest
-        Me.ReportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local
-        ReportViewer1.LocalReport.ReportPath = System.Environment.CurrentDirectory & "\rpGuestInvoice.rdlc"
-        Me.ReportViewer1.LocalReport.DataSources.Clear()
-        Me.ReportViewer1.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("Guset", dsGuest.Tables(0)))
-        Me.ReportViewer1.DocumentMapCollapsed = True
-        Me.ReportViewer1.RefreshReport()
+        Try
+            Dim reports As New ReportParameterCollection
+            MessageBox.Show(frmCheckInGuest.txtRoomID.Text)
+            MessageBox.Show(frmCheckInGuest.txtRoomType.Text)
+            Dim RoomID As New ReportParameter("RoomID", frmCheckInGuest.txtRoomID.Text)
+            Dim RoomType As New ReportParameter("RoomType", frmCheckInGuest.txtRoomType.Text)
+            Dim Duration As New ReportParameter("Duration", frmCheckInGuest.txtDuration.Text)
+            Dim TimeIn As New ReportParameter("TimeIn", frmCheckInGuest.TimeIn.Text)
+            Dim TimeOut As New ReportParameter("TimeOut", frmCheckInGuest.TimeOut.Text)
+            Dim Price As New ReportParameter("Price", frmCheckInGuest.txtPrice.Text)
+            Dim Discount As New ReportParameter("Discount", frmCheckInGuest.txtDiscount.Text)
+            Dim Amount As New ReportParameter("Amount", frmCheckInGuest.txtAmount.Text)
+            Dim Username As New ReportParameter("Username", DataLayer.ClsConnection.UserLogin.Username)
+            reports.Add(RoomID)
+            reports.Add(RoomType)
+            reports.Add(Duration)
+            reports.Add(TimeIn)
+            reports.Add(TimeOut)
+            reports.Add(Price)
+            reports.Add(Discount)
+            reports.Add(Amount)
+            reports.Add(Username)
+            ReportViewer1.LocalReport.SetParameters(reports)
+            Me.ReportViewer1.RefreshReport()
+        Catch ex As Exception
+            'MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

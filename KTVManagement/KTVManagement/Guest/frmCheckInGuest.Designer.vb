@@ -65,6 +65,8 @@ Partial Class frmCheckInGuest
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TimeIn = New System.Windows.Forms.TextBox()
+        Me.TimeOut = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -245,6 +247,8 @@ Partial Class frmCheckInGuest
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel4.Controls.Add(Me.TimeOut)
+        Me.Panel4.Controls.Add(Me.TimeIn)
         Me.Panel4.Controls.Add(Me.Button1)
         Me.Panel4.Controls.Add(Me.Label14)
         Me.Panel4.Controls.Add(Me.Label13)
@@ -623,6 +627,28 @@ Partial Class frmCheckInGuest
         '
         Me.Timer1.Interval = 1000
         '
+        'TimeIn
+        '
+        Me.TimeIn.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TimeIn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeIn.Location = New System.Drawing.Point(332, 428)
+        Me.TimeIn.Name = "TimeIn"
+        Me.TimeIn.Size = New System.Drawing.Size(300, 27)
+        Me.TimeIn.TabIndex = 68
+        Me.TimeIn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TimeIn.Visible = False
+        '
+        'TimeOut
+        '
+        Me.TimeOut.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TimeOut.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeOut.Location = New System.Drawing.Point(332, 457)
+        Me.TimeOut.Name = "TimeOut"
+        Me.TimeOut.Size = New System.Drawing.Size(300, 27)
+        Me.TimeOut.TabIndex = 69
+        Me.TimeOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TimeOut.Visible = False
+        '
         'frmCheckInGuest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -687,4 +713,6 @@ Partial Class frmCheckInGuest
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents btnGuestHistory As System.Windows.Forms.Button
+    Friend WithEvents TimeOut As System.Windows.Forms.TextBox
+    Friend WithEvents TimeIn As System.Windows.Forms.TextBox
 End Class

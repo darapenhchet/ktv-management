@@ -46,13 +46,16 @@ Public Class frmAddSong
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Try
+            song = New ClsSong
             song.Title = txtTitle.Text
             song.Album = txtAlbum.Text
             song.Production = New ClsProduction(cboProduction.SelectedValue, cboProduction.Text)
             song.Category = New ClsCategory(cboCategory.SelectedValue, cboCategory.Text)
             song.Language = New ClsLanguage(cboLanguage.SelectedValue, cboLanguage.Text)
             song.Path = txtPath.Text
-            Dim Destination As String = "D:\KTV\" & song.Production.Production & " \ " & song.Album
+            'Dim Destination As String = "\\197.7.7.7\\" & song.Production.Production & " \ " & song.Album
+            Dim Destination As String = "\\197.7.7.7\d"
+
             Try
                 If Not Directory.Exists(Destination) Then
                     Directory.CreateDirectory(Destination)
@@ -61,6 +64,7 @@ Public Class frmAddSong
                 song.Path = Path.Combine(Destination, file.Name)
                 file.CopyTo(song.Path, True)
             Catch ex As Exception
+                MessageBox.Show(ex.Message)
             End Try
 
             Dim strSingers As String = ""
@@ -111,6 +115,7 @@ Public Class frmAddSong
                 End If
             Next
             dgvSongList.Rows.Clear()
+            songs = New List(Of ClsSong)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

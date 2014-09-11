@@ -30,6 +30,9 @@
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
+            Dim currentDate As Date = DateTime.Now
+            TimeIn.Text = currentDate.ToString
+            TimeOut.Text = DateAdd(DateInterval.Hour, CInt(txtDuration.Text), currentDate)
             room.ID = CInt(txtRoomID.Text)
             room.RoomName = txtRoom.Text
             room.RoomType = txtRoomType.Text
@@ -50,7 +53,7 @@
             Else
                 fail.Visible = True
             End If
-
+            frmGuestInvoice.Show()
         Catch ex As Exception
 
         End Try
@@ -72,7 +75,6 @@
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         frmGuestInvoice.Show()
-
     End Sub
 
     Private Sub btnGuestHistory_Click(sender As Object, e As EventArgs) Handles btnGuestHistory.Click

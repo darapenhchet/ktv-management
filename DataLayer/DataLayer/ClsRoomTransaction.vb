@@ -121,6 +121,20 @@ Public Class ClsRoomTransaction
         End Try
     End Function
 
+    Public Function updateRoomStatus() As Boolean
+        Dim sql As String = "UPDATE rooms, guests SET rooms.`status` = 0 WHERE rooms.status = 1 AND TIMEDIFF(guests.timeOut,Now())<0 "
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = Sql
+                Command.ExecuteNonQuery()
+                Return True
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        End Try
+    End Function
+
 
     Public Function deleteRoom(id As ClsRoom) As Boolean
         Dim sql As String = "DELETE FROM rooma WHERE roomID = @ID"
