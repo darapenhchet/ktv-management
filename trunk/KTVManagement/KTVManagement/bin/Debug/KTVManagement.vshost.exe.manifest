@@ -99,19 +99,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yF3sVbHJGy79EHAgTi+b7MW/UwBaEJ8irbZswoBb1CE=</dsig:DigestValue>
+        <dsig:DigestValue>FitNPo9eD40MbVFXthbvSw+zYiHCAt5iSXIGtbJBLYI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLayer.dll" size="62464">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLayer.dll" size="62976">
       <assemblyIdentity name="DataLayer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8xkaYIwroYkMzYeUkRS8DqdAI5gHaJwWNqcZhsDGFvY=</dsig:DigestValue>
+        <dsig:DigestValue>1un7vaL4tPLz4ATGYejixBRfPpmlNEzedMYPjaH3dZk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -123,19 +123,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>awX9KN2mhHe3aXRjK6+NxZIZWBZ9oNOt+tf5IiNP25g=</dsig:DigestValue>
+        <dsig:DigestValue>Af6c1PK0lK0lcHnq/yLcyAvYk1j7PWCktbO02EM8n6s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KTVManagement.exe" size="636416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KTVManagement.exe" size="638976">
       <assemblyIdentity name="KTVManagement" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HhxpjvAd7fCPp70jT7K6ZO4tahTRQWCnFJmXGswIFLo=</dsig:DigestValue>
+        <dsig:DigestValue>SVSleeGj9oJYU+2lzIwBM1Wt9zVzjvdp+Mz0OXvsiY0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
