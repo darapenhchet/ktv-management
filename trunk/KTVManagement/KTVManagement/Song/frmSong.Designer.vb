@@ -194,7 +194,7 @@ Partial Class frmSong
         Me.vlc.Location = New System.Drawing.Point(406, 55)
         Me.vlc.Name = "vlc"
         Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.vlc.Size = New System.Drawing.Size(595, 159)
+        Me.vlc.Size = New System.Drawing.Size(596, 160)
         Me.vlc.TabIndex = 4
         '
         'btnPlay
