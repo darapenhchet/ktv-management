@@ -70,6 +70,7 @@ Public Class frmLogin
                 End If
             Next
             If update = True Then
+                update = False
                 dsCheckInGuests = guestTransaction.getCheckInRoom
                 MessageBox.Show("UPDATED")
             End If

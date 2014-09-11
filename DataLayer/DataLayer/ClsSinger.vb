@@ -6,8 +6,6 @@
     Private _Nationality As String
     Private _Photo As Byte()
 
-
-
     Public Property ID() As Integer
         Get
             Return _ID

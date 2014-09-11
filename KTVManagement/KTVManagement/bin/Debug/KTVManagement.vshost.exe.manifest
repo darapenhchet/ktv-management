@@ -111,7 +111,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1un7vaL4tPLz4ATGYejixBRfPpmlNEzedMYPjaH3dZk=</dsig:DigestValue>
+        <dsig:DigestValue>/yCLAwI8DxIZ2cNFdj9YyleECu5/LyEHoC/UcbEWQ38=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -128,14 +128,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KTVManagement.exe" size="638976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KTVManagement.exe" size="640000">
       <assemblyIdentity name="KTVManagement" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SVSleeGj9oJYU+2lzIwBM1Wt9zVzjvdp+Mz0OXvsiY0=</dsig:DigestValue>
+        <dsig:DigestValue>VPKuEiSJ4JvjwmGXVTYkFJMo23LqopXw/wOPwRwK72E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
