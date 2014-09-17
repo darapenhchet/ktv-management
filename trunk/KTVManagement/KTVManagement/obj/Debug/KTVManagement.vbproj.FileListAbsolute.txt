@@ -1,0 +1,4 @@
+C:\Users\DARAPENHCHET\Documents\Visual Studio 2012\Projects\Project1\KTVManagement\KTVManagement\bin\Debug\KTVManagement.exe.config
+C:\Users\DARAPENHCHET\Documents\Visual Studio 2012\Projects\Project1\KTVManagement\KTVManagement\obj\Debug\Interop.AXVLC.dll
+C:\Users\DARAPENHCHET\Documents\Visual Studio 2012\Projects\Project1\KTVManagement\KTVManagement\obj\Debug\AxInterop.AXVLC.dll
+C:\Users\DARAPENHCHET\Documents\Visual Studio 2012\Projects\Project1\KTVManagement\KTVManagement\obj\Debug\KTVManagement.vbproj.ResolveComReference.cache
