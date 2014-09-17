@@ -23,6 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <MinimumRequiredVersion>1.0.0.1</MinimumRequiredVersion>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -73,9 +74,10 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=11.2.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -123,124 +125,130 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Category\frmAddCategory.Designer.vb">
+    <Compile Include="Forms\Category\frmAddCategory.Designer.vb">
       <DependentUpon>frmAddCategory.vb</DependentUpon>
     </Compile>
-    <Compile Include="Category\frmAddCategory.vb">
+    <Compile Include="Forms\Category\frmAddCategory.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Category\frmUpdateCategory.Designer.vb">
+    <Compile Include="Forms\Category\frmUpdateCategory.Designer.vb">
       <DependentUpon>frmUpdateCategory.vb</DependentUpon>
     </Compile>
-    <Compile Include="Category\frmUpdateCategory.vb">
+    <Compile Include="Forms\Category\frmUpdateCategory.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm.Designer.vb">
-      <DependentUpon>frm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAboutus.Designer.vb">
+    <Compile Include="Forms\frmAboutus.Designer.vb">
       <DependentUpon>frmAboutus.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAboutus.vb">
+    <Compile Include="Forms\frmAboutus.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\frmCheckInGuest.Designer.vb">
+    <Compile Include="Forms\Guest\frmCheckIn.Designer.vb">
+      <DependentUpon>frmCheckIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Guest\frmCheckIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guest\frmCheckInGuest.Designer.vb">
       <DependentUpon>frmCheckInGuest.vb</DependentUpon>
     </Compile>
-    <Compile Include="Guest\frmCheckInGuest.vb">
+    <Compile Include="Forms\Guest\frmCheckInGuest.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\frmGuestHistory.Designer.vb">
+    <Compile Include="Forms\Guest\frmGuestHistory.Designer.vb">
       <DependentUpon>frmGuestHistory.vb</DependentUpon>
     </Compile>
-    <Compile Include="Guest\frmGuestHistory.vb">
+    <Compile Include="Forms\Guest\frmGuestHistory.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\frmRoomList.Designer.vb">
+    <Compile Include="Forms\Guest\frmRoomList.Designer.vb">
       <DependentUpon>frmRoomList.vb</DependentUpon>
     </Compile>
-    <Compile Include="Guest\frmRoomList.vb">
+    <Compile Include="Forms\Guest\frmRoomList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSongMain.Designer.vb">
+    <Compile Include="Forms\frmSongMain.Designer.vb">
       <DependentUpon>frmSongMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmSongMain.vb">
+    <Compile Include="Forms\frmSongMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Language\frmAddLanguage.Designer.vb">
+    <Compile Include="Forms\Language\frmAddLanguage.Designer.vb">
       <DependentUpon>frmAddLanguage.vb</DependentUpon>
     </Compile>
-    <Compile Include="Language\frmAddLanguage.vb">
+    <Compile Include="Forms\Language\frmAddLanguage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Language\frmLanguage.Designer.vb">
+    <Compile Include="Forms\Language\frmLanguage.Designer.vb">
       <DependentUpon>frmLanguage.vb</DependentUpon>
     </Compile>
-    <Compile Include="Language\frmLanguage.vb">
+    <Compile Include="Forms\Language\frmLanguage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Language\frmUpdateLanguage.Designer.vb">
+    <Compile Include="Forms\Language\frmUpdateLanguage.Designer.vb">
       <DependentUpon>frmUpdateLanguage.vb</DependentUpon>
     </Compile>
-    <Compile Include="Language\frmUpdateLanguage.vb">
+    <Compile Include="Forms\Language\frmUpdateLanguage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Production\frmAddProduction.Designer.vb">
+    <Compile Include="Forms\Production\frmAddProduction.Designer.vb">
       <DependentUpon>frmAddProduction.vb</DependentUpon>
     </Compile>
-    <Compile Include="Production\frmAddProduction.vb">
+    <Compile Include="Forms\Production\frmAddProduction.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Production\frmProduction.Designer.vb">
+    <Compile Include="Forms\Production\frmProduction.Designer.vb">
       <DependentUpon>frmProduction.vb</DependentUpon>
     </Compile>
-    <Compile Include="Production\frmProduction.vb">
+    <Compile Include="Forms\Production\frmProduction.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Production\frmUpdateProduction.Designer.vb">
+    <Compile Include="Forms\Production\frmUpdateProduction.Designer.vb">
       <DependentUpon>frmUpdateProduction.vb</DependentUpon>
     </Compile>
-    <Compile Include="Production\frmUpdateProduction.vb">
+    <Compile Include="Forms\Production\frmUpdateProduction.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\frmGuestInvoice.Designer.vb">
+    <Compile Include="Forms\Reports\frmGuestInvoice.Designer.vb">
       <DependentUpon>frmGuestInvoice.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reports\frmGuestInvoice.vb">
+    <Compile Include="Forms\Reports\frmGuestInvoice.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Room\frmAddRoom.Designer.vb">
+    <Compile Include="Forms\Room.Designer.vb">
+      <DependentUpon>Room.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Room.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Room\frmAddRoom.Designer.vb">
       <DependentUpon>frmAddRoom.vb</DependentUpon>
     </Compile>
-    <Compile Include="Room\frmAddRoom.vb">
+    <Compile Include="Forms\Room\frmAddRoom.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Category\frmCategoryInformation.Designer.vb">
+    <Compile Include="Forms\Category\frmCategoryInformation.Designer.vb">
       <DependentUpon>frmCategoryInformation.vb</DependentUpon>
     </Compile>
-    <Compile Include="Category\frmCategoryInformation.vb">
+    <Compile Include="Forms\Category\frmCategoryInformation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\frmGuest.Designer.vb">
+    <Compile Include="Forms\Guest\frmGuest.Designer.vb">
       <DependentUpon>frmGuest.vb</DependentUpon>
     </Compile>
-    <Compile Include="Guest\frmGuest.vb">
+    <Compile Include="Forms\Guest\frmGuest.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.vb">
+    <Compile Include="Forms\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.vb">
+    <Compile Include="Forms\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMainAdmin.Designer.vb">
+    <Compile Include="Forms\frmMainAdmin.Designer.vb">
       <DependentUpon>frmMainAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMainAdmin.vb">
+    <Compile Include="Forms\frmMainAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPlaySong.Designer.vb">
@@ -249,76 +257,64 @@
     <Compile Include="frmPlaySong.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Room\frmRoom.Designer.vb">
+    <Compile Include="Forms\Room\frmRoom.Designer.vb">
       <DependentUpon>frmRoom.vb</DependentUpon>
     </Compile>
-    <Compile Include="Room\frmRoom.vb">
+    <Compile Include="Forms\Room\frmRoom.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSingerInformation.Designer.vb">
-      <DependentUpon>frmSingerInformation.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmSingerInformation.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Singer\frmAddSinger.Designer.vb">
+    <Compile Include="Forms\Singer\frmAddSinger.Designer.vb">
       <DependentUpon>frmAddSinger.vb</DependentUpon>
     </Compile>
-    <Compile Include="Singer\frmAddSinger.vb">
+    <Compile Include="Forms\Singer\frmAddSinger.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Singer\frmSinger.Designer.vb">
+    <Compile Include="Forms\Singer\frmSinger.Designer.vb">
       <DependentUpon>frmSinger.vb</DependentUpon>
     </Compile>
-    <Compile Include="Singer\frmSinger.vb">
+    <Compile Include="Forms\Singer\frmSinger.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Singer\frmUpdateSinger.Designer.vb">
+    <Compile Include="Forms\Singer\frmUpdateSinger.Designer.vb">
       <DependentUpon>frmUpdateSinger.vb</DependentUpon>
     </Compile>
-    <Compile Include="Singer\frmUpdateSinger.vb">
+    <Compile Include="Forms\Singer\frmUpdateSinger.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Song\frmAddSong.Designer.vb">
+    <Compile Include="Forms\Song\frmAddSong.Designer.vb">
       <DependentUpon>frmAddSong.vb</DependentUpon>
     </Compile>
-    <Compile Include="Song\frmAddSong.vb">
+    <Compile Include="Forms\Song\frmAddSong.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Song\frmSong.Designer.vb">
+    <Compile Include="Forms\Song\frmSong.Designer.vb">
       <DependentUpon>frmSong.vb</DependentUpon>
     </Compile>
-    <Compile Include="Song\frmSong.vb">
+    <Compile Include="Forms\Song\frmSong.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Song\frmSongInformation.Designer.vb">
+    <Compile Include="Forms\Song\frmSongInformation.Designer.vb">
       <DependentUpon>frmSongInformation.vb</DependentUpon>
     </Compile>
-    <Compile Include="Song\frmSongInformation.vb">
+    <Compile Include="Forms\Song\frmSongInformation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Song\frmSongLists.Designer.vb">
+    <Compile Include="Forms\Song\frmSongLists.Designer.vb">
       <DependentUpon>frmSongLists.vb</DependentUpon>
     </Compile>
-    <Compile Include="Song\frmSongLists.vb">
+    <Compile Include="Forms\Song\frmSongLists.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSplashScreen.Designer.vb">
+    <Compile Include="Forms\frmSplashScreen.Designer.vb">
       <DependentUpon>frmSplashScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmSplashScreen.vb">
+    <Compile Include="Forms\frmSplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Room\frmUpdateRoom.Designer.vb">
+    <Compile Include="Forms\Room\frmUpdateRoom.Designer.vb">
       <DependentUpon>frmUpdateRoom.vb</DependentUpon>
     </Compile>
-    <Compile Include="Room\frmUpdateRoom.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUserInformation.Designer.vb">
-      <DependentUpon>frmUserInformation.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmUserInformation.vb">
+    <Compile Include="Forms\Room\frmUpdateRoom.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -336,132 +332,129 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Song\frmUpdateSong.Designer.vb">
+    <Compile Include="Forms\User\frmUpdateSong.Designer.vb">
       <DependentUpon>frmUpdateSong.vb</DependentUpon>
     </Compile>
-    <Compile Include="Song\frmUpdateSong.vb">
+    <Compile Include="Forms\User\frmUpdateSong.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transaction.vb" />
-    <Compile Include="User\frmAddUser.Designer.vb">
+    <Compile Include="Forms\User\frmAddUser.Designer.vb">
       <DependentUpon>frmAddUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="User\frmAddUser.vb">
+    <Compile Include="Forms\User\frmAddUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\frmUpdaterUser.Designer.vb">
+    <Compile Include="Forms\User\frmUpdaterUser.Designer.vb">
       <DependentUpon>frmUpdaterUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="User\frmUpdaterUser.vb">
+    <Compile Include="Forms\User\frmUpdaterUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\frmUser.Designer.vb">
+    <Compile Include="Forms\User\frmUser.Designer.vb">
       <DependentUpon>frmUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="User\frmUser.vb">
+    <Compile Include="Forms\User\frmUser.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Category\frmAddCategory.resx">
+    <EmbeddedResource Include="Forms\Category\frmAddCategory.resx">
       <DependentUpon>frmAddCategory.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Category\frmUpdateCategory.resx">
+    <EmbeddedResource Include="Forms\Category\frmUpdateCategory.resx">
       <DependentUpon>frmUpdateCategory.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm.resx">
-      <DependentUpon>frm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAboutus.resx">
+    <EmbeddedResource Include="Forms\frmAboutus.resx">
       <DependentUpon>frmAboutus.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\frmCheckInGuest.resx">
+    <EmbeddedResource Include="Forms\Guest\frmCheckIn.resx">
+      <DependentUpon>frmCheckIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guest\frmCheckInGuest.resx">
       <DependentUpon>frmCheckInGuest.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\frmGuestHistory.resx">
+    <EmbeddedResource Include="Forms\Guest\frmGuestHistory.resx">
       <DependentUpon>frmGuestHistory.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\frmRoomList.resx">
+    <EmbeddedResource Include="Forms\Guest\frmRoomList.resx">
       <DependentUpon>frmRoomList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\frmGuest.resx">
+    <EmbeddedResource Include="Forms\Guest\frmGuest.resx">
       <DependentUpon>frmGuest.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSongMain.resx">
+    <EmbeddedResource Include="Forms\frmSongMain.resx">
       <DependentUpon>frmSongMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Language\frmAddLanguage.resx">
+    <EmbeddedResource Include="Forms\Language\frmAddLanguage.resx">
       <DependentUpon>frmAddLanguage.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Language\frmLanguage.resx">
+    <EmbeddedResource Include="Forms\Language\frmLanguage.resx">
       <DependentUpon>frmLanguage.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Language\frmUpdateLanguage.resx">
+    <EmbeddedResource Include="Forms\Language\frmUpdateLanguage.resx">
       <DependentUpon>frmUpdateLanguage.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Production\frmAddProduction.resx">
+    <EmbeddedResource Include="Forms\Production\frmAddProduction.resx">
       <DependentUpon>frmAddProduction.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Production\frmProduction.resx">
+    <EmbeddedResource Include="Forms\Production\frmProduction.resx">
       <DependentUpon>frmProduction.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Production\frmUpdateProduction.resx">
+    <EmbeddedResource Include="Forms\Production\frmUpdateProduction.resx">
       <DependentUpon>frmUpdateProduction.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\frmGuestInvoice.resx">
+    <EmbeddedResource Include="Forms\Reports\frmGuestInvoice.resx">
       <DependentUpon>frmGuestInvoice.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\rpGuestInvoice.rdlc" />
-    <EmbeddedResource Include="Room\frmAddRoom.resx">
+    <EmbeddedResource Include="Forms\Reports\rpGuestInvoice.rdlc" />
+    <EmbeddedResource Include="Forms\Room.resx">
+      <DependentUpon>Room.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Room\frmAddRoom.resx">
       <DependentUpon>frmAddRoom.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Category\frmCategoryInformation.resx">
+    <EmbeddedResource Include="Forms\Category\frmCategoryInformation.resx">
       <DependentUpon>frmCategoryInformation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMainAdmin.resx">
+    <EmbeddedResource Include="Forms\frmMainAdmin.resx">
       <DependentUpon>frmMainAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlaySong.resx">
       <DependentUpon>frmPlaySong.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Room\frmRoom.resx">
+    <EmbeddedResource Include="Forms\Room\frmRoom.resx">
       <DependentUpon>frmRoom.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSingerInformation.resx">
-      <DependentUpon>frmSingerInformation.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Singer\frmAddSinger.resx">
+    <EmbeddedResource Include="Forms\Singer\frmAddSinger.resx">
       <DependentUpon>frmAddSinger.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Singer\frmSinger.resx">
+    <EmbeddedResource Include="Forms\Singer\frmSinger.resx">
       <DependentUpon>frmSinger.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Singer\frmUpdateSinger.resx">
+    <EmbeddedResource Include="Forms\Singer\frmUpdateSinger.resx">
       <DependentUpon>frmUpdateSinger.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Song\frmAddSong.resx">
+    <EmbeddedResource Include="Forms\Song\frmAddSong.resx">
       <DependentUpon>frmAddSong.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Song\frmSong.resx">
+    <EmbeddedResource Include="Forms\Song\frmSong.resx">
       <DependentUpon>frmSong.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Song\frmSongInformation.resx">
+    <EmbeddedResource Include="Forms\Song\frmSongInformation.resx">
       <DependentUpon>frmSongInformation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Song\frmSongLists.resx">
+    <EmbeddedResource Include="Forms\Song\frmSongLists.resx">
       <DependentUpon>frmSongLists.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSplashScreen.resx">
+    <EmbeddedResource Include="Forms\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Room\frmUpdateRoom.resx">
+    <EmbeddedResource Include="Forms\Room\frmUpdateRoom.resx">
       <DependentUpon>frmUpdateRoom.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUserInformation.resx">
-      <DependentUpon>frmUserInformation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -469,27 +462,46 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Song\frmUpdateSong.resx">
+    <EmbeddedResource Include="Forms\User\frmUpdateSong.resx">
       <DependentUpon>frmUpdateSong.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\frmAddUser.resx">
+    <EmbeddedResource Include="Forms\User\frmAddUser.resx">
       <DependentUpon>frmAddUser.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\frmUpdaterUser.resx">
+    <EmbeddedResource Include="Forms\User\frmUpdaterUser.resx">
       <DependentUpon>frmUpdaterUser.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\frmUser.resx">
+    <EmbeddedResource Include="Forms\User\frmUser.resx">
       <DependentUpon>frmUser.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="KTVManagement_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\DataSources\ClsSinger.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsCategory.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsCategoryTransaction.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsConnection.datasource" />
     <None Include="My Project\DataSources\DataLayer.ClsGuest.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsGuestTransaction.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsInvoice.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsLanguage.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsLanguageTransaction.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsProduction.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsProductionTransaction.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsRoom.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsRoomTransaction.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsSinger.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsSingerTransaction.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsSong.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsSongDetails.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsSongDetailsTransaction.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsSongTransaction.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsUser.datasource" />
+    <None Include="My Project\DataSources\DataLayer.ClsUserTransaction.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -577,6 +589,9 @@
       <Project>{aa5a1df8-6af9-4dab-b28c-48dac00e8288}</Project>
       <Name>DataLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

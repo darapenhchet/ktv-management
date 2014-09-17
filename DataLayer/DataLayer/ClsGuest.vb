@@ -5,6 +5,8 @@
     Private _timeIn As New DateTime
     Private _timeout As New DateTime
     Private _amount As Double
+    Private _status As Boolean
+
 
     Public Property ID As Integer
         Get
@@ -62,6 +64,15 @@
         End Get
         Set(value As Double)
             _amount = value
+        End Set
+    End Property
+
+    Public Property Status As Boolean
+        Get
+            Return _status
+        End Get
+        Set(value As Boolean)
+            _status = value
         End Set
     End Property
 End Class

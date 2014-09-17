@@ -6,12 +6,7 @@ DataLayer
 </name>
 </assembly>
 <members>
-<member name="F:DataLayer.ClsUserTransaction.dsUser">
-	<summary>
- dsUser for storing the record of the users
- </summary>
-	<remarks></remarks>
-</member><member name="F:DataLayer.ClsSingerTransaction.dsSinger">
+<member name="F:DataLayer.ClsSingerTransaction.dsSinger">
 	<summary>
  dsSinger is a Dataset of the Singer Table
  </summary>
@@ -63,6 +58,11 @@ DataLayer
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
+</member><member name="F:DataLayer.ClsUserTransaction.dsUser">
+	<summary>
+ dsUser for storing the record of the users
+ </summary>
+	<remarks></remarks>
 </member>
 </members>
 </doc>

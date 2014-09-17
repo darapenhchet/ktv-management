@@ -26,6 +26,7 @@ Partial Class frmPlaySong
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPlaySong))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -40,7 +41,6 @@ Partial Class frmPlaySong
         Me.btnPlay = New System.Windows.Forms.Button()
         Me.vlc = New AxAXVLC.AxVLCPlugin2()
         Me.openSong = New System.Windows.Forms.OpenFileDialog()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -76,6 +76,13 @@ Partial Class frmPlaySong
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1159, 165)
         Me.Panel2.TabIndex = 2
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(0, 3)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(1159, 23)
+        Me.ProgressBar1.TabIndex = 3
         '
         'Button6
         '
@@ -196,20 +203,12 @@ Partial Class frmPlaySong
         '
         'vlc
         '
-        Me.vlc.Dock = System.Windows.Forms.DockStyle.Fill
         Me.vlc.Enabled = True
         Me.vlc.Location = New System.Drawing.Point(0, 0)
         Me.vlc.Name = "vlc"
         Me.vlc.OcxState = CType(resources.GetObject("vlc.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.vlc.Size = New System.Drawing.Size(1162, 522)
+        Me.vlc.Size = New System.Drawing.Size(379, 354)
         Me.vlc.TabIndex = 1
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(0, 3)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(1159, 23)
-        Me.ProgressBar1.TabIndex = 3
         '
         'Timer1
         '

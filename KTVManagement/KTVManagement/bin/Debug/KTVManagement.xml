@@ -19,23 +19,7 @@ KTVManagement
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.arrow110">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
 </member><member name="P:KTVManagement.My.Resources.Resources.arrow3">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.back1">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.background">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.backward3">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -43,59 +27,7 @@ KTVManagement
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.close13">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
 </member><member name="P:KTVManagement.My.Resources.Resources.close33">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.create1">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.create11">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.delete38">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.delete38__1_">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.email20">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.home63">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.left164">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.machine2">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.magnifier12">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.market">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.menu48">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.microphone44">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -103,51 +35,11 @@ KTVManagement
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.microphone52__1_">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
 </member><member name="P:KTVManagement.My.Resources.Resources.muted">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.next15">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.next15__1_">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
 </member><member name="P:KTVManagement.My.Resources.Resources.Photo">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.reply">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.rewind26">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.rounded3">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.seo2">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.three115">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.user91">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:KTVManagement.My.Resources.Resources.verification5">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

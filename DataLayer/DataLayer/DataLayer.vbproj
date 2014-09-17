@@ -85,6 +85,7 @@
     <Compile Include="ClsConnection.vb" />
     <Compile Include="ClsGuest.vb" />
     <Compile Include="ClsGuestTransaction.vb" />
+    <Compile Include="ClsInvoice.vb" />
     <Compile Include="ClsLanguage.vb" />
     <Compile Include="ClsLanguageTransaction.vb" />
     <Compile Include="ClsProduction.vb" />
