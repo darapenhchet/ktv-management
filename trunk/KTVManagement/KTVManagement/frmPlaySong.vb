@@ -77,4 +77,7 @@
 
     End Sub
 
+    Private Sub vlc_Enter(sender As Object, e As EventArgs) Handles vlc.Enter
+
+    End Sub
 End Class

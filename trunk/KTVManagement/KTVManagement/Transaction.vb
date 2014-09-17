@@ -1,11 +1,8 @@
 ﻿Module Transaction
 
-    Public BACKGROUND_TITLE_PANEL As Color = Color.FromArgb(39, 174, 96)
-    Public BACKGROUND_ACTIVE_TAB As Color = Color.White
-    Public FOREGROUND_ACTIVE_TAB As Color = Color.FromArgb(44, 62, 80)
-    Public FOREGROUND_INACTIVE_TAB As Color = Color.White
 
     Public dsCheckInGuests As New DataSet
+    Public addNew As Boolean = False
 
     Public Function getMemoryStream(Picture As PictureBox) As Byte()
         Try
@@ -20,6 +17,7 @@
     End Function
 
     Public Sub AddDataIntoComboBox(cboName As ComboBox, ds As DataSet)
+        ds.Tables(0).Rows.Add(0, "Add New...")
         With cboName
             .DataSource = ds.Tables(0)
             .DisplayMember = ds.Tables(0).Columns(1).ColumnName

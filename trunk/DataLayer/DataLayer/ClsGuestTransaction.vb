@@ -4,7 +4,7 @@ Public Class ClsGuestTransaction
     Private dsGuest As New DataSet
 
     Public Function getAllGuests() As DataSet
-        Dim sql As String = "SELECT guestId,roomId,duration,timein,timeout,amount FROM guests"
+        Dim sql As String = "SELECT guestId,roomId,duration,timein,timeout,amount,status FROM guests"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -36,7 +36,7 @@ Public Class ClsGuestTransaction
     End Function
 
     Public Function searchGuestByKeyword(keyword As String) As DataSet
-        Dim sql As String = "SELECT guestId,guests.roomId,roomName,roomType,timein,timeout,duration,TIMEDIFF(guests.timeOut,NOW()) AS LEFTTIME,price,amount FROM guests INNER JOIN rooms ON guests.roomId = rooms.roomId WHERE (TIMEDIFF(guests.timeOut,NOW()) > 0) AND (guests.roomId LIKE @RoomID OR timein LIKE @TimeIn OR timeout LIKE @TimeOut OR amount LIKE @Amount)"
+        Dim sql As String = "SELECT guestId,guests.roomId,roomName,roomType,timein,timeout,duration,TIMEDIFF(guests.timeOut,NOW()) AS LEFTTIME,price,amount FROM guests INNER JOIN rooms ON guests.roomId = rooms.roomId WHERE  guests.status = 1 AND (guests.roomId LIKE @RoomID OR timein LIKE @TimeIn OR timeout LIKE @TimeOut OR amount LIKE @Amount OR rooms.roomType LIKE @RoomType)"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -44,6 +44,7 @@ Public Class ClsGuestTransaction
                 Command.Parameters.AddWithValue("@TimeIn", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@TimeOut", "%" & keyword & "%")
                 Command.Parameters.AddWithValue("@Amount", "%" & keyword & "%")
+                Command.Parameters.AddWithValue("@RoomType", "%" & keyword & "%")
                 Using adt As MySqlDataAdapter = New MySqlDataAdapter(Command)
                     adt.Fill(dsGuest)
                     Return dsGuest
@@ -71,12 +72,12 @@ Public Class ClsGuestTransaction
                 End Using
             End Using
         Catch ex As Exception
-            MsgBox(ex.Message)
+            'MsgBox(ex.Message)
             Return Nothing
         End Try
     End Function
     Public Function getCheckInRoom() As DataSet
-        Dim sql As String = "SELECT rooms.roomId, timeOut FROM rooms INNER JOIN guests ON rooms.roomId = guests.roomId WHERE status = 1 AND TIMEDIFF(guests.timeOut,NOW()) > 0"
+        Dim sql As String = "SELECT rooms.roomId, timeOut FROM rooms INNER JOIN guests ON rooms.roomId = guests.roomId WHERE rooms.status = 1 AND TIMEDIFF(guests.timeOut,NOW()) > 0"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -95,7 +96,7 @@ Public Class ClsGuestTransaction
         Dim dr As MySqlDataReader = Nothing
         Dim guest As New ClsGuest
 
-        Dim sql As String = "SELECT guestId,duration,roomId,timein,timeout,amount FROM guests WHERE roomID = @ID"
+        Dim sql As String = "SELECT guestId,duration,roomId,timein,timeout,amount FROM guests WHERE roomID = @ID AND guests.status=1"
         Try
             Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
                 Command.CommandText = sql
@@ -111,12 +112,13 @@ Public Class ClsGuestTransaction
                     guest.TimeOut = dr.GetDateTime(4)
                     guest.Amount = dr.GetDouble(5)
                 End While
+                dr.Close()
                 Return guest
             End Using
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return Nothing
         End Try
-        Return Nothing
     End Function
 
     Public Function addNewGuest(guest As ClsGuest) As Boolean
@@ -126,6 +128,7 @@ Public Class ClsGuestTransaction
                 Command.CommandText = "spAddNewGuest"
                 Command.CommandType = CommandType.StoredProcedure
                 Command.Parameters.AddWithValue("@SRoomID", guest.Room.ID)
+                Command.Parameters.AddWithValue("@STimeIn", guest.TimeIn)
                 Command.Parameters.AddWithValue("@SDuration", guest.Duration)
                 Command.Parameters.AddWithValue("@SAmount", guest.Amount)
                 Command.ExecuteNonQuery()
@@ -154,6 +157,23 @@ Public Class ClsGuestTransaction
             Return False
         End Try
     End Function
+
+    Public Function updateGuestRoom(roomID As Integer) As Boolean
+        Dim sql As String = "spUpdateGuestRoom"
+        Try
+            Using Command As MySqlCommand = ClsConnection.Con.CreateCommand
+                Command.CommandText = sql
+                Command.CommandType = CommandType.StoredProcedure
+                Command.Parameters.AddWithValue("@roomID", roomID)
+                Command.ExecuteNonQuery()
+                Return True
+            End Using
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+
 
     Public Function deleteGuest(id As Integer) As Boolean
         Dim sql As String = "DELETE FROM guests WHERE guestID = @ID"
